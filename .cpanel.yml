@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ttsmcomm/public_html/html/products/others/
-    - /bin/cp EN_mainOthers.html $DEPLOYPATH
-    - /bin/cp ES_mainOthers.html $DEPLOYPATH
+    - /bin/cp html/products/others/EN_mainOthers.html $DEPLOYPATH
+    - /bin/cp html/products/others/ES_mainOthers.html $DEPLOYPATH
