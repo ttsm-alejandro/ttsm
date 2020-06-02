@@ -1,18 +1,14 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+/nbproject/
+
+# php folder, donde hay credenciales de la base de datos.
+/php/
+#/TTSM/system_v2/php/util/Constants.php
+
+# system
+/TTSM/
+
+# Brochures
+/brochures/
