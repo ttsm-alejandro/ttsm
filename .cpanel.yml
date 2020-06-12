@@ -1,6 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ttsmcomm/public_html/html/products/others/
-    - /bin/cp html/products/others/EN_mainOthers.html $DEPLOYPATH
-    - /bin/cp html/products/others/ES_mainOthers.html $DEPLOYPATH
+    - /bin/cp TTSM/system_v2/js/sharepoint/systemPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
+    - /bin/cp TTSM/system_v2/html/util/modal/modal_sharepoint_textarea.html /home/ttsmcomm/public_html/TTSM/system_v2/html/util/modal/

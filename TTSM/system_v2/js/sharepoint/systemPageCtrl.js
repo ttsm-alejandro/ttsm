@@ -38,6 +38,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     //TextArea on Modal
     $scope.showTextAreaOnModal = [ true , false , false ];
     $scope.textAreaOnModalTitle = "System Comments";
+    $scope.showPleaseWaitMessage = false;
     
     /***** FOR SYSTEM ******/
     //forms
@@ -259,7 +260,8 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     //ACTUALIZAME
     $scope.updateOrSaveSystemDetail = function(){
         if( $scope.isSystemDetailDataOk() ){
-            $('#myLoadingModal').modal('show'); 
+            $('#myLoadingModal').modal('show');
+            $scope.showPleaseWaitMessage = true;
             $http({
                 url: systemServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
                 method: "POST",
@@ -267,6 +269,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             })
             .then(function(response) {
                 $scope.updateSystemLocalData( response.data );
+                $scope.showPleaseWaitMessage = false;
                 if( response.data.includes( "INSERT" ) ){ 
                     swal( { text: "INSERT DONE", icon: "success" } );
                 }else{
@@ -275,6 +278,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             }, 
             function(response) { // optional
                 swal( { text: "FAIL", icon: "error" } );
+                $scope.showPleaseWaitMessage = false;
                 $('#myLoadingModal').modal('hide'); 
             });
         }
@@ -596,6 +600,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     $scope.updateOrSaveMachineDetail = function(){
         if( $scope.isMachineDetailOk() ){
             $('#myLoadingModal').modal('show'); 
+            $scope.showPleaseWaitMessage = true;
             $http({
                 url: machineServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
                 method: "POST",
@@ -603,6 +608,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             })
             .then(function(response) {
                 $scope.updateMachineLocalData( response.data );
+                $scope.showPleaseWaitMessage = false;
                 if( response.data.includes( "INSERT" ) ){ 
                     swal( { text: "INSERT DONE", icon: "success" } );
                 }else{
@@ -611,6 +617,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             }, 
             function(response) { // optional
                 swal( { text: "FAIL", icon: "error" } );
+                $scope.showPleaseWaitMessage = false;
                 $('#myLoadingModal').modal('hide'); 
             });
         }
