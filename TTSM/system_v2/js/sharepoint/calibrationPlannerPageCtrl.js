@@ -7,8 +7,6 @@ var miApp = angular.module( "miApp" , [] );
 miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window', function( $scope , $http , $window ){
     /**** variables ****/
     //URL
-    var systemServiceUrl = serviceUrl + "php/resources/catalogs/SystemResource.php";
-    var machineServiceUrl = serviceUrl + "php/resources/catalogs/MachineResource.php";
     var calibrationPlannerServiceUrl = serviceUrl + "php/resources/excel/CalibrationPlannerResource.php";
     var serviceReminderServiceUrl = serviceUrl + "php/resources/excel/ServiceReminderResource.php";
     $scope.relativeUrl = "../../";
@@ -56,6 +54,21 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
         { value : "PAST" , name : "PAST" },
         { value : "NO APPLY" , name : "NO APPLY" }
     ];
+    $scope.monthCatalog = [
+        { value : "" , name : "-- ALL --" },
+        { value : "01" , name : "January" },
+        { value : "02" , name : "February" },
+        { value : "03" , name : "March" },
+        { value : "04" , name : "April" },
+        { value : "05" , name : "May" },
+        { value : "06" , name : "June" },
+        { value : "07" , name : "July" },
+        { value : "08" , name : "August" },
+        { value : "09" , name : "September" },
+        { value : "10" , name : "October" },
+        { value : "11" , name : "November" },
+        { value : "12" , name : "December" }
+    ];
     $scope.emailToSendResume = "";
 
     //table
@@ -66,6 +79,7 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.filterCompanyInCalibrationPlanner = "";
     $scope.filterMachineTypeInCalibrationPlanner = "";
     $scope.filterStatusInCalibrationPlanner = "";
+    $scope.filterMonthInCalibrationPlanner = "";
     $scope.isShowPlantInCalibrationPlanner = false;
     $scope.isShowPersonInCalibrationPlanner = false;
     $scope.isShowEmailInCalibrationPlanner = false;
@@ -77,6 +91,21 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.labelEmailStyle = "label-danger";
     $scope.labelEmailToSendStyle = "label-danger";
     $scope.labelDateLastReminderSentStyle = "label-danger";
+    
+    //
+    $scope.isMonthSelected = function( paramDate ){
+        var returnData = false;
+        if( $scope.filterMonthInCalibrationPlanner == "" ){
+            returnData = true;
+        }else{
+            if( paramDate.includes( "-" ) ){
+                if( paramDate.split( "-" )[1] == $scope.filterMonthInCalibrationPlanner ){
+                    returnData = true;
+                }
+            }
+        }
+        return returnData;
+    }
     
     //
     $scope.clicShowColumn = function( param ){
@@ -131,6 +160,37 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
                 //
                 $scope.tableCalibrationPlanner[ index ].lastReminderSent = "NEVER";
             }
+            
+            /*
+             * systemSerialNumber
+             * systemType
+             */
+            var tableAux = [];
+            var contador = -1;
+            var isSameSystemSerialNumber = false;
+            //
+            for( var index in $scope.tableCalibrationPlanner ){
+                if( contador == -1 ){
+                    tableAux.push( $scope.tableCalibrationPlanner[ index ] );
+                    contador++;
+                }else{
+                    if( tableAux[ contador ].systemSerialNumber == $scope.tableCalibrationPlanner[ index ].systemSerialNumber ){
+                        isSameSystemSerialNumber = true;
+                    }else{
+                        isSameSystemSerialNumber = false;
+                    }
+                    
+                    
+                    if( isSameSystemSerialNumber ){
+                        tableAux[ contador ].systemType += " / " + $scope.tableCalibrationPlanner[ index ].systemType;
+                    }else{
+                        tableAux.push( $scope.tableCalibrationPlanner[ index ] );
+                        contador++;
+                    }
+                }
+            }
+            $scope.tableCalibrationPlanner = tableAux;
+            
             $('#myLoadingModal').modal('hide');
         }, 
         function(response) { // optional

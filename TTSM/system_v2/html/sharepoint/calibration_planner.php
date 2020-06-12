@@ -13,7 +13,6 @@ Programmer: Alejandro Aguayo Acosta
 <html>
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         
-        
         <title>Calibration Planner</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,7 +93,18 @@ Programmer: Alejandro Aguayo Acosta
                     class="input-sm"
                     ng-options="x.value as x.name for x in statusCatalog"
                     >
-                </select><br>
+                </select>
+                <label class="label label-info">Filter by Status</label><br>
+                
+                <select
+                    title="Select Month to filter list"
+                    ng-model="filterMonthInCalibrationPlanner"
+                    class="input-sm"
+                    ng-options="x.value as x.name for x in monthCatalog"
+                    >
+                </select>
+                <label class="label label-info">Filter by Month</label><br>
+                
                 Show/hide columns: <label class="label {{ labelPlantStyle }}" ng-click="clicShowColumn( 'plant' )">Plant</label>
                 <label class="label {{ labelPersonStyle }}" ng-click="clicShowColumn( 'person' )">Person</label>
                 <label class="label {{ labelEmailStyle }}" ng-click="clicShowColumn( 'email' )">Email</label>
@@ -132,6 +142,7 @@ Programmer: Alejandro Aguayo Acosta
                                 ( ( filterCompanyInCalibrationPlanner == row.companyName ) || ( filterCompanyInCalibrationPlanner == '' ) )
                                 && ( ( filterStatusInCalibrationPlanner ==  row.status ) || (filterStatusInCalibrationPlanner == '' ) ) 
                                 && ( (  row.systemType.includes( filterMachineTypeInCalibrationPlanner ) ) || (filterMachineTypeInCalibrationPlanner == '' ) )
+                                && ( isMonthSelected( row.nextCalibrationDate ) )
                                 )
                             "
                             >
