@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Japan Atomic Energy Agency</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 8 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Japan Atomic Energy Agency</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Japan Atomic Energy Agency</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Japan Atomic Energy Agency</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+
+
+<!-- Subtitle -->
+<h3>
+La medición 3D con una precisión de nivel de micras brilla en un sistema experimental de gran escala que soporta física fundamental.
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+El pueblo de Tokai-mura, en la prefectura de Ibaraki, tiene una instalación de investigación con el mejor rendimiento del mundo en un enorme terreno de 65 hectáreas, equivalente a 14 veces el área del Domo de Tokio. Se llama Complejo de Investigación del Acelerador de Protones de Japón (J-PARC). Lanzó su operación en 2009, como un proyecto conjunto entre la Agencia de Energía Atómica de Japón (JAEA) y la Organización de Investigación del Acelerador de Alta Energía (KEK).
+<br><br> Esta instalación se ha utilizado para experimentos y estudios que utilizan " haces de protones de alta energía ". Los protones, que se crean con gas hidrógeno, se aceleran en un acelerador grande al 99.98% de la velocidad de la luz y se usan para irradiar a un núcleo atómico diana. Varias partículas secundarias generadas a partir de la energía de colisión entre los protones y el núcleo se utilizan para la ciencia de vanguardia.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+El Dr. Takaaki Kajita, del Instituto de Investigación de Rayos Cósmicos de la Universidad de Tokio, ha demostrado que los neutrinos tienen masa usando el "Super-Kamiokande", un observatorio de neutrinos en Kamioka-cho, Prefectura de Gifu. Es ampliamente conocido que recibió el Premio Nobel de Física en 2015. En J-PARC, los investigadores están utilizando rayos de protones de alta energía para crear neutrinos artificiales y dispararlos a Super-Kamiokande, ubicado a 295 km de distancia para avanzar en la investigación de neutrinos.
+<br> <br>
+Para acelerar los haces de protones de alta calidad y de alta energía, es necesario alinear varios cientos de electroimanes con precisión durante una larga distancia (llamada alineación de precisión). Si la precisión de la alineación es baja, la calidad del haz disminuye, haciendo imposible generar haces de alta energía. Como solución a este problema, están utilizando el <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a> A1 de Tokyo Boeki Techno-system. Han adoptado el equipo desde 2011, con un total de cuatro dispositivos, incluido un modelo de gama alta dentro de J-PARC.
+<br> <br>
+¿Qué tipo de medición se realiza en la instalación de investigación de vanguardia J-PARC? Hablamos con el Sr. Norio Tani y el Sr. Takatoshi Morishita en la división de aceleradores a cargo del diseño y administración de equipos.
+</p>
+</div>
+</div>
+                        
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Mr. Norio Tani (izquierda) / Mr. Takatoshi Morishita (derecha)
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Están involucrados en el diseño y desarrollo de grandes aceleradores: el Sr. Tani está a cargo de un acelerador cíclico, "3 Sincrotrón de ciclado rápido GeV (RCS)", y el Sr. Morishita está a cargo de un acelerador lineal, " œLinac.â € � Realizan mantenimiento y ajustes regulares para mantener las líneas del haz del acelerador de protones de alta energía.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Cubre no solo aplicaciones industriales, sino también investigaciones sobre los misterios del espacio y la ciencia de los materiales.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador: ¿Qué tipo de instituto de investigación es J-PARC?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Sr. Tani (T): </strong> todo lo que nos rodea consiste en partículas invisibles, llamadas átomos. Cada átomo tiene un núcleo, que contiene protones y neutrones. Como se trata de piezas de materia extremadamente pequeñas, es muy difícil investigarlas. J-PARC nos permite estudiar estructuras y movimientos de materia a nivel atómico.
+<br> <br>
+Para ello, utilizamos haces de protones de alta energía. En J-PARC, usamos un acelerador grande para acelerar los protones generados a partir de una fuente de iones y hacer que el haz de protones choque contra un objetivo a una velocidad cercana a la velocidad de la luz. Luego, el núcleo del objetivo se disocia en partículas secundarias más pequeñas, que incluyen neutrones, mesones y neutrinos. Usando estas partículas secundarias, puede investigar dentro de un átomo o la estructura de un elemento de materia.
+<br> <br>
+Por ejemplo, los elementos de luz, como el litio, son difíciles de visualizar usando un microscopio electrónico y también son difíciles de capturar con una radiografía. Sin embargo, los neutrones pueden capturar estos elementos. En la investigación de baterías de litio, se generan neutrones y se utilizan para seguir procesos de reacción detallados de litio. Una vez que comprendamos más sobre un fenómeno que ha sido invisible, podremos obtener una batería de litio de mayor rendimiento.
+<br> <br>
+<strong> Sr. Morishita (M): </strong> cuando tomas una foto, la cantidad de luz es clave. Para esta investigación, la cantidad de partículas secundarias dicta la calidad y la velocidad de los experimentos. Si pudiera generar una gran cantidad de neutrones, podría completar un experimento, que ha llevado varios días, en un día o incluso unas pocas horas. Cuanto más fuerte es el haz de protones, mayor es la cantidad de partículas secundarias. Por lo tanto, J-PARC tiene como objetivo suministrar haces de alta energía con precisión.
+<br> <br>
+<strong> E: Cuando llegué aquí por primera vez, me sorprendió el tamaño del local, en el que necesitamos un automóvil para desplazarnos. Supongo que los aceleradores deben ser enormes. </strong>
+<br> <br>
+<strong> T: </strong> En las instalaciones, hay tres grandes aceleradores y tres instalaciones experimentales. Estos aceleradores están conectados entre sí. Aumentamos gradualmente la energía del haz desde el acelerador aguas arriba y dividimos el haz a cada instalación experimental en función de sus demandas.
+<br> <br>
+El acelerador lineal, `` Linac '', se encuentra aguas arriba de los otros. Con una longitud total de aproximadamente 330 m, este acelerador genera protones a partir de una fuente de iones, los acelera a aproximadamente el 70% de la velocidad de la luz y entrega el haz al siguiente acelerador cíclico " RCS ".
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Figura 1: La parte para la inyección del haz de Linac a RCS. El rayo proviene de Linac ubicado en la parte posterior del lado derecho y va a la línea de rayo circular de RCS.<br> <br>El circuito completo de RCS es de unos 350 m, lo que permite acelerar un haz al 97% de la velocidad de la luz. Desde este punto, la línea del haz se divide en dos líneas de haz. Uno va al Centro Experimental de Materiales y Ciencias de la Vida, donde los investigadores usan neutrones y muones para realizar investigaciones industriales, como la batería de litio mencionada anteriormente, así como otras investigaciones, incluida la aclaración de la estructura de las proteínas y estudios agrícolas.<br> <br>El otro va a un acelerador cíclico â € œ50 GeV synchrotron (MR), que tiene un circuito completo de aproximadamente 1.600 m un diámetro de 500 m, lo que lo convierte en el acelerador de protones más grande de Japón. Más abajo, está la Instalación Experimental de Neutrinos y la Instalación Experimental Hadron, donde los investigadores se dedican a estudios básicos, como los del origen del universo y el nacimiento de la materia.<br> <br>Esta disposición de varias instalaciones que divergen de la línea de haz principal es exclusiva de J-PARC.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Laser Tracker para mediciones de precisión en un amplio rango
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> I: No sabía que el Laser Tracker AT401 se usa en una ciencia tan avanzada. </strong>
+<br> <br>
+<strong> M: </strong> Realizamos mantenimiento en todos los aceleradores completos, nos toma tres meses al año. Estoy a cargo del acelerador lineal, que se encuentra en un lugar a 13 m debajo del suelo, que incluye unos 60 componentes para la aceleración del haz y unos 300 grandes electroimanes para transportar el haz. Siempre tuve dificultades para alinearlos precisamente en línea recta.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Figura 2: Trabajo de alineación de un acelerador lineal con AT401.
+<br> <br>
+Antes de introducir el rastreador láser, solíamos usar un tipo de telescopio, llamado "telescopio de alineación", que fue desarrollado para alinear objetos en línea recta. Este método basado en telescopio es útil cuando quiero alinear equipos a intervalos de aproximadamente varios micrómetros dentro de una zona de aproximadamente 10 m.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Para el acelerador, sin embargo, el intervalo de instalación también es importante. Sin una alineación periódica adecuada, el haz no puede acelerarse. Por lo tanto, necesitamos usar una herramienta para medir la distancia y el intervalo, como las Estaciones Totales y los micrómetros.
+<br> <br>
+<strong> T: </strong> Dentro de la zona de transporte del haz, un haz está doblado, por lo que necesitamos una herramienta que pueda medir ángulos y distancias al mismo tiempo, como teodolitos y niveles automáticos. En otras palabras, dado que los dispositivos mencionados anteriormente tienen diferentes ventajas y desventajas en diferentes aplicaciones, solíamos usar el más adecuado para un propósito particular. Pude mostrar mi habilidad como persona a cargo de la alineación, pero me llevó mucho tiempo.
+<br> <br>
+En ese sentido, el Laser Tracker AT401 es muy confiable cuando tengo que alinear eficientemente los componentes con una alta precisión en una instalación a gran escala. Este rastreador puede medir ángulos y distancias al mismo tiempo, con un rango de medición de más de 100 m y una precisión de medición de varias docenas de µm o menos. AT401 también se utiliza para medir la posición de electroimanes y cavidades en el acelerador cíclico del que estoy a cargo.
+<br> <br>
+<strong> M: </strong> Otro factor decisivo para adoptar el AT401 fue la combinación del tiempo de implementación y las características. Esta instalación fue gravemente dañada por el Gran Terremoto del Este de Japón en 2011, con las líneas del haz rotas y el edificio roto. El problema más grave fue que el piso del túnel del acelerador lineal se inundó.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Tuvimos que restaurar las instalaciones para nuestra investigación, pero el dispositivo que solíamos usar, <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> LT600, no se pudo usar ya que el cuerpo del dispositivo y el controlador de energía están conectados con un cable. Si se usa en un lugar empapado de agua, podría causar una falla de energía. Entonces, cuando escuché sobre un rastreador láser a batería, inmediatamente lo busqué. Creo que no hubo otros proveedores que tuvieran un tipo inalámbrico de alto rendimiento. Creo que casi inmediatamente me decidí por ese.
+<br> <br>
+El AT401 es más liviano pero tiene un rendimiento más alto, lo que me atrajo aún más.
+</p>
+</div>
+</div>      
+
+
+<!-- Photo Piece06 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece06.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Figura 3: Realización de mediciones con LT600
+<br> <br>
+<strong> I: ¿Qué pensaste una vez que realmente usaste AT401? </strong>
+<br> <br>
+<strong> M: </strong> Como nuestro tiempo de mantenimiento es limitado, todavía estamos utilizando AT401 y LT600 para acortar el tiempo. Pero puedo decir que la cantidad de trabajo que AT401 puede completar es muy superior a la de LT600. Durante la medición, si un reflector está fuera de la vista de un rastreador láser incluso en un parpadeo, tenemos que volver a capturar el láser. Con el modelo anterior, se produce un pequeño error en esta situación. Por lo tanto, tenemos que deliberar sobre cómo mover los reflectores para que la captura con láser no se corte durante la medición en componentes complicados.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece07 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAtomic/japanAtomicPiece07.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Figura 4: Realización de mediciones con AT401
+<br> <br>
+Pero gracias a la mejora del rendimiento del seguimiento, el problema de los errores en la re-captura del láser se está resolviendo gradualmente. Con AT401, la tecnología PowerLock evita que el rastreador láser pierda reflectores. Es muy conveniente.
+<br> <br>
+<strong> T: </strong> Lo que realmente aprecio de AT401 es que el mantenimiento se puede realizar casi por completo en el país. Los rastreadores láser son convenientes, pero en el pasado, su mantenimiento tenía que hacerse fuera del país, lo que me preocupaba por la disponibilidad en un momento de emergencia. Sin embargo, escuché que Tokyo Boeki Techno-System puede proporcionar todo el trabajo de mantenimiento en las mismas condiciones que <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a>, incluido el intercambio de láser y la corrección del prisma. Si sucede algo, puedo consultar con la compañía y ellos pueden apoyarme. Este es el mayor apoyo para mí.
+<br> <br>
+<strong> I: El acelerador lineal tiene más de 300 metros de largo. ¿Cuántos puntos de medición tiene que establecer? </strong>
+<br> <br>
+<strong> M: </strong> Un total de aproximadamente 300 puntos. Para lograr una precisión de varias docenas de µm, hemos definido "una zona de medición" como "dentro de los 10 m delante y detrás de un rastreador". Después de completar la medición de una zona, tenemos que mover el " rastreador láser "para que algunos puntos de medición puedan superponerse, y luego conectar las coordenadas para ver la forma lineal completa.
+<br> <br>
+Hay alrededor de 15 puntos de medición en una zona. Repetimos la medición para eliminar cualquier error grande y / o promediar los valores de medición para reducir cualquier error. En la parte lineal de 300 m, medimos 60 zonas mientras movemos el rastreador, lo que resulta en la medición de un total de cerca de 1,000 puntos de medición.
+<br> <br>
+<strong> T: </strong> En J-PARC, antes de la instalación del acelerador, determinamos y marcamos los puntos de observación necesarios para el mantenimiento. Después de la instalación, utilizamos los puntos de observación para mantenimiento y administración. La precisión para el sincrotrón de ciclado rápido 3 GeV es más alta; lo ajustamos a un nivel de precisión con un error dentro de ± 0.2 mm.
+<br> <br>
+<strong> I: ¿Es el error realmente solo dentro de ± 0.2 mm para el sistema de más de 300 m de longitud? </strong>
+<br> <br>
+<strong> T: </strong> Sí. Discutimos la precisión de la instalación del sistema en la etapa inicial del proyecto y, en general, debe establecerse en el nivel de precisión más alto posible para los tiempos. Esto se debe a que, al igual que la precisión de producción del sistema y la estabilidad operativa, el error de alineación puede afectar el rendimiento del acelerador. En las instalaciones de investigación, investigamos la tecnología de medición disponible en las condiciones existentes, en el momento del diseño, para que la alta precisión se pueda mantener durante mucho tiempo. Tenemos que pensar "cómo se debe colocar el equipo para utilizar con éxito la tecnología" para crear un sistema mientras se considera el nivel más alto de mantenimiento desde el principio.
+<br> <br>
+<strong> M: </strong> Sin embargo, es imposible lograr precisión con cero errores, por lo que también tenemos que probar y colocar una herramienta para corregir cualquier efecto adverso en una viga por error de alineación. Cuanto menor es el error esperado, menor es el número de herramientas para la corrección y su rendimiento, lo que conduce a una reducción de costos.
+<br> <br>
+<strong> T: </strong> Además, las condiciones de medición siguen cambiando debido a varios factores, como la temperatura, la humedad y la corteza terrestre; por lo tanto, el error es inevitable incluso si buscamos un rendimiento del 100% en la etapa de diseño. Los investigadores de desarrollo de diseño, incluido yo, intentamos hacer un diseño que pueda aceptar cierto nivel de cambios condicionales. Sin embargo, es cierto que cuanto más precisa sea la posición de un sistema, mayor será la intensidad de salida que podemos aplicar. El rastreador láser es vital para mantener la calidad de la instalación.
+</p>
+</div>
+</div>
+                        
+                            <!-- Japan Atomic Energy Agency Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <!--div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/japanAtomic/japanAtomicLogo.jpg" style="width: 100%;">
+                                </div-->
+
+                                <!-- Datos -->
+                                <div class="col-md-12">
+                                    <h3>
+Acerca de Japan Atomic Energy Agency
+                                    </h3>
+                                    <p>
+ Establecida en octubre de 2005 como una agencia administrativa independiente al fusionar el Instituto de Investigación de Energía Atómica de Japón y el Instituto de Desarrollo del Ciclo Nuclear de Japón (Cycle Institute, ex Reactor de Energía / Corporación de Desarrollo de Combustible Nuclear), la agencia se reorganizó como una Corporación Nacional de Investigación y Desarrollo en Abril de 2015. Como la única organización de investigación y desarrollo nuclear integral de Japón, realiza investigación y desarrollo sobre mejora de la seguridad nuclear y el ciclo del combustible nuclear. Hay cinco departamentos de I + D y nueve bases en Japón.
+                                   </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+    </body>
+</html>

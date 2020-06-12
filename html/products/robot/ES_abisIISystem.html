@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ABIS II System</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/robot/abisIISystem_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/robot/ES_mainRobot.html">ROBOT</a> / 
+                <a href="">ABIS II System</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'abisIISystem' , 1 )">
+                                        <img src="../../../images/pages/products/robot/abisIISystem_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'abisIISystem' , 2 )">
+                                        <img src="../../../images/pages/products/robot/abisIISystem_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'abisIISystem' , 3 )">
+                                        <img src="../../../images/pages/products/robot/abisIISystem_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ABIS II System</h1></div>
+                            <h3>Objective and fast measurement with modular sensors</h3>
+                            <h3>ABIS II - Continuous analysis of the surface quality troughout the complete process chain</h3>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div class="row">
+                            <h3>Objective and fast measurement with modular sensors</h3>
+                            <p>
+                                With the ABIS II sensors, a wide range of defect types can be detected. Featuring a reliable, early recognition and classification of dents, bumps, sink marks, waviness, constrictions, cracks, etc., the systems represent the perfect quality control instruments for the production of sheet metal parts and bodies-in-white. Users especially benefit from the high precision and extremely short cycle times.
+                                <br>The modular sensor technology of ABIS II offers an exceptionally high flexibility. With the optional integration of the contrast sensor, the detection of contrast-sensitive defects such as adhesive residues, scratches and dirt, is also possible.
+                            </p>
+                            <h3>ABIS II - Continuous analysis of the surface quality troughout the complete process chain</h3>
+                            <p>
+                                <br>Many users in the automotive industry rely on an integrated surface quality analysis across the entire process chain. After each of the process steps Single Part, Assembly and Cathodic Dip Painting, the individual parts are examined again by same inspection application to identify any surface defects that might affect the top coat quality. The development of a defect is documented after each process step. Practical experience in production shows that the relevance of a surface defect can increase or decrease after a process step.
+                                <br>
+                                <br>Based on a process-wide quality analysis, the required rework is done precisely at the required location on the part and at the required process steps. This increases the efficiency in the finishing area and results in a significant cost saving. Besides the development of a surface defect across the process chain, the time-related changes within a production period also give users important information on the quality changes. For example, when the audit value deteriorates, corrective action (e.g. regarding press parameters or tool surfaces) can be taken at an early stage before producing parts with defects that will later require rework.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            TO DO
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

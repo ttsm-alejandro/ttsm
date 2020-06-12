@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+        <title>Perfil de la Compañia</title>
+        <link rel="icon" href="images/util/icono.png">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="getCurrentUrl();"
+             >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/ES_header.html'"></div>
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                <div class="row">
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                    <div class="col-md-8" style="text-align: left">
+                        <h2 style="text-align: right">TTS MÉXICO</h2>
+                        <h4 style="text-align: right">Proveemos soluciones en 3-D</h4>
+                        <h2>Acerca de Nosotros</h2>
+                        <p>
+                            
+                            TTSM es una compañía internacional que ofrece y soporta los mejores sistemas de medición y diseño tridimensional en el mundo. Asimismo, crea -de la mano del cliente- soluciones integrales que, mediante ingeniería de vanguardia, integran la tecnología más avanzada para atender e impulsar la mejora y evolución de los procesos de manufactura.
+                            <br><br>Como parte de la empresa global Tokyo Boeki Techno System LTD. (TTS) trabajamos estrechamente con algunas de las mejores marcas para ofrecer a nuestros clientes en todo el mundo, los mejores productos y el mejor servicio.
+                        </p>
+                        
+                        
+                        <h2>TTS y TTS México (TTSM)</h2>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}"></th>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}">TTS</th>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}">TTSM</th>
+                            </tr>
+                            <tr>
+                                <th>Nombre de la Compañia</th>
+                                <td>TOKYO BOEKI TECHNO-SYSTEM LTD.</td>
+                                <td>TOKYO BOEKI TECHNO-SYSTEM DE MEXICO, S.A. de C.V.</td>
+                            </tr>
+                            <tr>
+                                <th>Oficina Matriz </th>
+                                <td>KYOBASHI EDOGRAND 28F, 2-2-1, Kyobashi, Chuo-ku, Tokyo,Japan </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Fundación  </th>
+                                <td>1 de Marzo de 1994</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Capital  </th>
+                                <td>340 millones de yen</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Numero de empleados </th>
+                                <td>125 personas (hombre: 95 personas / mujeres: 30 personas) *hasta marzo del 2018</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Edad promedio </th>
+                                <td>43.1 años (hombres: 44.1 años/ mujeres 39.8 años) *hasta marzo del 2018</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Shareholder</th>
+                                <td>Tokyo Boeki Holdings Corporation (100%)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Ventas anuales</th>
+                                <td>6 billiones de yens (Fin del Año Fiscal, Marzo 2018)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Composicion de Productos</th>
+                                <td>Sistemas de medicion 3-D 80%, Software 20%</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Composicion del Mercado</th>
+                                <td>Domestico (Japon) 75%, Asia 15%, Estados Unidos 5%, Otros 5%</td>
+                                <td>Domestico (Mexico) 75%, SudAmerica 25%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                </div>
+                <div style="height: 5px"></div>
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/ES_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>

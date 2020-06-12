@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Leica AT403</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/laser/leicaAbsoluteTrackerAt403_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='LEICA';
+                               ">
+            
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                </hr>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/laser/EN_mainLaser.html">LASER TRACKER</a> / 
+                <a href="">Leica Absolute Tracker AT403</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Leica Absolute Tracker AT403</h1></div>
+                        <p>
+                            New all-in-one large-volume laser tracker system that sets a new standard for portability, simplicity, robust construction and measurement efficiency.
+                            <br><br>
+                            An all-in-one metrology solution more portable than any other on the market, the Leica Absolute Tracker AT403 from Hexagon Manufacturing Intelligence is a self-contained measurement workshop inside a compact and convenient single case.
+                            <br><br>
+                            With outperforming measurement process speed, operational simplicity like no other laser tracker and an unmatched level of robust construction, the Leica Absolute Tracker AT403 is a calculated bundle of affordable innovation without equal on the portable measurement market.
+                            <br><br>
+                            Improvements include faster and more economical stationary and continuous measurement processes, along with a streamlined station change procedure. Added WiFi access point functionality and hot-swappable batteries deliver unmatched measurement freedom. Designed for leading results in almost any imaginable measurement environment, it is rated for operation in temperatures ranging from -15 to 45 degrees Celsius and features built-in environmental monitoring, orient-to-gravity functionality and construction in line with the rigorous IP54 certification standard.
+                            <br><br>
+                            <strong>The Perfect Partner for the Leica B-Probe</strong>
+                            <br>The Leica Absolute Tracker AT403 presents the ideal solution for portable probing applications when paired with the established quality of the Leica B-Probe portable probing tool. This single-case portable probing system delivers improvements in measurement process speed and usability as well as customisable hidden-point reach. When added to the already class-leading cableless functionality of the Leica B-Probe, large-volume probing is now simpler and better than ever before.
+                        </p>
+                        
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <p>
+                            <strong>All-in-One Integrated Design</strong>
+                            <br>From integrated wireless connectivity, environmental monitoring and all-day battery power, to overview camera, RapidSight aim scope and ergonomic carry handle, every need is built in.
+
+                            <br><br><strong>Single-Box Probing System</strong>
+                            <br>Just one case contains the lightest and most portable sensor and probe as well as IR remote, with various transportation cases for full flexibility.
+
+                            <br><br><strong>Smart Connectivity</strong>
+                            <br>Built-in WiFi with true access point functionality delivers single-user operation through simple PC setup and remote control options via laptops, tablets or smartphones.
+
+                            <br><br><strong>PowerLock</strong>
+                            <br>Automatically re-establishes interrupted line of sight within a wide field of view with no user interaction required.
+
+                            <br><br><strong>Continuous Measurement</strong>
+                            <br>Continuous time and distance measurement mode.
+
+                            <br><br><strong>Entry-Level Probing</strong>
+                            <br>Cableless, battery-powered Leica B-Probe with customisable hidden-point capability.
+
+                            <br><br><strong>IP54 Certification</strong>
+                            <br>The IEC-certified sealed unit guarantees ingress protection against dust and other contaminants, enabling effective measurement in even the harshest environments. 
+
+                            <br><br><strong>MeteoStation</strong>
+                            <br>Integrated environmental unit monitors conditions including temperature, pressure and humidity to compensate for changes and ensure accurate measurements regardless of external factors.
+
+                            <br><br><strong>Orient-to-Gravity</strong>
+                            <br>Enables measurement with the Z-axis aligned to gravity, ideal for levelling and alignment tasks.
+
+                            <br><br><strong>Battery Power</strong>
+                            <br>Independent hot-swappable battery power supply allows for quick and easy cable-free setup and all-day wireless operation.
+
+                            <br><br><strong>Operating Temperature</strong>
+                            <br>Wide operating temperature range of -15 to 45 degrees Celsius.
+
+                            <br><br><strong>Measurement Volume</strong>
+                            <br>Ultra-large measurement volume of up to 320 metres (ø), with minimum measurement distance less than 0.8 metres.
+
+                            <br><br><strong>Hexagon Guarantee</strong>
+                            <br>Full 24-month factory warranty and guaranteed ten years of serviceability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <h4>Accuracy</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Reflector</th>
+                                    <td>U(x,y,z) = ± 15 μm + 6 μm/m (± 0.0006” + 0.000072”/ft)</td>
+                                </tr>
+                                <tr>
+                                    <th>Leica B-Probe</th>
+                                    <td>U(x,y,z) = ± 0.2mm (± 0.008”)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                            *All accuracies speci ed as Maximum Permissible Errors (MPE) and calculated per ASME B89.4.19-2006 and ISO10360-10:2016 using precision Leica 1.5” Red Ring Re ectors unless otherwise noted.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Absolute Distance Performance</th>
+                                    <td>± 10 μm (± 0.00039”) </td>
+                                </tr>
+                                <tr>
+                                    <th>Absolute Angular Performance (including Orient-to-Gravity)</th>
+                                    <td>± 15 μm + 6 μm/m
+                                        <br>(± 0.0006”+0.000072”/ft) 
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 02 -->
+                            <h4>Environmental</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Dust/Water</th>
+                                    <td>IP54 (IEC 60529)</td>
+                                </tr>
+                                <tr>
+                                    <th>Operating Temperature</th>
+                                    <td>15 ̊C to +45 ̊C </td>
+                                </tr>
+                                <tr>
+                                    <th>Relative Humidity</th>
+                                    <td>max. 95% (non-condensing)</td>
+                                </tr>
+                                <tr>
+                                    <th>Environmental Monitor</th>
+                                    <td>Temperature, pressure and humidity</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 03 -->
+                            <h4>Laser Safery</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Laser Class</th>
+                                    <td>Class 2 Laser Product in accordance with the IEC 60825-1 Second Edition (2014-05)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 04 -->
+                            <h4>Range</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Typical Reflector Measurement Volume (ø)</th>
+                                    <td>320 m </td>
+                                </tr>
+                                <tr>
+                                    <th>Minimum Reflector Measurement Distance</th>
+                                    <td>< 0.8 m </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 05 -->
+                            <h4>Interface</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Cable</th>
+                                    <td>TCP/IP (Cat5)</td>
+                                </tr>
+                                <tr>
+                                    <th>Wireless</th>
+                                    <td>WLAN (IEEE 802.11n)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 06 -->
+                            <h4>Power Management</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Internal</th>
+                                    <td>Lithium-ion battery with 8-hour typical runtime</td>
+                                </tr>
+                                <tr>
+                                    <th>External</th>
+                                    <td>AC Power supply</td>
+                                </tr>
+                                <tr>
+                                    <th>Optional</th>
+                                    <td>Power over Ethenet (PoE+)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 07 -->
+                            <h4>General Information</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Overview Camera</th>
+                                    <td>4:3 IR enhanced Image ≈ 10 ̊ FOV</td>
+                                </tr>
+                                <tr>
+                                    <th>Remote Control</th>
+                                    <td>
+                                        4-Button infrared 
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 08 -->
+                            <h4>Leica B-Probe</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Measurement Volume (ø)</th>
+                                    <td>Lithium-ion battery with 8-hour typical runtime</td>
+                                </tr>
+                                <tr>
+                                    <th>Relocation Volume (ø)</th>
+                                    <td>AC Power supply</td>
+                                </tr>
+                                <tr>
+                                    <th>Minimum Measurement Distance</th>
+                                    <td>Power over Ethenet (PoE+)</td>
+                                </tr>
+                                <tr>
+                                    <th>Dust-Waret</th>
+                                    <td>IP50</td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

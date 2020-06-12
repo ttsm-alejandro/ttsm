@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Japan Aerospace Exploration Agency (JAXA)</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 9 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/EN_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/others/EN_dpaSystem.html">DPA System</a><br>Japan Aerospace Exploration Agency (JAXA)</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'EN_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Japan Aerospace Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}EN_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}EN_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Japan Aerospace Exploration Agency (JAXA)</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/others/EN_dpaSystem.html">DPA System</a><br>Japan Aerospace Exploration Agency (JAXA)</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+          
+<!-- Subtitle -->
+<h3>
+Measuring relative displacement by photogrammetry<br>
+Aiming for creating a structure maintaining accuracy even in outer space
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+Japan Aerospace Exploration Agency (JAXA)JAXA is mentioned in every news report regarding launching rockets or satellite development that take place in Japan. Founded in 2003, JAXA started as a result of the merger of three institutions that had been involved in space development. It is one of the national research and development agencies, which is under the co-jurisdiction of the Cabinet Office, Ministry of Justice, Ministry of Education, Culture, Sports, Science and Technology, and Ministry of Economy, Trade and Industry, serving as an organization that holds the first-rank in research and technology in Japan’s space science.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+JAXA has offices and facilities all over Japan, including the Head Office, Chofu Aerospace Center (Chofu City, Tokyo), Sagamihara Campus with the Institute of Space and Astronautical Science (Sagamihara City, Kanagawa Prefecture), Kakuta Space Center, which is involved in the research and development of rocket engines (Kakuta City, Miyagi Prefecture), and Usuda Deep Space Center with a large parabolic antenna which is used for communicating with space probes (Saku City, Nagano Prefecture).
+<br><br>
+You may know of Tsukuba Space Center (Tsukuba City, Ibaraki Prefecture), where various activities for space development are performed, including development and operation of satellites and astronaut training, as well as Tanegashima Space Center (Minamitane-cho, Kumage County, Kagoshima Prefecture), which often appears on the news about rocket launching. They are also among JAXA’s facilities. If you are interested in space, these may be the places you want to visit at least once.
+<br><br>
+JAXA’s activities go beyond the space development field. They are involved in various types of research from basic research to that directly translated into business, including studies aiming for elucidating the mysteries of the origin of the universe and the birth of life, environment- and safety-conscious aero technology research, and industry-academia-government collaboration to enhance industrial competitiveness by improving aerospace technology.
+<br><br>
+We have visited the Institute of Space and Astronautical Science, which focuses on development of talented people who will be able to contribute to future space science as well as achieve a higher level of technological development by bringing in researchers from various companies and academic and research organizations. The facility has five divisions, including the Division of Space Astronomy and Astrophysics, which aims to understand space based on observations; the Division of Space Flight Systems, which is involved in space navigation; the Division of Interdisciplinary Space Science, which extends to surrounding fields; the Division of Spacecraft Engineering, which aims to lead to engineering technology; and the Division of Solar System Sciences, which focuses on the solar system.
+</p>
+</div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+■Dr. Kosei Ishimura (Doctor of Engineering)
+</h3>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospaceStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+ He has been conducting his studies about the shape stability of structural systems of space structures and is currently engaged in the development of satellite structures. As an associate professor at the Institute of Space and Astronautical Science, he also plays a role in the training of younger people.
+</p>
+</div>
+</div>
+
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Repeat measurement in a harsh environment that simulates space.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Interviewer (I): You are in the Division of Space Flight Systems. Please tell me about your research.
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+In Japan’s space science, particularly at sites of research and development using cutting-edge technologies, what is the significance of “measuring”? To get an answer for that, we interviewed Dr. Kosei Ishimura, an associate professor at Division of Space Flight Systems.
+<br><br>
+The main fields of research at my division include system engineering related to space navigation, space transportation engineering, and space structures and material engineering. I am in charge of the research of artificial satellite structures.
+<br><br>
+An artificial satellite is a structure to be launched into space; therefore, it is required to be able to withstand the vibration at launching as well as maintain its space, surfaces, and the position of items on board even under a harsh environment with extreme temperatures. Some of the items on board are precision equipment, such as antennas and observation equipment. In a satellite, they have to be kept highly accurate.
+<br><br>
+One of the ideal structures is an unchangeable structure that won’t have any deformation or dislocation under any environment. In order to create an unchangeable structure, we need a measuring device that can accurately detect any change. So, along with development of the technology for maintaining the shape of a structure, one of the important points in our research is to find a technology or method to allow for accurate measurement.
+<br><br>
+<strong>I: In which part of your satellite is our product used?</strong>
+<br><br>
+I am currently developing a satellite that has wings of several meters. Each wing consists of three 70 cm-square panels. The wings are stowed inside at launch and open up after the satellite arrives at the orbit. These wings together are supposed to form a large flat antenna. The rear side of the antenna holds solar cells to produce electricity.
+<br><br>
+Solar cells can produce electricity without being much affected by small tilts, like 0.5 degrees or 1 degree. But, the deviation of 1 degree is fatal for the antenna, causing the antenna to lose its function partially or completely depending on the wavelength. In order to prevent such a situation from occurring in space, we use your product to measure the flat antenna for testing and creating any necessary solutions on earth.
+<br><br>
+At the stage of development, we test whether a truly flat surface has been created that meets all the accuracy requirements in the deployed status, which is its basic movement. Even if we do testing under identical conditions, we always get different measurement values. Accepting this as a given, we repeat the stowed condition and the deployed condition to see how much deviation occurs when it is stowed and whether the deviation is acceptable. If there is an unacceptable deviation, we find out the cause by analyzing the data and take all necessary measures, such as a change in the shape or material.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong>I: Do you perform measurement in an environment similar to space?</strong>
+<br><br>
+After determining the accuracy in the basic movement, we conduct further measurements under different conditions. We perform measurement and assessment for each of the possible influencing parameters; for example, we compare the measurements obtained before and after a vibration test or exposure to a thermal vacuum environment. In general, we repeat measurements for assessment, not only once. As for an artificial satellite, we make more than one model, including flight models that actually go to space and engineering models, for both of which we conduct the same tests.
+<br><br>
+Space has a harsh environment, which could be several hundred degrees Celsius with direct sunlight and several hundred degrees Celsius below zero in shade. Of course, we use materials that are resistant to thermal deformation, but we try to further prevent deformation by various means, such as attaching a cover to avoid direct sunlight if it could cause any difference that influences observation, and applying temperature control. For developing these measures, detailed measurement data are essential.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong>I: Then, if you are expected to achieve higher accuracy, you have to improve measurement technology.</strong>
+<br><br>
+Right. I think that the measurement accuracy we are expected to provide is getting higher and higher. For us, it is important to have a technology to accurately measure large-scale structures, and the accuracy really matters.
+<br><br>
+In order to achieve high measurement accuracy for large-scale structures with other methods, such as measuring the distance from jigs fixed on a building floor and placing reference points in a building, we need to be very careful because, if those fixed points are shifted even slightly due to the temperature-or humidity-induced expanding and contracting of the whole building, the accuracy will be affected. If you have shifted reference points, you don’t know if you can believe your measurement values. On that point, if I use the method to place reference points on a measurement object based on the principle of photogrammetry, I can obtain relative measurement values without worrying about displacement of reference points.
+<br><br>
+Nevertheless, we still repeat measurements, never stopping with a single measurement, for verification and try to achieve our target accuracy by looking at average values and exploring any factors causing changes.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Our ultimate goal is to get an immovable “reference”
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+I: How many times do you repeat verification?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+It is hard to say without specifying conditions, but we have to measure the accuracy of a measuring instrument itself in every case. We repeat measurements of a test piece for a performance test, see how much variation in measurement can occur for that instrument, and determine if the variation is acceptable for our tests.
+<br><br>
+For assessment of thermal deformation, we apply heat to a test structure, measure how much deformation occurred to the structure, and compare the obtained values and values from a thermal distribution analysis model which we prepared in advance. This way, we can check if our prediction from the past studies correctly predicts the actual phenomenon we see with a real object. If our prediction was wrong, we have to question the validity of our measurement results as well as our analysis model. We have to think about all the possibilities, including whether the structure was really distorted, whether the temperature measuring method was correct, or whether the analysis model was right.
+<br><br>
+In development research, the hardest part is that there is no “absolutely correct” reference point anywhere. If we want to say “This value is correct” based on measurement, we have to have evidence and validation that can convince everyone by making them think “I can trust measurement values from these conditions.” In the development and experiment stages, we repeat measurements in order to prepare the solid evidence and validation.
+<br><br>
+<strong>I: As I expected, development requires patience.</strong>
+<br><br>
+I am a researcher and also a teacher of students. I emphasize as a teacher the importance of process, not just going ahead by thinking “It should be this way,” but rather “I should be confirming if what I think it should be is true.”
+<br><br>
+As for measuring instruments, their catalogues tell you “This accuracy can be achieved under this condition.” But we will never know if we can achieve those results as in their specifications without actually using them. We have to see whether that accuracy is true even with a different user, environment, and object to be measured. If you get a result that agrees with your hypothesis, you are lucky. But, in order to judge the agreement, you need a process to confirm whether it really agrees with the hypothesis. This may apply to other things than measuring.
+<br><br>
+When it comes to engineering technology, I believe there are many cases where we won’t get one and only one solution. The way you interpret a result varies depending on your point of view. And there are various ways to achieve the same performance and/or accuracy. Numerical data is one kind of information you can get through experiments and verification. I believe my job as a researcher is to “explore various routes to climb a mountain” by looking at the numerical data.
+<br><br>
+<strong>I: So, you seek for absolute accuracy, and there are various ways to get there.</strong>
+<br><br>
+Exactly. We seek for absolute accuracy, so we should know what causes the difference between the target accuracy and the actual accuracy we get. For example, if the requirement is “no thermal deformation at this part,” you should know that when that part has thermal deformation the quality of the measurement results goes down. If you can detect how the quality goes down, you can correctly assess and create a necessary solution.
+<br><br>
+When you try to point out such a difference, your problem will be quickly dissolved if you have an “absolute existence,” which is an immovable reference point in the case of measurement. For a satellite, by placing the “stable large-scale structure” at the point of origin, you can advance highly accurate development, focusing only on “how to change from that point.”
+<br><br>
+As a researcher, my ultimate goal is to create an absolutely stable structure. As I already said, in order to verify something, we need highly advanced measurement technology and repetition of analysis. There may not be an absolute solution. However, because of such an ultimate goal, I have motivation to try to reach it regardless of how many years it takes.
+</p>
+</div>
+</div>              
+                        
+                        
+                        
+
+                            <!-- Japan Aerospace Exploration Agency (JAXA) Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <!--div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/japanAerospace/japanAerospaceLogo.jpg" style="width: 100%;">
+                                </div-->
+
+                                <!-- Datos -->
+                                <div class="col-md-12">
+                                    <h3>
+About JAXA
+                                    </h3>
+                                    <p>
+Founded in October 2003, JAXA is a research development organization in charge of national aerospace development policies. The official name is Japan Aerospace Exploration Agency. It was established through the integration of the Institute of Space and Astronautical Science (ISAS), which is under the jurisdiction of the Ministry of Education, the National Aerospace Laboratory (NAL), and the National Space Development Agency of Japan (NASDA), which were all devoted to space and planetary research. After the integration, researchers share the technologies and research achievements from respective organizations to advance development.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/EN_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

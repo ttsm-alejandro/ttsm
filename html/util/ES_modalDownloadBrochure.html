@@ -1,0 +1,137 @@
+<div class="modal fade" id="modalDownloadBrochure" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color: white; background-color: {{ ttsmBlueColor }}">Formulario de descarga</h3>
+            </div>
+            
+            <!-- Form data -->
+            <div class="modal-body">
+                
+                <!-- Subtitulo -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Por favor llene la siguiente informacion</h4>
+                    </div>
+                </div>
+                <form ng-submit="clicDownloadBrochure()">
+                
+                <!-- Proposito de descargar el brochure -->
+                <div class="row">
+                    <div class="col-md-10" style="background-color: #d9edf7">
+                        <h5 style="color: black;">¿Cual es el proposito de descargar este brochure?</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="checkbox" ng-model="brochureFormData.downloadPurposeA">Actualmente tengo un producto similar
+                        <br>
+                        <input type="checkbox" ng-model="brochureFormData.downloadPurposeB">Considerando el producto
+                        <br>
+                        <input type="checkbox" ng-model="brochureFormData.downloadPurposeC">Considerando comprar el producto
+                        <br>
+                        <input type="checkbox" ng-model="brochureFormData.downloadPurposeD">Reuniendo informacion
+                    </div>
+                </div>
+                
+                <!-- Donde se entero de TTS -->
+                <div class="row">
+                    <div class="col-md-10" style="background-color: #d9edf7">
+                        <h5>¿Donde se entero de nuestra compañia? (solo 1 opcion)</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="Internet search">Busqueda en Internet (Google, Yahoo, others） 
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="Introduction from TTS staff">Presentacion por parte de staff de TTS
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="TTS News letter">TTS News letter
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="Event (exhibition, seminars, etc.)">Evento (exhibicion, seminario, etc.)
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="SNS（Facebook, Twitter, etc.)">Social Network (Facebook, Twitter, etc.)
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="YouTube">YouTube
+                        <br>
+                        <input type="radio" ng-model="brochureFormData.whereDidYouFindUs" value="Others">Otro
+                        <input type="text" class="input-sm" ng-model="brochureFormData.whereDidYouFindUsOthers">
+                    </div>
+                </div>
+                
+                <!-- Informacion personal -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Informacion personal</h5>
+                    </div>
+                </div>
+                
+                <!-- Nombre -->
+                <div class="row">
+                    <div class="col-md-10">
+                        <input ng-model="brochureFormData.name" class="form-control input-sm" placeholder="Nombre Completo" >
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                
+                
+                <!-- Compañia -->
+                <div class="row">
+                    <div class="col-md-10">
+                        <input ng-model="brochureFormData.company" class="form-control input-sm" placeholder="Compañia" >
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                
+                <!-- E-mail -->
+                <div class="row">
+                    <div class="col-md-10">
+                        <input type="email" required ng-model="brochureFormData.email" class="form-control input-sm" placeholder="e-mail" >
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                
+                <!-- Telefono -->
+                <div class="row">
+                    <div class="col-md-10">
+                        <input ng-model="brochureFormData.phone" class="form-control input-sm" placeholder="Telefono" >
+                    </div>
+                    <div class="col-md-2">
+                        <label class="label label-warning">Required</label>
+                    </div>
+                </div>
+                
+                
+                <!-- Telefono -->
+                <div class="row" ng-show="false">
+                    <div class="col-md-10">
+                        <textarea ng-model="brochureFormData.comment" class="form-control input-sm" placeholder="Nos gustaría saber más de usted, ¿por qué está interesado en este producto?" ></textarea>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                    <button type="submit" class="btn btn-block btn-info"> Download Brochure </button>
+                    <p style="font-size: small">
+                        <br>
+                        Su información personal se usará solo para responder preguntas, para enviar información sobre nuestro producto / evento y para los procedimientos necesarios para la respuesta. Administraremos esta información personal bajo las medidas de seguridad apropiadas y no divulgaremos / ofreceremos a terceros sin su consentimiento por adelantado.
+                    </p>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

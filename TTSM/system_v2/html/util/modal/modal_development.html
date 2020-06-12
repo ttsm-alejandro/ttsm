@@ -1,0 +1,89 @@
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<!-- MODAL DEVELOPMENT -->
+<div class="modal fade" id="myDevelopmentModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">DEVELOPMENT</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Vamo a buscar: "{{ filterSystemSerialNumber }}"</h3>
+                
+                <h3>Resultado:</h3>
+                <p>{{ searchCompleteResult }}</p>
+                
+                
+                <h3>CATALOGOS</h3>
+                
+                <h4 ng-click="hideCity = !hideCity">cityCatalog</h4>
+                <p ng-show="hideCity">
+                    {{ cityCatalog }}
+                </p>
+                
+                <h4 ng-click="hideCompany = !hideCompany">companyCatalog</h4>
+                <p ng-show="hideCompany">
+                    {{ companyCatalog }}
+                </p>
+                
+                <h4 ng-click="hideComputer = !hideComputer">computerCatalog</h4>
+                <p ng-show="hideComputer">
+                    {{ computerCatalog }}
+                </p>
+                
+                <h4 ng-click="hideDepartment = !hideDepartment">departmentCatalog</h4>
+                <p ng-show="hideDepartment">
+                    {{ departmentCatalog }}
+                </p>
+                
+                <h4 ng-click="hideMachine = !hideMachine">machineCatalog</h4>
+                <p ng-show="hideMachine">
+                    {{ machineCatalog }}
+                </p>
+                
+                <h4 ng-click="hideMachineType = !hideMachineType">machineTypeCatalog</h4>
+                <p ng-show="hideMachineType">
+                    {{ machineTypeCatalog }}
+                </p>
+                
+                <h4 ng-click="hidePerson = !hidePerson">personCatalog</h4>
+                <p ng-show="hidePerson">
+                    {{ personCatalog }}
+                </p>
+                
+                <h4 ng-click="hidePlant = !hidePlant">plantCatalog</h4>
+                <p ng-show="hidePlant">
+                    {{ plantCatalog }}
+                </p>
+                
+                <h4 ng-click="hideSoftware = !hideSoftware">softwareCatalog</h4>
+                <p ng-show="hideSoftware">
+                    {{ softwareCatalog }}
+                </p>
+                
+                <h4 ng-click="hideState = !hideState">stateCatalog</h4>
+                <p ng-show="hideState">
+                    {{ stateCatalog }}
+                </p>
+                
+                <h3>TABLAS</h3>
+                <h4 ng-click="hideTableContent = !hideTableContent">tableContent</h4>
+                <p ng-show="hideTableContent">
+                    {{ tableContent | json }}
+                </p>
+                
+                
+                
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+            </div>
+      </div>
+    </div>
+</div>

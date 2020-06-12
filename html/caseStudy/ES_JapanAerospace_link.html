@@ -1,0 +1,27 @@
+<!-- Y-TEC Case Study LINK-->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Vectoron" },
+        { id : 2 , name : "Comet" },
+        { id : 3 , name : "Leica Laser Tracker" },
+        { id : 4 , name : "spScan" }
+        { id : 5 , name : "DPA System" }
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToCaseStudy( 'ES_JapanAerospace' )"
+     ng-show="
+         (productCategorySelected == '5')
+         ||(productCategorySelected == '0')
+         ||(productCategorySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/caseStudy/linkJapanAerospace.jpg" width="100%">
+        <div class="well well-sm" style="height: 350px">
+            <h4>DPA System</h4>
+            <h3> Japan Aerospace Exploration Agency (JAXA)</h3>
+            <p style="text-align: left">
+                Medición de desplazamiento relativo por fotogrametría <br>
+Con el objetivo de crear una estructura que mantenga la precisión incluso en el espacio exterior
+            </p>
+        </div>
+</div>

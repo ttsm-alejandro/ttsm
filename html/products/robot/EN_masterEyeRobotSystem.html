@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Master Eye Robot System</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/robot/masterEyeRobotSystem_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/robot/EN_mainRobot.html">ROBOT</a> / 
+                <a href="">Master Eye Robot System</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'masterEyeRobotSystem' , 1 )">
+                                        <img src="../../../images/pages/products/robot/masterEyeRobotSystem_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'masterEyeRobotSystem' , 2 )">
+                                        <img src="../../../images/pages/products/robot/masterEyeRobotSystem_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'masterEyeRobotSystem' , 3 )">
+                                        <img src="../../../images/pages/products/robot/masterEyeRobotSystem_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Master Eye Robot System</h1></div>
+                        <p>
+                            Measuring the Flush & Gap between assembled parts of cars, machinery, equipment and household appliances and can be used for various tasks from prototype to the production.
+                            <br>MASTER EYE working with Laser and Sensor. The laser light incident on the object And reflected to a sensor for data processed by MASTER EYE Plus application.
+                            <br>
+                            <br>By intrigrated with Robot MASTER EYE can measuring Flush & Gap automatically. Suitable with In-Line system.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div class="row">
+                            TO DO
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <h3>Specification:</h3>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Measuring width</th>
+                                    <td>20 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Measuring depth</th>
+                                    <td>±6 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Measuring point</th>
+                                    <td>1024</td>
+                                </tr>
+                                <tr>
+                                    <th>Stand-off</th>
+                                    <td>42 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Accuracy of datum point</th>
+                                    <td>0.1 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Resolution (H,W)</th>
+                                    <td>0.025 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimension</th>
+                                    <td>232 mm x 186 mm x 62 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Scanner weight</th>
+                                    <td>550 g</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

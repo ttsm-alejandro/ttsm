@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Case Study</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+            ng-init="getCurrentUrl();"
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                <!-- ROUTE -->
+                <div style="height: 2px"></div>
+                <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                <a href="">CASE STUDY</a>
+                
+                <!-- PRODUCT CATEGORY SELECT -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg">
+                            <div class="row">
+                                <div class="col-md-6" style="text-align: right">
+                                    <div title="Please select one category" style="background-color: {{ ttsmBlueColor }}; color:white" class="btn btn-lg">Product Category</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <select
+                                        alt="Tonio"
+                                        title="Please select one category"
+                                        class="input-lg" 
+                                        ng-model="productCategorySelected"
+                                        ng-options="x.id as x.name for x in productCategoryArray">
+                                            <!--option class="select-option" ng-disabled="true" value="">Please Select a Category</option-->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study Y-TEC -->
+                <div ng-include="'./html/caseStudy/ES_YTec_link.html'"></div>
+                
+                <!-- Case Study Rinnai Corporation -->
+                <div ng-include="'./html/caseStudy/ES_RinnaiCorporation_link.html'"></div>
+                
+                <!-- Case Study Tanaka -->
+                <div ng-include="'./html/caseStudy/ES_Tanaka_link.html'"></div>
+                
+                <!-- Case Study Hara -->
+                <div ng-include="'./html/caseStudy/ES_Hara_link.html'"></div>
+                
+                <!-- Case Study Allex -->
+                <div ng-include="'./html/caseStudy/ES_Allex_link.html'"></div>
+                
+                <!-- Case Study Soshin -->
+                <div ng-include="'./html/caseStudy/ES_Soshin_link.html'"></div>
+                
+                <!-- Case Study Ikegami -->
+                <div ng-include="'./html/caseStudy/ES_Ikegami_link.html'"></div>
+                
+                <!-- Case Study National Institute -->
+                <div ng-include="'./html/caseStudy/ES_National_link.html'"></div>
+                
+                <!-- Case Study Japan Atomic -->
+                <div ng-include="'./html/caseStudy/ES_JapanAtomic_link.html'"></div>
+                
+                <!-- Case Study Japan Aerospace -->
+                <div ng-include="'./html/caseStudy/ES_JapanAerospace_link.html'"></div>
+                
+                <!-- Case Study Sivax -->
+                <div ng-include="'./html/caseStudy/ES_Sivax_link.html'"></div>
+                
+                <!-- Case Study STM -->
+                <div ng-include="'./html/caseStudy/ES_STM_link.html'"></div>
+                
+                <!-- Case Study Tokyo -->
+                <div ng-include="'./html/caseStudy/ES_Tokyo_link.html'"></div>
+
+            </div>
+        </div>
+    </body>
+</html>
+

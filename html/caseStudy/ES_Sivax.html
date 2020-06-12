@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Sivax Inc.</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 10 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Sivax Inc.</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Sivax Inc.</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Sivax Inc.</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+
+<!-- Subtitle -->
+<h3>
+Medición 3D que aceleró el desarrollo de modelos de automóviles <br>
+Convierta detalles sutiles en un molde de arcilla en datos electrónicos
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+No mucha gente probablemente sabe a qué tipo de negocio se dedica Sivax Inc. Sin embargo,
+La compañía tiene una historia de más de 55 años desde el lanzamiento de su negocio y ha
+sido una de las compañías líderes con una participación de primer nivel en el campo de soporte al 
+desarrollo del automóvil, que es conocido por todos en la industria del automóvil. Con su sede
+En Yokohama, la compañía ha establecido centros de desarrollo en varios lugares, desarrollando
+su negocio tanto a nivel nacional como internacional.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+En los últimos años, la compañía considera que su negocio principal es el soporte para el desarrollo del automóvil
+para fabricantes de automóviles. Hacen negocios con fabricantes de automóviles en
+Japón y otros países, participando en el desarrollo de exteriores e interiores de automóviles
+desde las primeras etapas de planificación y diseño. Han estado involucrados no solo en
+desarrollo de automóviles producidos en serie, sino también diseño y producción de automóviles conceptuales para
+exposiciones de motor, así como el desarrollo y producción de vehículos experimentales, 
+estableciendo una posición esencial en la industria.
+<br> <br>
+Su estándar corporativo basado en su filosofía corporativa es "QPS" (siglas en ingles de Quality, Price , Service y Speed), que significa
+Calidad, precio, servicio y rapides. 
+Con estos cuatro puntos siempre en mente, se esfuerzan por lograr una calidad que vaya 
+más allá de las expectativas de sus clientes. Su honestidad
+y el trabajo preciso ha sido muy aclamado y la compañía continúa en su camino de crecimiento.
+<br> <br>
+Para cualquier proyecto en el que estén involucrados desde el principio, su modelador de arcilla hace un
+Modelo de arcilla a escala 1/4 basado en un dibujo de diseño y modifica el modelo para que las líneas de cada
+parte, como un cuerpo, techo y parachoques, puede encajar con el concepto del diseño. Para medir el modelo de arcilla 
+terminado y convertir las mediciones en datos digitales, utilizan <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a> AT901 y Layout Machine, de Tokyo Boeki Techno-System.
+Han estado utilizando la máquina de diseño durante más de 40 años, con la compra de más de 100 unidades en total.
+<br> <br>
+Para aclarar cómo se utilizan los sistemas de medición 3D en la producción y desarrollo de modelos,
+en el cual la fecha límite es muy ajustada, entrevistamos al Sr. Daisuke Nishioka, líder del grupo de
+Model Group, Sr. Mutsumi Takahashi en el Model Group y Sr. Tadayuki Ozaki en el Styling Group.
+</p>
+</div>
+</div>
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h4>
+(A la izquierda, Daisuke Nishioka, Mutsumi Takahashi, y Tadayuki Ozaki)
+</h4>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/sivax/sivaxStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+El Sr. Nishioka y el Sr. Takahashi están a cargo del modelado, en el que se crea un modelo 3D.
+del diseño 2D. Repetir las conversaciones con los fabricantes de automóviles y la empresa.
+diseñadores, ponen en forma el concepto utilizando arcilla y diversos materiales de resina. Sr. Takahashi 
+se encarga principalmente del modelado experimental de vehículos.
+<br> <br>
+El Sr. Ozaki transfiere datos de medición al software CAD y ajusta líneas finas y superficies en
+los datos. Los datos de superficie ajustados se reflejarán mas adelante.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Modelando no solo automóviles producidos en masa sino también de autos concepto</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador: He oído que ya ha estado trabajando con muchos fabricantes de automóviles.
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Sr. Nishioka (N): </strong> participamos principalmente en el negocio del soporte al desarrollo del automóvil,
+trabajando principalmente con fabricantes de automóviles. Nuestro trabajo comienza con hacer
+un dibujo de diseño en un modelo 3D. Podemos colaborar con los diseñadores del fabricante en
+desarrollo o puede ser comisionado de la propuesta de diseño, ya que nuestra empresa tiene una division de diseño.
+No puedo hablar abiertamente sobre mi trabajo debido a la confidencialidad, pero creo que es un
+trabajo divertido y gratificante. 
+Trabajamos con varios tipos de automóviles, incluidos los producidos en serie, así como emprender el diseño y 
+la producción de automóviles conceptuales para exhibiciones de automóviles alrededor del mundo. 
+Imaginar un automóvil futuro, trabajar con un fabricante en diseño y completar una forma final para mostrar a mi cliente. 
+Este es el núcleo de mis proyectos.
+<br> <br>
+<strong> Sr. Takahashi (T): </strong> estoy a cargo de la producción del modelo de vehículo experimental que se utilizan 
+principalmente en experimentos. Como una parte importantes de las operaciones de soporte, modifico
+modelos basados ​​en resultados experimentales.
+<br> <br>
+<strong> Entrevistador: ¿no es difícil hacer un modelo de tamaño real? </strong>
+<br> <br>
+<strong> N: </strong> Dado que es muy difícil comenzar con un modelo de tamaño completo, hacemos un modelo de arcilla
+basado en un dibujo de diseño a escala 1/4. Con ese modelo, discutimos sobre hacer cambios
+a la forma de la arcilla, como "cambiemos esta línea en este lugar" y "hagamos esta superficie
+así ", para decidir la forma final del modelo. Luego, lo medimos usando un Láser Tracker y la
+Layout Machine. Un T-Scan portátil también se utiliza con mucha frecuencia. Después de medir el modelo, 
+dar forma y convertir los resultados de la medición en datos electrónicos, pasamos al siguiente paso
+utilizando el software CAD.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Sr. Ozaki (O): </strong> mi tarea es ajustar la forma de un automóvil en el software CAD.
+Es un proceso de creación de datos de superficie que coincide con un concepto de diseño basado en la medición
+de un modelo de arcilla. Dado que un modelo de arcilla se forma a mano, de alguna manera es imposible
+replicar completamente la aspereza fina y las líneas requeridas para un automóvil real. 
+Yo formo un modelo en detalle a partir de la forma ajustada por datos. 
+Estos datos serán la base para un modelo de arcilla para el siguiente proceso.
+</p>
+</div>
+</div>
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> N: </strong> Luego creamos un modelo de arcilla a escala completa basado en el diseño detallado. 
+A medida que agregamos o eliminamos algo de arcilla con el modelo para arreglar el diseño,
+nuevamente necesitamos medir el modelo ajustado y convertir las mediciones en datos.
+Finalmente, usando los datos, creamos un modelo a escala completa usando materiales de resina dura. 
+En este proceso, en lugar de agregar o quitar material blando como arcilla, usamos material de resina curada obtenido de
+una mezcla de una resina base y un agente de curado para hacer una forma a gran escala y corregir usando una maquina CNC Machine.
+uevamente, medir la información es la clave; necesitamos datos que permitan una replicación precisa
+de la línea generada en el moldeo de un modelo de arcilla y medición de los datos de superficie. Por lo tanto, el equipo de medición 
+de Tokyo Boeki Techno-System se utiliza ampliamente para diversas aplicaciones.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Mas de 40 años de confianza que conducen a nuevas compras
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador: Llevamos mucho tiempo trabajando con usted. Su empresa compró más de 100 máquinas de diseño.</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> N: </strong> Sí, recuerdo cuando empecé a trabajar aquí. La máquina de diseño ya era una herramienta escencial.
+Coloque un automóvil en una mesa de medición, coloque dos máquinas de diseño, una a cada lado del automóvil y tome las dimensiones con los brazos.
+Supongo que todavía usamos más de 80 máquinas activamente en todas nuestras instalaciones. 
+Las máquinas se utilizan en la medición de piezas grandes, como los mainframes de automóviles.
+Usamos la máquina no solo en tres ubicaciones en Japón, sino también en ubicaciones en otros países.
+Una máquina se usa en varias situaciones y es muy duradera, nos ayuda mucho, pero necesitará mantenimiento una vez cada pocos años. 
+Desde nuestro punto de vista, queremos que se haga rápidamente ya que el horario de medición es ajustado. 
+Un experto en máquinas de Tokyo Boeki Techno-System viene por trabajo de mantenimiento y lo completa en unas pocas horas, 
+por lo que realmente apreciamos un servicio tan rápido. 
+Actualmente estamos utilizando más de 20 máquinas en la sede, por lo que a menudo tenemos servicio del personal de Tokyo Boeki Techno-System.
+esponden rápidamente a nuestras preguntas y problemas, dándonos la sensación de seguridad.
+<br> <br>
+<strong> Entrevistador: su empresa compró rastreadores láser. ¿Cómo te han parecido? </strong>
+<br> <br>
+<strong> T: </strong> originalmente utilizamos un sistema de otra compañía para escanear. 
+Al usar el sistema, tuvimos que tomar fotos (escanear) con una cámara especial para medir un objeto, y tomó
+dos trabajadores y aproximadamente un día y medio para medir un modelo de arcilla.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Antes al escanear con esa cámara, teniamos que pegar pegatinas al objeto a medir, que
+sirven como un referencia en la medición con dicha cámara. Tuvimos que marcar con
+tales pegatinas casi 100 puntos en total. Después de la medición, tuvimos que eliminar las
+pegatinas cuidadosamente para no rayar el objeto. Este proceso de preparación y limpieza fue una molestia,
+ademas la cámara pesaba decenas de kilogramos y había una limitación en el rango del riel que regula el 
+movimiento de la cámara, por lo que fue difícil manejarla.
+También es peligroso manejar una cámara pesada, por lo que tuvimos que hacerlo con dos personas.
+<br> <br>
+<strong> O: </strong> En cambio con la cámara T-Scan, puedo manejarla con una sola mano. 
+Como utiliza láser sin contacto, es muy fácil manejarlo alrededor de un objeto a medir.
+Puedo simplemente bajar la mano para medir la superficie inferior de un automóvil. Siento un cambio realmente grande con
+respecto a la cámara del sistema anterior que utilizamos en términos de tamaño.
+<br> <br>
+El tiempo requerido para medir también se redujo significativamente. No necesitamos ninguna preparación, así que
+puede comenzar a medir en cuanto tenga el T-Scan la mano. Para medir una superficie grande, simplemente hago un movimiento para pasar 
+la cámara sobre la superficie y se importan los valores de medición en una PC. 
+La velocidad de medición se ha mejorado considerablemente. 
+Poder realizar mediciones por mí mismo es la mayor ventaja, ya que reduce los costos de personal y el tiempo.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Creo que con un láser tracker, una persona puede completar la medición de un automóvil en la tercera parte del tiempo.
+Dado que la cantidad real de nuestra operación se ha reducido a una tercera parte, me sentí menos presionado. 
+Podemos hacerlo en un día, no tenemos que pasar dos días. Esta es una gran diferencia para nosotros.
+<br><br>
+<strong> N: </strong> Además de los modelos de carrocería de automóviles, a veces medimos piezas pequeñas,
+tales como ruedas y artículos de interior. 
+Creo que T-Scan es el dispositivo de medición más rápido para adquirir datos. 
+Tuvimos que mover un sistema de medición basado en el brazo varias veces, pero con T-Scam es muy conveniente. 
+Para mayor precisión, el láser puede lograr mediciones a un nivel de 0.01 mm. Nosotros ahora solo tiene un T-Scan en la sede, 
+pero varias divisiones lo están utilizando a su vez.
+<br> <br>
+<strong> Entrevistador: cuando hablamos con personas de la industria, su empresa tiene una gran reputación
+en términos de velocidad y precisión. </strong>
+<br> <br>
+<strong> N: </strong> Siempre tenemos en mente el "QPS". Esto significa calidad, precio,
+Servicio y velocidad. Actualmente, somos mucho más rápidos que nuestros competidores en desarrollo y
+producción. Cuando hablo con algunos clientes, creo que esperan entregas mucho más rápidas que nosotros
+de otras compañías. Creo que hemos estado mejorando nuestros conocimientos y tecnologías para cumplir
+tales expectativas
+</p>
+</div>
+</div>
+
+<!-- Photo Piece06 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/sivax/sivaxPiece06.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Como el uso del T-Scan contribuyó en gran medida a nuestra operación,actualmente estamos 
+considerando introducirlo en ubicaciones en los EE. UU. 
+También estoy fascinado por la evolución del <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a>. 
+Sé que hay un último modelo que es altamente miniaturizado, estamos muy sorprendidos por el tamaño.
+<br> <br>
+Espero que podamos seguir consultando con Tokio Boeki para el desarrollo de herramientas de medición y
+métodos adecuados para medir nuestros objetos en nuestro entorno único. 
+Al hacerlo, creo que nuestra operación logrará una mayor sofisticación y un aumento adicional en general.
+Realmente espero que podamos trabajar juntos y mantener la buena relación entre nuestras dos compañías.
+</p>
+</div>
+</div>
+                            <!-- Sivax Inc. Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <!--div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/sivax/sivaxLogo.jpg" style="width: 100%;">
+                                </div-->
+
+                                <!-- Datos -->
+                                <div class="col-md-12">
+                                    <h3>
+Sivax Inc.
+                                    </h3>
+                                    <p>
+Comenzando su negocio en julio de 1961, la compañía se estableció como una compañía limitada llamada
+Shibazaki Kigata Seisakusho en febrero de 1964. Extendió gradualmente su alcance en diseño
+planificación, fabricación y venta de automóviles, aviones, barcos, artículos deportivos, interiores, 
+equipos electrónicos y otros modelos industriales, ampliando la escala de la empresa.
+Desde el cambio del nombre a Sivax Inc. en abril de 1990, la compañía ha mantenido su
+rendimiento sobresaliente, aumentando el número de ubicaciones en Tochigi y Aichi, también en el extrangero 
+como en Tailandia, China y los Estados Unidos. La empresa es especialmente aclamada en el desarrollo.
+de modelos relacionados con automóviles y ha estado trabajando principalmente con fabricantes de automóviles japoneses.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Productos Laser Tracker</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+                     ">
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- Horizontal line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                <div style="height: 2px"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php" 
+                   style="color:{{ ttsmBlueColor }};">INICIO
+                </a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html" 
+                   style="color:{{ ttsmBlueColor }};">PRODUCTOS
+                </a> / 
+                <a href="{{relativeUrl}}html/products/laser/ES_mainLaser.html"
+                   style="color:{{ ttsmBlueColor }};">LASER TRACKER
+                </a>
+
+                <!-- Content >
+                <h2 style="color:{{ ttsmBlueColor }}; ">Laser Tracker Main Content</h2-->
+
+                <!-- LIST OF Laser Tracker PRODUCTS -->
+                <!-- UPPER ROW -->
+                <div class="row">
+                    
+                    <!-- Leica Absolute Tracker ATS600 -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_leicaAbsoluteTrackerAts600.html">
+                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAts600_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Leica ATS600</h4>
+                                The Direct Scanning Laser Tracker
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Leica Absolute Tracker AT403 -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_leicaAbsoluteTrackerAt403.html">
+                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAt403_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Leica AT403</h4>
+                                Productividad absoluta. Portabilidad absoluta. Resistencia Absoluta
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Leica Absolute Tracker AT930 -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_leicaAbsoluteTrackerAt930.html">
+                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAt930_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Leica AT930</h4>
+                                Dinámica de alta velocidad como estándar
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Leica Absolute Tracker AT960 -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_leicaAbsoluteTrackerAt960.html">
+                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAt960_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Leica AT960</h4>
+                                Velocidad, precisión y portabilidad inigualables
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Leica AT403</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/laser/leicaAbsoluteTrackerAt403_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='LEICA';
+                               ">
+            
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                </hr>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/laser/ES_mainLaser.html">LASER TRACKER</a> / 
+                <a href="">Leica Absolute Tracker AT403</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Leica Absolute Tracker AT403</h1></div>
+                        <p>
+                            El legendario sistema seguidor de láser todo en uno de gran volumen que estableció un nuevo estándar de portabilidad, simplicidad, construcción robusta y eficiencia de medición.
+                            <br><br>
+                            La solución de metrología todo en uno más portátil que ninguna otra en el mercado, el Leica Absolute Tracker AT403 de Hexagon Manufacturing Intelligence es un taller de medición autónomo dentro de una única caja compacta y conveniente.
+                            <br><br>
+                            Con una velocidad superior en el proceso de medición, simplicidad operativa como ningún otro rastreador láser y un nivel incomparable de construcción robusta, el Leica Absolute Tracker AT403 es un paquete calculado de innovación asequible sin igual en el mercado de medición portátil.
+                            <br><br>
+                            Las mejoras incluyen procesos de medición estacionarios y continuos más rápidos y económicos, junto con un procedimiento simplificado de cambio de estación. La funcionalidad adicional del punto de acceso WiFi y las baterías intercambiables en caliente ofrecen una libertad de medición inigualable. Diseñado para obtener resultados líderes en casi cualquier entorno de medición imaginable, está calificado para operar a temperaturas que varían de -15 a 45 grados Celsius y cuenta con monitoreo ambiental incorporado, funcionalidad de orientación a gravedad y construcción en línea con el riguroso estándar de certificación IP54 .
+                            <br><br>
+                            <strong>El socio perfecto para Leica B-Probe</strong>
+                            <br>TEl Leica Absolute Tracker AT403 presenta la solución ideal para aplicaciones de sondeo portátil cuando se combina con la calidad establecida de la herramienta de sondeo portátil Leica B-Probe. Este sistema de sondeo portátil en un solo estuche ofrece mejoras en la velocidad y usabilidad del proceso de medición, así como en el alcance de punto oculto personalizable. Cuando se agrega a la funcionalidad sin cable líder en su clase de Leica B-Probe, el sondeo de gran volumen ahora es más simple y mejor que nunca.
+                        </p>
+                        
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <p>
+                            <strong>Diseño Integrado todo en uno</strong>
+                            <br>Desde la conectividad inalámbrica integrada, el monitoreo ambiental y la energía de la batería durante todo el día, hasta la cámara panorámica, el objetivo de alcance RapidSight y el asa de transporte ergonómica, todas las necesidades están incorporadas.
+
+                            <br><br><strong>Sistema de sondeo en un estuche</strong>
+                            <br>Un sólo estuche contiene el sensor y la sonda más ligeros y portátiles, así como el control remoto IR, con varios estuches de transporte para una flexibilidad total.
+
+                            <br><br><strong>Conectividad Inteligente</strong>
+                            <br>La conexión WiFi incorporada con funcionalidad de punto de acceso real proporciona una operación para un solo usuario a través de una sencilla configuración de PC y opciones de control remoto a través de computadoras portátiles, tabletas o teléfonos inteligentes.
+
+                            <br><br><strong>PowerLock</strong>
+                            <br>Restablece automáticamente la línea de visión interrumpida dentro de un amplio campo de visión sin necesidad de interacción del usuario.
+
+                            <br><br><strong>Medición continua</strong>
+                            <br>Modo de medición continua de tiempo y distancia.
+
+                            <br><br><strong>Sondeo sencillo</strong>
+                            <br>Sin cables, alimentado por batería Leica B-Probe con capacidad de punto escondido personalizable.
+
+                            <br><br><strong>Certificación IP54</strong>
+                            <br>La unidad sellada certificada por IEC garantiza la protección contra el ingreso de polvo y otros contaminantes, lo que permite una medición eficaz incluso en los entornos más hostiles. 
+
+                            <br><br><strong>MeteoStation</strong>
+                            <br>La unidad ambiental integrada monitorea las condiciones que incluyen temperatura, presión y humedad para compensar los cambios y garantizar mediciones precisas independientemente de factores externos.
+
+                            <br><br><strong>Orient-to-Gravity</strong>
+                            <br>Permite la medición con el eje Z alineado a la gravedad, ideal para tareas de nivelación y alineación.
+
+                            <br><br><strong>Batería</strong>
+                            <br>La fuente de alimentación independiente de la batería intercambiable en caliente permite una configuración rápida y sencilla sin cables y un funcionamiento inalámbrico durante todo el día.
+
+                            <br><br><strong>Temperatura de operación</strong>
+                            <br>Amplio rango de temperatura de funcionamiento de -15 a 45 grados Celsius.
+
+                            <br><br><strong>Volumen de medición</strong>
+                            <br>Volumen de medición ultragrande de hasta 320 metros (ø), con una distancia de medición mínima inferior a 0,8 metros.
+
+                            <br><br><strong>Garantía Hexagon</strong>
+                            <br>Garantía completa de fábrica de 24 meses y garantía de diez años de vida útil.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <h4>Precisión</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Reflector</th>
+                                    <td>U(x,y,z) = ± 15 μm + 6 μm/m (± 0.0006” + 0.000072”/ft)</td>
+                                </tr>
+                                <tr>
+                                    <th>Leica B-Probe</th>
+                                    <td>U(x,y,z) = ± 0.2mm (± 0.008”)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                            * Todas las precisiones son especificadas como Errores máximos permitidos (MPE) y calculadas según ASME B89.4.19-2006 e ISO10360-10: 2016 con precisión de Leica 1.5 "Red Ring Rectors a menos que se indique lo contrario.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Desempeño de distancia absoluta</th>
+                                    <td>± 10 μm (± 0.00039”) </td>
+                                </tr>
+                                <tr>
+                                    <th>Rendimiento angular absoluto (incluido orientado a la gravedad)</th>
+                                    <td>± 15 μm + 6 μm/m
+                                        <br>(± 0.0006”+0.000072”/ft) 
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 02 -->
+                            <h4>Ambiente</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Polvo/Agua</th>
+                                    <td>IP54 (IEC 60529)</td>
+                                </tr>
+                                <tr>
+                                    <th>Temperatura de operación</th>
+                                    <td>de -15 ̊C a +45 ̊C </td>
+                                </tr>
+                                <tr>
+                                    <th>Humedad relativa</th>
+                                    <td>max. 95% (sin condensación)</td>
+                                </tr>
+                                <tr>
+                                    <th>Monitor ambiental</th>
+                                    <td>Temperatura, presión y humedad</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 03 -->
+                            <h4>Seguridad Láser</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Clase del Láser</th>
+                                    <td>Producto láser de clase 2 de acuerdo con la segunda edición de IEC 60825-1 (2014-05)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 04 -->
+                            <h4>Rango</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Volumen de medición del reflector típico (ø)</th>
+                                    <td>320 m </td>
+                                </tr>
+                                <tr>
+                                    <th>Distancia mínima de medición del reflector</th>
+                                    <td>< 0.8 m </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 05 -->
+                            <h4>Interfaz</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Cable</th>
+                                    <td>TCP/IP (Cat5)</td>
+                                </tr>
+                                <tr>
+                                    <th>Wireless</th>
+                                    <td>WLAN (IEEE 802.11n)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 06 -->
+                            <h4>Administración de la energía</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Interna</th>
+                                    <td>Batería de iones de Litio con una duración convencional de 8 horas</td>
+                                </tr>
+                                <tr>
+                                    <th>Externa</th>
+                                    <td>Fuente de alimentacion de CA</td>
+                                </tr>
+                                <tr>
+                                    <th>Opcional</th>
+                                    <td>Alimentación sobre Ethernet (PoE+)</td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 07 -->
+                            <h4>Información general</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>cámara panorámica</th>
+                                    <td>Imagen mejorada 4:3 IR ≈ 10 ̊ FOV</td>
+                                </tr>
+                                <tr>
+                                    <th>Control remoto</th>
+                                    <td>
+                                        Infrarrojo de 4 botones 
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- DATA 08 -->
+                            <h4>Leica B-Probe</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Volumen de medición (ø)</th>
+                                    <td>Batería de iones de Litio con una duración convencional de 8 horas</td>
+                                </tr>
+                                <tr>
+                                    <th>Volumen de reubicación (ø)</th>
+                                    <td>Fuente de alimentación de CA</td>
+                                </tr>
+                                <tr>
+                                    <th>Distancia mínima de medición</th>
+                                    <td>Alimentación sobre Ethernet (PoE+)</td>
+                                </tr>
+                                <tr>
+                                    <th>Polvo-Agua</th>
+                                    <td>IP50</td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

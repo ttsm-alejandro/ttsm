@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Robot Calibration Solution</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/robot/robotCalibrationSolution_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/robot/ES_mainRobot.html">ROBOT</a> / 
+                <a href="">Robot Calibration Solution</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Robot Calibration Solution</h1></div>
+                        <p>
+                            innovative software solution delivering full calibration and performance testing functionality for industrial robotic systems. 
+                            <br>
+                            <br>The RoboDyn robot calibration and inspection system delivers complete robotic control, making it simple to get the most out of the precision, flexibility and intelligence automated systems have to offer.
+                            <br>
+                            <br>With the ability to calculate robot base alignment and tool centre point offsets as well as directly correct and compensate for robot parameters, the RoboDyn software is the perfect tool for improving absolute positioning and performance of robotics. Designed to meet the demands of the ISO 9283 standard, RoboDyn guarantees accuracy and reliability throughout automated operations.
+                            <br>
+                            <br>Simple and easy to use, RoboDyn allows for on-the-spot modification of robot models, followed by fast recalibration. Coming alongside the full capability for offline simulation, RoboDyn has the potential to transform process productivity across manufacturing, installation, testing and logistics areas.
+                            <br>
+                            <br>For static and dynamic data acquisition, RoboDyn requires use in conjunction with a quality Leica Absolute Tracker featuring precision, speed, large measurement range, portability and the capacity for 6DoF measurement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div class="row">
+                            <h4>ROBODYN SIMULATION</h4>
+                            <p>
+                                <ul>
+                                    <li>The Robodyn simulation module can be used to represent and analyse line-of-sight issues and offline path creation before connecting to the physical system. </li>
+                                    <li>Path accessibility feedback (joint limitation, inverse kinematics, etc.).</li>
+                                    <li>Simulation PTP, line, arc and spline curve movement.</li>
+                                    <li>Robot movement analysis using two-dimensional systems.</li>
+                                </ul>
+                            </p>
+                            <h4>ROBODYN CALIBRATION</h4>
+                            <p>
+                                <ul>
+                                    <li>The calibration module provides a fast and intuitive process for aligning the robot to the laser tracker and calibrating the robot’s kinematic configuration in order to improve absolute positioning accuracy. </li>
+                                    <li>Calculation of base alignment and TCP offset.</li>
+                                    <li>Calibration of DH parameters with accuracy to standard or modified conventions.</li>
+                                    <li>Automatic creation of calibration paths.</li>
+                                    <li>Flexible workspace and temperature fluctuation specific calibrations.</li>
+                                    <li>Support of linear axes.</li>
+                                    <li>Robot interfacing through direct communication, I/O or stable probing for highest level of flexibility and compatibility.</li>
+                                </ul>
+                            </p>
+                            <h4>ROBODYN PERFORMANCE TEST TO ISO 9283</h4>
+                            <p>
+                                <ul>
+                                    <li>The ISO test module allows for accuracy and performance testing according to ISO 9283 standard with any industrial robot. </li>
+                                    <li>Compliance with ISO 9283 standard.</li>
+                                    <li>Flexible definition of required tests and duration.</li>
+                                    <li>Automatic creation of robotic inspection path.</li>
+                                    <li>Flexible definition of working zones.</li>
+                                    <li>Direct control of robot and laser tracker.</li>
+                                    <li>Numerical and graphical inspection report production</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            TO DO
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

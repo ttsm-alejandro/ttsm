@@ -1,0 +1,81 @@
+<div class="modal fade" id="modalWebinarRegistration" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color: white; background-color: {{ ttsmBlueColor }}">Formulario registro a Webinar</h3>
+            </div>
+            
+            <!-- Form data -->
+            <div class="modal-body">
+                
+                <!-- Subtitulo -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Please fill the form</h4>
+                    </div>
+                </div>
+                
+                <!-- Informacion personal -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Your information</h5>
+                    </div>
+                </div>
+                
+                <form ng-submit="clicRegisterToWebinar()">
+                    
+                
+                    <!-- Nombre -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.name" class="form-control input-sm" placeholder="Name" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Compañia -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.company" class="form-control input-sm" placeholder="Company" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required type="email" ng-model="webinarFormData.email" class="form-control input-sm" placeholder="e-mail" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+                    <!-- Telefono -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.phone" class="form-control input-sm" placeholder="Phone" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+                        <button type="submit" class="btn btn-block btn-info" ng-disabled="registerButtonDisabled">Register</button>
+                        <p style="font-size: small">
+                            <br>
+                            Your personal information will be used only for answers to inquiries, for sending our product/event information, and for necessary procedures for response. We will manage these personal information under appropriate safety measures and we will not disclose / offer to third parties without your consent in advance.
+                        </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

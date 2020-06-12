@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>PolyWorks Modeler</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/software/polyworksModeler_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/software/ES_mainSoftware.html">SOFTWARE</a> / 
+                <a href="">PolyWorks Modeler</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>PolyWorks Modeler</h1></div>
+                        <p>
+                            PolyWorks|Modeler is a comprehensive reverse-engineering software solution that allows extracting optimal CAD entities—curves, surfaces, parametric sketches, and prismatic features—from polygonal models of digitized parts to serve as the starting point in your professional CAD modeling solution.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <img src="../../../images/pages/products/software/polyworksModeler_2.jpg" width="60%">
+
+                        <h3>POLYGONAL MODELING</h3>
+                        <h4>Manufacture from polygonal models</h4>
+                        <p>
+                            The first step in a reverse-engineering workflow consists in transforming digitized point clouds into a polygonal model, an operation also called "meshing". Sophisticated data-processing techniques, including point smoothing and curvature-based sampling, can be applied to raw point clouds during the meshing phase. As a result, polygonal models tend to be more compact, more accurate, and less noisy in comparison to the raw measurements.
+                            <br><br>Several industrial applications are capable of directly handling polygonal model representations. For example, polygonal models can be either directly milled, built using a 3D printer, or input into aerodynamic simulation software. PolyWorks|Modeler provides two categories of polygon-editing tools to prepare polygonal models for these applications:
+                            <ul>
+                                <li>A first set of tools is designed to repair and optimize imperfectly digitized geometry. For example, it may be necessary to interpolate new polygons over unmeasured areas to create a complete surface representation.</li>
+                                <li>A second set of tools offers CAD operations on polygonal models, such as extrusion, offset, fillet, and Boolean operations. </li>
+                            </ul>
+                        </p>
+
+                        <img src="../../../images/pages/products/software/polyworksModeler_3.jpg" width="60%">
+
+                        <h3>SURFACE MODELING</h3>
+                        <h4>Generate CAD-friendly freeform surfaces</h4>
+                        <p>
+                            Professional CAD/CAM solutions do not typically offer 3D modeling tools for polygonal models. One common way to transfer the surface of a digitized object into CAD/CAM software consists in fitting a network of NURBS surfaces over a polygonal model built from digitized point clouds. NURBS surfaces are ideal to mathematically describe freeform surfaces, plus they are CAD/CAM friendly.
+                            <br><br>PolyWorks|Modeler offers an intuitive surfacing approach in which curves are first laid down on a polygonal model, and then automatically intersected to form four-sided or N-sided trimmed NURBS patches. Next, the NURBS patches are used to control the fitting of a continuous network of NURBS surfaces. Fitted surfaces can then be exported to IGES or STEP files and directly imported into your favorite CAD/CAM application for further processing. 
+                            <br><br>PolyWorks|Modeler's NURBS surfacing technology offers a remarkable balance between lead time and surface quality, thanks to:
+                            <ul>
+                                <li>Intuitive curve reshaping methods and curvature-continuous curves</li>
+                                <li>The best NURBS surface-fitting engine on the reverse-engineering market in terms of quality (accuracy, smoothness, and continuity) and flexibility (trimmed surfaces and T-junctions, curvature-based two-step fitting process, and the possibility of blending fitted surfaces to an existing CAD model for local CAD reconstruction purposes)</li>
+                                <li>G2-, G1-, or G0-continuity control over NURBS patch boundaries</li>
+                                <li>Automatic G2 surface fitting in areas where NURBS patches have a rectangular topology</li>
+                            </ul>
+                            PolyWorks|Modeler also offers real-time guidance to accurately build and inspect fixtures and jigs using single-point measurement devices:
+                        </p>
+
+                        <img src="../../../images/pages/products/software/polyworksModeler_4.jpg" width="60%">
+
+                        <h3>SOLID MODELING</h3>
+                        <h4>Build solid CAD models from optimized geometric entities</h4>
+                        <p>
+                            The solid modeling philosophy of PolyWorks|Modeler consists in optimizing the extraction of geometric entities on digitized polygonal models, and then transferring these entities to your corporate feature-based solid CAD modeler to guarantee the creation of parametric, associative, and fully editable solid models. 
+                            <br><br>A fundamental building block in a solid modeling workflow is the parametric 2D sketch. 2D sketches consist in planar entities, such as arcs, lines, circles, and splines, defined on a plane embedded in 3D space. In solid-modeling software, sketches are used to create solid base features by performing Extrude, Revolve, Sweep, and Loft operations. Sketches are created by:
+                            <ol>
+                                <li>Defining a sketch plane</li>
+                                <li>Computing a sketch outline by slicing cross-sections of the digitized model or extracting its silhouette edge</li>
+                                <li>Anchoring and fitting sketch entities and dimensions, guided by the sketch outline</li>
+                            </ol>
+
+                            The parametric sketches are then transferred to the solid CAD modeler by using add-ins (for CATIA, NX, Creo, SolidWorks, and Inventor) or a neutral format (IGES). You can then combine the sketches and fitted NURBS surfaces, use the dimensions from fitted prismatic geometry, and design the solid model you want—all done directly in the professional CAD solution that you’re most familiar with. The solid modeling possibilities are unlimited with PolyWorks|Modeler, so let your creativity lead the way!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">STANDARD</th>
+                                    <th class="text-center">PREMIUM</th>
+                                </tr>
+                                <tr>
+                                    <th>Point cloud digitizer support for portable metrology</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                                <tr>
+                                    <th>Single-point measuring device support for portable metrology</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                                <tr>
+                                    <th>Real-time quality meshing and offline point cloud meshing</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                                <tr>
+                                    <th>Polygonal editing</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                                <tr>
+                                    <th>Parametric sketching</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                                <tr>
+                                    <th>NURBS surfacing</th>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"> •</td>
+                                </tr>
+                                <tr>
+                                    <th>One-year support/maintenance</th>
+                                    <td class="text-center">•</td>
+                                    <td class="text-center">•</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

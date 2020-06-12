@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Japan Aerospace Exploration Agency (JAXA)</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 9 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/others/ES_dpaSystem.html">DPA System</a><br>Japan Aerospace Exploration Agency (JAXA)</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Japan Aerospace Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Japan Aerospace Exploration Agency (JAXA)</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/others/ES_dpaSystem.html">DPA System</a><br>Japan Aerospace Exploration Agency (JAXA)</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+          
+<!-- Subtitle -->
+<h3>
+Medición de desplazamiento relativo por fotogrametría <br>
+Con el objetivo de crear una estructura que mantenga la precisión incluso en el espacio exterior
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+La Agencia de Exploración Aeroespacial de Japón (JAXA) se menciona en cada informe de noticias sobre el lanzamiento de cohetes o 
+desarrollo de satélites que tienen lugar en Japón. Fundada en 2003, JAXA comenzó como resultado de la fusión de tres instituciones 
+que habían estado involucradas en el desarrollo espacial. Es una de las agencias nacionales de investigación y desarrollo, 
+que está bajo la jurisdicción conjunta de la Oficina del Gabinete, el Ministerio de Justicia, el Ministerio de Educación, Cultura, Deportes, 
+Ciencia y Tecnología, y el Ministerio de Economía, Comercio e Industria, que actúa como una organización que ocupa el primer rango en 
+investigación y tecnología en la ciencia espacial de Japón.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+JAXA tiene oficinas e instalaciones en todo Japón, incluida la Oficina Central, el Centro Aeroespacial Chofu (Ciudad de Chofu, Tokio), el Campus Sagamihara con el Instituto de Ciencia Espacial y Astronáutica (Ciudad de Sagamihara, Prefectura de Kanagawa), el Centro Espacial Kakuta, que participa en la investigación y el desarrollo de motores de cohetes (ciudad de Kakuta, prefectura de Miyagi) y el Centro Espacial Profundo de Usuda con una gran antena parabólica que se utiliza para comunicarse con sondas espaciales (ciudad de Saku, prefectura de Nagano).
+<br> <br>
+Es posible que conozca el Centro Espacial Tsukuba (Ciudad Tsukuba, Prefectura de Ibaraki), donde se realizan diversas actividades para el desarrollo espacial, incluido el desarrollo y operación de satélites y entrenamiento de astronautas, así como el Centro Espacial Tanegashima (Minamitane-cho, Condado de Kumage, Prefectura de Kagoshima) ), que a menudo aparece en las noticias sobre el lanzamiento de cohetes. También se encuentran entre las instalaciones de JAXA. Si está interesado en el espacio, estos pueden ser los lugares que desea visitar al menos una vez.
+<br> <br>
+Las actividades de JAXA van más allá del campo de desarrollo espacial. Están involucrados en varios tipos de investigación, desde la investigación básica hasta la que se traduce directamente en los negocios, incluidos los estudios destinados a dilucidar los misterios del origen del universo y el nacimiento de la vida, la investigación de tecnología aeronáutica consciente del medio ambiente y la seguridad, y la industria. colaboración academia-gobierno para mejorar la competitividad industrial mejorando la tecnología aeroespacial.
+<br> <br>
+Hemos visitado el Instituto de Ciencia Espacial y Astronáutica, que se enfoca en el desarrollo de personas talentosas que podrán contribuir a la ciencia espacial futura, así como alcanzar un mayor nivel de desarrollo tecnológico al traer investigadores de varias compañías y organizaciones académicas y de investigación. . La instalación tiene cinco divisiones, incluida la División de Astronomía y Astrofísica Espaciales, cuyo objetivo es comprender el espacio a partir de observaciones; la División de Sistemas de Vuelo Espacial, que participa en la navegación espacial; la División de Ciencia Espacial Interdisciplinaria, que se extiende a los campos circundantes; la División de Ingeniería de Naves Espaciales, cuyo objetivo es conducir a la tecnología de ingeniería; y la División de Ciencias del Sistema Solar, que se centra en el sistema solar.
+</p>
+</div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+■Dr. Kosei Ishimura (Doctor en Ingeniería)
+</h3>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospaceStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Ha llevado a cabo sus estudios sobre la estabilidad de la forma de los sistemas estructurales de las estructuras espaciales y actualmente se dedica al desarrollo de estructuras satelitales. Como profesor asociado en el Instituto de Ciencia Espacial y Astronáutica, también desempeña un papel en la formación de personas más jóvenes.
+</p>
+</div>
+</div>
+
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Repita la medición en un entorno hostil que simula el espacio.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador (I): Usted está en la División de Sistemas de Vuelo Espacial. Cuénteme sobre su investigación.
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+En la ciencia espacial de Japón, particularmente en sitios de investigación y desarrollo que utilizan tecnologías de vanguardia, ¿cuál es el significado de la "medición"? Para obtener una respuesta para eso, entrevistamos al Dr. Kosei Ishimura, profesor asociado en División de Sistemas de Vuelo Espacial.
+<br> <br>
+Los principales campos de investigación en mi división incluyen la ingeniería de sistemas relacionados con la navegación espacial, la ingeniería de transporte espacial y las estructuras espaciales y la ingeniería de materiales. Estoy a cargo de la investigación de estructuras satelitales artificiales.
+<br> <br>
+Un satélite artificial es una estructura que se lanzará al espacio; por lo tanto, se requiere que sea capaz de resistir la vibración en el lanzamiento, así como mantener su espacio, superficies y la posición de los elementos a bordo, incluso en un entorno hostil con temperaturas extremas. Algunos de los elementos a bordo son equipos de precisión, como antenas y equipos de observación. En un satélite, deben mantenerse de forma muy precisa.
+<br> <br>
+Una de las estructuras ideales es una estructura inmutable que no tendrá deformación ni dislocación en ningún entorno. Para crear una estructura inmutable, necesitamos un dispositivo de medición que pueda detectar con precisión cualquier cambio. Entonces, junto con el desarrollo de Tecnología para mantener la forma de una estructura, uno de los puntos importantes en nuestra investigación es encontrar una tecnología o método que permita una medición precisa.
+<br> <br>
+<strong> I: ¿En qué parte de su satélite se utiliza nuestro producto? </strong>
+<br> <br>
+Actualmente estoy desarrollando un satélite que tiene alas de varios metros. Cada ala consta de tres paneles cuadrados de 70 cm. Las alas se guardan en el interior en el lanzamiento y se abren después de que el satélite llega a la órbita. Se supone que estas alas juntas forman un Antena plana grande. El lado posterior de la antena contiene células solares para producir electricidad.
+<br> <br>
+Las células solares pueden producir electricidad sin verse muy afectadas por pequeñas inclinaciones, como 0.5 grados o 1 grado, pero la desviación de 1 grado es fatal para la antena, lo que hace que la antena pierda su función parcial o completamente dependiendo de la longitud de onda. Para evitar que tal situación ocurra en el espacio, utilizamos su producto para medir la antena plana para probar y crear las soluciones necesarias en la tierra.
+<br> <br>
+En la etapa de desarrollo, probamos si se ha creado una superficie verdaderamente plana que cumpla con todos los requisitos de precisión en el estado desplegado, que es su movimiento básico. Incluso si hacemos pruebas en condiciones idénticas, siempre obtenemos valores de medición diferentes. Aceptando esto como un hecho, repetimos la condición almacenada y la condición desplegada para ver cuánta desviación ocurre cuando se guarda y si la desviación es aceptable. Si hay una desviación inaceptable, descubrimos la causa analizando los datos y tomamos todas las medidas necesarias, como un cambio en la forma o el material.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> I: ¿Realiza mediciones en un entorno similar al espacio? </strong>
+<br> <br>
+Después de determinar la precisión en el movimiento básico, realizamos mediciones adicionales en diferentes condiciones. Realizamos mediciones y evaluaciones para cada uno de los posibles parámetros de influencia; por ejemplo, comparamos las mediciones obtenidas antes y después de una prueba de vibración o exposición a un vacío térmico. En general, repetimos las mediciones para la evaluación, no solo una vez. En cuanto a un satélite artificial, fabricamos más de un modelo, incluidos los modelos de vuelo que realmente van al espacio y los modelos de ingeniería, para los cuales realizamos las mismas pruebas.
+<br> <br>
+El espacio tiene un ambiente hostil, que podría ser de varios cientos de grados Celsius con luz solar directa y varios cientos de grados Celsius bajo cero en la sombra. Por supuesto, utilizamos materiales que son resistentes a la deformación térmica, pero tratamos de prevenir aún más la deformación por varios medios, como colocar una cubierta para evitar la luz solar directa si pudiera causar alguna diferencia que influya en la observación, y aplicar el control de temperatura. Para desarrollar estas medidas, los datos detallados de las mediciones son esenciales.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/japanAerospace/japanAerospacePiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> I: Entonces, si se espera que logre una mayor precisión, debe mejorar la tecnología de medición. </strong>
+<br> <br>
+Correcto. Creo que la precisión de medición que se espera que proporcionemos es cada vez mayor. Para nosotros, es importante contar con una tecnología para medir con precisión estructuras a gran escala, y la precisión realmente importa.
+<br> <br>
+Para lograr una alta precisión de medición para estructuras a gran escala con otros métodos, como medir la distancia desde plantillas fijadas en el piso de un edificio y colocar puntos de referencia en un edificio, debemos tener mucho cuidado porque, si esos puntos fijos se desplazan incluso levemente debido a la expansión y contracción inducida por la temperatura o la humedad de todo el edificio, la precisión se verá afectada. Si ha cambiado los puntos de referencia, no sabe si puede creer sus valores de medición. En ese punto, Si uso el método para colocar puntos de referencia en un objeto de medición basado en el principio de la fotogrametría, puedo obtener valores de medición relativos sin preocuparme por el desplazamiento de los puntos de referencia.
+<br> <br>
+Mientras, seguimos repitiendo las mediciones, sin parar nunca con una sola medición, para verificar y tratar de lograr nuestra precisión objetivo al observar los valores promedio y explorar cualquier factor que cause cambios.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Nuestro objetivo final es obtener una " referencia " inamovible
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+I: ¿Cuántas veces repites la verificación?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Es difícil de decir sin especificar condiciones, pero tenemos que medir la precisión de un instrumento de medición en cada caso. Repetimos las mediciones de una pieza de prueba para una prueba de rendimiento, vemos cuánta variación en la medición puede ocurrir para ese instrumento y determinamos si la variación es aceptable para nuestras pruebas.
+<br> <br>
+Para evaluar la deformación térmica, aplicamos calor a una estructura de prueba, medimos cuánta deformación ocurrió a la estructura y comparamos los valores obtenidos y los valores de un modelo de análisis de distribución térmica que preparamos de antemano. De esta manera, podemos verificar si nuestra predicción de los estudios anteriores predice correctamente el fenómeno real que vemos con un objeto real. Si nuestra predicción era incorrecta, tenemos que cuestionar la validez de nuestros resultados de medición, así como nuestro modelo de análisis. Tenemos que pensar en todas las posibilidades, incluso si la estructura estaba realmente distorsionada, si el método de medición de temperatura era correcto o si el modelo de análisis era correcto.
+<br> <br>
+En la investigación del desarrollo, la parte más difícil es que no existe un punto de referencia `` absolutamente correcto '' en ningún lado. Si queremos decir "Este valor es correcto" basado en la medición, debemos tener evidencia y validación que puedan convencer a todos haciéndoles pensar "Puedo confiar en los valores de medición de estas condiciones".En las etapas de desarrollo y experimentación, repetimos mediciones para preparar la evidencia sólida y la validación.
+<br> <br>
+<strong> I: Como esperaba, el desarrollo requiere paciencia. </strong>
+<br> <br>
+Soy investigador y también profesor de alumnos. Como docente, enfatizo la importancia del proceso, no solo avanzar pensando "Debería ser de esta manera", sino más bien "Debería confirmar si lo que creo que debería ser es cierto".
+<br> <br>
+En cuanto a los instrumentos de medición, sus catálogos te dicen "Esta precisión se puede lograr bajo esta condición". Pero nunca sabremos si podemos lograr esos resultados como en sus especificaciones sin usarlos realmente. Tenemos que ver si esa precisión es cierta incluso con un usuario, entorno y objeto diferente a medir. Si obtienes un resultado que concuerda con tu hipótesis, tienes suerte. Pero, para juzgar el acuerdo, necesitas un proceso para confirmar si realmente concuerda con la hipótesis. Esto puede aplicarse a otras cosas además de medir.
+<br> <br>
+Cuando se trata de tecnología de ingeniería, creo que hay muchos casos en los que no obtendremos una única solución. La forma en que interpreta un resultado varía según su punto de vista. Y hay varias formas de lograr el mismo rendimiento y / o precisión. Los datos numéricos son un tipo de información que puedes obtener a través de experimentos y verificación. Creo que mi trabajo como investigador es "explorar varias rutas para escalar una montaña" observando los datos numéricos.
+<br> <br>
+<strong> I: Entonces, buscas precisión absoluta, y hay varias formas de llegar allí. </strong>
+<br> <br>
+Exactamente. Buscamos una precisión absoluta, por lo que debemos saber qué causa la diferencia entre la precisión del objetivo y la precisión real que obtenemos. Por ejemplo, si el requisito es "sin deformación térmica en esta parte", debes saber que cuando esa parte tiene deformación térmica, la calidad de los resultados de la medición disminuye. Si puedes detectar cómo baja la calidad, puedes evaluar correctamente y crear una solución necesaria.
+<br> <br>
+Cuando intentes señalar tal diferencia, tu problema se disolverá rápidamente si tienes una "existencia absoluta", que es un punto de referencia inamovible en el caso de la medición. Para un satélite, al colocar la `` estructura estable a gran escala '' en el punto de origen, puedes avanzar en un desarrollo altamente preciso, centrándote solo en `` cómo cambiar desde ese punto ''.
+<br> <br>
+Como investigador, mi objetivo final es crear una estructura absolutamente estable. Como ya dije, para verificar algo, necesitamos tecnología de medición altamente avanzada y repetición de análisis. Puede que no haya una solución absoluta. Sin embargo, debido a este objetivo final, tengo la motivación para tratar de alcanzarlo, independientemente de cuántos años lleve.
+</p>
+</div>
+</div>              
+                        
+                        
+                        
+
+                            <!-- Japan Aerospace Exploration Agency (JAXA) Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <!--div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/japanAerospace/japanAerospaceLogo.jpg" style="width: 100%;">
+                                </div-->
+
+                                <!-- Datos -->
+                                <div class="col-md-12">
+                                    <h3>
+Acerca de JAXA
+                                    </h3>
+                                    <p>
+Fundada en octubre de 2003, JAXA es una organización de desarrollo de investigación a cargo de las políticas nacionales de desarrollo aeroespacial. El nombre oficial es Agencia de Exploración Aeroespacial de Japón. Se estableció a través de la integración del Instituto de Ciencias Espaciales y Astronáuticas (ISAS), que está bajo la jurisdicción del Ministerio de Educación, el Laboratorio Nacional Aeroespacial (NAL) y la Agencia Nacional de Desarrollo Espacial de Japón (NASDA), que estaban todos dedicados a la investigación espacial y planetaria. Después de la integración, los investigadores comparten las tecnologías y los logros de investigación de las organizaciones respectivas para avanzar en el desarrollo.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+    </body>
+</html>

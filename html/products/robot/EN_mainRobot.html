@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Robot Products</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+                     ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- Horizontal line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                <div style="height: 2px"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php" 
+                   style="color:{{ ttsmBlueColor }};">HOME
+                </a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html" 
+                   style="color:{{ ttsmBlueColor }};">PRODUCTS
+                </a> / 
+                <a href="{{relativeUrl}}html/products/robot/EN_mainRobot.html"
+                   style="color:{{ ttsmBlueColor }};">Robot
+                </a>
+
+                <!-- Content >
+                <h2 style="color:{{ ttsmBlueColor }}; ">Robot Main Content</h2-->
+
+                <!-- LIST OF Others PRODUCTS -->
+                <!-- UPPER ROW -->
+                <div class="row">
+
+                    <!-- Comet Automated -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_cometAutomated.html">
+                        <img src="../../../images/pages/products/robot/cometAutomated_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>COMET Automated</h4>
+                                automated measurement solution
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Master Eye Robot System -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_masterEyeRobotSystem.html">
+                        <img src="../../../images/pages/products/robot/masterEyeRobotSystem_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Master Eye Robot System</h4>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- ABIS II System -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_abisIISystem.html">
+                        <img src="../../../images/pages/products/robot/abisIISystem_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>ABIS II System</h4>
+                                Automatic surface inspection system
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Robot Calibration Solution -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_robotCalibrationSolution.html">
+                        <img src="../../../images/pages/products/robot/robotCalibrationSolution_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Robot Calibration Solution</h4>
+                                Robot Calibration and ISO Performance Testing System
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- LOWER ROW -->
+                <div class="row">
+                    
+                    <!-- Leica Robot System -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_leicaRobotSystem.html">
+                        <img src="../../../images/pages/products/robot/leicaRobotSystem_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Leica Robot System</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

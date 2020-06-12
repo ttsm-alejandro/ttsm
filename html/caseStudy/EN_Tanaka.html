@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Tanaka Seimitsu Kogyo Co., Ltd.</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put BLUE BACKGROUND, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 2 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/EN_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/camera/EN_cometL3d2Base.html">COMET</a><br>Tanaka Seimitsu Kogyo Co., Ltd.</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'EN_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}EN_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}EN_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Tanaka Seimitsu Kogyo Co., Ltd.</a>
+                        
+                        <!-- Y-TEC SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/camera/EN_cometL3d2Base.html">COMET</a><br>Tanaka Seimitsu Kogyo Co., Ltd.</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- Subtitle -->
+                        <h3>
+                            Aiming to construct labor-saving future plants, installing a 
+                            robotic automated 3D measuring device and researching conditions
+                            for achieving highest performance.
+                        </h3>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 10px"></div>
+                        
+                        <!-- Script -->
+                        <div style="font-size: 18px">
+                            
+                            <!-- Text on left, image on right-->
+                            <div class="row">
+                                <!-- text -->
+                                <div class="col-md-6">
+                                    <p>
+                                        Tanaka Seimitsu Kogyo Co., Ltd. headquartered in Toyama City, 
+                                        Toyama Prefecture, has been manufacturing and selling automobile/motorbike 
+                                        parts for major automobile manufacturers since being founded in 1948. Their 
+                                        main products are the parts which influence smooth running, such as engines, 
+                                        transmissions, and chassis. As higher performance is demanded, higher precision
+                                        and durability of the parts are needed. Tanaka Seimitsu Kogyo has been 
+                                        satisfying the needs by improving their technique and having more sites.
+                                    </p>
+                                </div>
+                                <!-- image -->
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece01.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Because their integrated processing system of plastic working, lathing/cutting, 
+                                        heat treating, finishing, and parts assembly/inspection, and technical capability 
+                                        high enough to produce parts for racing cars are highly evaluated, it is known as
+                                        one of the most regarded companies in Toyama Prefecture. Recently it has been
+                                        expanding their manufacturing business, acquiring ISO9001, JISQ9001, and JISQ9100 
+                                        certifications which are essential for producing parts in the aerospace industry. 
+                                        <br><br>
+                                        Their most notable activity is establishment of “T-IReC (tii-airekku)” in December, 
+                                        2017. It renovated a plant into a research center dedicated to researching advanced 
+                                        technology in Toyama City, and started their own research to achieve efficiency and 
+                                        labor-saving in their future plants. Taking charge of one subject, such as AI, 
+                                        machining automation, centralization of operating information, each employee 
+                                        in the research center is conducting research on functions and conditions for 
+                                        use of the machines to be installed to each site in 2022. 
+                                        <br><br>
+                                        In the studies of 3D measuring system automation among those activities, they 
+                                        introduced “<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>”, a non-contact 3D measuring device, from Tokyo Boeki 
+                                        Techno-System Ltd. It is a cost-efficient product in which a robot, software, 
+                                        and measuring device are set, with the software that allows non-robot-experts to
+                                        create teaching data. 
+                                        <br><br>
+                                        I asked them in detail about the reason why they selected this product out of
+                                        various measuring devices, how they will use it in their future plants, and what
+                                        studies they are performing for that purpose.
+                                        <br><br>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Rinnai staff 01 -->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                         Mr. Kenji Kuse, Assistant Manager of Factory Automation Team, Business Planning Block,
+                                         Planning Department
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+                            
+                            <!-- Photo Staff 01 -->
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaStaff01.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         He started his work at the company with his aim to engage in a job related to 
+                                         automobiles. Leading the “T-IReC” from December, 2017, he is working with a
+                                         view to selection and verification of the equipment for constructing futuristic
+                                         plants, development of personnel who master the equipment operation, and subsequent
+                                         spread of the equipment. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 02-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Ms. Misako Tsubota, Factory Automation Team, Business Planning Block, Planning Department
+
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Photo Staff 02 -->
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaStaff02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        She was selected as a member of the “T-IReC” team who would lead the 
+                                        project of efficient automatic measurement in January, 2018. She has been
+                                        working on various activities every day since the installation of the device.
+                                        She is expected to do well as an instruction leader at each site in the future. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Measuring Process-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        Receiving more orders with only 3D data than with 2D drawings
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ---Your company has delivered excellent business results in manufacturing 
+                                        of automobile/motorbike parts for many years. It has become a major company 
+                                        representing the prefecture. 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Mr. Kenji Kuse (Kuse, hereinafter):</strong> 
+                                        Mr. Kenji Kuse (Kuse, hereinafter): 2018 was a milestone year for our company;
+                                        it was the 70th anniversary since being founded. We have been recognized as a
+                                        good manufacturer of small precision parts, such as engines, chassis, transmissions,
+                                        meeting the needs from manufacturers of motors, automobiles and motorbikes. 
+                                        We are confident in our parts whose quality is technically and performance-wise 
+                                        high enough to be used for racing cars.
+                                        <br><br>
+                                        However, the way in which orders are placed has changed in recent years. We used 
+                                        to receive orders requesting “to produce such parts” with 2D drawings shown and 
+                                        then started considering necessary dimensions and materials based on the drawings.
+                                        However, we have received more orders only with 3D CAD data without drawings for these 
+                                        past 5 years.   
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 02 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Because there is no shape drawing, we need to confirm arcs and angles in 
+                                        the 3D data in order to actually produce aluminum die-cast products in the 
+                                        production site. And after forming, we need to accurately measure the work 
+                                        piece to check “whether it is precisely formed in accordance with the 3D data”
+                                        and qualify it. It was very difficult to maintain precision of the contact-type
+                                        measuring device we were using then. We came up with an idea that we should 
+                                        introduce a non-contact measuring device to realize “faster and more accurate”
+                                        measurement. 
+                                        <br><br>
+                                        There was another important movement in our business. Although we have handled 
+                                        small parts, we want to expand our business to manufacture large parts and parts 
+                                        in areas other than automobiles/motorbikes. To acquire more orders for them, 
+                                        we should not respond in an old-fashioned manner. We thought that we would be 
+                                        in the phase of fundamentally reviewing the direction in our plants, and the personnel
+                                        arrangement.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ---Thus, the “T-IReC”, a research center for new technology was established. 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Kuse: </strong> 
+                                        Yes. We established an organization dedicated to the research completely 
+                                        separated from manufacturing technology development in 2017, with the FA 
+                                        Promotion Team which would concretely study and verify equipment. Its goal 
+                                        is to introduce various new equipment in our sites in and outside of Japan 
+                                        to achieve efficiency and labor-saving by 2022. Each employee in the research 
+                                        center is conducting research, taking charge of one subject, such as AI and
+                                        machining automation.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        - “<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>”, a non-contact 3D measuring device, was installed with a view to your
+                                        future plant. What were the points of selection? 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Kuse: </strong> 
+                                        We started the discussion about it in 2016. Because we wanted to substantially
+                                        shorten the measuring time, a non-contact automated measurement system was major 
+                                        premise. We were not in full knowledge of the products, so to collect information 
+                                        about the basic mechanism and trends we went first to exhibitions where measuring
+                                        device manufacturers gathered. We discussed 20 to 30 models, considering our application.
+                                        <br><br>
+                                        In fact, we introduced one measuring device from another company in 2017 because
+                                        we thought it would match our application of qualifying the shapes after forming. 
+                                        However, about a year after the introduction, the need, “we would like to check 
+                                        the shape in the middle of the production process as well” arose from the production
+                                        site. The measuring device we introduced could measure various shapes accurately, 
+                                        but it took a lot of time. We could select the second device soon because we felt
+                                        that “<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>” must be good for high-speed measurement during mass production” in 
+                                        our first discussion.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 03 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece03.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Its camera for picture-taking is single-lens reflex, which is beneficial for us.
+                                        In case of a compound-eye camera, overlapped data on the software is thinned. 
+                                        But we want data of the precise shape of the workpiece at hand. For that reason,
+                                        the measuring device with a single-lens reflex camera is the best to capture 
+                                        shapes including bug or deformation and only Tokyo Boeki Techno-System Ltd. 
+                                        offers an ideal type of product for us.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Research to achieve -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        Research to achieve highest performance in each site
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ---The measuring device was installed to the “T-IReC” at the end of August, 
+                                        2018. Will you install another one to each site from now? 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Kuse:</strong> Yes. Ms. Tsubota is currently in charge of studying 
+                                        automatic measurement and working on various works to verify the conditions
+                                        in which the device can present highest performance, considering what kind 
+                                        of attention should be paid to when actually introducing the device in our 
+                                        plants.
+                                        <br><br>
+                                        <strong>Ms. Tsubota (Tsubota, hereinafter): </strong> We know the time for 
+                                        shape confirmation measurement will be greatly shortened in the production 
+                                        site. For example, the work which took a whole day with the previous measuring 
+                                        device, can be completed within 30 minutes with “<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>”. It is also better at
+                                        measuring glossy surfaces than expected. Because molds for die-cast change as
+                                        it is being used, it will be useful for quality control if we can understand 
+                                        the change daily.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 04 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece04.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        However, the usage conditions should be adequately examined to achieve maximum efficiency at each plant. There is oily smoke, powder dust, wide temperature change, vibration in the production process, and so on in the production site. What environment should be prepared to measure accurate values under such conditions? Conversely, in what range of conditions, value fluctuations can be ignored? I am verifying the optimal usage for each site, because necessary conditions are different depending on the place and product to be measured. 
+                                        <br><br>
+                                        <strong>Kuse:</strong> She knew nothing about non-contact 3D measurement when she was assigned to this project, but now she is the best expert in the company.  
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+---How is the feeling of operation and usability?  
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <br><strong>Tsubota: </strong> When we installed it, an instructor came from Tokyo Boeki Techno-System and provided a one-on-one training on the operation for 4 days. In addition, I took a 3-day seminar at Toyama Vocational Skills Development Center to learn the basic knowledge about 3D measurement and the concept of capturing surfaces. I also took a training of industrial robots after being assigned.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 05 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece05.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+I started using it in September. I always ask the support center when I don't understand something, even if that is a basic question, such as, “what to do when this screen is displayed”. I email him with images or I call him when in a hurry. I have no worry because he responds immediately. 
+<br><br>
+<strong>Kuse: </strong>Performance-wise, I feel technology has been advancing so much when I see the software creates even a measuring program. When a workpiece is set in the simulation, the arm automatically turns round and round, measurement points are found, and the program is sent to the robot. I believe that such convenience will be key to solve personnel shortage when it is introduced to all our sites.
+<br><br>
+In addition, I feel secure because one person in charge becomes point of contact and advises us, understanding our use environment and purpose. When a problem occurred once, he explained the situation accurately and frankly, showing some recovery plans. At last it was solved much faster than expected, so I recognized his high response capability. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+---You are studying equipment other than the 3D measuring devices. What development are you planning from now on? 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Kuse: </strong> Kuse: Our primary goal is to install equipment to each sites in the optimal condition and realize efficiency and labor-saving. We think we will set the conditions and install them in the production lines without troubling the production site as much as possible. I want to improve the operating efficiency to the level where even new hires can learn the operation soon and use it in the site.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 06 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaPiece06.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        The integration of various technologies could promote labor-saving, such as automatic measurement by reading 2D barcodes made on products, and the entire plant having self-diagnosis function which allows automatic operation up to idling. We also consider selling our system to improve efficiency in plants as a package in the future. 
+
+                                        <br><br>
+                                        We would like to not only solve personnel shortage but also create the environment in which people can be engaged in more creative work, by automating the work which can be done by machine. I believe that there is still more room for it in the manufacturing industry.
+
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Tanaka Company Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/tanaka/tanakaLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+Tanaka Seimitsu Kogyo Co., Ltd.
+
+                                    </h3>
+                                    <p>
+Being founded as Tanaka Seisakusho in 1948, the company became Tanaka Kinzoku Kogyo Limited Liability Company in 1951. It then changed its name to “Tanaka Seimitsu Kogyo” in 1955 and incorporated itself in 1957. It has been developing their business mainly in manufacturing and sale of automobile/motorbike parts, being highly regarded as a supplier of high-precision/high-performance parts. It established “T-IReC”, a research center for advanced technology, in December, 2017. It has been conducting research there with a view to achieving efficiency and labor-saving in their future plants, separately from manufacturing technology development. It is planning to introduce the results of their research to their business sites in and outside Japan by 2022.
+
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/EN_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

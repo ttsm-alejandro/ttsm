@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Soluciones</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl">
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/ES_header.html'"></div>
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+                <h1 style="color: {{ ttsmBlueColor }};">Soluciones</h1>
+                
+                <!-- MAIN CONTENT -->
+                <!--img src="images/pages/solutions/reverseEngineer.png" width="100%"-->
+                
+                
+                <!-- Reverse Engineering -->
+                <h3 style="color: {{ ttsmBlueColor }};">Ingeniería inversa</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/pages/solutions/reverseEngineerProcess.png" width="100%">
+                    </div>
+                </div>
+                
+                <!-- 3D Metrology -->
+                <h3 style="color: {{ ttsmBlueColor }};">Metrología 3D</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/pages/solutions/3DMetrology.png" width="100%">
+                    </div>
+                </div>
+                    
+                
+                <!-- QA -->
+                <h3 style="color: {{ ttsmBlueColor }};">Aseguramiento de calidad</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            
+                            <ul>
+                                <li>Estampado</li>
+                                <li>Fundición</li>
+                                <li>Plásticos</li>
+                                <li>Certificación de escantillones</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/pages/solutions/qa.jpeg">
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <h2>¿Podemos ayudarte?</h2>
+                <div ng-include="'html/contact/ES_contactForm.html'"></div>
+
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/ES_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>
+

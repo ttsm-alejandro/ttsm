@@ -1,0 +1,95 @@
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<!-- MODAL SMC PLANNER -->
+<div class="modal fade" id="sMCPlannerModal" role="dialog">
+    <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title" title="{{ tableCalibrationPlanner | json }}">SMC Planner</h2>
+            </div>
+            
+            <!-- Computers Details -->
+            <div class="modal-body">
+                <h5>Filter List</h5>
+                Select Software:
+                <select 
+                    title="Select Software to filter list"
+                    ng-model="idSoftwareSelectedFilter"
+                    class="input-sm"
+                    ng-options="x.id as x.name for x in softwareCatalog"></select>
+                Select STATUS:
+                <select 
+                    title="Select Status to filter list"
+                    ng-model="statusSelectedFilter"
+                    class="input-sm"
+                    ng-options="x.name as x.name for x in statusCatalog"></select>
+                
+                <label class="label label-warning" ng-click="idSoftwareSelectedFilter = '' ; statusSelectedFilter = '';">RESET SELECTIONS</label>
+                Show Columns: 
+                <label class="label {{ labelCompany }}" ng-click="clicLabelShowColumn( 'company' )">COMPANY</label>
+                <label class="label {{ labelPlant }}" ng-click="clicLabelShowColumn( 'plant' )">PLANT</label>
+                <label class="label {{ labelPerson }}" ng-click="clicLabelShowColumn( 'person' )">PERSON</label>
+                <label class="label {{ labelPersonEmail }}" ng-click="clicLabelShowColumn( 'personEmail' )">EMAIL</label>
+                <label class="label {{ labelSystem }}" ng-click="clicLabelShowColumn( 'system' )">SYSTEM</label>
+                <!--label class="label label-success" ng-click="filterStatusInCalibrationPlanner = 'OK'">OK</label>
+                <label class="label label-danger" ng-click="filterStatusInCalibrationPlanner = 'PAST'">PAST</label>
+                <label class="label label-info" ng-click="filterStatusInCalibrationPlanner = '';">RESET Status</label>
+                <label class="label label-info">-</label>
+                <label class="label label-default" ng-click="isShowPlantInCalibrationPlanner = !isShowPlantInCalibrationPlanner">Plant</label>
+                <label class="label label-default" ng-click="isShowPersonInCalibrationPlanner = !isShowPersonInCalibrationPlanner">Person</label>
+                <label class="label label-default" ng-click="isShowEmailInCalibrationPlanner = !isShowEmailInCalibrationPlanner">Email</label-->
+                <div class="table-responsive"> 
+                    <table class="table table-hover table-condensed">
+                        <tr style="background-color: {{ ttsmBlueColor }}; color: white">
+                            <td ng-show="isShowCompany">Company</td>
+                            <td ng-show="isShowPlant">Plant</td>
+                            <td ng-show="isShowPerson">Person</td>
+                            <td ng-show="isShowPersonEmail">E-mail</td>
+                            <td ng-show="isShowSystem">System</td>
+                            <td>Computer</td>
+                            <td>Software</td>
+                            <td>Dongle</td>
+                            <td>Expiration Date</td>
+                            <td>Days left</td>
+                            <td>Status</td>
+                        </tr>
+                        <tr ng-repeat="row in tableSMCPlanner" 
+                            ng-show=" (
+                                        ( (statusSelectedFilter == row.status) || (statusSelectedFilter == '') )
+                                        && ( (idSoftwareSelectedFilter == row.idSoftware ) || (idSoftwareSelectedFilter == '') )
+                                    )
+                            
+                            "
+                            >
+                            
+                            <td ng-show="isShowCompany">{{ row.companyName }}</td>
+                            <td ng-show="isShowPlant">{{ row.plantName }}</td>
+                            <td ng-show="isShowPerson">{{ row.personName }}</td>
+                            <td ng-show="isShowPersonEmail"><label class="label label-default">{{ row.personEmail }}</label></td>
+                            <td ng-show="isShowSystem">{{ row.systemSerialNumber }}</td>
+                            <td>{{ row.computerServiceTag }}</td>
+                            <td><select ng-model="row.idSoftware" ng-disabled="true"  ng-options="x.id as x.name for x in softwareCatalog"></select></td>
+                            <td>{{ row.dongle }}</td>
+                            <td><input type="date" ng-disabled="true" ng-model="row.expirationDate"></td>
+                            <td>{{ row.dayUntilExpirationDate }}</td>
+                            <td style="{{ getStyleByStatus( row.status ) }}">{{ row.status }}</td>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                    <a href="../../php/resources/excel/CalibrationPlannerToExcelResource.php?user={{ user }}&token={{ token }}">
+                        <button type="button" ng-disabled="true" class="btn btn-success">Export to EXCEL</button>
+                    </a>
+                    <!--button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button-->
+            </div>
+      </div>
+    </div>
+</div>

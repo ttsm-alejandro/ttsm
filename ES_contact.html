@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Contacto</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="getCurrentUrl();"
+             >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/ES_header.html'"></div>
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+                <h1 style="color: {{ ttsmBlueColor }};">Contáctanos</h1>
+
+                <!-- Contact Info -->
+                <div ng-include="'html/contact/ES_contactInfo.html'"></div>
+                
+                <h2>¿Necesitas algo?</h2>
+                
+                <!-- Contact form -->
+                <div ng-include="'html/contact/ES_contactForm.html'"></div>
+
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/ES_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>
+

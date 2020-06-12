@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Mill-7 System</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/milling/mill7System_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='LM';
+                               ">
+            
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/milling/ES_mainMilling.html">MILLING</a> / 
+                <a href="">Mill-7 System</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>MILL-7 System</h1></div>
+                        <p>
+                            High performance high speed horizontal processing machine equipped with ATC and realizing simultaneous 5 axis processing is an essential NC processing system for model development
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <li>Foaming, artificial wood (resin), full size clay model can be cut. </li>
+                            <li>Automatic tool change can be installed by installing ATC (auto tool changer). </li>
+                            <li>Dust collecting port for suspended dust at cutting is also installed. </li>
+                            <li>Various dimensions that can be installed in existing buildings. </li>
+                            <li>The user interface is simple, easy to understand and operation learning is possible in a short time. </li>
+                            <li>Simultaneous 5-axis control and high-speed rotation of the main spindle shorten the processing time to 1/3 of the conventional one.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <h3>Specification:</h3>
+
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Machine spec</th>
+                                    <th>Horizontal Arm 3-axis</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>YZ Main Weight</td>
+                                    <td>4,000 kg.</td>
+                                </tr>
+                                <tr>
+                                    <th>Drive spec</th>
+                                    <td>LM Guide</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Pack Pinion</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>X Axis Cover Belt</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Stroke</td>
+                                    <td>X</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Y</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Z</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Machine speed & Ability</td>
+                                    <td>Distance from FL Line</td>
+                                    <td>160 mm</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Moving speed</td>
+                                    <td>25 m/min</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Minimum spindles speed</td>
+                                    <td>3,000mm</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Maximum spindles speed</td>
+                                    <td>24,000mm</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Maximum torque</td>
+                                    <td>3.7 Nm</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Standard torque</td>
+                                    <td>1.2-3.0 Nm</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Milling head</td>
+                                    <td>Auto 2-axis</td>
+                                    <td>Total 5-axis</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>C axis rotatable</td>
+                                    <td>± 120 °C</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>B axis rotatable</td>
+                                    <td>± 180 °C</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Cooling system</td>
+                                    <td>Air</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Magazine position</td>
+                                    <td>Column side</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ATC</td>
+                                    <td>Tools number</td>
+                                    <td>15 pcs</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Maximum Tool size</td>
+                                    <td>250 mm</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <h3>1. Colum stroke </h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Stroke (mm.)</th>
+                                    <th>Machine Height (mm.)</th>
+                                </tr>
+                                <tr>
+                                    <th>28</th>
+                                    <td>2800</td>
+                                    <td>4500</td>
+                                </tr>
+                                <tr>
+                                    <th>25</th>
+                                    <td>2500</td>
+                                    <td>4200</td>
+                                </tr>
+                                <tr>
+                                    <th>22</th>
+                                    <td>2200</td>
+                                    <td>3900</td>
+                                </tr>
+                                <tr>
+                                    <th>19</th>
+                                    <td>1900</td>
+                                    <td>3600</td>
+                                </tr>
+                                <tr>
+                                    <th>16</th>
+                                    <td>1600</td>
+                                    <td>3600</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <h3>2. Arm stroke</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Stroke (mm)</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>16</th>
+                                    <td>1650</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>16</th>
+                                    <td>1550</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>14</th>
+                                    <td>1450</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>13</th>
+                                    <td>1350</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <h3>3. Attachment</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Details</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>-</th>
+                                    <td>N/A</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>A</th>
+                                    <td>APC Unit</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>L</th>
+                                    <td>Base Area Sensor</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>M</th>
+                                    <td>Control Monitor Unit</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <h3>4. Base rail long</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Base long (m.)</th>
+                                    <th>Stroke (mm.)</th>
+                                </tr>
+                                <tr>
+                                    <th>8.5</th>
+                                    <td>8.5</td>
+                                    <td>4500</td>
+                                </tr>
+
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Comet L3D 2 Standard</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/camera/cometL3d2Standard_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='COMET';
+                               ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                </hr>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/camera/EN_mainCamera.html">CAMERA</a> / 
+                <a href="">COMET L3D 2 STANDARD</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>COMET L3D 2 STANDARD</h1></div>
+                        <p>
+                            The ultra-compact 3D sensor offers great flexibility, a high measuring speed and impressive performance
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <strong>ZEISS COMET LƎD 2</strong>
+                                    <br>
+                                    With the ZEISS COMET LƎD 2, you’re using the latest sensor technology and project-orientated software for simple and reliable 3D data capture.
+                                    <br>Map the 3D data of your components quickly and accurately and gain increased scope for a multitude of measuring tasks thanks to the unique flexibility of the system.
+                                    <br>The high-performance software platform colin3D ensures a consistently efficient and projectoriented procedure during the entire measuring process.
+
+                                    <br><br><strong>Designed for mobile and flexible use</strong>
+                                    <br>Do you value flexible application possibilities? The innovative sensor system is extremely compact and light, meaning you can transport it to different application sites without any difficulty. Simple on-site calibration ensures that you can quickly change the measuring field by swapping the lenses. It’s fast and easy, and soon the system is ready for the next measuring task.
+
+                                    <br><br><strong>A vast range of applications</strong>
+                                    <br>
+                                    <ul>
+                                        <li>Quality control / inspection</li>
+                                        <li>Mold and model making</li>
+                                        <li>Design</li>
+                                        <li>Rapid Manufacturing</li>
+                                        <li>Reverse Engineering</li>
+                                        <li>Archaeology, documentation of art-historical objects, etc</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <strong>Achieve optimal measurement results quickly and easily</strong>
+                                    <br>In just a few simple steps and without any lengthy preparation, the ZEISS COMET LƎD 2 sensor is ready for use - enabling you to concentrate on measuring.
+                                    <br>This comprehensive solution uses the latest sensor technology and the project-oriented software colin3D for data capture and data processing. It affords you a high level of efficiency in operating sequences and generates high-quality measurement data. Thanks to the minimal working distance, it is possible to work in cramped conditions without any difficulty.
+
+                                    <br><br><strong>High precision for demanding applications</strong>
+                                    <br>The ZEISS COMET LƎD 2 delivers excellent data quality and highly accurate measuring results, making the system the ideal solution for demanding applications in quality inspection. With the colin3D software, you’ll generate easy false color comparisons for individual analysis as well as reports for documenting measuring results
+
+                                    <br><br><strong>Innovative technology</strong>
+                                    <br>With the high light intensity and fast camera on the ZEISS COMET LƎD 2 sensor, you have the flexibility you need when using it at different sites.
+                                    <br>The system delivers precise 3D data and automatically recognizes changes in vibration and exposure, even in difficult ambient conditions - high-end technology for exceptional data quality with maximum ease of use.
+                                    <br>Moreover, the enormous light yield and the sensationally high measuring speed ensure reliable data capture on different object surfaces.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <h3>COMET LƎD 2 5M Specification</h3>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Resolution</th>
+                                    <td>2448 x 2050</td>
+                                </tr>
+                                <tr>
+                                    <th>Measurement Volume in mm³</th>
+                                    <td>45 field-of-view: 45 x 38 x 30</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>75 field-of-view: 74 x 62 x 45</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>100 field-of-view: 118 x 98 x 60</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>250 field-of-view: 255 x 211 x 140</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>500 field-of-view: 481 x 404 x 250</td>
+                                </tr>
+                                <tr>
+                                    <th>3D Point Distance in μm</th>
+                                    <td>field-of-view 45 / 75 / 100 / 250 / 500</td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>18 / 30 /   48 / 105 / 196</td>
+                                </tr>
+                                <tr>
+                                    <th>Fastest Measurement Time</th>
+                                    <td>~ 1 second</td>
+                                </tr>
+                                <tr>
+                                    <th>Working distance in mm</th>
+                                    <td>760 for measuring fields 45 / 75 / 100 / 250 / 500</td>
+                                </tr>
+                                <tr>
+                                    <th>Computers</th>
+                                    <td>Available with desktop computer or notebook</td>
+                                </tr>
+                                <tr>
+                                    <th>Sensor Positioning</th>
+                                    <td>Tripod or column-type stand with a manual rotational/swivel axis</td>
+                                </tr>
+                                <tr>
+                                    <th>Automatic Object Positioning</th>
+                                    <td>Rotation table (COMETrotary, COMETdual rotary)</td>
+                                </tr>
+                                <tr>
+                                    <th>Available Software</th>
+                                    <td>colin3D</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

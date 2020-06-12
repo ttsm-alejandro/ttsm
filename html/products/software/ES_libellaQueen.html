@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Libella Queen</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/software/libellaQueen_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/software/ES_mainSoftware.html">SOFTWARE</a> / 
+                <a href="">Libella Queen</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Libella Queen</h1></div>
+                        <p>
+                            Tokyo Boeki Techno-System Ltd está orgulloso de desarrollar software de metrología excepcional para usar en conjunto con nuestros instrumentos de medición.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <h3>Libella Queen</h3>
+
+                        <img src="../../../images/pages/products/software/libellaQueen_2.jpg" width="60%">
+
+                        <p>
+                            <br>Libella Queen ofrece una amplia selección de funciones para satisfacer todos los requisitos en cualquier entorno. Este software está vinculado a una máquina de medición tridimensional articulada, lo que hace que la medición funcione con la operación más sencilla posible. El software permite la inspección visual de los resultados de las mediciones en el momento.
+                        </p>
+
+                        <img src="../../../images/pages/products/software/libellaQueen_3.jpg" width="60%">
+
+                        <h3>Obtenga siempre retroalimentación</h3>
+
+                        <p>
+                           <br>Para respaldar completamente los procesos de fabricación, hemos incorporado una gran cantidad de opiniones genuinas de los técnicos de campo. Esta búsqueda ha llevado a una mayor funcionalidad y facilidad de uso, así como a soporte para el trabajo de medición e inspección de los clientes. Como resultado, nuestra herramienta se ha convertido en un estándar confiable dentro de los procesos de los fabricantes de automóviles japoneses.
+                        </p>
+
+                        <img src="../../../images/pages/products/software/libellaQueen_4.jpg" width="60%">
+
+                        <h3>Características del producto</h3>
+
+                        <p>
+                            <ul>
+                                <li>Ventana de visualización de las coordenadas en tiempo real</li>
+                                <li>Visualización grafica de los elementos medidos</li>
+                                <li>Visualización de la sonda del equipo de medición en tiempo real</li>
+                                <li>Guía de operación del proceso de medición</li>
+                                <li>Juicio inmediato del resultado de medición en una ventana emergente, evaluado a partir de las tolerancias del cliente (con CAD)</li>
+                            </ul>
+
+                            <br>sin embargo, no es necesario contar con archivos CAD para realizar mediciones, a través de los diferentes métodos de alineación disponiples para diferentes condiciones y características de las piezas, podemos modelar incluso nuestro propio "Master" para comparaciones futuras. Diferentes elementos geométricos pueden ser medidos, sírculos, pernos, conos, etc. Los análisis de seccion transversal y el escaneo se realizan sin esfuerzo gracias a sus funciones de guía de procesos
+                            <br><br>Our software makes it possible to omit the middle icon operation using a simple macro function. This permits repeated measurements of the same procedure with ease.
+                            <br><br>La funcionalidad de asistente (wizard) es compatible con nuestro software. A diferencia de la función macro que repite un proceso, esta funcionalidad permite a los usuarios agregar procesos, como el juicio de tolerancia, al procedimiento de medición. Los resultados de la medición de contacto se pueden exportar directamente en formato de hoja de cálculo Excel ™. El informe se completa sin escribir a mano el resultado de la medición.
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Requerimientos del sistema</h4>
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>O/S</th>
+                                    <td>
+                                        Windows 10 Pro (64bit)
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>Intel Core i7 o mayor recomendado</td>
+                                </tr>
+                                <tr>
+                                    <th>Memoria RAM</th>
+                                    <td>
+                                        
+                                        <br>64bit: 16 GB o más recomendado
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Disco duro</th>
+                                    <td>Mínimo 256 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>Resolución</th>
+                                    <td>1280 X 1024 más alta</td>
+                                </tr>
+                                <tr>
+                                    <th>Condiciones de operación</th>
+                                    <td>
+                                        Un puerto USB libre (para licencia)                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Gráficos</th>
+                                    <td>
+                                        Tarjeta OpenGL
+                                        <br>NVIDIA serie Quadro recomendada
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

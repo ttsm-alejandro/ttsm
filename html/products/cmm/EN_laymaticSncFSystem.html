@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Laymatic SNC F System</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+            brochureToDownload='LM';
+                     ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / <a href="{{relativeUrl}}html/products/cmm/EN_mainCmm.html">CMM MANUAL</a> / <a href="">Laymatic SNC F System</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="../../../images/pages/products/cmm/laymaticSncFSystem.jpg" width="100%">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="text-muted"><h1>Laymatic SNC F System</h1></div>
+                        <p>
+                            Improved Layout Machine F-Model to CNC System
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <li>Alleviating work load.</li>
+                            <li>Improvement in operation performance.</li>
+                            <li>Enlargement of effective stroke.</li>
+                            <li>Improvement in precision stability.</li>
+                            <li>Improvement in job site environment protection.</li>
+                            <li>Improvement in safety.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Specification</h4>
+                            <img src="../../../images/pages/products/cmm/layoutMachineAModelSpecification.jpg" width="50%">
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>TYPE</th>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>D</th>
+                                    <th>E</th>
+                                    <th>F</th>
+                                    <th>Accuracy/Axis</th>
+                                    <th>Weight(kg.)</th>
+                                </tr>
+                                <tr>
+                                    <th>1615F</th>
+                                    <td>1450</td>
+                                    <td>380</td>
+                                    <td>1920</td>
+                                    <td>1550</td>
+                                    <td>200</td>
+                                    <td>2390</td>
+                                    <td>±0.07</td>
+                                    <td>270</td>
+                                </tr>
+                                <tr>
+                                    <th>2015F</th>
+                                    <td>1450</td>
+                                    <td>380</td>
+                                    <td>1920</td>
+                                    <td>1950</td>
+                                    <td>200</td>
+                                    <td>2790</td>
+                                    <td>±0.07</td>
+                                    <td>280</td>
+                                </tr>
+                            </table>
+                            When using the frame dedicated for the Layout Machine, the precision means a requirement for each axis, given based upon the TTS's inspection procedure
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

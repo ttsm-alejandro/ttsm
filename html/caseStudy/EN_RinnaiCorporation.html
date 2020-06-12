@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Rinnai Corporation</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 1 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/EN_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/camera/EN_cometL3d2Base.html">COMET</a><br>RINNAI CORPORATION</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'EN_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}EN_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}EN_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Rinnai Corporation</a>
+                        
+                        <!-- Y-TEC SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/camera/EN_cometL3d2Base.html">COMET</a><br>Rinnai Corporation</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- Subtitle -->
+                        <h3>
+                            ・Acquire precise 3D measurement data at the development stage<br>
+                            ・Rework and losses are drastically reduced, and prototype costs are reduced by 50%<br>
+                            ・Easily understand distortion and share information visually
+                        </h3>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 10px"></div>
+                        
+                        <!-- Script -->
+                        <div style="font-size: 18px">
+                            
+                            <!-- Text on left, image on right-->
+                            <div class="row">
+                                <!-- text -->
+                                <div class="col-md-6">
+                                    <p>
+                                        Rinnai Corporation, celebrating its 100th anniversary 
+                                        in 2020, was founded in 1920 as the “Rinnai Shokai”, taking the 
+                                        letters of the founders Kaneyoshi Hayashi and Shujiro Naito. With 
+                                        sales offices nationwide based in Nagoya, Aichi Prefecture, the 
+                                        company has grown into a global company that forms the Rinnai
+                                        Group of 15 domestic companies and 31 overseas companies. The
+                                        business that started with the manufacture and sale of pressurized 
+                                        oil stoves has been expanded into gas appliances such as gas table
+                                        stoves, gas ranges, gas stoves, and gas water heaters.
+                                    </p>
+                                </div>
+                                <!-- image -->
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiPiece01.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        The technical power and safety performance that was related to aircraft 
+                                        manufacturing in the past have been applied to precise design. The 
+                                        product group that can withstand the hard working environment has 
+                                        also been highly evaluated.
+                                        <br><br>
+                                        In the future, we would like to expand in fields that contribute
+                                        to the environment, health, and time savings. We are developing
+                                        technologies that achieve high efficiency through hybrids with
+                                        electricity and products that change the common sense of gas equipment.
+                                        Among them, clothes dryers that use gas and Dutch ovens that make use
+                                        of the strength of direct fire are gradually attracting attention.
+                                        <br><br>
+                                        An indispensable thing for efficient use of thermal energy is a
+                                        mechanical design that precisely controls gas and air and precise 
+                                        mold fabrication. The non-contact 3D measuring machine “<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>” 
+                                        of Tokyo Boeki Techno-System was used in the field, and it succeeded
+                                        in cutting costs and shortening the construction period by using it
+                                        for mold production and molding measurement. The measured 3D data can
+                                        be visually analyzed and compared with the CAD comparison inspection
+                                        software "spGauge", so you can immediately share information on the
+                                        distortion points and differences.
+                                        <br><br>
+                                        This time, we asked in detail about the benefits of using a non-contact
+                                        3D measuring machine in the development, and in what situation the cost
+                                        reduction was realized.
+                                        <br><br>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Rinnai staff 01 -->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■Mr. Seiichi Muto, Manager
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Production Engineering Department, Product Technology Development 
+                                        Section, Processing Technology Development Section 1 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Staff 01 -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiStaff01.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         He mainly engaged in research and development of various processing
+                                         technologies. In 2008, he introduced a non-contact 3D measuring system 
+                                         to improve mold production efficiency, and makes efforts to improve 
+                                         in-house inspection technology.  
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 02-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■Mr. Taiki Harada, Senior Engineer
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         Product Technology Division, Product Technology Development Section, 
+                                         Production Technology Department 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Staff 02 -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiStaff02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         After being involved in welding technology development, he is
+                                         now working on early production of new products at the 
+                                         production design site. He is also in charge of in-house 
+                                         3D measuring system education. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 03-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                         ■Ms. Minori Hashimoto, Engineer
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         Product Technology Development Section, Production Technology Department
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Staff 03 -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiStaff03.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         With Director Muto, she is engaged in technology development of 
+                                         welding and uses measuring system to measure molds and molded products 
+                                         under development.                                   
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Measuring Process-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        Utilizing measuring instruments from upstream processes, 
+                                        reducing prototype costs by 50%                                    
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Your company has been manufacturing and selling a wide range of 
+                                        gas related equipment for many years. When did you use the 
+                                        measuring machine and in what kind of scene?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Mr. Seiichi Muto (hereinafter referred to as Muto):</strong> 
+                                        We introduced the non-contact 3D measuring machine "<a href="../products/camera/EN_cometL3d2Base.html">COMET</a>" and CAD
+                                        comparison and inspection software "spGauge" in 2008. They are 
+                                        mostly used for the process to check if a prototype matches its
+                                        drawings in early production process of new products.                                    
+                                        <br><br>
+                                        <strong> Mr. Taiki Harada (hereinafter referred to Harada):</strong>
+                                        As the development process for new products progresses, it moves to 
+                                        factory production preparation. One of my department's roles is to
+                                        reduce return loss and defective products. When the prototype is
+                                        measured in 3D, the difference between the molded product and the
+                                        drawing can be seen. Based on this data, the mold is corrected and 
+                                        the machining tool is changed, which leads to accurate product 
+                                        manufacturing.
+                                        <br><br>
+                                        Our products such as gas stoves and water heaters have many 
+                                        extremely complicated drawing shapes consisting of curved parts. 
+                                        Previously it was measured with an analog R gauge or a contact
+                                        measuring machine, but accurate values cannot be obtained for 
+                                        continuous surfaces of different R. However, with <a href="../products/camera/EN_cometL3d2Base.html">COMET</a>, you 
+                                        can acquire point cloud data at intervals of 0.2 mm with a single
+                                        shot, and you can see fine distortion and dents on the surface. In
+                                        the analysis software, you can see 3D visuals in which color change
+                                        depending on the degree of distortion and you can share it at a 
+                                        glance with the development and production members who check together.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 02 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiPiece02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Muto: </strong> Producing prototypes costs time and money. 
+                                        The first good point after introducing <a href="../products/camera/EN_cometL3d2Base.html">COMET</a> was that the difference
+                                        between the mold and the prototype could be understood immediately,
+                                        and the number of mold rework and correction was drastically reduced.
+                                        This reduced the prototype cost by nearly half depending on the year.
+                                        This is a pretty big achievement as a company.
+                                        <br><br>
+                                        In the past, skilled engineers judged the parts that could not be
+                                        measured based on empirical rules and repeated trial and error. 
+                                        Then the prototype cost was that much higher. Now it is possible 
+                                        to measure in detail, and anyone can see the degree of distortion
+                                        with numerical values and images, so the quality can be achieved 
+                                        with the second trial production.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 03 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiPiece03.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Ms. Mirei Hashimoto (hereinafter referred to Hashimoto):</strong> I'm 
+                                        in the second year in this department and I measure for example, the 
+                                        welded part of the tank body and the lid called the end plate with 3D 
+                                        measuring system to check if the parts are made at the designed angle.
+                                        The machine is quite helpful as there are many parts that cannot be 
+                                        measured with calipers, etc.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Do you see any other merits of introduction?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Harada:</strong> With early manufacturing before mass
+                                        production, molds can be made with precise 3D data even in 
+                                        the upstream, prototype stage design stage. This cost reduction 
+                                        and construction time reduction are also the achievement.
+                                        <br><br>
+                                        <strong>Muto:</strong> Also, we conduct CAE simulations such 
+                                        as pressure resistance and gas flow. By importing actual 
+                                        measured product data, the accuracy of CAE has improved 
+                                        dramatically, and the number of prototypes has been greatly 
+                                        reduced. I noticed this later, but it was really good.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Use after Booking -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        Use after booking on the in-house registration system, everyone will use if convenient
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Why did you consider introduction of the 3D non-contact measuring system in 2008?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        We are handling functional parts such as burners. In the old days, it was 
+                                        actually burned to see if the function worked properly. 
+                                        <br>
+                                        There was an engineer who could tell what was wrong with the mold by 
+                                        checking how the flame came out. However, there is no data left anywhere 
+                                        on the shape of the mold that they finely shaved and polished.
+                                        When renewing products or replacing worn molds, those new molds 
+                                        were recreated from scratch.
+                                        <br><br>
+                                        We thought that it was necessary to change the situation in which mold 
+                                        performance was determined by personal skills and we needed an environment 
+                                        in which anyone could understand the part shape precisely and reproduce it.
+                                        Then we started considering introduction of a 3D non-contact measuring machine.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Around the time you started considering it, the machine was still minor and expensive.
+                                        How did you convince others in your company of the introduction? 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Muto:</strong> Considering our company's scale, it was surely one
+                                        expensive investment. However, we work with the words "Quality is our
+                                        destiny (our livelihood depends on the quality of our products)".
+                                        There is a strong commitment to quality, and the spirit of making a 
+                                        higher-grade product has been a thriving corporate culture. I believed 
+                                        others would be convinced if I persuaded in terms of investment that 
+                                        contributes to quality.
+                                        <br><br>
+                                        I think that the boss at that time was positive about the introduction
+                                        of this measuring machine also encouraged the introduction. As it 
+                                        took a lot of money and time to make the mold, it was calculated that 
+                                        introduction of the measuring machine would recover at least that part
+                                        from the beginning.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        I assume you must have considered some other makers’ devices as well.
+                                        What was the point to choose <a href="../products/camera/EN_cometL3d2Base.html">COMET</a> among them? 
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Muto: </strong>We realized that it requires a technique to complete 
+                                        the measurement precisely from the measurement principle and we wanted to
+                                        have a relationship with a maker which would provide us tips. Thus, we 
+                                        prepared jigs for inspection and visited each company so that we could 
+                                        compare makers fairly. Some of them said they would visit us, but we would 
+                                        rather visit and see them all to judge. 
+                                        <br><br>
+                                        People in Tokyo Boeki Techno-System are all sincere and dedicated to 
+                                        measuring accurately, that was an impression that I had when I first
+                                        visited the company. Not only the measurement value was good but also
+                                        their response was good. That's why we chose the product this company
+                                        provided.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 04 -->
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiPiece04.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                         The person in charge at the time of introduction called them to inquire
+                                         on use of the machine frequently. I took a lecture where they taught
+                                         me how to use both the hardware and software dedicatedly from the beginning
+                                         at their technical center in Toyota when I started using the machine. 
+                                         spGauge is a highly flexible analysis software that can set various
+                                         parameters and inspection items. The more functions of the machine you are
+                                         familiar to, the wider range of needs it can meet.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Is the measuring machine used frequently now?                                    
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        <strong>Muto: </strong> The production period of complicated molds, which 
+                                        used to take several years has been shortened by several months, or the 
+                                        measurement that took three days has been completed in less than one day.
+                                        As a result, the time and technical benefits are gradually known within 
+                                        the company. At the beginning, the system allowed only a limited number 
+                                        of employees. As the measurement points required by each department are 
+                                        different, we changed the system so that <a href="../products/camera/EN_cometL3d2Base.html">COMET</a> can be used by employees 
+                                        in development departments, mold departments, and affiliated companies.
+                                        <br><br>
+                                        <strong>Harada: </strong> Specifically, we ask employees who want to use
+                                        the measuring machine to make advance applications. Then we teach safety
+                                        precautions and basic operations, and then register the users. The registrants
+                                        can book the machine via online reservation system. Because of this system,
+                                        we can share the machine efficiently.  
+                                        <br><br>
+                                        <strong>Muto: </strong> At first, most of employees were not familiar
+                                        with the technology of non-contact measurement, but once they find it
+                                        convenient after using it, they continue to use it. If you don't know
+                                        how to use it, an in-house educator supports at the site. The number 
+                                        of chances that the machine is used are increasing. It means the
+                                        introduction of the machine was successful.
+                                        <br><br>
+                                        <strong>Hashimoto: </strong> There are some employees who have known a 
+                                        lot about the machine who can be called an expert after 11 years of 
+                                        introduction. Other employees ask them questions on the machine and
+                                        share the information within a group actively. Such actions accumulate
+                                        knowledge about the machine within our company.
+                                        <br><br>
+                                        <strong>Harada: </strong> In addition, since unnecessary man-hours
+                                        have been cut off, time can be allocated to new product development
+                                        and value-added jobs. Every year checks on shortening the development
+                                        period and prototyping costs is getting stricter. We think that <a href="../products/camera/EN_cometL3d2Base.html">COMET</a>
+                                        is a great help to build things quickly and accurately.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- RINNAI Company Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/rinnai/rinnaiLogo.png" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+                                        Rinnai Corporation
+                                    </h3>
+                                    <p>
+                                        Established in 1920 as Rinnai Shokai, and changed its name to Rinnai Corporation in 1971. Starting with the manufacture and sales of pressurized oil stoves, they have built trust and track record as a company that handles gas equipment such as gas table stoves, gas ranges, gas stoves, and gas water heaters. Currently, it has the top share in domestic gas stove sales. Towards 2020, the 100th anniversary of its founding, the “Rinnai” logo has been renewed in 2019, and we are making products that contribute not only to technology and safety, but also to the environment, health, and time savings.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/EN_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

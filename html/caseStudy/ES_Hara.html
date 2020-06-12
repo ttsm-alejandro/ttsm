@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Hara Seisakusho Ltd.</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put BLUE BACKGROUND, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 3 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Hara Seisakusho Ltd.</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Hara Seisakusho Ltd.</a>
+                        
+                        <!-- Y-TEC SCRIPT -->
+                        <!-- Title -->
+<h2>
+<a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>Hara Seisakusho Ltd.
+</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- Subtitle -->
+<h3>
+・Partes de grandes dimensiones, patrimonio cultural y coordenadas de líneas de producción
+<br>・Medición rápida utilizando un dispositivo de medición tridimensional sin contacto
+<br>・Para hacer frente a una amplia gama de necesidades del cliente
+</h3>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 10px"></div>
+                        
+                        <!-- Script -->
+                        <div style="font-size: 18px">
+                            
+                            <!-- Text on left, image on right-->
+                            <div class="row">
+                                <!-- text -->
+                                <div class="col-md-6">
+<p>
+Hara Seisakusho Ltd., con sede en la ciudad de Ueda, Prefectura de Nagano, ha cambiado su estilo de negocios de acuerdo con las necesidades cambiantes de la época desde su fundación en 1952, y desde 2008 se ha desempeñado como una empresa de ingeniería inversa que realiza mediciones en sitio comisionadas en todo Japón. 
+<br> <br> 
+Usando un escáner 3D para escanear productos, moldes y productos antiguos cuyos dibujos están ahora perdidos, para reproducir sus datos CAD.
+</p>
+                                </div>
+                                <!-- image -->
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/hara/haraPiece01.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                            
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+En el proceso, se utilizan varios dispositivos 3D. Además de un instrumento óptico que irradia luz que dibuja coordenadas para capturar objetos con una cámara, la compañia cuenta con una gama de equipos que les permite manejar una amplia gama de objetos que los clientes desean medir, incluidos los tipos que usan marcadores o Radiografía. Entre ellos, la introducción de un sistema de medición 3D sin contacto con rastreador láser amplió el campo de los objetos medibles.
+<br> <br>
+El método del rastreador láser permite medir objetos que solían ser difíciles de manejar, como productos con una longitud de más de 10 metros o bienes culturales (propiedades) para los que se requiere un manejo delicado.
+<br> <br>
+Fue en septiembre de 2017 cuando presentaron el "<a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> AT960LR / T-Scan / T-Probe", todo a la vez desde Tokyo Boeki Techno-System Ltd. Ellos están atrayendo clientes agresivamente, pues se han vuelto "capaces de hacer lo que anteriormente no se podía''.
+<br> <br>
+El presidente Yosuke Hara participó en el soporte de diseño para la fabricación de automóviles en un lugar de trabajo anterior. En ese momento, dijo que notó el hecho de que, si bien logró racionalizar un proceso mediante el análisis o el diseño de datos utilizando 3D-CAD, la velocidad disminuyó en el proceso de realización de productos reales. Pensó que si mejoraba los métodos de prueba y medición y ofrecía el servicio a los clientes, el negocio podría ser rentable. Y puso la idea en práctica en 2008.
+<br> <br>
+Lo entrevistamos para preguntarle por qué tenía el ojo puesto en el sistema de medición 3D sin contacto del "laser tracker" mientras manejaba muchos dispositivos de medición y manejaba una amplia gama de objetos traídos de los clientes, y lo que consideraba importante como una empresa especializada en medición.
+</p>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<img src="../../images/pages/caseStudy/hara/haraStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-2"></div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+■Yosuke Hara, Representative Director & President
+
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Después de trabajar para una firma anterior en el campo del soporte de diseño para automóviles, se unió a Hara Seisakusho Ltd. creando un grupo de medición 3D en 2008 como la base de una empresa comercial.
+<br> <br>
+Instalado como Director Representante en 2014, promovió estratégicamente el Plan de CI de la empresa y el proyecto de promoción de ventas para construir una marca como empresa especializada en mediciones. Además del servicio de medición interno, también se esforzó por dar a conocer ampliamente la tecnología de escaneo.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Queremos presentar una máquina insignia también para el sistema Laser Tracker
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Su empresa se centra en la medición in situ y comisionada como el negocio principal. ¿Podría decirme qué lo llevó a comercializar el servicio de medición?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Yosuke Hara (referido como "Hara"): </strong> El fundador de Hara Seisakusho Ltd. es mi abuelo. Después de trasladar el negocio al campo de la fabricación de dispositivos de comunicación e imanes, la compañía experimentó un aumento constante en las ventas y comenzó un negocio de mecanizado en 1984. Cuando me unó a la empresa, mi padre era el presidente de segunda generación y el negocio de mecanizado constituía el principal pilar de la empresa. Comencé a pensar en establecer otras líneas de negocio como divisiones nuevas y rentables para hacer crecer la empresa. Fue el negocio de medición al que llegamos al final.
+</p>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Cuando trabajaba para la compañía anterior en el campo del soporte de diseño para la industria automotriz, ya se había realizado una producción eficiente de productos utilizando 3D-CAD. Pero incluso si los datos mostraran que el análisis o el procesamiento podrían realizarse rápidamente, la velocidad disminuyó en el proceso de fabricación de un producto real. En particular, los métodos de inspección y medición aún requerían la intervención de manos humanas, como en el manejo de Vernier o medidores de altura, presentando así un cuello de botella.
+<br> <br>
+En esa situación, aprendó sobre los escáneres 3D, y cuando intenté usar uno, tuve la sensación de que era una buena herramienta para unir lo analógico y lo digital. Para pensar en la cantidad de personas involucradas en la fabricación de productos en el mundo, si ofreciéramos el servicio especializado en este proceso, podríamos ayudarlos, pensé. Y la idea se realizó en el grupo de medición 3D creado en 2008.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Enorme recesión económica provocada por el Choque de Lehman en 2008
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> ya tenía una preparación avanzada para entonces, y el establecimiento del nuevo negocio se topó con el llamado Choque de Lehman. En el primer año, apenas realizamos ventas y comenzamos nuestro negocio principalmente visitando clientes potenciales e inclinando la cabeza.
+<br> <br>
+A pesar del hecho, tenía confianza en el servicio de medición en sí. El proceso de inspección y medición nunca desaparecería si los fabricantes continuaran utilizando 3D-CAD en la fabricación de productos. Creía que si continuábamos ofreciendo el servicio especializado, el mercado eventualmente lo apreciaría.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/hara/haraPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Como 3D-CAD es ampliamente utilizado por los clientes para mejorar la eficiencia en la fabricación de productos, el número de personas que esperan poseer dispositivos de medición también está en aumento. Pero dado que comprar dispositivos de medición requiere una cierta cantidad de inversión, si la frecuencia de uso no es tan alta, el outsourcing de medición a una empresa con un equipo excelente es una opción técnicamente más confiable y rentable. Además, debido a que habíamos desarrollado habilidades de medición antes del establecimiento del servicio de medición, confiamos en nuestra superioridad con respecto a otras empresas en el conocimiento.
+<br> <br>
+A veces recibimos solicitudes que eran difíciles de manejar por parte de los clientes con la expectativa de que ¿Quizás Hara Seisakusho Ltd. pueda atender nuestras solicitudes o contactos sobre piezas que no fueron aceptados por otras compañías. Tengo la sensación de que hemos acumulado la confianza de los clientes cada vez que completamos tales solicitudes.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+A partir del dispositivo de medición óptica, adoptó el método Laser Tracker de <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> en 2017.
+<br> ¿Cuál fue su motivación para elegir <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> mientras manejaba muchos tipos de instrumentos de medición?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> Una limitación de tamaño es inevitable para la medición. Para objetos de más de 10 metros, 
+se necesita mucha preparación solo para obtener el sistema de coordenadas, esto requiere recurso humano y tiempo. 
+Además, a veces el tipo de material provoca ruido en la medición, y algunos objetos no eran medibles por un instrumento 
+de contacto debido a la condición de la superficie, lo que aumentaba los casos en que los dispositivos convencionales no
+podían hacer el trabajo. Consideramos la introducción del dispositivo de medición sin contacto leaser-tracker como la solución a estos desafíos.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/hara/haraPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Como utilizamos una máquina insignia para el instrumento óptico, también queríamos usar una máquina insignia para el método Laser Tracker. 
+Estábamos pensando en tener las máquinas de más alto rendimiento de ambos tipos para poder decir: "Si la medición es difícil para nosotros, 
+ciertamente también lo será para otras compañías".
+<br> <br>
+Entre los varios candidatos, seleccionamos el producto de <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a>, porque puede medir y procesar una gran cantidad de datos a alta velocidad.
+<br> <br>
+Mientras que otros productos de tipo láser están limitados en su rango de movimiento porque están unidos con brazos, T-Scan y T-Probe son portátiles 
+y buenos para medir un amplio rango. Esperábamos poder lidiar con cualquier rango ya que nos trajeron objetos de varios tipos.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/hara/haraPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Pudimos decir "Podemos" incluso a mediciones que antes eran imposibles.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Qué tipo de beneficios ha traído la introducción del método Laser Tracker?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> Sobre todo, pudimos responder "Podemos llevar a cabo esta medición" a clientes
+a los que antes teníamos que rechazar. Antes, teníamos que rechazar aproximadamente el 30% de los clientes, 
+pero gracias al Laser Tracker, ahora podemos atender a esos clientes.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/hara/haraPiece05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Los métodos de rastreo láser y escaneo láser pueden medir con precisión objetos de gran tamaño que antes no se podían medir 
+con los instrumentos convencionales, la coordenada precisa de la posición de un robot frente a las operaciones en una
+línea de producción, los lugares que eran demasiado estrechos para colocar un instrumento y objetos que requieren una
+medición dinámica de su movimiento.
+<br> <br>
+El primer objeto que medimos después de la entrega de <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> fue el modelo de gran tamaño de un avión caza Zero enganchado en 
+la pared de una sala de exposiciones.
+<br> <br>
+Tuvimos que medir con precisión el andamio inestable y alto con un requisito que prohíbe
+el contacto con la superficie, que estaba recubierta delicadamente. La medición de este objeto sería
+imposible si no fuera por el Laser Tracker con T-Scan.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece06 -->
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<img src="../../images/pages/caseStudy/hara/haraPiece06.jpg" style="width: 100%;">
+</div>
+<div class="col-md-2"></div>
+</div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Debe ser difócil medir objetos grandes.
+</h3>
+</div>
+</div>
+
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> Correcto. Algunas partes de aviones, proyectos espaciales, ferrocarriles, 
+maquinaria pesada o equipos de generación de energía que manejamos a veces tienen más de 10 metros de longitud.
+<br> <br>
+El sistema Laser Tracker es muy útil ya que puede medir con precisión en un largo rango.
+<br> <br>
+Como el T-Probe puede medir desde el punto de vista del rastreador grandes huecos o la parte 
+posterior de un objeto donde el láser no puede alcanzar directamente, reduce la necesidad de 
+mover el rastreador cada vez. Como resultado, la eficiencia de medición mejoró.
+<br> <br>
+Si bien los métodos capaces de una medición de alta precisión de grandes obras son limitados, 
+tenemos la impresión de que <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> es especialmente fuerte en la medición de objetos de gran tamaño.
+<br> <br>
+Todavía hay más objetos que otros dispositivos no pueden manejar pero que <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> puede medir. 
+Por ejemplo, si tiene que medir dos dispositivos que están unidos en paredes enfrentadas a una 
+distancia de 15 metros, puede medir cada objeto con un escáner convencional con precisión, 
+pero sería difícil medir la relación posicional entre los dos dispositivos y la sala al 
+mismo tiempo con esos instrumentos. <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a> funciona bien para tal medición.
+<br> <br>
+También permite digitalizar o importar fenómenos a datos CAD mediante el seguimiento de un robot 
+transportador para obtener datos de trayectoria de movimiento.
+</p>
+</div>
+</div>
+
+
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿No tenías ninguna preocupación o ansiedad al principio?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> A menudo me reuní con el personal de Tokyo Boeki Techno-System Ltd., 
+compartiendo información de tendencias en mediciones o nuevos productos. Hice preguntas francas 
+antes de la presentación. Para ser específicos, preguntas sobre el contenido de soporte, la 
+calibración o el funcionamiento del dispositivo.
+<br> <br>
+Hice contactos directamente con el equipo técnico para asuntos técnicos. Incluso ahora 
+resolvemos problemas contactándolos por teléfono para preguntarles sobre el funcionamiento 
+del software o el contenido de los errores de medición. Sus respuestas claras y rápidas son 
+muy útiles, especialmente cuando tenemos algunos problemas. Creemos que el instrumento en sí es 
+una máquina extremadamente buena y lo usamos con absoluta confianza.
+</p>
+</div>
+</div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Cómo expandirá el negocio de medición en el futuro?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Hara: </strong> Una empresa especializada en servicios de medición se evalúa 
+no solo a través de la medición en sí misma sino también a través de una respuesta flexible a 
+las verdaderas necesidades del cliente con respecto a la utilización de los datos obtenidos o 
+el propósito de la medición. Continuaremos buscando una comprensión profunda de nuestros clientes 
+y ofreciendo las mejores soluciones tecnológicas.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece07 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/hara/haraPiece07.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Las necesidades recientes no se limitan a la fabricación de productos a partir de datos, 
+como en el caso de la ingeniería inversa. Las solicitudes han aumentado para una medición
+precisa de la información espacial, como la de obtener una coordenada para el ajuste de una
+línea o máquina, o para volver a examinar la relación posicional entre la trayectoria y las
+operaciones de un robot en una línea de producción.
+<br> <br>
+Los instrumentos de medición con rastreador láser también son buenos para el rastreo dinámico,
+y podemos encontrar los problemas que deben resolverse a partir de los resultados de medición
+obtenidos.
+<br> <br>
+Nos gustaría hacer un esfuerzo para que los clientes comprendan bien las mediciones para las
+cuales se pueden utilizar las características especiales de <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica</a>.
+</p>
+</div>
+</div>
+
+                            <!-- Hara Company Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/hara/haraLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+<h3>
+Hara Seisakusho Ltd.
+
+
+</h3>
+<p>
+Establecida como una empresa de fabricación de dulces en 1952. Después de cambiar el negocio a la fabricación
+de dispositivos de comunicación e imanes, introdujo una máquina de fresado, pulidora y torno para comenzar 
+un servicio de mecanizado en 1984. Toshimichi Hara, el presidente de segunda generación, tuvo éxito al timón
+de la empresa en 1988 y el aumento de las ventas en el campo de monozukuri, o fabricación de productos. 
+Yosuke Hara, el presidente de tercera generación, fijó su mirada en el potencial de la medición 3D y la creación
+de datos CAD. En 2008, se creó un grupo de medición 3D internamente. En la actualidad, la división de fabricación
+se divide en una compañía separada y Hara Seisakusho Ltd. ofrece un buen desempeño como compañía especializada
+en negocios de medición in situ y comisionados.
+
+<br>
+<a href="http://www.hara-sss.co.jp/"> http://www.hara-sss.co.jp/ </a>
+<br>
+
+
+</p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

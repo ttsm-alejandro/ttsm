@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Ikegami Mold Engineering Group</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 6 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/software/ES_spGauge.html">spScan</a><br>Ikegami Mold Engineering Group</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Ikegami Mold Engineering Group</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/software/ES_spGauge.html">spScan</a><br>Ikegami Mold Engineering Group</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+
+
+<!-- Subtitle -->
+<h3>
+Software de procesamiento de datos de medición 3D con ajuste automático y manual, en un equilibrio fino para soportar ingeniería inversa
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+Ikegami Mold Engineering Group inició su operación en 1934 y se estableció como una empresa en 1945. Ikegami Mold Engineering Group está especializada en la fabricación de moldes de inyección de plástico, proporcionando moldes de varios tamaños, desde medianos y grandes para automóviles y electrodomésticos hasta Pequeños moldes precisos para dispositivos médicos. Fabricante altamente aclamado por su contribución a los clientes con precisión, asegura una precisión de nivel de micras y un corto tiempo de respuesta, la compañía ha estado desarrollando su negocio en todo el mundo a través de bases nacionales y subsidiarias en el extranjero en los Estados Unidos, México, China y Tailandia, promoviendo la especialización internacional.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Además, la ventaja de la compañía sobre otros competidores es su actitud proactiva para la creación de nuevos negocios mediante el establecimiento de una división de desarrollo de mercado bajo el control directo del presidente. Además del conocimiento de fabricación de moldes de alto nivel que respalda la fabricación desde la base, la compañía se ha centrado recientemente en la ingeniería inversa como un nuevo servicio.
+<br> <br>
+La compañía ya ha realizado ingeniería inversa en la fabricación de piezas de aviones, emblemas 3D y troqueles de inserción viejos, y ahora está considerando mudarse a nuevos campos con su conocimiento de moldes, como la fabricación de figuras dirigida al mercado de cómics, que no atrae a grandes fabricantes, y procesamiento de estampados, incluyendo texturizado, granulado y grabado, mediante grabado químico manual, que es difícil de producir a gran escala. Para ambos casos, se podría esperar una fabricación de alta velocidad a bajo costo generando datos CAD para superficies de productos o procesando sólidos a partir de datos de polígonos.
+<br> <br>
+Para reflejar la fuerza técnica obtenida de la fabricación de moldes y los ajustes finos en los datos CAD, se requiere un software de procesamiento que permita el procesamiento intuitivo de los datos escaneados desde una máquina de medición 3D. Para ello, la compañía eligió '' <a href="../products/software/ES_spGauge.html">spScan</a> '' de Tokyo Boeki Techno-System. Entrevistamos a dos empleados de la compañía sobre cómo la compañía usa la máquina donde el procesamiento queda en manos de técnicos extranjeros.
+</p>
+</div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+■  Mr. Masaya Ishikawa, Manager, New Market R&D Department
+</h3>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-4"></div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+■Mr. Akihiko Aigami, New Market R&D Department
+</h3>
+</div>
+</div>
+
+<!-- Photo Staff02 -->
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiStaff02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Se dedican principalmente a la ingeniería inversa junto con el desarrollo de nuevos servicios y productos que reemplazarían la fabricación de moldes. Como técnicos de campo, están utilizando sus conocimientos sobre moldes y su fuerza técnica como fabricante especializado para la preparación de la expansión de su negocio a otras áreas. El Sr. Aigami también está a cargo de la capacitación del personal en las filiales en el extranjero para promover las operaciones en el extranjero.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Candidato prometedor para futuros negocios, " ingeniería inversa "
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador (I): Sé que su empresa ya ha logrado mucho en la fabricación de moldes. Entonces, me pregunto qué te hizo comenzar la ingeniería inversa.
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Sr. Masaya Ishikawa (MI): </strong> ya teníamos una máquina de medición CMM 3D para medir moldes y objetos moldeados. Si hay cientos de puntos de medición para un objeto a medir, la medición en sí misma toma unos días. No era realmente práctico, por lo que compramos una máquina de medición CCD 3D sin contacto. Nuestro presidente sugirió que esta función podría usarse para otros proyectos, y condujo al lanzamiento de nuestro proyecto de ingeniería inversa.
+<br> <br>
+Presentamos la máquina de medición CCD en 2015 y el proyecto de ingeniería inversa lanzado en septiembre de 2016. Por lo tanto, solo ha pasado un año y medio. Para la conversión de datos de polígonos a datos de CAD, utilizamos el software '' <a href="../products/software/ES_spGauge.html">spScan</a> '' de Tokyo Boeki Techno-System.
+<br> <br>
+<strong> I: ¿Introdujo â € œ<a href="../products/software/ES_spGauge.html">spScan</a>â € � al mismo tiempo que la máquina de medición 3D? </strong>
+<br> <br>
+<strong> MI: </strong> No, estábamos usando software de una compañía diferente. Lo habíamos estado usando durante aproximadamente un año y comencé a escuchar "es un poco difícil de usar" de mis colegas. Entonces, decidimos revisar solo el software. El software que solíamos usar era similar a "<a href="../products/software/ES_spGauge.html">spScan</a>", los cuales convierten un polígono en una superficie; sin embargo, el primero requería trabajo manual detallado. Entonces, con él, al establecer parámetros detallados, puede crear cada superficie con precisión según lo designado. Pero el trabajo manual requerido era demasiado detallado para lograr un equilibrio entre el tiempo y el esfuerzo que dedicamos al trabajo y el resultado que queríamos del trabajo.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Había otro software candidato de otra compañía, que estaba completamente automatizado en comparación con el primero. Podría crear una superficie a partir de datos en un sistema rápidamente, siempre y cuando reconozca los datos como "posibles". Sin embargo, lo reconoció como "imposible" si los requisitos no se cumplieran por completo. Además, una superficie de procesamiento totalmente automatizado es difícil de modificar en parte, por lo que no es adecuada para trabajos detallados, como "hacer que solo esta parte cambie de esta manera".
+<br> <br>
+En ingeniería inversa, es necesario agregar o modificar manualmente partes faltantes o incompletas, además de convertir los datos obtenidos en una superficie. También queríamos algún nivel de automatización del software, junto con las necesidades de que el trabajo manual de técnicos calificados debería estar involucrado en la creación de la superficie. Ambas necesidades fueron perfectamente satisfechas por "<a href="../products/software/ES_spGauge.html">spScan</a>".
+<br> <br>
+<strong> I: Entonces, ¿fue su primera impresión del software muy positiva? </strong>
+<br> <br>
+<strong> MI: </strong> Sí. Las superficies creadas por CAD tienen un `` flujo '' que me permite conocer intuitivamente las partes dobladas y planas, por lo que me ayuda mucho a juzgar cualquier modificación necesaria, como "este ángulo debe cambiarse" o " "Esto tiene una superficie diferente". Este tipo de cosas son difíciles de reconocer solo con datos de polígonos o datos numéricos, por lo que pensé que la codificación de colores de la información sensorial por "<a href="../products/software/ES_spGauge.html">spScan</a>" era muy conveniente y útil.
+<br> <br>
+La codificación de colores con diversas condiciones está disponible en la etapa de convertir los datos escaneados en una superficie. Entonces, al colorear grandes superficies con partes verdes y dobladas en rojo, puedo imaginar rápidamente la forma general de un vistazo de la pantalla. Para los datos de medición sin color, podría imaginar la forma vagamente pero no intuitivamente. Desde la introducción de "<a href="../products/software/ES_spGauge.html">spScan</a>", creo que el tiempo necesario para escanear y configurar la forma se ha reducido considerablemente.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div> 
+
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> I: Entonces, el software tiene exactamente lo que quieres en el sitio. </strong>
+<br> <br>
+<strong> MI: </strong> Sí. Al preparar nuestro proyecto de ingeniería inversa, capacitamos a los técnicos para la creación de superficies en nuestra oficina de Filipinas. Creo que '<a href="../products/software/ES_spGauge.html">spScan</a>' contribuye a la mejora de sus habilidades. Con este software, puede ver cómo operarlo sin una explicación detallada y reconocer intuitivamente los lugares que se modificarán manualmente al crear la superficie. Podríamos terminar el entrenamiento en un tiempo mucho más corto que el período de entrenamiento programado y ahora pueden trabajar por su cuenta.
+<br> <br>
+Al principio, los alumnos comenzaron con casi cero experiencia en el uso de CAD o software de dibujo. Entonces, cuando me dirigía a la capacitación, pensé que tomaría mucho tiempo, trayendo muchos materiales. Pero contrario a mis expectativas, fue muy fácil. Independientemente del país, las personas pueden reconocer intuitivamente la forma con este software. A menudo se nos dice que "su proyecto de ingeniería inversa se inició muy rápidamente", y creo que es gracias a este software.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+El profundo conocimiento sobre los moldes permite una ingeniería inversa precisa
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+I: En su proyecto de ingeniería inversa, ¿en qué tipo de productos ha trabajado?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Sr. Akihiko Aigami (AA): </strong> El flujo básico de la ingeniería inversa es recibir un producto de un cliente, escanearlo con una máquina de medición CCD, crear superficies utilizando "<a href="../products/software/ES_spGauge.html">spScan</a>", convertirlo en datos CAD y dáselo al cliente. Hemos trabajado en partes de aviones. Solo teníamos dibujos a mano de las décadas de 1960 a 1970, por lo que tuvimos que rastrearlos, examinarlos contra los datos de medición obtenidos de las partes reales del avión y discutir con el cliente en detalle sobre cómo convertir los datos en nuevos datos CAD.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/ikegami/ikegamiPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+La clave en la ingeniería inversa es que un objeto no se vuelve a crear simplemente en función del dibujo original. La ingeniería inversa no es simplemente compensar las partes faltantes. Por ejemplo, esta parte del avión tiene una parte separada para ensamblar en la punta, que puede haberse desgastado después de haber sido utilizada durante muchos años. Si no vuelve a crear la parte del avión teniendo en cuenta el desgaste de la otra parte, no funcionará con éxito. Mientras tanto, si hay algún defecto debido al desgaste, también tenemos que compensarlos en la recreación. La recreación de partes y el ajuste entre las partes recreadas es donde los técnicos pueden mostrar sus habilidades.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 and Piece06-->
+<div class="row">
+    <div class="col-md-6">
+        <img src="../../images/pages/caseStudy/ikegami/ikegamiPiece05.jpg" style="width: 100%;">
+    </div>
+    <div class="col-md-6">
+        <img src="../../images/pages/caseStudy/ikegami/ikegamiPiece06.jpg" style="width: 100%;">
+    </div>
+</div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Medición de muestra e ingeniería inversa.
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Para este tipo de trabajo, si usamos software que no permita modificaciones detalladas, tomará mucho tiempo. Dado que hemos estado trabajando en moldes durante muchos años, sabemos qué partes de los moldes son más susceptibles al desgaste y qué nivel de modificación requieren nuestros clientes. Usando '' <a href="../products/software/ES_spGauge.html">spScan</a> '', podemos trabajar cómodamente para convertir dichos detalles en datos cambiando entre operaciones automáticas y manuales.
+<br> <br>
+La parte más difícil en la conversión de datos de polígonos en datos CAD es en realidad crear una forma que no coincida completamente con los polígonos. Incluso si la forma no coincide con los polígonos, se nos solicita un procesamiento similar al modelado CAD. No conozco mucho software que sea lo suficientemente flexible como para atender esta solicitud.
+<br> <br>
+<strong> I: si puede manejar los datos de forma intuitiva sin ningún parámetro complejo, puede adelantarse a la programación. </strong>
+<br> <br>
+<strong> MI: </strong> Sí. Además, con la tecnología de ingeniería inversa, podemos ser aún más rápidos porque nuestros clientes no necesitarán hacer un molde desde cero. Recientemente, hay muchos casos en los que nuestro cliente tiene un molde, pero el fabricante del molde ya no existe debido a la quiebra. Si tenemos que desmontar el molde y recrear cada una de las partes, tenemos que comenzar desde el diseño, lo que sería difícil. Sin embargo, si podemos escanear el molde existente y hacer algunos ajustes contra los datos originales, podemos reducir en gran medida el costo de mano de obra y las horas hombre.
+<br> <br>
+A veces tomamos prestado un molde existente, lo desarmamos en partes y recreamos las partes necesarias solo para obtener datos del molde o ensamblar las partes. De esta manera, si es rápido, podemos completar el proceso solo 1/10 del tiempo del método convencional.
+<br> <br>
+<strong> I: ¿Esperaba recibir tales solicitudes antes de comenzar el proyecto? </strong>
+<br> <br>
+<strong> MI: </strong> no realmente. A menudo notamos nuevas necesidades después de recibir las solicitudes de nuestros clientes. Después de un año y medio del proyecto, nos hemos dado cuenta de que nuestros clientes tienen problemas en una gama de campos mucho más amplia de lo que esperábamos. Por lo tanto, valoramos el tiempo para hablar cara a cara con nuestros clientes, no solo ofreciéndoles propuestas.
+<br> <br>
+Si pasamos tiempo hablando con un cliente, surgen nuevas tareas por resolver, como "¿Puede hacer esto entonces?" Junto con ideas y solicitudes relacionadas de ambas partes. Creo que hay más usos imprevistos de la ingeniería inversa.
+<br> <br>
+Nuestro objetivo es la ingeniería inversa exclusiva de un especialista en moldes. No solo escaneamos un objeto y generamos datos. Podemos generar valor agregado en el procesamiento y asesoramiento que solo puede brindar un especialista en moldes. Para el futuro, estamos planeando expandir aún más nuestro proyecto a través de exposiciones y demostraciones.
+</p>
+</div>
+</div>
+
+                            <!-- Ikegami Mold Engineering Group Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/ikegami/ikegamiLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+Acerca del Grupo de Ingeniería de Moldes Ikegami
+                                    </h3>
+                                    <p>
+Fundada en 1945, Ikegami es un fabricante especializado en moldes de inyección de plástico para diversas aplicaciones, incluidos electrodomésticos, automóviles, dispositivos médicos y contenedores de alimentos. Reciben pedidos de respuesta muy difíciles y rápidos de los clientes y cumplen con sus expectativas al realizar un procesamiento de datos preciso a alta velocidad utilizando los últimos ajustes finos de procesamiento CAD, CAM, NC y post-procesamiento por parte de trabajadores calificados. Recientemente han lanzado un proyecto de ingeniería inversa. La compañía ha estado mejorando su reputación con sus capacidades sobresalientes como especialista en moldes.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+    </body>
+</html>

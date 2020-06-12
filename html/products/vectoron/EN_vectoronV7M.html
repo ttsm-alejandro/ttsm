@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>VMC-7000M Series</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/vectoron/vectoronV7M_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='V7M';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+				<a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+				<a href="{{relativeUrl}}html/products/vectoron/EN_mainVectoron.html">VECTORON</a> / 
+				<a href="">VMC-7000M Series</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <!--img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%"-->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'vectoronV7M' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV7M_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'vectoronV7M' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV7M_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'vectoronV7M' , 3 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV7M_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>VMC-7000M Series</h1></div>
+                        <h3>Fast and Accurate</h3>
+                        <p>
+                            High-Speed and High-Resolution
+                        </p>    
+                        <h3>Best service</h3>
+                        <p>
+                            No yearly hardware contract obligation Service & Support by Trained-Mexican Engineer
+                        </p>
+                        <h3>ApiScan Scanner</h3>
+                        <p>
+                            The best laser scanner ever 
+                        </p>
+                        <h3>Improvement of probe connection</h3>
+                        <p>
+                            Improved repeatability accuracy
+                            <br>Hot-swap with ApiScan
+                        </p>
+                        <h3>Electromagnetic lock</h3>
+                        <p>
+                            Freezing arm in any position
+                        </p>
+                        <h3>Lighter than before</h3>
+                        <p>
+                            Re-design to reduce weight
+                        </p>
+                        <h3>Integrated Controller</h3>
+                        <p>
+                            Only 2 cable needed
+                            <br>Hot-swap function 
+                        </p>
+                        <h3>Customizable</h3>
+                        <p>
+                            Customized to meet user requirement
+                            <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <table class="table table-striped table-condensed">
+                            <tr>
+                                <th>Fast and Accurate</th>
+                                <td>High-Speed and High-Resolution</td>
+                            </tr>
+                            <tr>
+                                <th>Best service</th>
+                                <td>No yearly hardware contract obligation Service & Support by Trained-Mexican Engineer</td>
+                            </tr>
+                            <tr>
+                                <th>ApiScan Scanner</th>
+                                <td>The best laser scanner ever</td>
+                            </tr>
+                            <tr>
+                                <th>Improvement of probe connection</th>
+                                <td>
+                                    Improved repeatability accuracy
+                                    <br>Hot-swap with ApiScan
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Electromagnetic lock</th>
+                                <td>Freezing arm in any position</td>
+                            </tr>
+                            <tr>
+                                <th>Lighter than before</th>
+                                <td>Re-design to reduce weight</td>
+                            </tr>
+                            <tr>
+                                <th>Integrated Controller</th>
+                                <td>
+                                    Only 2 cable needed
+                                    <br>Hot-swap function 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Customizable</th>
+                                <td>
+                                    Customized to meet user requirement
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Specification:</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Arm measurement area</th>
+                                    <td>Operation area 3,500 mm (Arm length 1,750mm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>11 kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact measurement accuracy 2σ</th>
+                                    <td>±0.04mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Non-Contact measure accuracy (ApiScan)</th>
+                                    <td>±0.06mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Usage environment</th>
+                                    <td>10°C ~ 40°C </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

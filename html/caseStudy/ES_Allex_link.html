@@ -1,0 +1,27 @@
+<!-- Y-TEC Case Study LINK-->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Vectoron" },
+        { id : 2 , name : "Comet" },
+        { id : 3 , name : "Leica Laser Tracker" },
+        { id : 4 , name : "spScan" }
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToCaseStudy( 'ES_Allex' )"
+     ng-show="
+         (productCategorySelected == '1')
+         ||(productCategorySelected == '0')
+         ||(productCategorySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/caseStudy/linkAllex.jpg" width="100%">
+    <div class="well well-sm" style="height: 350px">
+            <h4>VECTORON</h4>
+            <h3>Allex Japan Inc.</h3>
+            <p style="text-align: left">
+                Trazabilidad requerida en la industria aeroespacial
+                <br>VECTORON, un sistema de medición 3D tipo brazo
+                <br>Los fabricantes confían en él como un estándar de medición, “lo medí con Vectoron”
+            </p>
+        </div>
+</div>

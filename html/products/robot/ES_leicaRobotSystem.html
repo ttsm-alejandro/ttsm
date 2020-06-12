@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Leica Robot System</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/robot/leicaRobotSystem_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/robot/ES_mainRobot.html">ROBOT</a> / 
+                <a href="">Leica Robot System</a>
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'leicaRobotSystem' , 1 )">
+                                        <img src="../../../images/pages/products/robot/leicaRobotSystem_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'leicaRobotSystem' , 2 )">
+                                        <img src="../../../images/pages/products/robot/leicaRobotSystem_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'leicaRobotSystem' , 3 )">
+                                        <img src="../../../images/pages/products/robot/leicaRobotSystem_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Leica Robot System</h1></div>
+                        <p>
+                            Leica Automatic Measurement System is a hybrid measurement system that can perform noncontact scanning with laser and contact measurement with probe with auto tool changer and measure. The whole shape can be scanned with a laser sensor, and geometric elements such as holes or difficult to scan can be compensated by probe measurement. Measurement range is maximally 50 m in diameter, and it is a system best suited for measurement of medium to large structures such as aircraft, cans made of large items, large molds, etc. which are difficult to measure with ordinary measuring instruments. In addition, the laser tracker body has been certified IP 54 and is a system that can be used in the field environment. * Please also see a demonstration such as projecting the in-line line to the work by 3D laser projection system (LPT). * Offline teaching + inspection
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        TO DO
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            TO DO
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

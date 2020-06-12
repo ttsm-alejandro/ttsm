@@ -1,0 +1,25 @@
+<!-- Y-TEC Case Study LINK-->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Vectoron" },
+        { id : 2 , name : "Comet" },
+        { id : 3 , name : "Leica Laser Tracker" },
+        { id : 4 , name : "spScan" }
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToCaseStudy( 'ES_Soshin' )"
+     ng-show="
+         (productCategorySelected == '2')
+         ||(productCategorySelected == '0')
+         ||(productCategorySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/caseStudy/linkSoshin.jpg" width="100%">
+        <div class="well well-sm" style="height: 350px">
+            <h4>COMET</h4>
+            <h3>Soshin Co., Ltd.</h3>
+            <p style="text-align: left">
+                Medición 3D sin contacto de objetos moldeados, que muestra claras diferencias en el grado de error con la gradación de color
+            </p>
+        </div>
+</div>

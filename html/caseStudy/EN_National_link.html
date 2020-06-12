@@ -1,0 +1,26 @@
+<!-- National Institute Case Study LINK-->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Vectoron" },
+        { id : 2 , name : "Comet" },
+        { id : 3 , name : "Leica Laser Tracker" },
+        { id : 4 , name : "spScan" }
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToCaseStudy( 'EN_National' )"
+     ng-show="
+         (productCategorySelected == '3')
+         ||(productCategorySelected == '0')
+         ||(productCategorySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/caseStudy/linkNational.jpg" width="100%">
+        <div class="well well-sm" style="height: 350px">
+            <h4>Leica Laser Tracker</h4>
+            <h3>National Institutes for Quantum and Radiological Science and Technology (QST)</h3>
+            <p style="text-align: left">
+                Nuclear fusion reactor dealing with items of matter at millions of degrees Celsius as well as high current
+                <br>The key for assembly is absolute coordinates obtained by laser measurement.
+            </p>
+        </div>
+</div>

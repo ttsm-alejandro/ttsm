@@ -1,0 +1,26 @@
+<!-- Y-TEC Case Study LINK-->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Vectoron" },
+        { id : 2 , name : "Comet" },
+        { id : 3 , name : "Leica Laser Tracker" },
+        { id : 4 , name : "spScan" }
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToCaseStudy( 'ES_Tanaka' )"
+     ng-show="
+         (productCategorySelected == '2')
+         ||(productCategorySelected == '0')
+         ||(productCategorySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/caseStudy/linkTanaka.jpg" width="100%">
+        <div class="well well-sm" style="height: 350px">
+            <h4>COMET</h4>
+            <h3>Tanaka Seimitsu Kogyo Co., Ltd.</h3>
+            <p style="text-align: left">
+                Con el objetivo de construir futuras plantas que ahorren trabajo, instalando un robot automatizado, dispositivo de medición 3D y condiciones de investigación para lograr el máximo rendimiento.
+
+            </p>
+        </div>
+</div>

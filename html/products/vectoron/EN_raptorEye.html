@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Raptor Eye</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/vectoron/raptorEye_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='V6M';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/vectoron/EN_mainVectoron.html">VECTORON</a> / 
+                <a href="">Raptor Eye</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <!--img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%"-->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'raptorEye' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/raptorEye_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'raptorEye' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/raptorEye_2_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Raptor Eye</h1></div>
+                        <p>
+                            
+                        </p>
+                        
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <ul>
+                                <li>Designed compact and lightweight</li>
+                                <li>It possible to measure many object surface</li>
+                                <li>Wide range measurements</li>
+                                <li>High-speed measurement</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Specification:</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Laser Type</th>
+                                    <td>Laser Line</td>
+                                </tr>
+                                <tr>
+                                    <th>Accuracy (E mode)</th>
+                                    <td>2σ：±0.050mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Data Point</th>
+                                    <td>170,000 point / sec</td>
+                                </tr>
+                                <tr>
+                                    <th>Speed</th>
+                                    <td>128Hz</td>
+                                </tr>
+                                <tr>
+                                    <th>Warm up</th>
+                                    <td>20 min</td>
+                                </tr>
+                                <tr>
+                                    <th>Stand-off</th>
+                                    <td>85 ～ 185mm (±50mm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensions</th>
+                                    <td>70(W) x 114(D) x 122(H)mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>550g</td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Second table -->
+                            <h4>Scanner Mode</h4>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Laser Wideth (mm)</th>
+                                    <th>Max X Pitch (mm)<th>
+                                </tr>
+                                <tr>
+                                    <td>36-96</td>
+                                    <td>0.08</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

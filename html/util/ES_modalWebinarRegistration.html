@@ -1,0 +1,101 @@
+<div class="modal fade" id="modalWebinarRegistration" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="color: white; background-color: {{ ttsmBlueColor }}">Formulario registro a Webinar</h3>
+            </div>
+            
+            <!-- Form data -->
+            <div class="modal-body">
+                
+                <!-- Subtitulo -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Por favor llene la siguiente informacion</h4>
+                    </div>
+                </div>
+                
+                <!-- Informacion personal -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Informacion personal</h5>
+                    </div>
+                </div>
+                
+                <form ng-submit="clicRegisterToWebinar()">
+                    
+                
+                    <!-- Nombre -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.name" class="form-control input-sm" placeholder="Nombre Completo" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+
+                    <!-- Compañia -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.company" class="form-control input-sm" placeholder="Compañia" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Departamento -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input ng-model="webinarFormData.department" class="form-control input-sm" placeholder="Departamento (opcional)" >
+                        </div>
+                        <div class="col-md-2">
+                            <!--label class="label label-warning">Required</label-->
+                        </div>
+                    </div>
+                    
+                    <!-- Puesto -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input ng-model="webinarFormData.role" class="form-control input-sm" placeholder="Puesto (opcional)" >
+                        </div>
+                        <div class="col-md-2">
+                            <!--label class="label label-warning">Required</label-->
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required type="email" ng-model="webinarFormData.email" class="form-control input-sm" placeholder="e-mail" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+                    <!-- Telefono -->
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input required ng-model="webinarFormData.phone" class="form-control input-sm" placeholder="Telefono" >
+                        </div>
+                        <div class="col-md-2">
+                            <label class="label label-warning">Required</label>
+                        </div>
+                    </div>
+
+                        <button type="submit" class="btn btn-block btn-info" ng-disabled="registerButtonDisabled">Registrarse</button>
+                        <p style="font-size: small">
+                            <br>
+                            Su información personal se usará solo para responder preguntas, para enviar información sobre nuestro producto / evento y para los procedimientos necesarios para la respuesta. Administraremos esta información personal bajo las medidas de seguridad apropiadas y no divulgaremos / ofreceremos a terceros sin su consentimiento por adelantado.
+                        </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

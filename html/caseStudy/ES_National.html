@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST)</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 7 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker </a><br>Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST)</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST)</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker </a><br>Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica  (QST)</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Subtitle -->
+<h3>
+Reactor de fusión nuclear que se ocupa de elementos de materia a millones de grados centígrados, así como de alta corriente <br>
+La clave para el ensamblaje son las coordenadas absolutas obtenidas por medición láser.
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+El Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST) se encuentra en la ciudad de Naka, prefectura de Ibaraki. En el QST, los investigadores están estudiando la "fusión nuclear", que se dice que es la energía del futuro de la Tierra. Mientras que la energía de la energía nuclear utiliza la reacción de fisión nuclear en la que el bombardeo de partículas causa la división del átomo, la energía de fusión se basa en la reacción de fusión nuclear en la que múltiples núcleos atómicos se combinan para formar diferentes núcleos y partículas atómicas.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/national/nationalPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Como no hay producción de desechos radiactivos de alto nivel, la energía de fusión nuclear se está estudiando activamente como una fuente de energía más segura. El Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST) se encuentra en la ciudad de Naka, prefectura de Ibaraki. En el QST, los investigadores están estudiando la "fusión nuclear", que se dice que es la energía del futuro de la Tierra. Mientras que la energía de la energía nuclear utiliza la reacción de fisión nuclear en la que el bombardeo de partículas causa la división del átomo, la energía de fusión se basa en la reacción de fusión nuclear en la que múltiples núcleos atómicos se combinan para formar diferentes núcleos y partículas atómicas. Como no hay producción de desechos radiactivos de alto nivel, la energía de fusión nuclear se está estudiando activamente como una fuente de energía más segura.
+<br> <br>
+El QST ha llamado la atención gracias al JT-60, un dispositivo de fusión nuclear. Para obtener potencia de fusión, el combustible debe calentarse a más de 100 millones de grados Celsius para crear un estado de 'plasma' en el que los componentes moleculares, como los electrones y los núcleos atómicos, vuelen independientemente. Es difícil controlar tal estado de alta temperatura y alta densidad, que es el desafío común para muchos institutos de investigación. `` JT-60 '', que lanzó su operación en 1985, confinó con éxito el plasma de deuterio a una temperatura de 190 millones de grados Celsius, una densidad de iones de 49 billones por centímetro cuadrado, por un segundo, lo que sorprendió e impresionó al mundo.
+<br> <br>
+Después de eso, Japón se unió al proyecto Reactor Termonuclear Experimental Internacional (ITER) junto con Europa, Rusia, Estados Unidos, China, Corea del Sur e India. El QST se ha convertido en la base de operaciones de Japón para el proyecto ITER. Actualmente, para una investigación más avanzada, el JT-60 se ha detenido y el dispositivo se ha desarmado. Bajo la colaboración entre Europa y Japón, se está llevando a cabo la actualización a JT-60SA, un tokamak superconductor avanzado.
+</p>
+</div>
+</div>
+
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Una vista de águila del JT-60SA
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+La imagen completa del JT-60SA (diciembre de 2016)
+<br> <br>
+JT-60SA presenta una bobina superconductora de gran tamaño que mantiene un anillo de plasma de seis metros de diámetro. Para controlar una corriente pesada de 5.5 millones de amperios y una energía de calentamiento de 40,000 kW por 100 segundos, que se utilizan en JT-60SA, se necesita un dispositivo de precisión a gran escala. Los componentes del dispositivo llegan de otros países, como países europeos; por lo tanto, se requiere ensamblar con precisión piezas con sutiles variaciones individuales. Para eso, se utilizan <a href="../products/laser/ES_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a> AT901, AT401 y AT402 de Tokyo Boeki Techno-System.
+<br> <br>
+¿Cómo y qué miden para el ensamblaje de un dispositivo de fusión nuclear que requiere precisión? Entrevistamos al Sr. Tomokazu Nishiyama, técnico jefe del grupo de desarrollo del cuerpo principal JT-60, la División de Desarrollo de Tecnología del Sistema Tokamak.
+</p>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<img src="../../images/pages/caseStudy/national/nationalStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-4"></div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Sr. Tomokazu Nishiyama
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Durante la operación de JT-60, comenzó a involucrarse en la operación y mantenimiento de la unidad principal JT-60. En la operación de desmontaje desde 2008, se ha encargado del almacenamiento y la gestión de los componentes activados. Después del inicio del proyecto JT-60SA, ha llevado a cabo principalmente operaciones relacionadas con el montaje y la medición de la unidad principal JT-60SA, así como el diseño de equipos periféricos.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Se espera que sea una fuente de energía para generar electricidad en el futuro
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Entrevistador (I): He oído hablar del término " poder de fusión nuclear ", pero ¿podría explicarme con más detalle?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Tomando un ejemplo familiar, el sol brilla debido a la reacción de fusión nuclear. En el estudio de la `` fusión nuclear '', nuestro objetivo es recrear en la Tierra el estado en el que se produce constantemente una enorme cantidad de energía. Por lo tanto, también se conoce como el `` Sol en la Tierra ''.
+<br> <br>
+La energía utilizada actualmente en la generación de energía nuclear se obtiene de la reacción de fisión nuclear en la que el bombardeo de neutrones hace que un núcleo atómico pesado, como el uranio, se divida en un núcleo atómico más ligero. En este método, con cada reacción con el combustible nuclear, la cantidad de neutrones generados y la cantidad de generación de calor disminuyen, lo que lleva al agotamiento. Para ser reemplazado con combustible nuevo, el "combustible nuclear gastado" se saca del reactor, pero es un elemento difícil de eliminar adecuadamente debido a su radiactividad de alto nivel.
+<br> <br>
+Nuestro objetivo de investigación, el poder de fusión, utiliza la reacción de fusión nuclear, en la cual el núcleo de deuterio y tritio, ambos isótopos de hidrógeno, se fusionan a altas temperaturas. A medida que se producen neutrones, se genera radiación; sin embargo, la mayor parte se convierte en calor dentro del reactor. Un problema es que los neutrones generados activan la construcción, pero esto no es demasiado difícil de manejar, ya que es un material radiactivo de bajo nivel.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Además, como el combustible para la fusión nuclear, el deuterio, existe en el agua de mar, el recurso parecería inagotable. El residuo de la fusión nuclear es helio, sin ninguna generación de dióxido de carbono u óxido de nitrógeno. De esto se deriva la reputación de la fusión nuclear como tecnología ecológica y de seguridad.
+<br> <br>
+Nuestro objetivo es utilizar la energía de fusión para la generación de energía en el futuro. Para explorar las condiciones que permiten la realización práctica, ensamblamos los dispositivos más avanzados en nuestras instalaciones.
+<br> <br>
+<strong> E: He oído que tiene un dispositivo de fama mundial aquí. </strong>
+<br> <br>
+Creo que te refieres a JT-60. El método para combinar el campo magnético de un electroimán con el campo magnético de una corriente alta para formar una forma de cesta de líneas magnéticas, y usarlo para confinar plasma, se llama tokamak. JT-60 es uno de los dispositivos tokamak más grandes del mundo, que permitió muchos logros. ã € ‚
+<br> <br>
+Para la reacción de fusión nuclear, se necesita un dispositivo potente para mantener un estado de plasma en el que los electrones y el núcleo atómico de un elemento de materia se disocian. Tenemos que obtener una temperatura tan alta como cientos de millones de grados centígrados, así como un entorno de alta densidad que permita la colisión frecuente entre los núcleos atómicos. Por lo tanto, utilizando el hecho de que un núcleo atómico y electrones en estado de plasma están cargados, el método tokamak es uno de los dispositivos que controla el plasma con líneas magnéticas. JT-60 alcanzó una temperatura iónica de 520 millones de grados Celsius en 1996, lo que llevó a un lugar en el Libro Guinness de los récords como la temperatura más alta del mundo que los humanos han generado en la Tierra.
+<br> <br>
+<strong> I: Entonces, va a remodelar el JT-60 para una investigación más eficiente de la reacción de fusión nuclear. </strong>
+<br> <br>
+Exactamente. Estamos planeando reemplazar la bobina conductora normal que hemos estado usando con una bobina superconductora para que el dispositivo pueda contribuir a la investigación de soporte del ITER. El ensamblaje de JT-60SA comenzó en enero de 2013 y esperamos comenzar su operación en 2019.
+<br> <br>
+Nuestra tarea es hacer planes de medición y realizar el mantenimiento de los rastreadores láser para ensamblar con precisión las piezas fabricadas en Japón y Europa. Como tenemos que ensamblar el equipo más avanzado, utilizamos un sistema CAD 3D, así como varios dispositivos de medición.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Localización en tiempo real con reubicación de piezas.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+I: ¿Qué tan grande es el dispositivo?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+La parte de plasma en forma de rosquilla en el centro tiene un diámetro de unos seis metros. Junto con todos los equipos periféricos, incluidas las bobinas de campo toroidales para confinamiento de plasma, las bobinas de campo poloidal para posicionamiento y conformación de plasma, el criostato y un contenedor para mantener los imanes superconductores a una temperatura ultrabaja, todo el sistema está cerca de 15 metros en diámetro. Estamos planeando conectar más equipos y dispositivos a esto, por lo que el tamaño final será aún mayor.
+<br> <br>
+El sitio de montaje se llama la sala de la unidad principal, que tiene un espacio de 40 metros cuadrados por 40 metros de altura. Cuenta con aire acondicionado para mantener un ambiente constante, de modo que siempre podamos ensamblar las piezas bajo la misma condición.
+<br> <br>
+Primero, pedimos la base a Europa, luego colocamos una bobina de campo poloidal más baja, que se fabricó en Japón, y luego colocamos un recipiente de vacío en forma de rosquilla. Obtenemos este contenedor en partes desmontadas, al igual que las secciones de una naranja, por lo que tenemos que organizarlas con precisión de forma radial para ensamblar un contenedor.
+<br> <br>
+Luego, colocamos bobinas de campo toroidales que generan un campo magnético para confinar el plasma. Cada una de las bobinas de campo toroidales tiene la forma de un anillo. Tenemos que poner el recipiente de vacío a través del orificio de cada bobina usando una grúa, lo cual es muy difícil. Con 18 bobinas, podemos formar una forma de rosquilla de 360 ​​grados, que cubre todo el contenedor de vacío.
+<br> <br>
+Si bien cada pieza de equipo de precisión tiene un tamaño de aproximadamente varios metros, el espacio entre el contenedor y las bobinas de campo es de varias docenas de milímetros. Siguiendo el diseño, tenemos que ensamblar las piezas con precisión sin causar ningún daño. Para eso, necesitamos una medición precisa.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece06 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece06.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Montaje de las bobinas de campo toroidales JT-60SA
+<br> <br>
+<strong> I: ¿Cómo utiliza el rastreador láser en el sitio de ensamblaje? </strong>
+<br> <br>
+Creamos coordenadas dentro de la sala de la unidad principal, de modo que podamos gestionar las ubicaciones de instalación de los equipos respectivos utilizando los valores de coordenadas. Asigne X, Y y Z para la longitud, el ancho y la altura, respectivamente, y establezca el punto a ocho metros del piso, que corresponde a la ubicación central del plasma, como un punto cero.
+<br> <br>
+Como tenemos que manejar e instalar componentes enormes de una manera complicada dentro de un espacio pequeño, esperábamos que el láser pudiera bloquearse. Por lo tanto, colocamos muchos puntos de referencia en la pared en la etapa de planificación de la encuesta. Al medir desde uno de los puntos de referencia, podemos leer una coordenada absoluta precisa en cualquier momento. Las bobinas solenoides más importantes, que constituyen el eje central de las bobinas superconductoras, también tienen un tamaño de varios metros, pero el error de instalación aceptable es inferior a 1 mm. No creo que podamos lograr este nivel de precisión sin un rastreador láser.
+<br> <br>
+<strong> I: ¿Qué le parece el rastreador láser? </strong>
+<br> <br>
+Me gusta porque podemos medir a medida que movemos objetos. A veces medimos dos puntos diferentes, por ejemplo, un punto interno y un punto externo, usando dos rastreadores. Dado que un rastreador puede comunicarse con una PC de forma inalámbrica, colocamos dos PC una al lado de la otra para ajustar ubicaciones mientras verificamos ambas coordenadas. Los rastreadores láser nos pueden indicar las coordenadas en tiempo real de cada parte en las PC, lo que permite una alineación eficiente.
+<br> <br>
+Primero compramos AT901, que es un tipo estacionario, y AT401, que es un tipo portátil. Queríamos realizar mediciones con dos rastreadores, por lo que compramos AT402. La razón principal por la que elegimos AT402 fue que es compatible con B-Probe, una sonda inalámbrica de tipo portátil. Esta sonda permite la medición en cualquier sitio donde no podamos hacer un agujero para un asiento para fijar un reflector esférico.
+<br> <br>
+Fue un gran momento para nosotros porque en ese momento tuvimos que medir puntos en una superficie con trazado, que es difícil de manejar en un reflector esférico. B-Probe tiene una opción de plantillas con forma de aguja. Utilizándolos, podríamos medir rápidamente un área incluso con surcos.
+<br> <br>
+También utilizamos la función para cambiar los ángulos del rastreador por control remoto. Al principio, bloqueamos el láser o movimos un reflector para ajustar el ángulo a un punto a medir a fin de evitar la posibilidad de desalineación del rastreador causado por moverlo con la mano. Pero ahora, podemos ajustar el ángulo mientras comprobamos una cámara, lo que ha mejorado nuestra eficiencia en el trabajo, y no tenemos que movernos con un reflector en la mano, especialmente en lugares altos, lo que ha mejorado la seguridad. Es de gran ayuda para nosotros.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece07 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece07.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Medición usando un rastreador láser
+<br> <br>
+<strong> I: Entonces, para instalar con precisión piezas / componentes siguiendo el diseño, es un hecho que debe poder medir con precisión. </strong>
+<br> <br>
+Si. Incluso después de la instalación, todavía tenemos que hacer ajustes finos. Por ejemplo, las bobinas dispuestas de forma radial, si una de las bobinas está desalineada con una desviación de ángulo menor, se perderían buenas alineaciones de todas las otras bobinas. Entonces, usamos algo así como una placa delgada para colocar entre las bobinas para alinearlas en una forma radial precisa. Al medir de antemano la forma de las bobinas, calculamos el grosor de la placa que permitirá una alineación perfecta de las bobinas. Dado que las partes / componentes de otros países tienen sutiles variaciones individuales, debemos realizar la tarea de modificar mientras se mide.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece08 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/national/nationalPiece08.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+En un modelo de sector de contenedor de vacío JT-60SA
+<br> <br>
+Durante el montaje, mientras que algunas partes se fijan con pernos, algunas partes necesitan soldadura para su fijación. La soldadura inevitablemente causa la deformación de la pieza a soldar, por lo que tenemos que verificar midiendo realmente cuánta deformación ocurrió antes y después de la soldadura y si se produjo alguna distorsión. Al repetir tales mediciones, podemos acumular datos que nos dicen cuánta contracción podría ocurrir bajo una determinada condición. Al ensamblar partes divididas para un componente, como un contenedor de vacío, puede aplicar los datos obtenidos para la primera parte a soldar al ensamblaje posterior de las partes restantes.
+<br> <br>
+Entonces, repetimos la medición con la misma parte. Una parte tendría diferentes condiciones entre cuando se coloca sola y después de ensamblarla con otras partes. Para un dispositivo grande, la precisión de cada pieza / componente y ensamblaje se reflejará en la precisión general. Confiando en el nivel de precisión que solo el rastreador láser puede lograr, nos gustaría llegar a la finalización.
+</p>
+</div>
+</div>
+
+                            <!-- National Institutes for Quantum and Radiological Science and Technology (QST) Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/national/nationalLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+Sobre el instituto nacional para Ciencia y Tecnología Cuántica y Radiológica (QST)
+                                    </h3>
+                                    <p>
+En abril de 2016, se estableció el Instituto Nacional de Ciencia y Tecnología Cuántica y Radiológica (QST) como resultado de la fusión del Instituto Nacional de Ciencias Radiológicas (NIRS), la Dirección de Haz Cuántico y la Dirección de Fusión Nuclear de la Agencia de Energía Atómica de Japón (JAEA). QST lleva a cabo una investigación y desarrollo integral relacionados con la ciencia y las tecnologías cuánticas y la ciencia radiológica y su aplicación en medicina. El Instituto Naka Fusion, donde se realizó la entrevista anterior, se ha hecho cargo de las tecnologías y los logros de JAEA y está avanzando en la investigación y el desarrollo de tecnología de ingeniería hacia la aplicación práctica de un reactor de fusión nuclear en colaboración con países europeos y otros países.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

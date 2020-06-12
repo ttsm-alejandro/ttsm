@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Vectoron Products</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+                     ">
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- Horizontal line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                <div style="height: 2px"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php" 
+                   style="color:{{ ttsmBlueColor }};">HOME
+                </a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html" 
+                   style="color:{{ ttsmBlueColor }};">PRODUCTS
+                </a> / 
+                <a href="{{relativeUrl}}html/products/vectoron/EN_mainVectoron.html"
+                   style="color:{{ ttsmBlueColor }};">VECTORON
+                </a>
+
+                <!-- Content >
+                <h2 style="color:{{ ttsmBlueColor }}; ">Vectoron Main Content</h2-->
+
+                <!-- LIST OF VECTORON PRODUCTS -->
+                <!-- UPPER ROW -->
+                <div class="row">
+                    
+                    <!-- V7M -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_vectoronV7M.html">
+                        <img src="../../../images/pages/products/vectoron/vectoronV7M_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>VMC-7000M Series</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- VME300M -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_vectoronVME300M.html">
+                        <img src="../../../images/pages/products/vectoron/vectoronVME300M_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>VME-300M Series</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- V6MII -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_vectoronV6MII.html">
+                        <img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>VMC-6600M II Series</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- V6C -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_vectoronV6C.html">
+                        <img src="../../../images/pages/products/vectoron/vectoronV6C_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>VMC-6600C Series</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    
+                    <!-- ApiScan -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_apiScan.html">
+                        <img src="../../../images/pages/products/vectoron/apiScan_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>ApiScan</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Raptor Eye -->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_raptorEye.html">
+                        <img src="../../../images/pages/products/vectoron/raptorEye_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Raptor Eye</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Raptor Eye 2-->
+                    <div class="col-md-3 text-center">
+                        <a href="EN_raptorEye2.html">
+                        <img src="../../../images/pages/products/vectoron/raptorEye2_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Raptor Eye 2</h4>
+                                --
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

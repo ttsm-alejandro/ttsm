@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Layout Machine Mini-Model</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+            brochureToDownload='LM';
+                     ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                </hr>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+				<a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+				<a href="{{relativeUrl}}html/products/cmm/EN_mainCmm.html">CMM MANUAL</a> / 
+				<a href="">Layout Machine Mini Model</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="../../../images/pages/products/cmm/layoutMachineMiniModel.jpg" width="100%">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="text-muted"><h1>Layout Machine G Model</h1></div>
+                        <p>
+                            This is a compact-sized Layout Machine in combination with a dedicated table, which can be used for various purposes such as manufacturing of scale models and small work design models, and inspection of works not included in the category of small works.
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <li>For genral use </li>
+                            <li>Easy to use</li>
+                            <li>Light weight</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Specification</h4>
+                            <img src="../../../images/pages/products/cmm/layoutMachineAModelSpecification.jpg" width="50%">
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>TYPE</th>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>C</th>
+                                    <th>D</th>
+                                    <th>E</th>
+                                    <th>F</th>
+                                    <th>Accuracy/Axis</th>
+                                    <th>Weight(kg.)</th>
+                                </tr>
+                                <tr>
+                                    <th>36A</th>
+                                    <td>600</td>
+                                    <td>244</td>
+                                    <td>1020</td>
+                                    <td>760</td>
+                                    <td>130</td>
+                                    <td>1430</td>
+                                    <td>±0.16</td>
+                                    <td>600</td>
+                                </tr>
+                            </table>
+                            When using the frame dedicated for the Layout Machine, the precision means a requirement for each axis, given based upon the TTS's inspection procedure
+                            <div style="height: 8px;"></div>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Table base</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Table dimensions</th>
+                                    <td>1,600 x 1,100 x 150mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Table material</th>
+                                    <td>cast aluminum</td>
+                                </tr>
+                                <tr>
+                                    <th>Load resistance</th>
+                                    <td>Max 100kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Rail length</th>
+                                    <td>1,740mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Table planarity</th>
+                                    <td>0.3mm(according to the inspection when there is no measurement object on the table)</td>
+                                </tr>
+                                <tr>
+                                    <th>Guide rail straightness</th>
+                                    <td>0.05/1,000mm</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

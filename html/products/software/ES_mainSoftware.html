@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Software</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+                     ">
+            
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- Horizontal line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                <div style="height: 2px"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php" 
+                   style="color:{{ ttsmBlueColor }};">INICIO
+                </a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html" 
+                   style="color:{{ ttsmBlueColor }};">PRODUCTOS
+                </a> / 
+                <a href="{{relativeUrl}}html/products/software/ES_mainSoftware.html"
+                   style="color:{{ ttsmBlueColor }};">SOFTWARE
+                </a>
+
+                <!-- Content >
+                <h2 style="color:{{ ttsmBlueColor }}; ">Software Main Content</h2-->
+
+                <!-- LIST OF Software PRODUCTS -->
+                <!-- UPPER ROW -->
+                <div class="row">
+
+                    <!-- Libella Queen -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_libellaQueen.html">
+                        <img src="../../../images/pages/products/software/libellaQueen_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Libella Queen</h4>
+                                Software de Metrología e inspección 3D, diseñado especialmente para trabjar con Vectoron
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- PolyWorks Inspector -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_polyworksInspector.html">
+                        <img src="../../../images/pages/products/software/polyworksInspector_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>PolyWorks Inspector</h4>
+                                Solución en metrología 3D para tomar el control de todo el proceso
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- PolyWorks Modeler -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_polyworksModeler.html">
+                        <img src="../../../images/pages/products/software/polyworksModeler_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>PolyWorks Modeler</h4>
+                                Soluciones de ingenierría inversa para trabajar en conjunto con su software profesional CAD/CAM
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- spGauge -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_spGauge.html">
+                        <img src="../../../images/pages/products/software/spGauge_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>spGauge</h4>
+                                Herramienta de inspección de productos usando nube de puntos y su diseño original CAD 3D
+                            </div>
+                        </a>
+                    </div>
+				<!-- Quitaremos el 3D Magic porque es solo para Toyota***
+                </div>
+                <!-- LOWER ROW 
+                <div class="row">
+                    <!-- 3D-Magic 
+                    <div class="col-md-3 text-center">
+                        <a href="3dMagic.html">
+                        <img src="../../../images/pages/products/software/3dMagic_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>3D-Magic</h4>
+                                Tokyo Boeki Techno-System metrology software 
+                            </div>
+                        </a>
+                    </div>
+				-->
+                </div>
+            </div>
+            
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Company Profile</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="getCurrentUrl();"
+             >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/EN_header.html'"></div>
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                <div class="row">
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                    <div class="col-md-8" style="text-align: left">
+                        <h2 style="text-align: right">TTS MÉXICO</h2>
+                        <h4 style="text-align: right">Proveemos soluciones en 3-D</h4>
+                        <h2>About Us</h2>
+                        <p>
+                            TTS is an international company that provides and support the best three-dimensional measurement instruments in the world like custom design CMM's (Layout Machine), multi-joint type measurement machines (Vectorarm) and many others. 
+
+                            <br><br>As a part of global corporate Tokyo Boeki Techno System LTD. (TTS) we work closely with some of the best branches in the world to give our world-wide customers the best products and support.
+                        </p>
+                        
+                        
+                        <h2>TTS & TTS México (TTSM)</h2>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}"></th>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}">TTS</th>
+                                <th style="color: white;background-color: {{ ttsmBlueColor }}">TTSM</th>
+                            </tr>
+                            <tr>
+                                <th>Company Name </th>
+                                <td>TOKYO BOEKI TECHNO-SYSTEM LTD.</td>
+                                <td>TOKYO BOEKI TECHNO-SYSTEM DE MEXICO, S.A. de C.V.</td>
+                            </tr>
+                            <tr>
+                                <th>Headquaters </th>
+                                <td>KYOBASHI EDOGRAND 28F, 2-2-1, Kyobashi, Chuo-ku, Tokyo,Japan </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Founded  </th>
+                                <td>March 1, 1994</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Capital  </th>
+                                <td>340 million yen</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Number of employees </th>
+                                <td>125 people (male: 95 people / female: 30 people) *As of end-March 2018</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Average age </th>
+                                <td>43.1 years old (male: 44.1 y.o./ female 39.8 y.o.) *As of end-March 2018</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Shareholder</th>
+                                <td>Tokyo Boeki Holdings Corporation (100%)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Annual Sales </th>
+                                <td>6 billion yen (Fiscal year ended March 2018)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Product composition</th>
+                                <td>3D measuring systems 80%, Software 20%</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Market composition</th>
+                                <td>Domestic (Japan) 75%, Asia 15%, US 5%, Others 5%</td>
+                                <td>Domestic (Mexico) 75%, South America 25%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                </div>
+                <div style="height: 5px"></div>
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/EN_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Technical Support</title>
+        <link rel="icon" href="images/util/icono.png">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl">
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/EN_header.html'"></div>
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+                <h1 style="color: {{ ttsmBlueColor }};">Technical Support</h1>
+                
+                <!-- MAIN CONTENT -->
+                
+                <!-- Service Center -->
+                <h3 style="color: {{ ttsmBlueColor }};">Service Center: +52 449 962 2528</h3>
+ 
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>
+                            <strong>Manager Oscar Ceballos</strong>
+                            <br>E-mail: oceballos@tbts.co.jp
+                            <br><br>
+                            <strong>Service Engineer Alejandro Aguayo Acosta</strong>
+                            <br>E-mail: alejandro.aguayo@tbts.co.jp
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/pages/techSupport/serviceCenter2.png" width="100%">
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <!-- Capacitation -->
+                <h3 style="color: {{ ttsmBlueColor }};">Training</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            Libella Queen and 3DMagic capacitation.
+                            <br>Software support/capacitation
+                            <br>Equipment support/capacitation
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/pages/techSupport/capacitacion.jpg" width="100%">
+                    </div>
+                </div>
+                
+                <a href="./TTSM/system_v2/"><div style="height: 4px"></div></a>
+                
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/EN_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>

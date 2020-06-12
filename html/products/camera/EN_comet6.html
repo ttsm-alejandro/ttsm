@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Comet 6</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/camera/comet6_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='COMET';
+                               ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/camera/EN_mainCamera.html">CAMERA</a> / 
+                <a href="">COMET 6</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>COMET 6</h1></div>
+                        <p>
+                            High-End technology for your demanding digitizing applications: Do your projects require maximum measurement speed or highest resolution for measuring detailed/complexshaped parts? The COMET 6 sensors are the ideal choice, offering uncompromising flexibility and data quality
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <strong>HIGH LIGHT POWER AND INTELLIGENT 3D ILC TECHNOLOGY</strong>
+                                    <br>COMET 6 features an extremely powerful LED and innovative projection optics. The adaptive projection technology (3D ILC - Intelligent Light Control) locally adapts the light quantity projected onto the object surface; undesired effects such as glare are therefore minimized
+
+                                    <br><br><strong>COMET 6 8M: THE NEW SENSOR FOR ULTIMATE MEASUREMENT SPEED</strong>
+                                    <br>The new high-speed fringe projection sensor COMET 6 8M excites with a stunningly short measurement time which is even in high resolution mode less than one second. The outstandingly powerful projection module sets new standards with maximum efficiency for the acquisition of 3D data.	
+
+                                    <br><br><strong>HIGH FLEXIBILITY AND EFFICIENCY FOR WIDE APPLICATION RANGE</strong>
+                                    <br>Choose between higher resolution and maximum measurement speed at any time and achieve optimal performance for your specific usage with the COMET 6 sensors. The short working distance even with large measuring fields enables simple, time-saving handling, especially in confined spaces. Adapting the field-of-view only requires a few simple steps by exchanging the objective lens - within shortest time, the modular digitizing system is available for your next application.
+                                    <br><br>Without the need of any elaborate hardware modifications or additional sensors, you can take full advantage of the exceptionally high flexibility provided by the COMET 6 high-end sensors.	
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <strong>MODULAR DESIGN FOR EFFICIENCY AND FLEXIBILITY</strong>
+                                    <br>The unique design of the COMET 6 sensors is based on a modular set-up with the proven single-camera-technology which allows a fast and easy adaptation of the field-of-view to the application at hand.
+
+                                    <br><br><strong>COMET 6 16M: HIGH RESOLUTION FOR HIGHEST LEVEL OF DETAIL</strong>
+                                    <br>COMET 6 16M with a high-resolution 16 Megapixel camera features a previously unprecedented precision for the digitization of objects with fine structures or for applications requiring the highest level of detail.
+
+                                    <br><br><strong>USER-ORIENTED, ERGONOMIC SENSOR HANDLING</strong>
+                                    <br>The compact sensor design and new handling system are designed to offer maximum user friendliness and ergonomic operation. The sensor can be adjusted particularly easy, precise and quick – enabling the user to operate the system intuitively and conveniently. Paired with the sensationally fast measurement time, COMET 6 offers maximum efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }};">
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>TECHNICAL DATA</th>
+                                    <th>COMET 6 8M	</th>
+                                    <th>COMET 6 16M</th>
+                                </tr>
+                                <tr>
+                                    <td>Camera resolution</td>
+                                    <td>3296 x 2472</td>
+                                    <td>4896 x 3264</td>
+                                </tr>
+                                <tr>
+                                    <td>Field-of-view</td>
+                                    <td>Measurement volume</td>
+                                    <td>Measurement volume</td>
+                                </tr>
+                                <tr>
+                                    <td>80</td>
+                                    <td>86 x 64 x 40 mm³</td>
+                                    <td>81 x 54 x 40 mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>150</td>
+                                    <td>142 x 106 x 80 mm³</td>
+                                    <td>145 x 97 x 80 mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>250</td>
+                                    <td>283 x 213 x 160 mm³</td>
+                                    <td>274 x 193 x 160 mm³
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>386 x 289 x 200 mm³</td>
+                                    <td>382 x 254 x 200 mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>700</td>
+                                    <td>666 x 499 x 400 mm³</td>
+                                    <td>656 x 437 x 400 mm³</td>
+                                </tr>
+                                <tr>
+                                    <td>1200</td>
+                                    <td>1216 x 912 x 600 mm³</td>
+                                    <td>1235 x 823 x 600 mm³</td>
+                                </tr>
+                                <tr>
+                                    <td> Field-of-view</td>
+                                    <td>3D point distance</td>
+                                    <td>3D point distance</td>
+                                </tr>
+                                <tr>
+                                    <td> 80 / 150</td>
+                                    <td>26 μm / 43 μm</td>
+                                    <td>16 μm / 30 μm</td>
+                                </tr>
+                                <tr>
+                                    <td>250 / 400</td>
+                                    <td>86 μm / 117 μm</td>
+                                    <td>56 μm / 78 μm </td>
+                                </tr>
+                                <tr>
+                                    <td>700 / 1200</td>
+                                    <td>202 μm / 369 μm</td>
+                                    <td>134 μm / 252 μm </td>
+                                </tr>
+                                <tr>
+                                    <td> Field-of-view</td>
+                                    <td>Working distance</td>
+                                    <td>Working distance</td>
+                                </tr>
+                                <tr>
+                                    <td> 80 / 150</td>
+                                    <td>420 mm / 600 mm</td>
+                                    <td>420 mm / 600 mm</td>
+                                </tr>
+                                <tr>
+                                    <td> 250 / 400</td>
+                                    <td>600 mm / 785 mm</td>
+                                    <td>600 mm / 785 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>700 / 1200</td>
+                                    <td>785 mm / 1400 mm</td>
+                                    <td>785 mm / 1400 mm</td>
+                                </tr>
+                                <tr>
+                                    <td> Fastest measuring time in seconds</td>
+                                    <td>< 1 sec</td>
+                                    <td>1,2 sec.</td>
+                                </tr>
+                                <tr>
+                                    <td>PC</td>
+                                    <td colspan="2">64Bit HighEnd Workstation with Windows 7</td>
+                                </tr>
+                                <tr>
+                                    <td>Sensor positioning</td>
+                                    <td colspan="2">Tripod or column stand with manual rotary/swivel axis</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Automatic object positioning</td>
+                                    <td colspan="2">Rotary tables COMETrotary, COMETdual rotary</td>
+                                </tr>
+                                <tr>
+                                    <td>Available software</td>
+                                    <td colspan="2">colin3D</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            
+            </div>
+            <!-- SPACE -->
+            <div style="height: 10px"></div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

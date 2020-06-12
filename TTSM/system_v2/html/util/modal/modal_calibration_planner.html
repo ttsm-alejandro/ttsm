@@ -1,0 +1,85 @@
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<!-- MODAL CALIBRATION PLANNER -->
+<div class="modal fade" id="calibrationPlannerModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title" title="{{ tableCalibrationPlanner | json }}">Calibration Planner</h2>
+                <!--a href="../../php/resources/excel/CalibrationPlannerToExcelResource.php?user={{ user }}&token={{ token }}">
+                        <button type="button" class="btn btn-success">Export to EXCEL</button>
+                    </a-->
+            </div>
+            
+            <!-- System Details -->
+            <div class="modal-body">
+                <h5>Filter List</h5>
+                <select 
+                    title="Select Company to filter list"
+                    ng-model="filterCompanyInCalibrationPlanner"
+                    class="input-sm"
+                    ng-options="x.shortName as x.fullName for x in companyCatalog"></select>
+                <select 
+                    title="Select Machine Type to filter list : {{ filterMachineTypeInCalibrationPlanner }}"
+                    ng-model="filterMachineTypeInCalibrationPlanner"
+                    class="input-sm"
+                    ng-options="x.name as x.name for x in machineTypeCatalog"></select>
+                <label class="label label-success" ng-click="filterStatusInCalibrationPlanner = 'OK'">OK</label>
+                <label class="label label-warning" ng-click="filterStatusInCalibrationPlanner = 'CLOSE'">CLOSE</label>
+                <label class="label label-danger" ng-click="filterStatusInCalibrationPlanner = 'PAST'">PAST</label>
+                <label class="label label-info" ng-click="filterCompanyInCalibrationPlanner = ''">RESET Company</label>
+                <label class="label label-info" ng-click="filterMachineTypeInCalibrationPlanner = ''">RESET MachineType</label>
+                <label class="label label-info" ng-click="filterStatusInCalibrationPlanner = '';">RESET Status</label>
+                <label class="label label-info">-</label>
+                <label class="label {{ labelPlantStyle }}" ng-click="clicShowColumn( 'plant' )">Plant</label>
+                <label class="label {{ labelPersonStyle }}" ng-click="clicShowColumn( 'person' )">Person</label>
+                <label class="label {{ labelEmailStyle }}" ng-click="clicShowColumn( 'email' )">Email</label>
+                <div class="table-responsive"> 
+                    <table class="table table-hover table-condensed">
+                        <tr style="background-color: {{ ttsmBlueColor }}; color: white">
+                            <td>Company</td>
+                            <td ng-show="isShowPlantInCalibrationPlanner">Plant</td>
+                            <td ng-show="isShowPersonInCalibrationPlanner">Person</td>
+                            <td ng-show="isShowEmailInCalibrationPlanner">E-mail</td>
+                            <td>System</td>
+                            <td>System Type</td>
+                            <td>Next Calibration</td>
+                            <td>Days left</td>
+                            <td>Status</td>
+                        </tr>
+                        <tr ng-repeat="row in tableCalibrationPlanner" 
+                            ng-show="
+                                ( 
+                                ( ( filterCompanyInCalibrationPlanner == row.companyName ) || ( filterCompanyInCalibrationPlanner == '' ) )
+                                && ( ( filterStatusInCalibrationPlanner ==  row.status ) || (filterStatusInCalibrationPlanner == '' ) ) 
+                                && (  row.systemType.includes( filterMachineTypeInCalibrationPlanner )  || (filterMachineTypeInCalibrationPlanner == '' ) )
+                                )
+                            "
+                            >
+                            <td>{{ row.companyName }}</td>
+                            <td ng-show="isShowPlantInCalibrationPlanner">{{ row.plantName }}</td>
+                            <td ng-show="isShowPersonInCalibrationPlanner">{{ row.personName }}</td>
+                            <td ng-show="isShowEmailInCalibrationPlanner"><label class="label label-default">{{ row.personEmail }}</label></td>
+                            <td>{{ row.systemSerialNumber }}</td>
+                            <td>{{ row.systemType }}</td>
+                            <td>{{ row.nextCalibrationDate }}</td>
+                            <td>{{ row.dayUntilNextCalibrationDate }}</td>
+                            <td style="{{ getStyleByStatus( row.status ) }}">{{ row.status }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                    <a href="../../php/resources/excel/CalibrationPlannerToExcelResource.php?user={{ user }}&token={{ token }}">
+                        <button type="button" ng-disabled="true" class="btn btn-success">Export to EXCEL</button>
+                    </a>
+                    <!--button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button-->
+            </div>
+      </div>
+    </div>
+</div>

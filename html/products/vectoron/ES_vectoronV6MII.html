@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>VMC-6600M II Series</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/vectoron/vectoronV6MII_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='V6M';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / <a href="{{relativeUrl}}html/products/vectoron/ES_mainVectoron.html">VECTORON</a> / <a href="">VMC-6600MII Series</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <!--img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%"-->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'vectoronV6MII' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV6MII_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'vectoronV6MII' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV6MII_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'vectoronV6MII' , 3 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV6MII_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>VMC-6600M II Series</h1></div>
+                        <p>
+                            ESTE BRAZO DE ALTA GAMA DE ÚLTIMA GENERACIÓN, PERMITE MEDICIONES DE ALTA PRECISION Y CALIDAD
+                            <br>El brazo articulado de medición tridimensional VECTORON® permite maniobras flexibles gracias a sus 7 articulaciones. Es un sistema que permite mediciones con un alto grado de libertad y consigue el más alto nivel de precisión de la industria. Para medir es posible colocar a la punta del brazo una sonda (modo contacto) o un escáner láser (modo sin contacto), permitiendo la medición de cualquier forma u objeto El VMC6600MII es el modelo de alta gama dentro de la línea de VECTORON® Rápido y preciso                         
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <li>RÁPIDO Y PRECISO</li>
+                            <ul>
+                                <li>Alta velocidad y alta resolución</li>
+                            </ul>
+                            <li>SISTEMA PORTÁTIL</li>
+                            <li>HECHO EN JAPÓN</li>
+                            <li>FÁCIL DE CALIBRAR</li>
+                            <ul>
+                                <li>Calibración de usuario disponible</li>
+                            </ul>
+                            <li>MEDICIÓN CON CONTACTO Y SIN CONTACTO</li>
+                            <ul>
+                                <li>Sonda</li>
+                                <li>ApiScan</li>
+                            </ul>
+                            <li>EL MEJOR SERVICIO</li>
+                            <ul>
+                                <li>No hay contratos forzosos de servicio de hardware. El soporte y mantenimiento son brindados por Ingenieros Mexicanos Expertos</li>
+                            </ul>
+                            <li>PERSONALIZABLE</li>
+                            <ul>
+                                <li>Personalización disponible para cumplir con los requerimientos del Cliente</li>
+                                <li>Varios accesorios disponibles (Beses magneticas, sondas, módulos para grandes dimensiones, etc.) </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Especificaciones:</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Volúmen de medición del brazo</th>
+                                    <td>Volúmen de operación: 3,500 mm (Longitud del brazo: 1,750mm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Peso</th>
+                                    <td>10 kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión de la medicion en modo contacto (2σ)</th>
+                                    <td>±0.04mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión de la medición sin contacto (ApiScan)</th>
+                                    <td>±0.06mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Ambiente de operación</th>
+                                    <td>10°C ~ 40°C </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

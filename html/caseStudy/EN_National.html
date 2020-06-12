@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>National Institute for Quantum and Radiological Science and Technology (QST)</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put *** BLUE BACKGROUND ***, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 7 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/EN_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/laser/EN_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>National Institute for Quantum and Radiological Science and Technology (QST)</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'EN_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}EN_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}EN_caseStudy.html">CASE STUDY</a> /
+                        <a href="">National Institute for Quantum and Radiological Science and Technology (QST)</a>
+                        
+                        <!-- COMPANY NAME SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/laser/EN_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a><br>National Institute for Quantum and Radiological Science and Technology (QST)</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Subtitle -->
+<h3>
+Nuclear fusion reactor dealing with items of matter at millions of degrees Celsius as well as high current<br>
+The key for assembly is absolute coordinates obtained by laser measurement.
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+National Institute for Quantum and Radiological Science and Technology (QST)The National Institute for Quantum and Radiological Science and Technology (QST) is located in Naka City, Ibaraki Prefecture. At the QST, researchers are studying “nuclear fusion,” which is said to be the Earth’s energy of the future. While nuclear power energy utilizes nuclear fission reaction in which particle bombardment causes atom splitting, fusion power is based on nuclear fusion reaction in which multiple atomic nuclei are combined to form different atomic nuclei and particles. 
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/national/nationalPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Since there is no production of high-level radioactive waste, nuclear fusion energy is being actively studied as a safer source of energy.National Institute for Quantum and Radiological Science and Technology (QST)The National Institute for Quantum and Radiological Science and Technology (QST) is located in Naka City, Ibaraki Prefecture. At the QST, researchers are studying “nuclear fusion,” which is said to be the Earth’s energy of the future. While nuclear power energy utilizes nuclear fission reaction in which particle bombardment causes atom splitting, fusion power is based on nuclear fusion reaction in which multiple atomic nuclei are combined to form different atomic nuclei and particles. Since there is no production of high-level radioactive waste, nuclear fusion energy is being actively studied as a safer source of energy.
+<br><br>
+The QST has gained attention because of JT-60, a nuclear fusion device. In order to obtain fusion power, fuel has to be heated to above 100 million degrees Celsius to create a “plasma” state in which molecular constituents such as electrons and atomic nuclei are flying around independently. It is difficult to control such a state of high temperature and high density, which is the common challenge for many research Institute. “JT-60,” launching its operation in 1985, successfully confined deuterium plasma at a temperature of 190 million degrees Celsius, an ion density of 49 trillion per square centimeters, for one second, which surprised and impressed the world.
+<br><br>
+After that, Japan joined the International Thermonuclear Experimental Reactor (ITER) project along with the Europe, Russia, the United States, China, South Korea, and India. The QST has become Japan’s operation base for the ITER project. Currently, for further advanced research, JT-60 has been stopped and the device has been disassembled. Under the collaboration between Europe and Japan, upgrading to JT-60SA, an advanced superconducting tokamak, is being undertaken.
+</p>
+</div>
+</div>
+
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+A bird’s eye view of JT-60SA
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+The whole picture of JT-60SA (December, 2016)
+<br><br>
+JT-60SA features a large-size superconducting coil maintaining a plasma ring six meters in diameter. In order to control heavy current of 5.5 million amperes and heating energy of 40,000 kW for 100 seconds, which are used in JT-60SA, a large-scale precision device is needed. The device components arrive from other countries, such as European countries; therefore, it is required to precisely assemble parts with subtle individual variabilities. For that, <a href="../products/laser/EN_leicaAbsoluteTrackerAt960.html">Leica Laser Tracker</a> AT901, AT401, and AT402 by Tokyo Boeki Techno-System are utilized.
+<br><br>
+How and what do they measure for assembly of a nuclear fusion device that requires precision? We interviewed Mr. Tomokazu Nishiyama, a chief technician at the JT-60 main body development group, Tokamak System Technology Development Division.
+</p>
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<img src="../../images/pages/caseStudy/national/nationalStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-4"></div>
+</div>
+
+<!-- Japanese Rinnai staff 01 -->
+<!-- Name -->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Mr. Tomokazu Nishiyama
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+During the operation of JT-60, he started getting involved in operation and maintenance of the JT-60 main unit. In the disassembly operation since 2008, he has been in charge of storage and management of activated components. After the initiation of the JT-60SA project, he has been mainly conducting operations related to the assembly and measurement of the JT-60SA main unit as well as designing peripheral equipment.
+</p>
+</div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Expected to be an energy source to generate electricity in the future
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Interviewer (I): I have heard of the term “nuclear fusion power,” but could you explain it to me in more detail?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Taking a familiar example, the sun is shining because of nuclear fusion reaction. In the study of “nuclear fusion,” we aim to recreate on Earth the state in which an enormous amount of energy is constantly produced. Therefore, it is also known as the “Sun on Earth.”
+<br><br>
+The energy currently used in nuclear power generation is obtained from nuclear fission reaction in which neutron bombardment causes heavy an atomic nucleus, such as uranium, to split into a lighter atomic nucleus. In this method, with every reaction with the nuclear fuel, the number of neutrons generated and amount of heat generation go down, leading to depletion. In order to be replaced with new fuel, the “spent nuclear fuel” is taken out from the reactor, but it is a difficult item to dispose of properly due to its high-level radioactivity.
+<br><br>
+Our research target, fusion power, utilizes the nuclear fusion reaction, in which the nucleus of deuterium and tritium, which are both hydrogen isotopes, are fused at high temperatures. As neutrons are produced, radiation is generated; however, most of it turns into heat inside the reactor. One problem is that the generated neutrons activate the building, but this is not too hard to deal with as it is a low-level radioactive material. 
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+In addition, as the fuel for nuclear fusion, deuterium, exists in seawater, the resource would appear inexhaustible. The residue from the nuclear fusion is helium, without any generation of carbon dioxide or nitrogen oxide. The reputation of nuclear fusion as an environmentally friendly technology as well as for safety comes from this.
+<br><br>
+Our target is to use fusion power for power generation in the future. In order to explore conditions that allow practical realization, we assemble the most advanced devices at our facility.
+<br><br>
+<strong>I: I have heard that you have a world-famous device here.</strong>
+<br><br>
+I believe you are referring to JT-60. The method to combine the magnetic field of an electromagnet with the magnetic field of a high current to form a basket-like shape of magnetic lines, and use it to confine plasma, is called tokamak. JT-60 is one of the world’s biggest tokamak devices, which enabled many achievements. 。
+<br><br>
+For nuclear fusion reaction, a powerful device is necessary for maintaining a plasma state in which electrons and the atomic nucleus of an item of matter are dissociated. We have to obtain a temperature as high as hundreds of millions of degrees Celsius as well as a high-density environment that allows frequent collision among atomic nuclei. Therefore, utilizing the fact that an atomic nucleus and electrons in a plasma state are charged, the tokamak method is one of the devices that controls plasma with magnetic lines. JT-60 achieved an ionic temperature of 520 million degrees Celsius in 1996, which led to a place in the Guinness Book of Records as the world’s highest temperature humans have ever generated on Earth.
+<br><br>
+<strong>I: So, you are going to remodel the JT-60 for more efficient research of nuclear fusion reaction.</strong>
+<br><br>
+Exactly. We are planning to replace the normal conducting coil we have been using with a superconducting coil so that the device can contribute to the ITER’s support research. The assembly of JT-60SA started in January, 2013, and we are looking to starting its operation in 2019.
+<br><br>
+Our task is to make measurement plans and perform maintenance of the laser trackers in order to precisely assemble parts manufactured in Japan and Europe. As we have to assemble the most advanced equipment, we use a 3D CAD system as well as various measurement devices.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece05 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+Real-time localization with relocation of parts
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Text Subtitle-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+I: How big is the device?
+</h3>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+The donut-shaped plasma part at the center has a diameter of about six meters. Along with all the peripheral equipment, including the toroidal field coils for plasma confinement, poloidal field coils for plasma positioning and shaping, the cryostat, and a container to keep the superconducting magnets at an ultralow temperature, the whole system is close to 15 meters in diameter. We are planning to attach more equipment and devices to this, so the final size will be even bigger.
+<br><br>
+The assembly site is called the main unit room, which has a space of 40 meters square by 40 meters in height. It has air conditioning to maintain a consistent environment, so that we can always assemble the parts under the same condition.
+<br><br>
+First, we order the base from Europe, then place on it a lower poloidal field coil, which was made in Japan, and further place a donut-shaped vacuum container. We get this container in disassembled parts, just like sections of an orange, so we have to precisely arrange them in a radial fashion to assemble a container.
+<br><br>
+Then, we place toroidal field coils that generate a magnetic field to confine plasma. Each of the toroidal field coils has the shape of a ring. We have to put the vacuum container through the hole of each coil using a crane, which is very difficult. With 18 coils, we can form a 360-degree donut shape, which covers the entire vacuum container.
+<br><br>
+While each piece of precision equipment has a size of about several meters, the gap between the container and field coils is about several dozen millimeters. Following the design, we have to assemble the parts precisely without causing any damage. For that, we need precise measuring.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece06 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece06.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Assembly of the JT-60SA toroidal field coils
+<br><br>
+<strong>I: How do you use the laser tracker at the assembly site?</strong>
+<br><br>
+We create coordinates inside the main unit room, so that we can manage the installation locations of respective equipment using the coordinate values. Assign X, Y, and Z for the length, width, and height, respectively, and set the point eight meters from the floor, which corresponds to the center location of plasma, as a zero point.
+<br><br>
+Since we have to handle and install huge components in a complicated way within a small space, we expected that the laser could be blocked. Therefore, we placed many reference points on the wall at the survey planning stage. By measuring from one of the reference points, we can read an accurate absolute coordinate anytime. The most important solenoid coils, which constitute the central axis of the superconducting coils, also have a size of several meters, but the acceptable installation error is less than 1 mm. I don’t think we can achieve this level of accuracy without a laser tracker.
+<br><br>
+<strong>I: How do you like the laser tracker?</strong>
+<br><br>
+I like it because we can measure as we move objects. We sometimes measure two different points, for example an inside point and outside point, using two trackers. Since a tracker can communicate with a PC wirelessly, we place two PCs side by side to adjust locations while checking both coordinates. The laser trackers can tell us real-time coordinates of each part on PCs, enabling efficient alignment.
+<br><br>
+We first purchased AT901, which is a stationary type, and AT401, which is a portable type. We wanted to conduct measurement with two trackers, so we purchased AT402. The main reason we chose AT402 was that it is compatible with B-Probe, a handheld-type wireless probe. This probe allows measurement on any site where we cannot make a hole for a seating to fix a spherical reflector.
+<br><br>
+It was great timing for us because at that time we had to measure points on a surface with scribing, which is hard to deal with on a spherical reflector. B-Probe has an option of needle-like jigs. Using them, we could quickly measure an area even with grooves.
+<br><br>
+We also use the function to change tracker angles by remote control. At first, we locked the laser or moved a reflector to adjust the angle to a point to be measured so as to avoid the possibility of misalignment of the tracker caused by moving it by hand. But now, we can adjust the angle while checking on a camera, which has improved our work efficiency, and we don’t have to move around with a reflector in hand, especially in high places, which has improved safety. It is a great help for us.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece07 -->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<img src="../../images/pages/caseStudy/national/nationalPiece07.jpg" style="width: 100%;">
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Measurement using a laser tracker
+<br><br>
+<strong>I: So, in order to accurately install parts/components following the design, it is a given fact that you must be able to measure accurately.</strong>
+<br><br>
+Yes. Even after installment, we still have to do fine adjustments. For example of the coils arranged in a radial fashion, if one of the coils is misaligned with a minor angle deviation, good alignments of all the other coils would be lost. So, we use something like a thin plate to be placed between the coils to align them in an accurate radial shape. By measuring the shape of the coils in advance, we calculate the thickness of the plate that will allow perfect alignment of the coils. Since parts/components from other countries have subtle individual variabilities, we must perform the task of modifying while measuring.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece08 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/national/nationalPiece08.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+At a JT-60SA vacuum container sector model
+<br><br>
+During assembly, while some parts are fixed by bolts, some parts need welding for fixing. Welding inevitably causes deformation of the part to be welded, so we have to check by actual measuring how much deformation occurred before and after welding and whether any distortion occurred. By repeating such measurements, we can accumulate data telling us how much shrinkage could occur under a certain condition. When assembling divided parts for a component, such as a vacuum container, you can apply the data obtained for the first part to be welded to the subsequent assembly of the remaining parts.
+<br><br>
+So, we repeat measurement with the same part. One part would have different conditions between when it is placed alone and after it is assembled with other parts. For a large device, the accuracy of each part/component and assembly will be reflected in the overall accuracy. Relying on the level of accuracy only the laser tracker can achieve, we would like to reach the completion.
+</p>
+</div>
+</div>
+
+                            <!-- National Institute for Quantum and Radiological Science and Technology (QST) Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/national/nationalLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+About the National Institute for Quantum and Radiological Science and Technology (QST)
+                                    </h3>
+                                    <p>
+In April 2016, the National Institute for Quantum and Radiological Science and Technology (QST) was established as a result of the merger of the National Institute of Radiological Sciences (NIRS), and the Quantum Beam Directorate and the Nuclear Fusion Directorate of the Japan Atomic Energy Agency (JAEA). QST conducts comprehensive research and development related to quantum science and technologies and radiological science and its application in medicine. The Naka Fusion Institute, where the above interview was conducted, has taken over the technologies and achievements from JAEA and is advancing the research and development of engineering technology towards practical application of a nuclear fusion reactor in collaboration with European and other countries.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/EN_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

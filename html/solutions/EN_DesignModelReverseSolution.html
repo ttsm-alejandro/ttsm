@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Design model reverse solution</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+        <!-- Style -->
+        <style>
+            p{ 
+                font-family: sans-serif; 
+                font-size: 14pt; 
+            }
+            h2{ 
+                font-family: sans-serif; 
+                font-weight: bold; 
+                color: #061f5c; 
+            }
+        </style>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put BLUE BACKGROUND, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/EN_header.html'"></div>
+				
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                              
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'EN_solutionsMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Design model reverse solution Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}EN_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}EN_solutions.html">SOLUTIONS</a> /
+                        <a href="">Design model reverse solution</a>
+                        
+                        <!-- Title -->
+                        <h2>Design model reverse solution</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 4px"></div>
+                        <br>
+                        
+                        <!-- Mission -->
+                        <h2>Mision</h2>
+
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="background-color: white; height: 2px"></div>
+
+                        <!-- text -->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    AQUIVALAMISION
+                                </p>
+                            </div>
+                            
+                            <!-- image -->
+                            <div class="col-md-4">
+                                <img src="../../images/pages/solutions/design_model_reverse_solution_1.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                        
+
+                        <!-- Solution -->
+                        <h2>Solution</h2>
+
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="background-color: white; height: 2px"></div>
+                        <p>
+                            AQUIVALASOLUCION
+                        </p>
+                        
+                        <!-- System Configuration -->
+                        <h2>System Configuration</h2>
+
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="background-color: white; height: 2px"></div>
+                        
+                        <!-- image -->
+                        <img src="../../images/pages/solutions/design_model_reverse_solution_2.jpg" style="width: 100%;">
+                        
+                        <!-- System Image -->
+                        <h2>System Image</h2>
+
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="background-color: white; height: 2px"></div>
+                        
+                        <!-- image -->
+                        <img src="../../images/pages/solutions/design_model_reverse_solution_1.jpg" style="width: 100%;">
+                        
+                        <!-- Related Product -->
+                        <h2>Related Product</h2>
+
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="background-color: white; height: 2px"></div>
+                        
+                        <!-- image -->
+                        <!--img src="../../images/pages/solutions/alignment_of_large_object_1.jpg" style="width: 100%;"-->
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

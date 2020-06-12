@@ -1,0 +1,208 @@
+<div class="row">
+	<div class="col-md-12" style="text-align: right; background-color: white; ">
+		<!--a href="{{ relativeUrl }}ES_index.php"><img src="{{ relativeUrl }}images/flags/mexico.png" width="25" height="17"> Version en Espanol</a-->	
+                <div ng-click="changeLanguajeByUrl( 'ES' )">
+                    <img src="{{ relativeUrl }}images/flags/mexico.png" width="25" height="18"> Version en Espanol
+                </div>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" style="background-color: {{ ttsmBlueColor }}; color:white;" data-toggle="collapse" data-target="#myNavbar">
+                        <strong>MENU</strong>
+                    </button>
+                <a href="{{ relativeUrl }}EN_index.php"><img src="{{ relativeUrl }}images/util/logo.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                        <a style="font-weight: bold;" class="dropdown-toggle" data-toggle="dropdown" href="#"><br>&nbsp PRODUCTS &nbsp<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <!-- Product Information -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/EN_mainProducts.html">
+                                        PRODUCT INFORMATION
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+
+                                <!-- Item 1: CMM MANUAL -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/cmm/EN_mainCmm.html">
+                                        CMM MANUAL
+                                        <span class="signoMas" ng-click="showSubMenu( 1 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineAModel.html" ng-show="showItem1">LayOut Machine A Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineEModel.html" ng-show="showItem1">LayOut Machine E Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineGModel.html" ng-show="showItem1">LayOut Machine G Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineJModel.html" ng-show="showItem1">LayOut Machine J Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineFModel.html" ng-show="showItem1">LayOut Machine F Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_layoutMachineMiniModel.html" ng-show="showItem1">LayOut Machine Mini - Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_laymaticSncJSystem.html" ng-show="showItem1">Laymatic SNC J - System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/EN_laymaticSncFSystem.html" ng-show="showItem1">Laymatic SNC F - System</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 2: Brazo Multiarticulado -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/vectoron/EN_mainVectoron.html">
+                                        MULTIARTICULATED ARM
+                                        <span class="signoMas" ng-click="showSubMenu( 2 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_vectoronV7M.html" ng-show="showItem2">Vectoron V7M</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_vectoronVME300M.html" ng-show="showItem2">Vectoron VME-300M</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_vectoronV6MII.html" ng-show="showItem2">Vectoron V6MII</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_vectoronV6C.html" ng-show="showItem2">Vectoron V6C</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_apiScan.html" ng-show="showItem2">ApiScan</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_raptorEye.html" ng-show="showItem2">Raptor Eye</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/EN_raptorEye2.html" ng-show="showItem2">Raptor Eye2</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 3: Laser Tracker -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/laser/EN_mainLaser.html">
+                                        LASER TRACKER
+                                        <span class="signoMas" ng-click="showSubMenu( 3 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/EN_leicaAbsoluteTrackerAt403.html" ng-show="showItem3">Leica Absolute Tracker AT403</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/EN_leicaAbsoluteTrackerAt960.html" ng-show="showItem3">Leica Absolute Tracker AT960</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/EN_leicaAbsoluteTrackerAt930.html" ng-show="showItem3">Leica Absolute Tracker AT930</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/EN_leicaAbsoluteTrackerAts600.html" ng-show="showItem3">Leica Absolute Tracker ATS600</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 4: Camera -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/camera/EN_mainCamera.html">
+                                        CAMERA
+                                        <span class="signoMas" ng-click="showSubMenu( 4 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/EN_cometL3d2Standard.html" ng-show="showItem4">Comet L3D 2 Standard</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/EN_comet6.html" ng-show="showItem4">Comet 6</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/EN_cometL3d2Base.html" ng-show="showItem4">Comet L3D 2 Base</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 5: Milling System -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/milling/EN_mainMilling.html">
+                                        MILLING SYSTEM
+                                        <span class="signoMas" ng-click="showSubMenu( 5 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/EN_mill7System.html" ng-show="showItem5">Mill-7 System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/EN_portableMillSystem.html" ng-show="showItem5">Portable Mill System</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 6: Software -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/software/EN_mainSoftware.html">
+                                        SOFTWARE
+                                        <span class="signoMas" ng-click="showSubMenu( 6 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/EN_libellaQueen.html" ng-show="showItem6">Libella Queen</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/EN_polyworksInspector.html" ng-show="showItem6">Polyworks Inspector</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/EN_polyworksModeler.html" ng-show="showItem6">Polyworks Modeler</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/EN_spGauge.html" ng-show="showItem6">spGauge</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/EN_3dMagic.html" ng-show="showItem6">3D Magic</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 7: Robot -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/robot/EN_mainRobot.html">
+                                        ROBOT
+                                        <span class="signoMas" ng-click="showSubMenu( 7 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/EN_cometAutomated.html" ng-show="showItem7">COMET Automaed</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/EN_masterEyeRobotSystem.html" ng-show="showItem7">Master Eye Robot System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/EN_abisIISystem.html" ng-show="showItem7">ABIS II System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/EN_robotCalibrationSolution.html" ng-show="showItem7">Robot Calibration Solution</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/EN_leicaRobotSystem.html" ng-show="showItem7">Leica Robot System</a></li>
+                                <li class="divider"></li>
+
+                                <!-- Item 6: Otros -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/others/EN_mainOthers.html">
+                                        OTHERS
+                                        <span class="signoMas" ng-click="showSubMenu( 8 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/EN_gapNinja.html" ng-show="showItem8">GAP Ninja</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/EN_masterEye.html" ng-show="showItem8">Master Eye</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/EN_autoGrid.html" ng-show="showItem8">AutoGrid</a></li>
+                                <li class="divider"></li>
+
+                            </ul>
+                        </li>
+                        <li><a style="font-weight: bold;" href="{{ relativeUrl }}EN_solutions.html"><br>SOLUTIONS</a></li>
+                        <li><a style="font-weight: bold;" href="{{ relativeUrl }}EN_caseStudy.html"><br>CASE STUDY</a></li>
+                        <li><a style="font-weight: bold;" href="{{ relativeUrl }}EN_techSupport.html"><br>TECH-SUPPORT</a></li>
+                        
+                        <!-- ABOUT US -->
+                        <li class="dropdown">
+                        <a style="font-weight: bold;" class="dropdown-toggle" data-toggle="dropdown" href="#"><br>&nbsp ABOUT US &nbsp<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <!-- Contact Us -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}EN_contact.html">
+                                        CONTACT US
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+
+                                <!-- Company Profile -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}EN_companyProfile.html">
+                                        COMPANY PROFILE
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                
+                                <!-- Company Profile -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}EN_ttsInTheWorld.html">
+                                        TTS NETWORK
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                
+                                <!-- NEWS -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}EN_news.html">
+                                        NEWS
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+
+                            </ul>
+                        </li>
+                        
+                        <li><a style="color: white;" href="https://www.facebook.com/TTSMexico/">.<img src="{{ relativeUrl }}images/util/facebook_logo.png">.</a></li>
+						
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<!-- This script is for the function of the desplegable menu -->
+<script>
+    $(document).ready(function(){
+    $('.signoMas').on("click", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        });
+    });
+</script>

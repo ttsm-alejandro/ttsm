@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ApiScan</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/vectoron/apiScan_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='V6M';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/vectoron/EN_mainVectoron.html">VECTORON</a> / 
+                <a href="">ApiScan</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <!--img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%"-->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'apiScan' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 3 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_3_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 4 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_4_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ApiScan</h1></div>
+                        <p>
+                            By adopting the laser probe method, we will scan the laser light to detect the spatial coordinates of the surface of the object. It is an anti - halation spray - less type sensor that can not be used with conventional laser sensors, can measure glossy surface, black color. The scanning width and resolution can be selected, making the measurement more efficient and reducing the time. In addition, it is a compact, lightweight handy type, and has a structure design that is less susceptible to disturbance light.
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <ul>
+                                <li>It possible to measure many object surface including chromium coated shine object without spray.</li>
+                                <li>No spray</li>
+                                <li>High-Accuracy</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Specification:</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Laser Type</th>
+                                    <td>Flying dot</td>
+                                </tr>
+                                <tr>
+                                    <th>Accuracy (E mode)</th>
+                                    <td>2σ：±0.012mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Data Point</th>
+                                    <td>150,000 point / sec</td>
+                                </tr>
+                                <tr>
+                                    <th>Speed</th>
+                                    <td>Max 100Hz</td>
+                                </tr>
+                                <tr>
+                                    <th>Warm up</th>
+                                    <td>3 min</td>
+                                </tr>
+                                <tr>
+                                    <th>Stand-off</th>
+                                    <td>145 ～ 205mm (±30mm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensions</th>
+                                    <td>76(W) x 109(D) x 125(H)mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>600g</td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Second table -->
+                            <h4>Scanner Mode</h4>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Mode</th>
+                                    <th>Laser Wideth (mm)</th>
+                                    <th>Max X Pitch (mm)</th>
+                                </tr>
+                                <tr>
+                                    <th>C+</th>
+                                    <td>214</td>
+                                    <td>0.061</td>
+                                </tr>
+                                <tr>
+                                    <th>D</th>
+                                    <td>100</td>
+                                    <td>0.061</td>
+                                </tr>
+                                <tr>
+                                    <th>E</th>
+                                    <td>50</td>
+                                    <td>0.031</td>
+                                </tr>
+                                <tr>
+                                    <th>F</th>
+                                    <td>51</td>
+                                    <td>0.016</td>
+                                </tr>
+                                <tr>
+                                    <th>Fh</th>
+                                    <td>22</td>
+                                    <td>0.016</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

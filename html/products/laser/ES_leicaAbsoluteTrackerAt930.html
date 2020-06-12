@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Leica AT930</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/laser/leicaAbsoluteTrackerAt930_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='LEICA';
+                               ">
+            
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                </hr>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/laser/ES_mainLaser.html">LASER TRACKER</a> / 
+                <a href="">Leica Absolute Tracker AT930</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <!--div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'vectoronV6C' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV6C_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'vectoronV6C' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/vectoronV6C_2_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div-->
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Leica Absolute Tracker AT930</h1></div>
+                        <p>
+                            El Leica Absolute Tracker AT930 es el rastreador láser 3D de próxima generación que cuenta con el Interferómetro Absoluto Leica (AIFM), que brinda capacidades de medición dinámica de alta velocidad que lo diferencian de la competencia. Con ubicación automática del objetivo, arquitectura en tiempo real y la capacidad de restablecer al instante un rayo interrumpido, es la manera rápida, precisa y fácil de usar para medir los reflectores.
+                            <br><br>
+                            Certificado según los estándares IP54 por IEC, el robusto diseño de tecnología integrada del AT930 está listo para medir incluso en las condiciones más duras sin necesidad de accesorios adicionales.
+                            <br><br>
+                            Como versión 3D del Leica Absolute Tracker AT960, el AT930 comparte todas las características y funcionalidades del AT960 excepto por la compatibilidad variozoom 6DoF, por lo que es la solución ideal para mediciones de alta velocidad en volúmenes de hasta 160 m (Ø). Compatible con reflectores para medir la línea de visión, el AT930 ofrece una solución de rastreador láser portátil 3D versátil.
+                            <br><br>
+                            La última generación del sistema de visión activa PowerLock asegura que el láser sigue automáticamente al usuario, restableciendo un rayo interrumpido con una incertidumbre típica de solo 10 μm, por lo que los operadores ya no necesitan preocuparse por romper el rayo. El AIFM proporciona la velocidad de medición de un interferómetro y la precisión de un medidor de distancia absoluta, mientras que el sistema operativo en tiempo real admite una tasa de medición de hasta 1 000 puntos por segundo.
+                            <br><br>
+                            El diseño todo en uno con equipo de nivelación, monitoreo ambiental y cámara panorámica integrados en el dispositivo permite a los usuarios simplemente desempaquetar el rastreador y comenzar a medir. También ofrece comunicación inalámbrica y una opción de alimentación de red o batería, el AT930 puede operar prácticamente en cualquier lugar.
+                        </p>
+                        
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <p>
+                            <strong>Diseño Todo-en-uno</strong>
+                            <br>Con cada accesorio de rastreador láser Leica integrado en el dispositivo, el AT930 requiere una configuración y capacitación del operador mínimas, y puede estar listo para medir directamente desde la caja.
+
+                            <br><br><strong>PowerLock</strong>
+                            <br>La línea de visión interrumpida se restablece automáticamente en un campo de visión de +/- 5 grados sin la necesidad de interacción del usuario para facilitar el uso y un rendimiento excepcional incluso en los volúmenes de medición más concurridos.
+
+                            <br><br><strong>Interferómetro Absoluto (AIFM)</strong>
+                            <br>La unidad de distanciamiento único de AIFM combina la precisión de un medidor de distancia absoluta y la velocidad de un interferómetro para proporcionar lecturas de forma rápida y precisa sin necesidad de un punto inicial.
+
+                            <br><br><strong>Salida de datos a 1 kHz</strong>
+                            <br>La arquitectura en tiempo real con desempeño dinámico brinda una tasa de medición de hasta 1 000 puntos por segundo, lo que permite una captura de datos más detallada, más rápidamente.
+
+                            <br><br><strong>Batería</strong>
+                            <br>El suministro de energía independiente de la batería de intercambio en caliente permite una configuración rápida y sencilla sin cables en casi cualquier ubicación para una mejor portabilidad, ofreciendo una solución flexible que dura hasta el turno de un día, donde sea que se necesite el rastreador.
+
+                            <br><br><strong>Wi-Fi</strong>
+                            <br>El Wi-Fi incorporado permite una configuración y comunicación simples con la PC para operaciones verdaderamente inalámbricas, y también brinda opciones de control remoto a través de computadoras portátiles, tabletas o teléfonos inteligentes para que el rastreador pueda ser operado por un solo usuario.
+
+                            <br><br><strong>IP54</strong>
+                            <br>La unidad sellada certificada por IEC garantiza la protección contra el ingreso de polvo y otros contaminantes, lo que permite una medición eficaz incluso en los entornos más hostiles. 
+
+                            <br><br><strong>MeteoStation</strong>
+                            <br>La unidad ambiental integrada monitorea las condiciones que incluyen temperatura, presión y humedad para compensar los cambios y garantizar mediciones precisas independientemente de factores externos.
+
+                            <br><br><strong>Cámara panorámica (OVC)</strong>
+                            <br>La cámara panorámica a color de alta resolución permite a los operadores ver de forma remota el campo de visión del rastreador, ubicando objetivos para medir reflectores fijos, incluida la manipulación de múltiples puntos en una sola imagen, ideal para dispositivos de puntos ocultos estáticos o para complementar la documentación.
+
+                            <br><br><strong>Orient to gravity (OTG)</strong>
+                            <br>La función OTG permite a los usuarios medir con el eje Z alineado a la gravedad, ideal para tareas de nivelación y alineación, así como para construir e inspeccionar herramientas y el ensamble de excantillones.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Precisión * </th>
+                                    <td>Ux,y,z = ±15 μm + 6 μm/m</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p>* Todas las precisiones son especificadas como Errores máximos permitidos (MPE) y calculadas según 
+                                            <br>ASME B89.4.19-2006 e ISO10360-10: 2016 con precisión de Leica 1.5" Red Ring Rectors a menos que se indique lo contrario.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión de ángulo</th>
+                                    <td>±15 μm</td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión de distancia</th>
+                                    <td>±0.5 μm/m</td>
+                                </tr>
+                                <tr>
+                                    <th>Enfoque automático del AIFM</th>
+                                    <td>±10 μm</td>
+                                </tr>
+                                <tr>
+                                    <th>Orient to Gravity (OTG)</th>
+                                    <td>Uz(OTG) = ±15 μm + 8 μm/m </td>
+                                </tr>
+                                <tr>
+                                    <th>Condiciones ambientales de trabajo</th>
+                                    <td>IP54 (IEC 60529) </td>
+                                </tr>
+                                <tr>
+                                    <th>Polvo/Agua</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>OTemperatura de operación</th>
+                                    <td>0 ̊C to +40 ̊C</td>
+                                </tr>
+                                <tr>
+                                    <th>Tasa de salida de datos</th>
+                                    <td>1000 puntos/seg</td>
+                                </tr>
+                                <tr>
+                                    <th>Seguridad Láser</th>
+                                    <td>
+                                        Clase 2
+                                        <br>IEC 60825-1 (2014-05) “Safety of laser products” 
+                                        <br>EN 60825-1 (2007-10) “Safety of laser products” 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Leica T-Probe</th>
+                                    <td>Ux,y,z = ±35 μm *</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        * Incertidumbre adicional de T-Probe que se agregará según la Guía ISO / IEC 98-3: 2008 a la incertidumbre existente de Leica Absolute Tracker AT960 "Uxyz" para una incertidumbre completa de "Uxyz" hasta una distancia de 25 m
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Leica T-Scan 5 </th>
+                                    <td>Ux,y,z = ±60 μm </td>
+                                </tr>
+                                <tr>
+                                    <th>Leica T-Mac *</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión de la posición</th>
+                                    <td>±15 μm + 6 μm/m </td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión típica de rotación</th>
+                                    <td>±0.01 grados **</td>
+                                </tr>
+                                <tr>
+                                    <th>Exactitud de rotación de la marca de tiempo</th>
+                                    <td>< 5 microsegundos</td>
+                                </tr>
+                            </table>
+                            * Todas las precisiones se expresan en error máximo permisible (MPE). Los resultados típicos son la mitad de MPE.
+                            <br>** Precisión convencional 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

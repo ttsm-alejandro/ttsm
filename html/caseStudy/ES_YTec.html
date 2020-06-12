@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Y-Tec Corporation</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 0 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/camera/ES_cometL3d2Base.html">COMET</a><br>Y-TEC CORPORATION</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Y-TEC CORPORATION</a>
+                        
+                        <!-- Y-TEC SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/camera/ES_cometL3d2Base.html">COMET</a><br>Y-TEC CORPORATION</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- Subtitle -->
+                        <h3>
+・ Fabrica acero de alta resistencia a la tracción para hacer los vehículos más ligeros. <br>
+・ La máquina de medición 3D sin contacto les permite medir los paneles de procesamiento con alta precisión y crear paneles de alta calidad en un corto plazo.                        </h3>
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 10px"></div>
+                        
+                        <!-- Script -->
+                        <div style="font-size: 18px">
+                            
+                            <!-- Text on left, image on right-->
+                            <div class="row">
+                                <!-- text -->
+                                <div class="col-md-6">
+                                    <p>
+Y-TEC CORPORATION suministra piezas a varios diseños importantes de fabricantes nacionales de automóviles,
+desarrolla y fabrica piezas grandes como chasis y carrocerías de vehículos, piezas funcionales
+como pedales y palancas, y piezas de transmisión y motor que completan complicadas
+mecanismo. Siempre persiguen la mejora de la calidad en las condiciones difíciles.
+como el estándar de seguridad que se vuelve más estricto año tras año y un plazo de entrega más corto.                                    
+                                    </p>
+                                </div>
+                                <!-- image -->
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecPiece03.jpg" style="width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+No solo la calidad de sus trabajos, también se preocupan por el ambiente de trabajo
+para sus empleados en la fábrica. Revisaron la línea de producción de un
+punto de vista ergonómico y lo cambió para que incluso los empleados con falta de
+la fuerza puede funcionar sin carga, e introdujo un mecanismo que lo hace
+Fácil de manejar piezas grandes mediante la aplicación de un mecanismo físico. Gracias al dispositivo
+se ha convertido en un lugar de trabajo donde trabajan muchas mujeres, lo cual es inusual en la industria.
+br> <br>
+En los últimos años, las demandas de acero de alta resistencia a la tracción (HTSS) que es delgado y
+tiene alta resistencia se han incrementado debido a las tecnologías progresivas en el
+Auto industria. Cuanto más fuerte se vuelve el material, más difícil es moldearlo
+en un panel, y requiere un análisis de medición y corrección precisos en el
+etapa anterior antes de que sea demasiado tarde para remodelarlo. Para hacerlo más suave
+y precisos, presentaron "<a href="../products/camera/ES_cometL3d2Base.html">COMET</a>", una máquina de medición 3D sin contacto que
+Tokyo Boeki Techno-System introducido en marzo de 2015.
+br> <br>
+Los entrevistamos para preguntar qué tipo de problemas tenían con la medición convencional.
+dispositivos, qué tipo de cambios han tenido desde que se introdujo <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> y otros relacionados
+cuentos.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff -->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■ Sr. Takahiko Kawada, Jefe del Grupo de Simulación, Departamento de Ingeniería de Prensa.
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+                            
+                            <!-- Photo -->
+                            <div class="row">
+                                <div class="col-md-3">                                </div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecStaff01.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        El Sr. Kawada está a cargo de las aplicaciones de simulación y moldeabilidad.
+                                        evaluación basada en el resultado de la medición de paneles y moldes terminados después del prensado.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 02-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■Sr. Seiya Higashizawa, miembro del Grupo de Simulación, Departamento de Ingeniería de Prensa.
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Photo -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecStaff02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Como parte del Grupo de Simulación, el Sr. Higashizawa está a cargo de la precisión.
+                                        mejora al compartir la información que obtiene de la medición y el análisis.
+                                        La nueva tecnología para medir el espesor de la placa que él ha inventado está en marcha.
+                                        proceso de registro de patentes en cooperación con Tokyo Boeki Techno System.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 03-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■Sr. Takumi Shimada, miembro del Grupo de Simulación, Departamento de Ingeniería de Prensa
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Photo -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecStaff03.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Como parte del Grupo de Simulación, el Sr. Shimada está a cargo de mejorar
+                                        eficacia de la medición con comandos, así como la comparación de mediciones
+                                        resultado con datos CAD y compartir la información con otros departamentos.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Japanese Y-Tec staff 04-->
+                            <!-- Name -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ■Sr. Kazuki Masutani, miembro del grupo de producción de troqueles, departamento de producción de troqueles
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Photo -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecStaff04.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        El Sr. Masutani está a cargo de mejorar la precisión de la medición utilizando
+                                        datos extraídos del Grupo de simulación y contando a los ingenieros de fabricación
+                                        opiniones a analizadores en el sitio de moldeo.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Measuring Process-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+                                        La medición de los paneles del proceso de medición se ha vuelto obligatoria debido a la introducción de un nuevo material.
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        Su empresa introdujo la máquina de medición 3D sin contacto "<a href="../products/camera/ES_cometL3d2Base.html">COMET</a>" en 2015. ¿Qué le hizo elegir la máquina?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Como trasfondo significativo, toda la industria automotriz en su conjunto comenzó
+                                        enfocándose en "alta resistencia y reducción de peso de vehículos" considerando
+                                        desempeño ambiental y seguridad de colisión. Entre estos, materiales con extremadamente
+                                        Se usaron alta resistencia tal como acero de alta resistencia a la tracción y acero de alta resistencia a la tracción.
+                                        Incluso si se reduce el espesor de la placa, la misma resistencia que el acero convencional
+                                        se puede obtener placa, y las partes se pueden reducir significativamente en peso.
+                                        Cuanta más dureza tenga el material, más problemas de procesamiento habrá, tales
+                                        como grietas, arrugas y retrocesos (un fenómeno que la parte procesada por prensado
+                                        en el material vuelve a la forma antes de presionar). Es por eso que persigue el
+                                        la precisión es bastante desafiante y requiere varias veces la medición de la forma
+                                        y correcciones de precisión estimada. Por lo tanto, queríamos realizar el proceso.
+                                        de medir el panel en el medio del moldeado desde la etapa más temprana posible,
+                                        captando exactamente lo que estaba mal, y reparando el punto malo señalado.
+                                        br> <br>
+                                        Anteriormente, el objetivo principal era verificar el panel terminado, por lo que utilizamos un láser
+                                        máquina de medición Sin embargo, considerando el mayor número de mediciones de proceso
+                                        y el manejo de piezas grandes, es mucho más conveniente introducir un nuevo sin contacto
+                                        Sistema de medida 3D.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 01 -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecPiece01.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Además, el chasis y las partes del cuerpo son muy grandes, por lo que los trabajadores deben trasladarse a
+                                        medir con una máquina de medición convencional y el trabajo de doblar y estirar
+                                        Su cintura es físicamente difícil. También es difícil hacer tales trabajos en una fábrica
+                                        donde hace mucho calor en verano y frío en invierno. Por otro lado, podemos trabajar
+                                        en un entorno bien organizado con un sistema de medición 3D sin contacto y reducir
+                                        tiempo de medición al controlarlo.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ¿Consideró también los productos de otros fabricantes?                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Sí, consideramos que el producto de otra compañía era más barato.
+                                        considerando solo el costo unitario, pero Tokyo Boeki Techno-System fue más
+                                        razonable considerando el costo de desarrollo de las funciones necesarias,
+                                        así que elegí el Tokyo Boeki Techno-system comparando el costo total.
+                                        br> <br>
+                                        Además del costo total, también notamos la calidad de los datos de medición.
+                                        El producto de otra compañía corrige demasiado los datos de medición.
+                                        Los datos de pequeñas abolladuras y cicatrices se suavizan y no se ven en la pantalla.
+                                        Se ve hermoso en la pantalla, pero lo que necesitamos es "forma medida con precisión"
+                                        que incluso incluye esas pequeñas abolladuras y cambios de forma para que podamos arreglar los paneles
+                                        y moldes perfectamente.
+                                        br> <br>
+                                        Para obtener información que necesitamos con precisión, <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> fue la que lo hizo posible.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 02 -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecPiece02.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        El número máximo de píxeles también fue el factor que elegimos <a href="../products/camera/ES_cometL3d2Base.html">COMET</a>.
+                                        Como estábamos acostumbrados a la pantalla de la máquina de medición láser, estábamos
+                                        tan impresionado con los datos de <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> a primera vista. Pensamos como
+                                        "¿Cómo podría ser posible mostrar la amplia gama tan temprano y hermoso?"
+                                        Los puntos de nube que mostró <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> fueron mucho más suaves de lo que esperábamos al comparar
+                                        con nubes de puntos adquiridas a través de una máquina de medición láser y tuvimos una impresión
+                                        que era un dispositivo que medía cada objeto sinceramente. También fue bueno que
+                                        El software de aplicación era "spGauge" y "spScan", que estábamos usando.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        ¿Qué tipo de beneficio obtuvo de <a href="../products/camera/ES_cometL3d2Base.html">COMET</a>?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Velocidad de medición aumentada, el número de piezas de trabajo.
+                                        para medir ampliamente aumentado, y la precisión de medición aumentada.
+                                        Cuando el trabajo que se usó para la medición con medición convencional
+                                        la máquina es 100, esperábamos que sería 200 como el número de
+                                        El tiempo de medición y las piezas aumentaron drásticamente después de la introducción
+                                        Acero de alta resistencia. Sin embargo, <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> reduce la carga física de
+                                        medida y acorta el tiempo que lleva. Incluso si el número de
+                                        mediciones y piezas de medición aumentan, el esfuerzo total es de aproximadamente 80.
+                                        br> <br>
+                                        El plazo de preparación para la producción en masa es cada vez más corto,
+                                        y también hay una solicitud del proceso posterior, como "Queremos
+                                        corrija la precisión tan pronto como salga el panel ". La verdadera intención
+                                        del sitio es tomar más tiempo para arreglar que para medir. La correccion
+                                        el ciclo se ha acortado ya que el resultado de la medición se puede decir en breve
+                                        Después de la medición.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Cooperation... -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>
+La cooperación con el equipo del fabricante del molde acelera la velocidad de la mejora de la calidad.
+                                    </h2>
+                                </div>
+                            </div>
+                            
+                            <!-- Small Blue line -->
+                            <div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>                            
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+- ¿Hay algún otro beneficio?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Midiendo el espesor y el molde del panel de proceso y aplicando
+                                        los valores de la simulación, la precisión de la verificación de escritorio tiene
+                                        ha mejorado mucho
+                                        <br> <br>
+                                        Se puede hacer bastante en la etapa de simulación, y el número
+                                        de las correcciones reales de paneles y moldes se ha reducido. Incluso cuando las correcciones
+                                        se hacen, los valores numéricos precisos se pueden transmitir a la producción de moldes
+                                        departamento, lo que permite una corrección de alta precisión en una etapa temprana. Por comparación
+                                        la nube de puntos medida y CAD, es posible cortar la parte de interferencia
+                                        por adelantado.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Staff 05  -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecStaff05.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Para ser honesto, creo que la verificación entre la verificación de escritorio
+                                        y el sitio de producción no tuvo éxito antes. No fue eficiente
+                                        porque hubo discusiones con valores sensoriales. La persona a cargo
+                                        de verificación de escritorio no conoce los detalles del sitio, y la persona
+                                        a cargo de la producción no conoce la verificación de escritorio. Porque allí
+                                        Hubo pocas oportunidades para conocer el trabajo del otro.
+                                        br> <br>
+                                        Sin embargo, después de la introducción de <a href="../products/camera/ES_cometL3d2Base.html">COMET</a>, es posible compartir "cuánto
+                                        distorsionado "gracias a valores de medición precisos y mapas de color de un vistazo.
+                                        Para los ingenieros de moldes, queda claro con el valor numérico y el color que
+                                        Cuántos mm puedes cortar si mueves tu mano" y "qué parte debes
+                                        cortar ", ayuda a mejorar la tecnología combinando el sentido y la
+                                        situación actual.
+                                        <br> <br>
+                                        Anteriormente, incluso si la calidad se ajustaba con el primer molde, allí
+                                        no hubo cambios en el registro de las partes que se afeitaron a mano, por lo que tomó como
+                                        tanto tiempo como el primero para hacer el segundo y tercer moldes. Ahora el segundo
+                                        y los troqueles posteriores se pueden producir rápidamente a partir de los datos. Esto es porque
+                                        las partes que se han corregido manualmente se pueden entrelazar en el CAD, y
+                                        Se puede crear una forma precisa mediante mecanizado.
+                                        <br> <br>
+                                        Creo que el intercambio de información entre departamentos ha aumentado
+                                        a través de los valores medidos de <a href="../products/camera/ES_cometL3d2Base.html">COMET</a>, como el equipo de análisis y el
+                                        Equipo de producción de moldes, nuestra empresa y otras empresas. Ahora que tenemos
+                                        reuniones periódicas sobre valores medidos, la velocidad del desarrollo de calidad
+                                        se ha acelerado considerablemente Siento que puedo apreciar la información.
+                                        basado en la información correcta.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+- ¿Cómo es el uso del dispositivo y el software?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Creo que es necesario tener un conocimiento básico de lo que
+                                        ángulo del objeto de medición debe tomarse y por qué.
+                                        En ese sentido, en el momento de la presentación, tomé una conferencia
+                                        de Tokio Boeki Techno-system y me enseñaron exactamente
+                                        lo que no entendí. Actualmente, estamos educando cómo
+                                        para usarlo solo dentro de la empresa.
+                                        br> <br>
+                                        También estamos estudiando cómo usarlos. Al principio, se introdujo
+                                        con el fin de medir la forma del panel de proceso. Sin embargo,
+                                        ya que hubo una sugerencia para medir el grosor de la placa, una prueba
+                                        y el error hizo posible encontrar un método para una medición precisa
+                                        con <a href="../products/camera/ES_cometL3d2Base.html">COMET</a>. Anteriormente, era difícil medir con precisión el
+                                        espesor de la placa, pero después de mejorar el método de medición
+                                        repetidamente y verificándolo una y otra vez, pudimos obtener
+                                        una prueba de que se obtuvieron valores precisos. Estamos solicitando una patente
+                                        en cooperación con Tokyo Boeki Techno-system.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Piece 03  -->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <img src="../../images/pages/caseStudy/yTec/yTecPiece03.jpg" style="width: 100%;">
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            
+                            <!-- Text title -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>
+                                        - Entonces hubo efectos positivos no solo en la velocidad de medición
+                                        pero también cooperación entre departamentos y desarrollo tecnológico.
+                                        <br> <br>
+                                        ¿Cómo va a utilizar la máquina de ahora en adelante?
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Only Text -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        La clave de nuestro índice de rendimiento es la precisión de la recuperación elástica.
+                                        y espesor de placa. Esto es muy útil para aumentar el grado.
+                                        de perfección al aumentar la coherencia con la simulación, por lo que
+                                        continuaremos mejorando la precisión mientras aplicamos la medida
+                                        valores.
+                                        <br> <br>
+                                        Si es posible, me gustaría saber cómo usar <a href="../products/camera/ES_cometL3d2Base.html">COMET</a> interactuando con
+                                        otras compañías que han introducido instrumentos de medición. Por supuesto,
+                                        También puede compartir tecnología original, como la medición del espesor de la placa
+                                        aquí, y podemos mejorar dramáticamente nuestro trabajo con mutuo
+                                        conocimiento. Algunas compañías pueden visitarnos para ver la tecnología.
+                                        Esperamos que Tokyo Boeki Techno-system cree estas oportunidades
+                                        en el futuro.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Y-TEC Company Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/yTec/yTecLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+                                        Y-TEC CORPORATION
+                                    </h3>
+                                    <p>
+                                        Yamako Co., Ltd y Mitsuba Industries Co., Ltd establecido
+                                        en la ciudad de Hiroshima se fusionaron con Y-TEC CORPORATION en 2001.
+                                        <br> <br>
+                                        Y-TEC CORPORATION cuenta actualmente con 9 fábricas nacionales y
+                                        5 bases en el extranjero, y produce autopartes, moldes y ensamblajes
+                                        plantillas para varios fabricantes de automóviles importantes a pedido directo de tales
+                                        fabricantes.
+                                        <br> <br>
+                                        Su producción integrada a través del diseño, desarrollo,
+                                        y la fabricación está bien organizada en base a la cooperación con
+                                        esos fabricantes de automóviles y su habilidad para producir piezas de alta resistencia
+                                        con menos peso es altamente evaluado.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>

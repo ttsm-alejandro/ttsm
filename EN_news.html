@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>News</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="getCurrentUrl();"
+             >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/EN_header.html'"></div>
+                
+                <!-- MODAL INSCRIPCION A WEBINAR -->
+                <!--div ng-include=" 'html/util/ES_modalWebinarRegistration.html' "></div-->
+
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                <div class="row">
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                    <div class="col-md-8" style="text-align: center">
+                        
+                        <!-- Webinar 28 de Mayo 2020 -->
+                        <h3 style="text-align: left">Mayo 28, 2020, ¡Webinar! </h3>
+                        <img src="images/news/CARTEL-WEBINAR-2-MAYO-2020_ES.jpg" width="100%" >
+                        <div style="height: 5px; background-color: {{ ttsmBlueColor }}"></div>
+                        
+                        <!-- Primer Webinar, Mayo 2020 -->
+                        <h3 style="text-align: left">May 2020, Webinar</h3>
+                        <img src="images/news/CARTEL-WEBINAR-MAYO-2020_EN.jpg" width="100%">
+                        <div style="height: 5px; background-color: {{ ttsmBlueColor }}"></div>
+                        
+                        <h3 style="text-align: left">July 2019, Found us in Stand #7! </h3>
+                        <img src="images/news/CARTEL-CONGRESO_EN.jpg" width="100%">
+                        <div style="height: 5px; background-color: {{ ttsmBlueColor }}"></div>
+                        
+                        <h3 style="text-align: left">January 2019, New Release</h3>
+                        <img src="images/news/VECTORON-V7_EN.jpg" width="100%">
+                        <div style="height: 5px; background-color: {{ ttsmBlueColor }}"></div>
+                    </div>
+                    <div class="col-md-2" style="text-align: center">
+                    </div>
+                </div>
+                <div style="height: 5px"></div>
+            </div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/EN_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>
+

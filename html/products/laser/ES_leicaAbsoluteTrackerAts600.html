@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Leica ATS600</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/laser/leicaAbsoluteTrackerAts600_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='LEICA-ATS600';
+                               ">
+            <div class="container" >
+            
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/laser/ES_mainLaser.html">LASER TRACKER</a> / 
+                <a href="">Leica Absolute Tracker ATS600</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'leicaATS600' , 1 )">
+                                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAts600_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'leicaATS600' , 2 )">
+                                        <img src="../../../images/pages/products/laser/leicaAbsoluteTrackerAts600_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Leica Absolute Tracker ATS600</h1></div>
+                        <p>
+                            Los fabricantes están cada vez más interesados ​​en identificar e inspeccionar digitalmente piezas grandes y superficies que simplemente están fuera del alcance de un escáner láser 3D de mano tradicional, una sonda táctil o un reflector. El Leica Absolute Tracker ATS600 está listo para enfrentar los desafíos de estas nuevas aplicaciones con un principio de funcionamiento único que puede ubicar con precisión un punto en el espacio 3D con precisión de grado de metrología sin la necesidad de un reflector en el punto de medición.
+                            <br><br>Basado en la tecnología Wave-Form Digitiser establecida detrás de algunas herramientas topográficas de alta gama, el ATS600 está impulsado por el primer medidor de distancia absoluta de escaneo, una iteración de grado de metrología de este principio técnico que puede ubicar un punto dentro de 300 micras desde arriba a 60 metros de distancia.
+                            <br><br>Al medir una serie de tales puntos en un área de medición definible por el usuario, el ATS600 puede producir rápidamente una cuadrícula de medición que define la superficie de medición objetivo. La densidad de esa cuadrícula de puntos también es personalizable, lo que permite al operador tener un control completo del equilibrio entre la velocidad del proceso y el nivel de detalle que se introducirá en su software de metrología.
+                            <br><br>Con el Leica Absolute Tracker ATS600, los objetos que anteriormente requerían importantes inversiones de tiempo para digitalizar, o que estaban más allá de la posibilidad realista de una medición eficiente, pueden ser traídos rápidamente al mundo del análisis 3D por un solo operador. Con el primer "rastreador láser de escaneo directo" del mundo, el control de calidad productivo está preparado para expandirse a áreas de producción completamente nuevas, impulsado por un cambio fundamental en la forma en que pensamos sobre la medición 3D.
+                            <br><br>El ATS600 también ofrece muchas de las características familiares del resto de nuestra gama de productos Absolute Tracker, incluida la medición del reflector a una distancia de hasta 80 metros, con plena capacidad PowerLock. La combinación de la medición del reflector y las capacidades de escaneo directo ofrece un rendimiento impresionante en todas las tareas de medición a gran escala, con el escaneo que describe rápidamente las superficies y las lecturas individuales del reflector utilizadas para la alineación y la definición de las características.
+                        </p>
+                        <br>
+                            <!-- Download Brochure -->
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <p>
+                            <strong>Scanning Absolute Distance Meter (ADM)</strong>
+                            <br> El primer ADM de escaneo permite que el Leica Absolute Tracker ATS600 ubique con precisión un punto en un espacio de coordenadas 3D con o sin reflector, lo que permite mediciones estándar de un solo punto del rastreador láser junto con la capacidad única de digitalizar una superficie desde hasta Distancia de 60 metros sin objetivo en el punto de medición.
+                            <br><br>
+                            
+                            <strong> Densidad de punto variable </strong>
+                            <br> La densidad de puntos de la cuadrícula de medición de superficie que produce el ATS600 es totalmente configurable por el usuario, lo que le da al operador el control total para encontrar el equilibrio perfecto entre la calidad de los datos y la velocidad del proceso.
+                            <br> <br>
+                            
+                            <strong> Escaneo selectivo </strong>
+                            <br> No hay necesidad de mediciones innecesarias con el ATS600: solo defina su área de medición objetivo con la cámara de visión general integrada o mediante el uso de datos CAD dentro de su software y el sistema limitará su proceso de medición exactamente al área requerida, sin necesidad de desordenar analizando los datos de un escaneo de domo completo para recopilar unos pocos grados de datos de medición.
+                            <br> <br>
+                            
+                            <strong> Independencia del operador </strong>
+                            <br> Sin necesidad de un objetivo en el lugar para realizar una medición, el Leica Absolute Tracker ATS600 elimina una de las partes más caras del típico sistema de seguimiento láser: el operador en el punto de medición, lo que lo convierte en un láser rastreador exclusivo para procesos de medición automatizados.
+                            <br> <br>
+                            
+                            <strong> Flujo de trabajo de metrología </strong>
+                            <br> Con su diseño como dispositivo de metrología dedicado, el ATS600 es, como estándar, totalmente compatible con todos los paquetes de software de metrología aceptados, lo que le permite adaptarse perfectamente a los estándares de procesamiento de datos y flujos de trabajo de metrología establecidos actualmente.
+                            <br> <br>
+                            <strong> PowerLock </strong>
+                            <br> Como con todos los modelos dentro de nuestra línea Absolute Tracker, el ATS600 viene con la reconocida función PowerLock como estándar cuando se realizan mediciones de reflector, lo que permite restablecer automáticamente una línea de visión interrumpida al objetivo de medición sin Se requiere interacción del usuario.
+                            <br> <br>
+                            
+                            <strong> Medición combinada </strong>
+                            <br> El ATS600 es particularmente poderoso cuando se usa tanto el escaneo directo como la medición del reflector dentro del mismo proceso, ya sea inspección de calidad de piezas grandes usando escaneo de superficies y un reflector para características, o procedimientos de construcción y ajuste donde el escaneo proporciona una imagen completa de El montaje y la medición del reflector ofrecen una referencia de posición más precisa.
+                            <br> <br>
+                            
+                            <strong> Energía de la batería </strong>
+                            <br> La esperada fuente de alimentación de batería intercambiable en caliente independiente también es estándar para el ATS600, lo que permite una configuración rápida y fácil sin cables en casi cualquier ubicación para una mejor portabilidad, ideal para un rastreador láser aprobado, adecuado para usar en grandes Escala de sitios de trabajo.
+                            <br> <br>
+                            
+                            <strong> Conectividad WiFi </strong>
+                            <br> La conectividad WiFi incorporada del ATS600 se suma a la impresionante portabilidad del sistema, al tiempo que permite un control aún más fácil de una unidad que puede entregar completamente con un solo operador.
+                            <br> <br>
+                            
+                            <strong> Certificación IP54 </strong>
+                            <br> El ATS600 es una unidad sellada con certificación IP54 IEC con protección de ingreso garantizada contra el polvo y otros contaminantes, lo que permite que el rastreador láser mida de manera efectiva incluso en los entornos más hostiles.
+                            <br> <br>
+                            
+                            <strong> MeteoStation </strong>
+                            <br> Un monitor ambiental integrado verifica condiciones que incluyen temperatura, presión y humedad, lo que permite el registro de mediciones precisas independientemente de los desafíos de las configuraciones de medición hostiles.
+                            <br> <br>
+                            
+                            <strong> Diseño todo en uno </strong>
+                            <br> Al igual que con todos nuestros sistemas de seguimiento láser, el ATS600 ha sido diseñado para su portabilidad, pesa menos de 15 kilogramos y puede transportarse de forma segura dentro de una pequeña caja de vuelo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Presición</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="text-align: center">
+                                        ＊Medición con reflector
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Rendimiento angular absoluto（1）</th>
+                                    <td>± 15 μm + 6 μm/m</td>
+                                </tr>
+                                <tr>
+                                    <th>Medición de longitud (EUni:0:LT,MPE)（2）	</th>
+                                    <td>± 100 μm</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">Todas las precisiones especificadas como Error máximo permitido (MPE). Los valores típicos son la mitad de MPE.</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="text-align: center">Medición sin contacto</th>
+                                </tr>
+                                <tr>
+                                    <th>Range noise（3）</th>
+                                    <td>< 80 μm</td>
+                                </tr>
+                                <tr>
+                                    <th>Absolute accuracy（4）	</th>
+                                    <td>< ± 300 μm</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="text-align: center">【Area de medicion】</th>
+                                </tr>
+                                <tr>
+                                    <th>Medición con reflector (radio)	</th>
+                                    <td>0.8 ～ 80 m</td>
+                                </tr>
+                                <tr>
+                                    <th>Medición sin contacto (radio)</th>
+                                    <td>1.5 ～ 60 m</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" style="text-align: center">【Velocidad】</th>
+                                </tr>
+                                <tr>
+                                    <th>Velocidad de escaneo</th>
+                                    <td>1 kHz</td>
+                                </tr>
+                                <tr>
+                                    <th>Scanning rate (5)</th>
+                                    <td>< 135 sec/㎡ (Standard Mode)</td>
+                                </tr>
+                            </table>
+                            <p style="font-size: small">
+                                1 Angular Performance Transverse eT según ISO 10360-10: 2016, con respecto a un MPE para el error de ubicación (LDia.2x1: P&R: LT, MPE)
+                                de acuerdo con el capítulo 6.3 de ISO 10360-10: 2016 de ± 30 μm + 12 μm / m.
+                                <br> 2 De acuerdo con ISO 10360-10: 2016 Capítulo 6.4, Tabla 4, posiciones 1 a 35.
+                                <br> 3 Desviación estándar (1σ) de un plano de mejor ajuste (78% de albedo), distancia de 1,5 a 30 metros, modo de medición estándar, objetivo alineado.
+                                <br> 4 Desviación máxima (MPE) de la posición absoluta de un avión (78% Albedo), 1,5 a 30 metros, ángulo de incidencia de 0 a ± 45 °.
+                                <br> 5 En la distancia predeterminada de punto a punto y de línea a línea (10 metros).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

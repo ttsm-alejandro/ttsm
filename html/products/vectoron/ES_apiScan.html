@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ApiScan</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/vectoron/apiScan_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='V6M';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/vectoron/ES_mainVectoron.html">VECTORON</a> / 
+                <a href="">ApiScan</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!--div ng-include=""></div-->
+
+                        <!--img src="../../../images/pages/products/vectoron/vectoronV6MII_1.jpg" width="100%"-->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'apiScan' , 1 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 2 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 3 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_3_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'apiScan' , 4 )">
+                                        <img src="../../../images/pages/products/vectoron/apiScan_4_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row" style="height: 10px;"></div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ApiScan</h1></div>
+                        <p>
+                           Tenemos el agrado de presentar el nuevo escáner de gama alta ApiScan®, para el brazo de medición 3D que es utilizado por la mayoría de las empresas japonesas de la industria automotriz, Vectoron®. ApiScan ha mejorado drásticamente a su predecesor, el modelo Puls-G, usando la tecnología de medición más avanzada. Le velocidad de medición es mucho más rápida pero manteniendo el mismo método láser “Flying dot” que tiene muy buena reputación entre los usuarios. Además, como la precisión, la sensibilidad en superficies brillantes y la resolución han mejorado, ApiScan® es la mejor opción para la mayoría de las aplicaciones.
+                        </p>
+                        
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <ul>
+                            <ul>
+                                <li>Fuerte contra el brillo! Excelente escaneo sin polvo desarrollador.</li>
+								<li>El más alto nivel de precisión en el mercado (escáner 2σ: ±0.008 mm)</li>
+                                <li>El más rápido del mundo usando método FLYING DOT (Max : 100Hz)</li>
+                                <li>Modos de medición sin contacto según la forma y el uso, cambie fácilmente el área y resolución de la medición presionando un botón.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <h4>Especificaciones:</h4>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Método de detección láser</th>
+                                    <td>Flying dot</td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión (modo E)</th>
+                                    <td>2σ：±0.008mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Adquisición de datos</th>
+                                    <td>150,000 puntos / seg</td>
+                                </tr>
+                                <tr>
+                                    <th>Velocidad de barrido</th>
+                                    <td>Max 100Hz</td>
+                                </tr>
+                                <tr>
+                                    <th>Estabilización de temperatura</th>
+                                    <td>3 min</td>
+                                </tr>
+                                <tr>
+                                    <th>Distancia focal</th>
+                                    <td>145 ～ 205mm (±30mm)</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensioness</th>
+                                    <td>76 x 109 x 125 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Peso</th>
+                                    <td>600g</td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Second table -->
+                            <h4>Modos de escáner</h4>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Modo</th>
+                                    <th>Ancho del láser (mm)</th>
+                                    <th>Separacion máxima en X (mm)</th>
+                                </tr>
+                                <tr>
+                                    <th>C+</th>
+                                    <td>214</td>
+                                    <td>0.061</td>
+                                </tr>
+                                <tr>
+                                    <th>D</th>
+                                    <td>100</td>
+                                    <td>0.061</td>
+                                </tr>
+                                <tr>
+                                    <th>E</th>
+                                    <td>50</td>
+                                    <td>0.031</td>
+                                </tr>
+                                <tr>
+                                    <th>F</th>
+                                    <td>51</td>
+                                    <td>0.016</td>
+                                </tr>
+                                <tr>
+                                    <th>Fh</th>
+                                    <td>22</td>
+                                    <td>0.016</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

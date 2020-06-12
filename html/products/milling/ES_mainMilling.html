@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Milling Products</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl" ng-init="
+            relativeUrl = '../../../';
+            getCurrentUrl();
+                     ">
+            <div class="container">
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- Horizontal line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                <div style="height: 2px"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php" 
+                   style="color:{{ ttsmBlueColor }};">HOME
+                </a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html" 
+                   style="color:{{ ttsmBlueColor }};">PRODUCTS
+                </a> / 
+                <a href="{{relativeUrl}}html/products/milling/ES_mainMilling.html"
+                   style="color:{{ ttsmBlueColor }};">MILLING
+                </a>
+
+                <!-- Content >
+                <h2 style="color:{{ ttsmBlueColor }}; ">Milling Main Content</h2-->
+
+                <!-- LIST OF Milling PRODUCTS -->
+                <!-- UPPER ROW -->
+                <div class="row">
+
+                    <!-- Mill-7 System -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_mill7System.html">
+                        <img src="../../../images/pages/products/milling/mill7System_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Mill-7 System</h4>
+                                5 Axis High function Milling Machine with ATC
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Portable Mill System -->
+                    <div class="col-md-3 text-center">
+                        <a href="ES_portableMillSystem.html">
+                        <img src="../../../images/pages/products/milling/portableMillSystem_1.jpg" width="100%">
+                            <div class="well well-sm">
+                                <h4>Portable Mill System</h4>
+                                Model processor of travelling type
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

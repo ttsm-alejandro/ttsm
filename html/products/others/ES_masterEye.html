@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Master Eye Z</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/others/masterEye_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='MEZ';
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/ES_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/others/ES_mainOthers.html">OTROS</a> / 
+                <a href="">Master Eye Z</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'masterEye' , 1 )">
+                                        <img src="../../../images/pages/products/others/masterEye_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'masterEye' , 2 )">
+                                        <img src="../../../images/pages/products/others/masterEye_2_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>Master Eye Z</h1></div>
+                        <p>
+                            Sistema para medir el nivel y la holgura entre partes ensambladas de automóviles, maqyunaria, equipo y electrodomésticos, puede ser usado para varias tareas desde el prototipo hasta la producción en masa.
+                            <br>Master eye Z trabaja con un láser y un sensor. El haz láser incide en el objeto para ser detectado por el sensor, la información obtenida se procesa con la aplicacion Master Eye Z Plus.
+                        </p>
+                        <br>
+                            <button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Descargar Brochure </button>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <p>
+							<strong>Simple</strong>
+							<br> Sólo coloque las barras guías en el objeto y presione el gatillo.  El nivel y holgura (dato de medición) será enviado instantáneamente a su PC y será calculado por nuestro software exclusivo (Master EYE Z Plus).
+							<br> 
+							<strong>Portátil</strong>
+							<br> Con el uso del arnés portátol con batería, el dispositivo se comunicara vía Bluetooth con la PC (También hay versión alámbrica disponible)
+							<br>
+							<br> Disponible con láser rojo o láser azul (para producto con pintura)
+							<br> Proyecto integral in-line disponible (inspección en la línea de producción, datos en tiempo real)
+							<br> Software amigable y personalizable, ajuste sus tolerancias y parámetros para el cálculo de sus mediciones para cada proyecto
+							<br> Ayuda visual con guía para mostrar los puntos a medir, haciendolo fácil de usar con poco entrenamiento
+							<br> Resultado de la medición en menos de un segundo
+						</p>
+							
+
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+                
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <h4>Specification:</h4>
+                            <!-- DATA 01 -->
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>Ancho de medición</th>
+                                    <td>20 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Profundidad de medición</th>
+                                    <td>±6 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Puntos generados por disparo</th>
+                                    <td>1024</td>
+                                </tr>
+                                <tr>
+                                    <th>Distancia focal</th>
+                                    <td>42 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Precisión del punto de referencia</th>
+                                    <td>0.1 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Resolución (H,W)</th>
+                                    <td>0.025 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensiones</th>
+                                    <td>232 mm x 186 mm x 62 mm</td>
+                                </tr>
+                                <tr>
+                                    <th>Peso</th>
+                                    <td>550 g</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+                
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>
