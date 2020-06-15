@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Solutions</title>
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+            ng-init="getCurrentUrl();"
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                <!-- ROUTE -->
+                <div style="height: 2px"></div>
+                <a href="{{ relativeUrl }}ES_index.php">INICIO</a> / 
+                <a href="">SOLUCIONES</a>
+                
+                <!-- PRODUCT CATEGORY SELECT -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg">
+                            <div class="row">
+                                <div class="col-md-6" style="text-align: right">
+                                    <div title="Please select one Industry" style="background-color: {{ ttsmBlueColor }}; color:white" class="btn btn-lg">Industry Category</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <select
+                                        title="Please select one industry"
+                                        class="input-lg" 
+                                        ng-model="solutionIndustrySelected"
+                                        ng-options="x.id as x.name for x in solutionIndustryArray">
+                                        <option selected hidden style="display:none">What is your city</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                                
+                <!-- Alignment of large objects such as airplane doors -->
+                <div ng-include="'./html/solutions/link/ES_AlignmentOfLargeObjects_link.html'"></div>
+
+                <!-- Automatic measuring solution (automatic probing & scanning system) -->
+                <div ng-include="'./html/solutions/link/ES_AutomaticMeasuringSolutionAutomatic_link.html'"></div>
+
+                <!-- Measuring dimensions of relatively large object -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringDimensionsOfRelatively_link.html'"></div>
+
+                <!-- Measuring solution (Vehicle white body inspection) BMW -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringSolutionVehicleWhite_link.html'"></div>
+
+                <!-- Measuring the engine position and posture while moving -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringTheEnginePosition_link.html'"></div>
+
+                <!-- Measuring the wheel position and posture while moving -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringTheWheelPosition_link.html'"></div>
+
+                <!-- Optimizing clamp work before the vehicle panel welding process -->
+                <div ng-include="'./html/solutions/link/ES_OptimizingClampWorkBefore_link.html'"></div>
+
+                <!-- Optimizing parameters for push, bend and twist on bending machines -->
+                <div ng-include="'./html/solutions/link/ES_OptimizingParametersForPush_link.html'"></div>
+
+                <!-- Robot accuracy improvement solution / Robot calibration system -->
+                <div ng-include="'./html/solutions/link/ES_RobotAccuracyImprovementSolution_link.html'"></div>
+
+                <!-- Sheet metal distortion and sheet thickness analysis -->
+                <div ng-include="'./html/solutions/link/ES_SheetMetalDistortionAnd_link.html'"></div>
+
+                <!-- Verifying by comparing CAE results with the actual object -->
+                <div ng-include="'./html/solutions/link/ES_VerifyingByComparingCAE_link.html'"></div>
+
+                <!-- High precision mold copy solution -->
+                <div ng-include="'./html/solutions/link/ES_HighPrecisionMoldCopy_link.html'"></div>
+
+                <!-- Automated Measurement and Inspection Solution  Zeiss COMET Automatic Measurement System -->
+                <div ng-include="'./html/solutions/link/ES_AutomatedMeasurementAndInspection_link.html'"></div>
+
+                <!-- Automation of measurement work, data processing, and report creation by Vectoron -->
+                <div ng-include="'./html/solutions/link/ES_AutomationOfMeasurementWork_link.html'"></div>
+
+                <!-- Defective products prediction by gap &amp; flush trend management -->
+                <div ng-include="'./html/solutions/link/ES_DefectiveProductsPredictionBy_link.html'"></div>
+
+                <!-- Design model reverse solution -->
+                <div ng-include="'./html/solutions/link/ES_DesignModelReverseSolution_link.html'"></div>
+
+                <!-- Virtual Assembly -->
+                <div ng-include="'./html/solutions/link/ES_VirtualAssembly_link.html'"></div>
+
+                <!-- ＜3D-magic REGALIS＞Software that anybody can use. -->
+                <div ng-include="'./html/solutions/link/ES_3DmagicREGALISSoftwareThatAnybody_link.html'"></div>
+
+                <!-- Posture measurement/positioning of unit such as a robot -->
+                <div ng-include="'./html/solutions/link/ES_PostureMeasurementpositioningOfUnit_link.html'"></div>
+
+                <!-- Quality evaluation of 3D additive manufacturing products and 3D model manufacturing by reverse engineering -->
+                <div ng-include="'./html/solutions/link/ES_QualityEvaluationOf3D_link.html'"></div>
+
+                <!-- Automated manufacturing and production tracking solutions in the aerospace industry -->
+                <div ng-include="'./html/solutions/link/ES_AutomatedManufacturingAndProduction_link.html'"></div>
+
+                <!-- Improve product quality and production efficiency of jet engines -->
+                <div ng-include="'./html/solutions/link/ES_ImproveProductQualityAnd_link.html'"></div>
+
+                <!-- Management and utilization of numerical and dimensional data of products in the aerospace industry -->
+                <div ng-include="'./html/solutions/link/ES_ManagementAndUtilizationOf_link.html'"></div>
+
+                <!-- Automated assembly of large parts　MAA（Measurement Assisted Assembly）Real-Time Feedback -->
+                <div ng-include="'./html/solutions/link/ES_AutomatedAssemblyOfLarge_link.html'"></div>
+
+                <!-- Measuring solution (Housing inspection for hydroelectric generators) -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringSolutionHousingInspection_link.html'"></div>
+
+                <!-- Measuring solution (supply, assembly and calibration of large machinery and similar equipment) -->
+                <div ng-include="'./html/solutions/link/ES_MeasuringSolutionSupplyAssembly_link.html'"></div>
+
+                <!-- Digitization of quality inspection of metal casting products (paperless) -->
+                <div ng-include="'./html/solutions/link/ES_DigitizationOfQualityInspection_link.html'"></div>
+
+                <!-- Assembly assist measuring solution (MAA assembly assist measurement system) -->
+                <div ng-include="'./html/solutions/link/ES_AssemblyAssistMeasuringSolution_link.html'"></div>
+
+                <!-- Automatic measuring solution in processing machine (automatic probing &amp; scanning system) -->
+                <div ng-include="'./html/solutions/link/ES_AutomaticMeasuringSolutionIn_link.html'"></div>
+
+                <!-- Improving the quality of white goods (improving appearance defects) -->
+                <div ng-include="'./html/solutions/link/ES_ImprovingTheQualityOf_link.html'"></div>
+
+                <!-- Improving product quality and production efficiency at medical device manufacturers -->
+                <div ng-include="'./html/solutions/link/ES_ImprovingProductQualityAnd_link.html'"></div>                
+                
+            </div>
+        </div>
+    </body>
+</html>
+
