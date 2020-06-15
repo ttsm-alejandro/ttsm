@@ -244,7 +244,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
         $scope.systemDetail.comment = param.comment;
         
         //
-        $scope.getMachineInSystem( true );
+        $scope.getMachineInSystem( true , "" );
         $scope.machineDetail.idSystem = param.id;
     };
     
@@ -524,7 +524,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     
     /*********** MACHINE ARRAY ***************/
     //AGREGAR COMENTARIOS
-    $scope.getMachineInSystem = function( isCleanMachineDetail ){
+    $scope.getMachineInSystem = function( isCleanMachineDetail , responseData ){
         $scope.machineArrayInSystem = [];
         if( isCleanMachineDetail ){ $scope.cleanMachineDetail(); }
         $scope.isShowMachineDetail = true;
@@ -533,7 +533,18 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
                 $scope.machineArrayInSystem.push( $scope.machineCatalog[ index ] );
             }
         }
-        if( $scope.machineArrayInSystem.length == 0 ){ $scope.isShowMachineDetail = false; }else{ $scope.getMachineDetail( $scope.machineArrayInSystem[ 0 ] ); }
+        if( $scope.machineArrayInSystem.length == 0 ){ $scope.isShowMachineDetail = false; }else{ 
+            if( responseData.includes( "DELETE" ) ){
+                $scope.getMachineDetail( $scope.machineArrayInSystem[ 0 ] ); 
+            }else{
+                var id = responseData.split( " " )[ 1 ];
+                for( var index in $scope.machineArrayInSystem ){
+                    if( $scope.machineArrayInSystem[ index ].id == id ){
+                        $scope.getMachineDetail( $scope.machineArrayInSystem[ index ] ); 
+                    }
+                }
+            }
+        }
     };
     
     //AGREGAR COMENTARIOS
@@ -669,7 +680,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             }
         }
         
-        $scope.getMachineInSystem( false );
+        $scope.getMachineInSystem( false , responseData );    //aqui git
         $('#myLoadingModal').modal('hide'); 
     };
     
