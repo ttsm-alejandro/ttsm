@@ -422,6 +422,48 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         $scope.caseStudyMenuStyle[ caseStudySelected ] = styleSelected;
     }
     
+	    /*
+     ************************************************************************** 
+     * Solutions from here...
+     * ************************************************************************
+     */
+    
+    /********** VARIABLES **********/
+    $scope.solutionIndustryArray = [
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Automobiles" },
+        { id : 2 , name : "Aerospace" },
+        { id : 3 , name : "Heavy Industries / Energy" },
+        { id : 4 , name : "Vehicles / Agriculture / Railways" },
+        { id : 5 , name : "Construction / Steel / Engineering" },
+        { id : 6 , name : "Casting and forging" },
+        { id : 7 , name : "Machine manufacturing / Robot" },
+        { id : 8 , name : "IT / Home appliances" },
+        { id : 9 , name : "Other" }
+    ];
+    $scope.solutionIndustrySelected = "";
+    
+    $scope.solutionIndustryShowSolution = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ];
+    
+    /********** FUNCTIONS **********/
+    //
+    $scope.goToSolution = function( solutionSelected ){
+        if( ( solutionSelected == "EN_solutions" ) || ( solutionSelected == "ES_solutions" ) ){
+            window.location.href = $scope.relativeUrl + solutionSelected + '.html';
+        }else{
+            window.location.href = $scope.relativeUrl + 'html/solutions/' + solutionSelected + '.html';
+        }
+    }
     
     /*************************
      * 
