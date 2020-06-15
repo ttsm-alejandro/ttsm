@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp TTSM/system_v2/js/sharepoint/calibrationPlannerPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
-    - /bin/cp TTSM/system_v2/html/sharepoint/calibration_planner.php /home/ttsmcomm/public_html/TTSM/system_v2/html/sharepoint/
+    - /bin/cp TTSM/system_v2/js/sharepoint/systemPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
