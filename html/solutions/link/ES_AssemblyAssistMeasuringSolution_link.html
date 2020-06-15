@@ -1,0 +1,27 @@
+<!-- Solución de medición de asistencia de ensamblaje (sistema de medición de asistencia de ensamblaje MAA) -->
+<!-- 
+Product Category 
+        { id : 0 , name : "ALL" },
+        { id : 1 , name : "Automobiles" },
+        { id : 2 , name : "Aerospace" },
+        { id : 3 , name : "Heavy Industries / Energy" },
+        { id : 4 , name : "Vehicles / Agriculture / Railways" },
+        { id : 5 , name : "Construction / Steel / Engineering" },
+        { id : 6 , name : "Casting and forging" },
+        { id : 7 , name : "Machine manufacturing / Robot" },
+        { id : 8 , name : "IT / Home appliances" },
+        { id : 9 , name : "Other" }
+    ];
+-->
+<div class="col-md-3 text-center"
+     ng-click="goToSolution( 'ES_AssemblyAssistMeasuringSolution' )"
+     ng-show="
+         (solutionIndustrySelected == '1')
+         ||(solutionIndustrySelected == '0')
+         ||(solutionIndustrySelected == '')"
+     >
+    <img src="{{ relativeUrl }}images/pages/solutions/assembly_assist_measuring_solution_1.jpg" width="100%">
+        <div class="well well-sm" style="height: 250px">
+            <h3>Solución de medición de asistencia de ensamblaje (sistema de medición de asistencia de ensamblaje MAA)</h3>
+        </div>
+</div>
