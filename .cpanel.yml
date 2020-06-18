@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp html/util/EN_carousel.html /html/util/
-    - /bin/cp html/util/ES_carousel.html /html/util/
+    - /bin/cp html/util/EN_carousel.html /home/ttsmcomm/public_html/html/util/
+    - /bin/cp html/util/ES_carousel.html /home/ttsmcomm/public_html/html/util/
