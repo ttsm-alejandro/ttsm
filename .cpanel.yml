@@ -1,4 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp TTSM/system_v2/js/sharepoint/systemPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
+    - /bin/cp html/util/EN_carousel.html /html/util/
+    - /bin/cp html/util/ES_carousel.html /html/util/
