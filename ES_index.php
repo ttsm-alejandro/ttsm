@@ -52,10 +52,10 @@ Programmer: Alejandro Aguayo Acosta
             </div>
             
             <!-- MODAL ON LOAD-->
-            <!--div ng-include=" 'html/util/ES_modalOnLoad.html' "></div-->
+            <div ng-include=" 'html/util/ES_modalOnLoad.html' "></div>
             
             <!-- MODAL INSCRIPCION A WEBINAR -->
-            <!--div ng-include=" 'html/util/ES_modalWebinarRegistration.html' "></div-->
+            <div ng-include=" 'html/util/ES_modalWebinarRegistration.html' "></div>
             
             <!-- Carousel of main products -->
             <div>
@@ -203,7 +203,7 @@ arm
                     <div class="text-center">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <img src="images/news/CARTEL-WEBINAR-2-MAYO-2020_ES.jpg" width="100%" >
+                            <img ng-click="showWebinarRegistrationForm()" src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" >
                             <div style="height: 5px"></div>
                         </div>
                         <div class="col-md-2"></div>
