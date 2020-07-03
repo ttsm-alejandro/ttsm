@@ -1,7 +1,19 @@
 ---
 deployment:
   tasks:
-    - /bin/cp EN_news.html /home/ttsmcomm/public_html/
-    - /bin/cp ES_news.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_caseStudy.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_companyProfile.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_contact.html /home/ttsmcomm/public_html/
     - /bin/cp EN_index.php /home/ttsmcomm/public_html/
+    - /bin/cp EN_news.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_solutions.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_techSupport.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_ttsInTheWorld.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_caseStudy.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_companyProfile.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_contact.html /home/ttsmcomm/public_html/
     - /bin/cp ES_index.php /home/ttsmcomm/public_html/
+    - /bin/cp ES_news.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_solutions.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_techSupport.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_ttsInTheWorld.html /home/ttsmcomm/public_html/
