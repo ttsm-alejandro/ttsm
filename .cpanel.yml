@@ -13,12 +13,14 @@ deployment:
     - /bin/cp html/solutions/link/ES_AutomatedAssemblyOfLarge_link.html /home/ttsmcomm/public_html/html/solutions/link/
     - /bin/cp html/solutions/link/ES_AutomatedManufacturingAndProduction_link.html /home/ttsmcomm/public_html/html/solutions/link/
     
+    - /bin/cp html/solutions/EN_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_3DmagicREGALISSoftwareThatAnybody.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_AlignmentOfLargeObjects.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_AssemblyAssistMeasuringSolution.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_AutomatedAssemblyOfLarge.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_AutomatedManufacturingAndProduction.html /home/ttsmcomm/public_html/html/solutions/
     
+    - /bin/cp html/solutions/ES_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_3DmagicREGALISSoftwareThatAnybody.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_AlignmentOfLargeObjects.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_AssemblyAssistMeasuringSolution.html /home/ttsmcomm/public_html/html/solutions/
