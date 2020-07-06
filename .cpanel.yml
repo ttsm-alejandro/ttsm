@@ -1,29 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp EN_solutions.html /home/ttsmcomm/public_html/
-    - /bin/cp ES_solutions.html /home/ttsmcomm/public_html/
-    
-    - /bin/cp html/solutions/link/EN_3DmagicREGALISSoftwareThatAnybody_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AlignmentOfLargeObjects_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AssemblyAssistMeasuringSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AutomatedAssemblyOfLarge_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AutomatedManufacturingAndProduction_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    
-    - /bin/cp html/solutions/link/ES_3DmagicREGALISSoftwareThatAnybody_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AlignmentOfLargeObjects_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AssemblyAssistMeasuringSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AutomatedAssemblyOfLarge_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AutomatedManufacturingAndProduction_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    
-    - /bin/cp html/solutions/EN_3DmagicREGALISSoftwareThatAnybody.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AlignmentOfLargeObjects.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AssemblyAssistMeasuringSolution.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AutomatedAssemblyOfLarge.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AutomatedManufacturingAndProduction.html /home/ttsmcomm/public_html/html/solutions/
-    
-    - /bin/cp html/solutions/ES_3DmagicREGALISSoftwareThatAnybody.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AlignmentOfLargeObjects.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AssemblyAssistMeasuringSolution.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AutomatedAssemblyOfLarge.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AutomatedManufacturingAndProduction.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp js/mainCtrl.js /home/ttsmcomm/public_html/js/
