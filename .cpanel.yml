@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - /bin/cp EN_solutions /home/ttsmcomm/public_html/
-    - /bin/cp ES_solutions /home/ttsmcomm/public_html/
+    - /bin/cp EN_solutions.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_solutions.html /home/ttsmcomm/public_html/
     - /bin/cp html/solutions/EN_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/EN_AutomatedMeasurementAndInspection.html /home/ttsmcomm/public_html/html/solutions/
