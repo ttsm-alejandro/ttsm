@@ -5,11 +5,31 @@ deployment:
     - /bin/cp ES_solutions.html /home/ttsmcomm/public_html/
     - /bin/cp html/solutions/EN_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AutomatedMeasurementAndInspection.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AutomatedMeasurementAndInspection.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AutomaticMeasuringSolutionAutomatic.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AutomaticMeasuringSolutionAutomatic.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/link/EN_AutomatedMeasurementAndInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AutomatedMeasurementAndInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AutomaticMeasuringSolutionAutomatic_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AutomaticMeasuringSolutionAutomatic_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    
+    - /bin/cp html/solutions/EN_AutomaticMeasuringSolutionIn.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_AutomationOfMeasurementWork.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_DefectiveProductsPredictionBy.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_DesignModelReverseSolution.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_DigitizationOfQualityInspection.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_HighPrecisionMoldCopy.html /home/ttsmcomm/public_html/html/solutions/
+    
+    - /bin/cp html/solutions/ES_AutomaticMeasuringSolutionIn.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_AutomationOfMeasurementWork.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_DefectiveProductsPredictionBy.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_DesignModelReverseSolution.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_DigitizationOfQualityInspection.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_HighPrecisionMoldCopy.html /home/ttsmcomm/public_html/html/solutions/
+    
+    - /bin/cp html/solutions/link/EN_AutomaticMeasuringSolutionIn_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_AutomationOfMeasurementWork_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_DefectiveProductsPredictionBy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_DesignModelReverseSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_DigitizationOfQualityInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_HighPrecisionMoldCopy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    
+    - /bin/cp html/solutions/link/ES_AutomaticMeasuringSolutionIn_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_AutomationOfMeasurementWork_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_DefectiveProductsPredictionBy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_DesignModelReverseSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_DigitizationOfQualityInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_HighPrecisionMoldCopy_link.html /home/ttsmcomm/public_html/html/solutions/link/
