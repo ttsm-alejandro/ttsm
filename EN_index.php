@@ -53,10 +53,10 @@ Programmer: Alejandro Aguayo Acosta
             </div>
             
             <!-- MODAL ON LOAD -->
-            <div ng-include=" 'html/util/EN_modalOnLoad.html' "></div>
+            <!--div ng-include=" 'html/util/EN_modalOnLoad.html' "></div-->
             
             <!-- MODAL INSCRIPCION A WEBINAR -->
-            <div ng-include=" 'html/util/EN_modalWebinarRegistration.html' "></div>
+            <!--div ng-include=" 'html/util/EN_modalWebinarRegistration.html' "></div-->
             
             <!-- Carousel of main products -->
             <div>
@@ -143,50 +143,6 @@ arm
                     </div>
                 </div>
                   
-                <!-- MISSION VISION VALUES -->
-                <!--div class="row">
-                    <div class="col-md-4">
-                        <h3 
-                            class="well well-sm text-center" 
-                            style="
-                                color: white;
-                                background-color: {{ ttsmBlueColor }};">
-                            MISION
-                        </h3>
-                        <p>
-                            Provide our customers with the best technology, support and technical advice to solve their needs in 3-D measurement and design. Always looking for the growth of our customers, associates and partners. 
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 
-                            class="well well-sm text-center" 
-                            style="
-                                color: white;
-                                background-color: {{ ttsmBlueColor }};">
-                            VISION
-                        </h3>
-                        <p>
-                            Be the leader in 3-D design and measurement technologies for the Latin American industry. 
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 
-                            class="well well-sm text-center" 
-                            style="
-                                color: white;
-                                background-color: {{ ttsmBlueColor }};">
-                            VALUES
-                        </h3>
-                        <p>
-                            Honesty 
-                            <br>Professionalism 
-                            <br>Integrity 
-                            <br>Respect 
-                            <br>Commitment 
-                        </p>
-                    </div>
-                </div-->
-                
                 <!-- WHITE SPACE -->
                 <div class="row" style="height: 5px; background-color: {{ ttsmGrayColor }};"></div>
                     
@@ -198,7 +154,8 @@ arm
                     <div class="text-center">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <img ng-click="showWebinarRegistrationForm()" src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" >
+                            <img src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" >
+                            <!--img ng-click="showWebinarRegistrationForm()" src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" -->
                             <div style="height: 5px"></div>
                         </div>
                         <div class="col-md-2"></div>

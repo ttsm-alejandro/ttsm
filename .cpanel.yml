@@ -33,3 +33,8 @@ deployment:
     - /bin/cp html/solutions/link/ES_DesignModelReverseSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
     - /bin/cp html/solutions/link/ES_DigitizationOfQualityInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
     - /bin/cp html/solutions/link/ES_HighPrecisionMoldCopy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    
+    - /bin/cp EN_index.php /home/ttsmcomm/public_html/
+    - /bin/cp ES_index.php /home/ttsmcomm/public_html/
+    - /bin/cp EN_news.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_news.html /home/ttsmcomm/public_html/
