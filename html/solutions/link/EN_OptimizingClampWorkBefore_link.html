@@ -16,9 +16,11 @@ Product Category
 <div class="col-md-3 text-center"
      ng-click="goToSolution( 'EN_OptimizingClampWorkBefore' )"
      ng-show="
-         (solutionIndustrySelected == '0')
+         (solutionIndustrySelected == '')
+         ||(solutionIndustrySelected == '0')
          ||(solutionIndustrySelected == '1')
-         ||(solutionIndustrySelected == '')"
+         ||(solutionIndustrySelected == '4')
+         ||(solutionIndustrySelected == '7')"
      >
     <img src="{{ relativeUrl }}images/pages/solutions/optimizing_clamp_work_before_1.jpg" width="100%">
         <div class="well well-sm" style="height: 250px">

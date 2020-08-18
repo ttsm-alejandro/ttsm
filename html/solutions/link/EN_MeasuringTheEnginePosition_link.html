@@ -16,9 +16,10 @@ Product Category
 <div class="col-md-3 text-center"
      ng-click="goToSolution( 'EN_MeasuringTheEnginePosition' )"
      ng-show="
-         (solutionIndustrySelected == '0')
+         (solutionIndustrySelected == '')
+         ||(solutionIndustrySelected == '0')
          ||(solutionIndustrySelected == '1')
-         ||(solutionIndustrySelected == '')"
+         ||(solutionIndustrySelected == '4')"
      >
     <img src="{{ relativeUrl }}images/pages/solutions/measuring_the_engine_position_1.jpg" width="100%">
         <div class="well well-sm" style="height: 250px">

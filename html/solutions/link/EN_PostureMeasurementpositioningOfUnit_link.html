@@ -16,9 +16,17 @@ Product Category
 <div class="col-md-3 text-center"
      ng-click="goToSolution( 'EN_PostureMeasurementpositioningOfUnit' )"
      ng-show="
-         (solutionIndustrySelected == '0')
+         (solutionIndustrySelected == '')
+         ||(solutionIndustrySelected == '0')
          ||(solutionIndustrySelected == '1')
-         ||(solutionIndustrySelected == '')"
+         ||(solutionIndustrySelected == '2')
+         ||(solutionIndustrySelected == '3')
+         ||(solutionIndustrySelected == '4')
+         ||(solutionIndustrySelected == '5')
+         ||(solutionIndustrySelected == '6')
+         ||(solutionIndustrySelected == '7')
+         ||(solutionIndustrySelected == '8')
+         ||(solutionIndustrySelected == '9')"
      >
     <img src="{{ relativeUrl }}images/pages/solutions/posture_measurementpositioning_of_unit_1.jpg" width="100%">
         <div class="well well-sm" style="height: 250px">
