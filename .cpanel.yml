@@ -6,35 +6,15 @@ deployment:
     - /bin/cp html/solutions/EN_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     - /bin/cp html/solutions/ES_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
     
-    - /bin/cp html/solutions/EN_AutomaticMeasuringSolutionIn.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_AutomationOfMeasurementWork.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_DefectiveProductsPredictionBy.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_DesignModelReverseSolution.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_DigitizationOfQualityInspection.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_HighPrecisionMoldCopy.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_ImprovingProductQualityAnd.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/EN_ImprovingTheQualityOf.html /home/ttsmcomm/public_html/html/solutions/
     
-    - /bin/cp html/solutions/ES_AutomaticMeasuringSolutionIn.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_AutomationOfMeasurementWork.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_DefectiveProductsPredictionBy.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_DesignModelReverseSolution.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_DigitizationOfQualityInspection.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_HighPrecisionMoldCopy.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_ImprovingProductQualityAnd.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/ES_ImprovingTheQualityOf.html /home/ttsmcomm/public_html/html/solutions/
     
-    - /bin/cp html/solutions/link/EN_AutomaticMeasuringSolutionIn_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_AutomationOfMeasurementWork_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_DefectiveProductsPredictionBy_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_DesignModelReverseSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_DigitizationOfQualityInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_HighPrecisionMoldCopy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_ImprovingProductQualityAnd_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/EN_ImprovingTheQualityOf_link.html /home/ttsmcomm/public_html/html/solutions/link/
     
-    - /bin/cp html/solutions/link/ES_AutomaticMeasuringSolutionIn_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_AutomationOfMeasurementWork_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_DefectiveProductsPredictionBy_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_DesignModelReverseSolution_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_DigitizationOfQualityInspection_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_HighPrecisionMoldCopy_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_ImprovingProductQualityAnd_link.html /home/ttsmcomm/public_html/html/solutions/link/
+    - /bin/cp html/solutions/link/ES_ImprovingTheQualityOf_link.html /home/ttsmcomm/public_html/html/solutions/link/
     
-    - /bin/cp EN_index.php /home/ttsmcomm/public_html/
-    - /bin/cp ES_index.php /home/ttsmcomm/public_html/
-    - /bin/cp EN_news.html /home/ttsmcomm/public_html/
-    - /bin/cp ES_news.html /home/ttsmcomm/public_html/
