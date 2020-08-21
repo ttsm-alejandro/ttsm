@@ -3,18 +3,7 @@ deployment:
   tasks:
     - /bin/cp EN_solutions.html /home/ttsmcomm/public_html/
     - /bin/cp ES_solutions.html /home/ttsmcomm/public_html/
-    - /bin/cp html/solutions/EN_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_solutionsMenu.html /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/* /home/ttsmcomm/public_html/html/solutions/
+    - /bin/cp html/solutions/link/* /home/ttsmcomm/public_html/html/solutions/link/
     
-    - /bin/cp html/solutions/EN_ImprovingProductQualityAnd.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/EN_ImprovingTheQualityOf.html /home/ttsmcomm/public_html/html/solutions/
-    
-    - /bin/cp html/solutions/ES_ImprovingProductQualityAnd.html /home/ttsmcomm/public_html/html/solutions/
-    - /bin/cp html/solutions/ES_ImprovingTheQualityOf.html /home/ttsmcomm/public_html/html/solutions/
-    
-    - /bin/cp html/solutions/link/EN_ImprovingProductQualityAnd_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/EN_ImprovingTheQualityOf_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    
-    - /bin/cp html/solutions/link/ES_ImprovingProductQualityAnd_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    - /bin/cp html/solutions/link/ES_ImprovingTheQualityOf_link.html /home/ttsmcomm/public_html/html/solutions/link/
-    
+   
