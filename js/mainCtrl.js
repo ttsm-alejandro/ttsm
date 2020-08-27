@@ -551,14 +551,36 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
             var a = document.createElement("a");
 
             //product brochure wanted to download
-            if( $scope.brochureToDownload == "V7M" ){ ahref = $scope.brochureLocationFolder + "VAR700M Brochure EN.pdf"; }
+            if( $scope.brochureToDownload == "ES_V7M" ){ ahref = $scope.brochureLocationFolder + "VAR700M Brochure EN.pdf"; }
+            if( $scope.brochureToDownload == "EN_V7M" ){ ahref = $scope.brochureLocationFolder + "VAR700M Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "V6M" ){ ahref = $scope.brochureLocationFolder + "VAR600 Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_V6M" ){ ahref = $scope.brochureLocationFolder + "VAR600 Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_V6M" ){ ahref = $scope.brochureLocationFolder + "VAR600 Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "LM" ){ ahref = $scope.brochureLocationFolder + "LM Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_LM" ){ ahref = $scope.brochureLocationFolder + "LM Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_LM" ){ ahref = $scope.brochureLocationFolder + "LM Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "LEICA" ){ ahref = $scope.brochureLocationFolder + "LEICA Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_LEICA" ){ ahref = $scope.brochureLocationFolder + "LEICA Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_LEICA" ){ ahref = $scope.brochureLocationFolder + "LEICA Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "LEICA-ATS600" ){ ahref = $scope.brochureLocationFolder + "LEICA ATS600 Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_LEICA-ATS600" ){ ahref = $scope.brochureLocationFolder + "LEICA ATS600 Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_LEICA-ATS600" ){ ahref = $scope.brochureLocationFolder + "LEICA ATS600 Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "COMET" ){ ahref = $scope.brochureLocationFolder + "COMET Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_COMET" ){ ahref = $scope.brochureLocationFolder + "COMET Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_COMET" ){ ahref = $scope.brochureLocationFolder + "COMET Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "GAPNINJA" ){ ahref = $scope.brochureLocationFolder + "GAPNINJA Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_GAPNINJA" ){ ahref = $scope.brochureLocationFolder + "GAPNINJA Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_GAPNINJA" ){ ahref = $scope.brochureLocationFolder + "GAPNINJA Brochure EN.pdf"; }
+            
             if( $scope.brochureToDownload == "MEZ" ){ ahref = $scope.brochureLocationFolder + "MEZ Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "ES_MEZ" ){ ahref = $scope.brochureLocationFolder + "MEZ Brochure EN.pdf"; }
+            //if( $scope.brochureToDownload == "EN_MEZ" ){ ahref = $scope.brochureLocationFolder + "MEZ Brochure EN.pdf"; }
 
             //
             if( ahref != "" ){
@@ -567,7 +589,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
 
                 //download brochure
                 a.href = ahref;
-                a.setAttribute( "download" , $scope.brochureToDownload + " Brochure.pdf" );
+                a.setAttribute( "download" , $scope.brochureToDownload.replace( "ES_" , "" ).replace( "EN_" , "" ) + " Brochure.pdf" );
                 a.click();
                 $('#modalDownloadBrochure').modal('hide');
                 swal( { icon : "success" , "text" : "Thanks for download brochure, if there is a problem, please contact to 'Technical Support'" } );
@@ -579,7 +601,14 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     
     //
     $scope.sendEmailBrochureDownload = function(){
-        $scope.brochureFormData.product = "" + $scope.brochureToDownload;
+        var languageBrochure = "English";
+        
+        if( $scope.brochureToDownload.includes( "ES_" ) ){
+            languageBrochure = "Español";
+        }
+        
+        
+        $scope.brochureFormData.product = "" + $scope.brochureToDownload + ", Language: " + languageBrochure;
         $http({
             url: emailServiceUrl,
             method: "POST",
