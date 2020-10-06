@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp html/products/software/EN_spGauge.html /home/ttsmcomm/public_html/html/products/software/
-    - /bin/cp html/products/software/ES_spGauge.html /home/ttsmcomm/public_html/html/products/software/
+    - /bin/cp ES_index.html /home/ttsmcomm/public_html/
+    - /bin/cp EN_index.html /home/ttsmcomm/public_html/
