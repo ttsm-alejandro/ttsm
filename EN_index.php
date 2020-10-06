@@ -148,19 +148,19 @@ arm
                     
                     
                 <!-- NEWS -->
-                <div class="row">
+                <!--div class="row">
                     <h1 style="color: {{ ttsmBlueColor }};">NEWS</h1>
                     
                     <div class="text-center">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <img src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" >
-                            <!--img ng-click="showWebinarRegistrationForm()" src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" -->
                             <div style="height: 5px"></div>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                </div>
+                </div-->
+                            <!--img ng-click="showWebinarRegistrationForm()" src="images/news/CARTEL-WEBINAR-JULIO-2020_ES.jpg" width="100%" -->
                 
             </div>
             
