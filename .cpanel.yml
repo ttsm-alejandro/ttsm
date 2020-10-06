@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp ES_index.html /home/ttsmcomm/public_html/
-    - /bin/cp EN_index.html /home/ttsmcomm/public_html/
+    - /bin/cp ES_index.php /home/ttsmcomm/public_html/
+    - /bin/cp EN_index.php /home/ttsmcomm/public_html/
