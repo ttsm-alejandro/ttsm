@@ -523,8 +523,10 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     };
     
     /*********** MACHINE ARRAY ***************/
-    //AGREGAR COMENTARIOS
+    //crea Array con las maquinas en el sistema, busca idSystem en machineCatalog y crea un machineArrayInSystem
     $scope.getMachineInSystem = function( isCleanMachineDetail , responseData ){
+        
+        //crea Array con las maquinas en el sistema, busca idSystem en machineCatalog y crea un machineArrayInSystem
         $scope.machineArrayInSystem = [];
         if( isCleanMachineDetail ){ $scope.cleanMachineDetail(); }
         $scope.isShowMachineDetail = true;
@@ -533,16 +535,15 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
                 $scope.machineArrayInSystem.push( $scope.machineCatalog[ index ] );
             }
         }
-        if( $scope.machineArrayInSystem.length == 0 ){ $scope.isShowMachineDetail = false; }else{ 
-            if( responseData.includes( "DELETE" ) ){
+        
+        //Ya con el array completo, determina si se hizo UPDATE, INSERT o DELETE 
+        if( $scope.machineArrayInSystem.length == 0 ){ 
+            $scope.isShowMachineDetail = false; 
+        }else{ 
+            console.log( responseData );
+            
+            if( responseData.includes( "DELETE" ) || (responseData == "") ){
                 $scope.getMachineDetail( $scope.machineArrayInSystem[ 0 ] ); 
-            }else{
-                var id = responseData.split( " " )[ 1 ];
-                for( var index in $scope.machineArrayInSystem ){
-                    if( $scope.machineArrayInSystem[ index ].id == id ){
-                        $scope.getMachineDetail( $scope.machineArrayInSystem[ index ] ); 
-                    }
-                }
             }
         }
     };

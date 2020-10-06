@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp ES_index.php /home/ttsmcomm/public_html/
-    - /bin/cp EN_index.php /home/ttsmcomm/public_html/
+    - /bin/cp TTSM/system_v2/js/sharepoint/systemPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
