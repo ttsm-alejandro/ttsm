@@ -15,15 +15,18 @@ class ServiceReminderModel {
     var $idSystem;
     var $idComputer;
     var $dateLastReminder;
+    var $comment;
     
     //constructor
     function ServiceReminderModel(
             $idSystem,
             $idComputer,
-            $dateLastReminder
+            $dateLastReminder,
+            $comment
             ){
         $this->idSystem = $idSystem;
         $this->idComputer = $idComputer;
         $this->dateLastReminder = $dateLastReminder;
+        $this->comment = $comment;
     }
 }

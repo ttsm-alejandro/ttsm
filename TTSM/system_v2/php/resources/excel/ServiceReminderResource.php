@@ -105,7 +105,8 @@ function returnDataPOST( $link ){
     $newElement = new ServiceReminderModel(
             $datos["idSystem"],
             $datos["idComputer"],
-            $datos["dateLastReminder"]
+            $datos["dateLastReminder"],
+            $datos["comment"]
             );
     $returnInfo = ServiceReminderService::save( $link , $newElement );
     echo $returnInfo;

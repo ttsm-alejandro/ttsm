@@ -119,6 +119,12 @@ Programmer: Alejandro Aguayo Acosta
                         clicShowColumn( 'dateLastReminderSent' );
                         getAllDateLastReminderSent();
                                             ">Last Reminder Sent</label>
+                <label 
+                    class="label {{ labelCommentStyle }}" 
+                    ng-click="
+                        clicShowColumn( 'comment' );
+                        getAllDateLastReminderSent();
+                                            ">Comment</label>
                     
                     
                     <div class="table-responsive"> 
@@ -134,6 +140,7 @@ Programmer: Alejandro Aguayo Acosta
                             <td>Next Calibration</td>
                             <td>Days left</td>
                             <td ng-show="isShowDateLastReminderSentInCalibrationPlanner">Last Reminder</td>
+                            <td ng-show="isShowCommentInCalibrationPlanner">Comment</td>
                             <td>Status</td>
                         </tr>
                         <tr ng-repeat="row in tableCalibrationPlanner" 
@@ -145,6 +152,7 @@ Programmer: Alejandro Aguayo Acosta
                                 && ( isMonthSelected( row.nextCalibrationDate ) )
                                 )
                             "
+                            title="{{ row.comment }}"
                             >
                             <td>{{ row.companyName }}</td>
                             <td ng-show="isShowPlantInCalibrationPlanner">{{ row.plantName }}</td>
@@ -164,9 +172,10 @@ Programmer: Alejandro Aguayo Acosta
                                     >{{ row.lastReminderSent }}</label>
                                 <button 
                                     class="btn btn-sm btn-primary" 
-                                    ng-click="updateLastReminderSent( row.systemSerialNumber );"
+                                    ng-click="updateLastReminderSent( row.systemSerialNumber , row.comment );"
                                     ng-show=" row.emailToSend != ''" 
                                     title="Clic to update Last reminder sent"><span class="glyphicon glyphicon-envelope"></span>-<span class="glyphicon glyphicon-forward"></span></button></td>
+                            <td ng-show="isShowCommentInCalibrationPlanner"><input type="text" ng-model="row.comment"></td>
                             <td style="{{ getStyleByStatus( row.status ) }}">{{ row.status }}</td>
                         </tr>
                     </table>

@@ -18,7 +18,8 @@ class ServiceReminderService {
         $query = " SELECT 
                     (SELECT serial_number FROM system WHERE id=service_reminder.id_system),
                     (SELECT service_tag FROM computer WHERE id=service_reminder.id_computer),
-                    date_last_reminder
+                    date_last_reminder,
+                    comment
                 FROM
                     service_reminder";
                 
@@ -36,9 +37,9 @@ class ServiceReminderService {
         if( $newElement-> idComputer == "-1" ){
             $query = "SELECT * FROM service_reminder WHERE id_system = (SELECT id FROM system WHERE serial_number='$newElement->idSystem')";
             if( mysqli_num_rows( mysqli_query( $link , $query ) ) <= 0 ){
-                $query = "INSERT INTO service_reminder VALUES ( (SELECT id FROM system WHERE serial_number='$newElement->idSystem') , -1 , '$today[mday]-$today[month]-$today[year]' )";
+                $query = "INSERT INTO service_reminder VALUES ( (SELECT id FROM system WHERE serial_number='$newElement->idSystem') , -1 , '$today[mday]-$today[month]-$today[year]' , '$newElement->comment')";
             }else{
-                $query = "UPDATE service_reminder SET date_last_reminder='$today[mday]-$today[month]-$today[year]' WHERE id_system=(SELECT id FROM system WHERE serial_number='$newElement->idSystem')";
+                $query = "UPDATE service_reminder SET date_last_reminder='$today[mday]-$today[month]-$today[year]' , comment='$newElement->comment' WHERE id_system=(SELECT id FROM system WHERE serial_number='$newElement->idSystem')";
             }
             mysqli_query( $link , $query );
         }else{
@@ -62,7 +63,8 @@ class ServiceReminderService {
         $newRow = new ServiceReminderModel( 
                 $row[0],
                 $row[1],
-                $row[2]
+                $row[2],
+                $row[3]
                 );
         return $newRow;
     }

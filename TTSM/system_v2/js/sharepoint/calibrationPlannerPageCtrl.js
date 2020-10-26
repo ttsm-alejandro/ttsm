@@ -85,12 +85,14 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.isShowEmailInCalibrationPlanner = false;
     $scope.isShowEmailToSendInCalibrationPlanner = false;
     $scope.isShowDateLastReminderSentInCalibrationPlanner = false;
+    $scope.isShowCommentInCalibrationPlanner = false;
     //labels for filter
     $scope.labelPlantStyle = "label-danger";
     $scope.labelPersonStyle = "label-danger";
     $scope.labelEmailStyle = "label-danger";
     $scope.labelEmailToSendStyle = "label-danger";
     $scope.labelDateLastReminderSentStyle = "label-danger";
+    $scope.labelCommentStyle = "label-danger";
     
     //
     $scope.isMonthSelected = function( paramDate ){
@@ -133,6 +135,11 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
         if( param == 'dateLastReminderSent' ){
             $scope.isShowDateLastReminderSentInCalibrationPlanner = !$scope.isShowDateLastReminderSentInCalibrationPlanner;
             if( $scope.isShowDateLastReminderSentInCalibrationPlanner ){ $scope.labelDateLastReminderSentStyle = "label-success"; }else{ $scope.labelDateLastReminderSentStyle = "label-danger"; }
+        }
+        //Commment
+        if( param == 'comment' ){
+            $scope.isShowCommentInCalibrationPlanner = !$scope.isShowCommentInCalibrationPlanner;
+            if( $scope.isShowCommentInCalibrationPlanner ){ $scope.labelCommentStyle = "label-success"; }else{ $scope.labelCommentStyle = "label-danger"; }
         }
         
     }
@@ -205,6 +212,7 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
             for( var index in $scope.serviceReminderCatalog ){
                 if( $scope.tableCalibrationPlanner[ indexRow ].systemSerialNumber == $scope.serviceReminderCatalog[ index ].idSystem ){
                     $scope.tableCalibrationPlanner[ indexRow ].lastReminderSent = $scope.serviceReminderCatalog[ index ].dateLastReminder;
+                    $scope.tableCalibrationPlanner[ indexRow ].comment = $scope.serviceReminderCatalog[ index ].comment;
                     break;
                 }
             }
@@ -230,11 +238,11 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     };
     
     //
-    $scope.updateLastReminderSent = function( systemSerialNumber ){
+    $scope.updateLastReminderSent = function( systemSerialNumber , comment ){
         $http({
             url: serviceReminderServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
             method: "POST",
-            data: { idSystem : systemSerialNumber , idComputer : "-1" , dateLastReminder : "" }
+            data: { idSystem : systemSerialNumber , idComputer : "-1" , dateLastReminder : "" , comment : comment }
         })
         .then(function(response) {
             swal({ text : "OK" , icon : "success" });
