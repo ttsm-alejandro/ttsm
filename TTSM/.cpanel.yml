@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - /bin/cp html/util/EN_header.html /home/ttsmcomm/public_html/html/util/
+    - /bin/cp html/util/ES_header.html /home/ttsmcomm/public_html/html/util/
