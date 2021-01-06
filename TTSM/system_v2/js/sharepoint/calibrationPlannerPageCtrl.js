@@ -154,6 +154,10 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
         .then(function(response) {
             for( var index in response.data ){
                 $scope.tableCalibrationPlanner[ index ] = response.data[ index ];
+                
+                //Se agrega una dato local "showRow" que se usara para ocultar esta fila manualmente si asi se quiere
+                $scope.tableCalibrationPlanner[ index ].showRow = true;
+                
                 if( $scope.tableCalibrationPlanner[ index ].nextCalibrationDate == "No Apply" ){
                     $scope.tableCalibrationPlanner[ index ].dayUntilNextCalibrationDate = "No Apply";
                     $scope.tableCalibrationPlanner[ index ].status = "NO APPLY";
@@ -205,6 +209,13 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
             $('#myLoadingModal').modal('hide');
         });
     };
+    
+    //
+    $scope.setShowRowManualInTableCalibrationPlanner = function( value ){
+        for( var index in $scope.tableCalibrationPlanner ){
+            $scope.tableCalibrationPlanner[ index ].showRow = value;
+        }
+    }
     
     //
     $scope.getAllDateLastReminderSent = function(){

@@ -130,6 +130,7 @@ Programmer: Alejandro Aguayo Acosta
                     <div class="table-responsive"> 
                     <table class="table table-hover table-condensed">
                         <tr style="background-color: {{ ttsmBlueColor }}; color: white">
+                            <td title="clic to show all manually hiden rows" ng-click="setShowRowManualInTableCalibrationPlanner( true )"><span class="glyphicon glyphicon-eye-open"></span></td>
                             <td>Company</td>
                             <td ng-show="isShowPlantInCalibrationPlanner">Plant</td>
                             <td ng-show="isShowPersonInCalibrationPlanner">Person</td>
@@ -150,10 +151,12 @@ Programmer: Alejandro Aguayo Acosta
                                 && ( ( filterStatusInCalibrationPlanner ==  row.status ) || (filterStatusInCalibrationPlanner == '' ) ) 
                                 && ( (  row.systemType.includes( filterMachineTypeInCalibrationPlanner ) ) || (filterMachineTypeInCalibrationPlanner == '' ) )
                                 && ( isMonthSelected( row.nextCalibrationDate ) )
+                                && ( row.showRow )
                                 )
                             "
                             title="{{ row.comment }}"
                             >
+                            <td title="clic to hide this row" ng-click="row.showRow = false "><span class="glyphicon glyphicon-eye-close"></span></td>
                             <td>{{ row.companyName }}</td>
                             <td ng-show="isShowPlantInCalibrationPlanner">{{ row.plantName }}</td>
                             <td ng-show="isShowPersonInCalibrationPlanner">{{ row.personName }}</td>

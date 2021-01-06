@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - /bin/cp html/util/EN_header.html /home/ttsmcomm/public_html/html/util/
-    - /bin/cp html/util/ES_header.html /home/ttsmcomm/public_html/html/util/
+    - /bin/cp TTSM/system_v2/html/sharepoint/calibration_planner.php /home/ttsmcomm/public_html/TTSM/system_v2/html/sharepoint/
+    - /bin/cp TTSM/system_v2/js/sharepoint/calibrationPlannerPageCtrl.js /home/ttsmcomm/public_html/TTSM/system_v2/js/sharepoint/
