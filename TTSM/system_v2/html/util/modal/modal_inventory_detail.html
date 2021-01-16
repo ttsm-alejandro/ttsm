@@ -1,0 +1,87 @@
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<!-- MODAL COMPANY -->
+<div class="modal fade" id="inventoryDetailModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" title="{{ rowDetailsSelected | json }} mantener combos: {{ isMaintainCombosInSaveAndNew }}">Item Details</h4>
+            </div>
+            <div class="modal-body">
+                
+                <div ng-show="isWaitingHttpRequest">
+                    
+                    <h1>
+                        Please wait for response
+                    </h1>
+                    
+                </div>
+                <div ng-show="!isWaitingHttpRequest">
+                    <table>
+                        <tr>
+                            <td><strong>Numero de Parte</strong></td>
+                            <td><input class="input-sm" ng-model="rowDetailsSelected.partNumber"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Link de la imagen</strong></td>
+                            <td><input class="input-sm" ng-model="rowDetailsSelected.link"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Descripcion:</strong></td>
+                            <td><textarea rows="5" class="input-sm" ng-model="rowDetailsSelected.description"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tipo:</strong></td>
+                            <td>
+                                <select
+                                    class="form-group-sm"
+                                    ng-model="rowDetailsSelected.type"
+                                    ng-options="x.id as x.name for x in typeCatalog"
+                                ></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Localizacion:</strong></td>
+                            <td>
+                                <select
+                                    class="form-group-sm"
+                                    ng-model="rowDetailsSelected.localization"
+                                    ng-options="x.id as x.name for x in localizationCatalog"
+                                ></select>
+                                <!--input class="input-sm" ng-model="rowDetailsSelected.localization"--></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Unidad:</strong></td>
+                            <td>
+                                <select
+                                    class="form-group-sm"
+                                    ng-model="rowDetailsSelected.unit"
+                                    ng-options="x.id as x.name for x in unitCatalog"
+                                ></select>
+                                <!--input class="input-sm" ng-model="rowDetailsSelected.unit"--></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stock:</strong></td>
+                            <td><input class="input-sm" ng-model="rowDetailsSelected.stock"></td>
+                        </tr>
+                        <!--tr>
+                            <td><strong>Revisado:</strong></td>
+                            <td><input class="input-sm" ng-model="rowDetailsSelected.checked"></td>
+                        </tr-->
+                    </table>
+                    <!--{{ rowDetailsSelected | json }}-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" ng-click="clicSaveAndNewButtonModal( 0 )">Guardar</button>
+                        <button type="button" class="btn btn-primary" ng-click="clicSaveAndNewButtonModal( 1 )">Guardar y Cerrar</button>
+                        <button type="button" class="btn btn-success" ng-click="clicSaveAndNewButtonModal( 2 )">Guardar y Nuevo</button>
+                        <!--input title="marca esta casilla para mantener los combos si se da clic en 'Guardar y Nuevo'" type="checkbox" ng-model="isMaintainCombosInSaveAndNew"-->
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
