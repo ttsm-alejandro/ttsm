@@ -22,7 +22,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
     $scope.userScreenHeight = "";
     
     //flags
-    $scope.isWaitingHttpRequest = false;
+    $scope.isWaitingHttpRequest = true;
     $scope.showViewRow = false;
     $scope.showDeleteRow = false;
     $scope.isDeleteWarning = true;
@@ -226,14 +226,15 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
         
     //traer toda la tabla
     $scope.getData = function(){
+        $scope.isWaitingHttpRequest = true;
         $scope.getUserScreenHeight();
         $scope.inventoryTableData = [];
-        //$('#myLoadingModal').modal('show'); 
         $http({
             url: inventoryPageServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
             method: "GET"
         })
         .then(function(response) {
+            $scope.isWaitingHttpRequest = false;
             if(response.data == "ACCESS DENIED" ){
                 swal( { icon : error , text : "ACCESS DENIED" } );
             }else{
@@ -242,9 +243,11 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
                     $scope.inventoryTableData[ index ].showRow = true;
                     //$scope.inventoryTableData[ index ].date = new Date( $scope.reportData[ index ].date );
                 }
+                $scope.isWaitingHttpRequest = false;
             }
         }, 
         function(response) { // optional
+            $scope.isWaitingHttpRequest = false;
             swal( { icon : error , text : "ERROR" } );
         });
     };
@@ -322,6 +325,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
     //Manda mediante GET el id/delete=ok para borrar el registro
     //despues actualiza la tabla local borrando el registro con id = al id enviado
     $scope.deleteInDataBase = function( id ){
+        $scope.isWaitingHttpRequest = true;
         $http({
                 url: inventoryPageServiceUrl + "?id=" + id + "&delete=ok&user=" + $scope.user + "&token=" + $scope.token,
                 method: "GET"
@@ -349,6 +353,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
                                 });
                         }
                     }
+                    $scope.isWaitingHttpRequest = false;
                 }
             }, 
             function(response) { // optional
@@ -370,6 +375,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
             })
             .then(function(response) {
                 if(response.data == "ACCESS DENIED" ){
+                    $('#myLoadingModal').modal('hide'); 
                     swal( { icon : error , text : "ACCESS DENIED" } );
                 }else{
                     var id = response.data.split( " " )[1];

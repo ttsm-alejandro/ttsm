@@ -56,25 +56,9 @@ Programmer: Alejandro Aguayo Acosta
                     <div ng-include="'../util/modal/modal_inventory_detail.html'"></div>
 
                     <!-- Line -->
-                    <div style="background-color: {{ ttsmBlueColor }}; height: 5px;"></div>
+                    <div ng-click="getData()" style="background-color: {{ ttsmBlueColor }}; height: 5px;"></div>
 
-                    <!-- SELECT TABLE -->
-                    <!--div class="row">
-                        <div class="col-md-2">
-                            <h4 style="text-align: right">Select Table</h4>
-                        </div>
-                        <div class="col-md-2">
-                            <select
-                                class="form-control"
-                                ng-model="tableReportSelected"
-                                ng-options="x.name as x.name for x in tableReportList"
-                                ng-change="getData()"
-                            ></select>
-                        </div>
-                        <div class="col-md-8"></div>
-                    </div-->
-
-                    <!-- Hide data until select table -->
+                    <!-- CONTENIDO -->
                     <div>
                         <!-- Title -->
                         <div class="row">
@@ -84,29 +68,13 @@ Programmer: Alejandro Aguayo Acosta
                                 </h2>
                             </div>
                         </div>
-
-                        <!-- Main Table -->
-                        <div class="row">
-                            <!--h5 ng-click="showHelp()">Clic pa calar los modales</h5-->
-                        <!--label class="label label-warning" 
-                               ng-click="tableReportFilterDateInit = '';
-                                            tableReportFilterDateFinish = '';
-                                            tableReportShowColumn[0] = true;
-                                            tableReportShowColumn[1] = true;
-                                            tableReportShowColumn[2] = true;
-                                            tableReportShowColumn[3] = true;
-                                            tableReportShowColumn[4] = true;
-                                            tableReportShowColumn[5] = true;
-                                            tableReportShowColumn[6] = true;
-                                            tableReportShowColumn[7] = true;
-                        ">RESET SELECTIONS</label-->
-                        
-                        </div>
                     </div>
                 </div>
                     
-                <div>
-                        
+                <div ng-show="isWaitingHttpRequest" style="text-align: center">
+                    <h1>Please wait...</h1>
+                </div>
+                <div ng-show="!isWaitingHttpRequest">
                         <!-- DIVISION DEL LARGO, 8 PARA LA TABLA, 3 PARA LA IMAGEN -->
                         <div class="row">
                             <!-- Sangria -->
@@ -114,10 +82,9 @@ Programmer: Alejandro Aguayo Acosta
                                 
                             </div>
                             
-                            <!-- Tabla -->
-                            <div class="col-md-8 col-lg-8" style="overflow: scroll; max-height: {{ userScreenHeight }};">
+                            <!-- Acciones -->
+                            <div class="col-md-11 col-lg-11">
                                 Acciones: 
-                                
                                     <span ng-click="showViewRow = !showViewRow" title="clic para activar la columna show/hide" class="glyphicon glyphicon-eye-open"></span>
                                     <span ng-click="showDeleteRow = !showDeleteRow" style="color: red" title="clic para activar la columna delete" class="glyphicon glyphicon-trash"></span>
                                 <br>
@@ -147,6 +114,17 @@ Programmer: Alejandro Aguayo Acosta
                                     ></select>
                                     <div ng-click="removeFilter()" class="label label-default">Remove filters</div>
                                 </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Sangria -->
+                            <div class="col-md-1 col-lg-1">
+                                
+                            </div>
+                            
+                            <!-- Tabla -->
+                            <div class="col-md-8 col-lg-8" style="overflow: scroll; max-height: {{ userScreenHeight }};">
                                 <div class="table-responsive"> 
                                     <table class="table table-hover table-condensed">
                                         <tr style="background-color: {{ ttsmBlueColor }}; color: white">
