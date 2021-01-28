@@ -112,6 +112,22 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     
     //clic on the thumb
     $scope.productChangeImage = function( page , number ){
+        //Flare
+        if( page === "flare" ){
+            switch( number ){
+                case 1:
+                    $scope.productImageSelected = "../../../images/pages/products/camera/flare_1.jpg";
+                    break;
+                case 2:
+                    $scope.productImageSelected = "../../../images/pages/products/camera/flare_2.jpg";
+                    break;
+                case 3:
+                    $scope.productImageSelected = "../../../images/pages/products/camera/flare_3.jpg";
+                    break;
+            }
+        }
+        
+        
         //V7M
         if( page === "vectoronV7M" ){
             switch( number ){

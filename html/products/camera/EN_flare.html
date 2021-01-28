@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>FLARE</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/camera/flare_1.jpg';
+                        getCurrentUrl();
+                        brochureToDownload='EN_FLARE';
+                               ">
+            <div class="container">
+            
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+                
+                <!-- MODAL PARA DESCARGAR BROCHURE-->
+                <div ng-include=" '../../util/EN_modalDownloadBrochure.html' "></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/camera/EN_mainCamera.html">CAMERA</a> / 
+                <a href="">FLARE</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- IMAGEN -->
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                        
+                        <!-- thumbs abajo de IMAGEN -->
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td ng-click="productChangeImage( 'flare' , 1 )">
+                                        <img src="../../../images/pages/products/camera/flare_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'flare' , 2 )">
+                                        <img src="../../../images/pages/products/camera/flare_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td ng-click="productChangeImage( 'flare' , 3 )">
+                                        <img src="../../../images/pages/products/camera/flare_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>FLARE</h1></div>
+                        <p>
+                            A non-contact 3D scanner that can easily and quickly acquire high-precision 3D data.
+                            
+                            <br><br><strong>HIGH LIGHT POWER AND INTELLIGENT 3D ILC TECHNOLOGY</strong>
+                            <br><br>・The FLARE system is a non-contact 3D scanner for industrial products. The surface shape can be converted into 3D data quickly with high accuracy, without touching the object to be measured. By utilizing this 3D data, it is possible to solve various problems in the production process such as prototype development and quality control, and improve the productivity of customers’ manufacturing.
+                            <br><br>・By simply placing the object to be measured on dedicated rotary table, measurement can be started easily, and high quality and high accuracy measurement is possible without depending on the skill of the measurer.
+                            <br><br>・FLARE system models are available, therefore we can propose solutions that meet customers’ requirement.
+                        </p>
+                        <br>
+                            <!--button class="btn btn-info" ng-click="showDownloadBrochureForm()" > Donwload Brochure </button-->
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <h3>Product Features</h3>
+                                
+                                <p>
+                                    <strong>1. Easy measurement without markers</strong><br>
+                                    ：Multiple measurement data can be combined without markers, eliminating the need for troublesome marker attachment / removal work.
+                                    
+                                    <br><br><strong>2. Shape reproducibility</strong><br>
+                                    ：Measures minute surface irregularities, accurately catches surface abnormalities, and is useful for early detection of defects. 　
+                                    
+                                    <br><br><strong>3. High-speed data processing</strong><br>
+                                    ：The polygon conversion of measurement data can be processed in a short time.
+                                    
+                                    <br><br><strong>4. Combined accuracy guarantee</strong><br>
+                                    ：Combined accuracy guarantee according to VDI / VDE guideline 2634 Part 3 with sphere distance test is possible.
+                                    
+                                    <br><br><strong>5. Lens configuration for all kinds of situation</strong><br>
+                                    ：We offer a wide range of lenses with all the series for different measurement FOV
+                                    
+                                    <br><br><strong>6. Probe measurement</strong><br>
+                                    ：The probe tool enables deep measurement, which is a blind spot in the optical system.
+                                    
+                                    <br><br><strong>7. Back projection</strong><br>
+                                    ：You can directly check the inspection result by projecting the measured / inspected data on the object.
+                                    
+                                    <br><br><strong>8. Texture mapping</strong><br>
+                                    ：Full color management with polygon data is possible.
+                                    
+                                    <br><br><strong>9. Target tracking</strong><br>
+                                    ：Track the target position information with two cameras.
+                                </p>
+                                
+                                <img src="../../../images/pages/products/camera/flare_3.png">
+                                
+                                <h3>Application</h3>
+                                
+                                <p>
+                                    <strong>1. Reduction of man-hours for quality judgment and cost reduction in trial production and mass production processes</strong><br>
+                                    - Color map evaluation of curved surface shapes, which is difficult with contact-type measuring machines.
+                                    <br>- Reduction of inspection man-hours from conventional measuring machines: Color map evaluation from dimensional data.
+                                    
+                                    <br><br><strong>2. Reverse engineering</strong><br>
+                                    - Used for mold copy
+                                    <br>- Used for CAE analysis to confirm mold correction
+                                    
+                                    <br><br><strong>3. Reduction of repair man-hours in mold maintenance work</strong><br>
+                                    - Immediate analysis and visualization of the amount of mold correction on site using the back projection function.
+                                    
+                                    <br><br><strong>4. Versatile measurement with touch probe</strong><br>
+                                    - Point measurement is possible by inserting a probe into a deep hole or groove that cannot be covered with optical system.
+                                    (Inspection of holes, circles, cylinders, planes, point positions, etc. is possible)
+                                    <br>- Even if a large mold reference points are located on the bottom and back, measurement is completed with less setup by measuring with a probe together with non-contact (upper surface).
+                                    
+                                    <br><br><strong>5. Jig inspection and correction</strong><br>
+                                    - The target tracking function enables on-site inspection and adjustment of jigs used for inspection.
+                                    
+                                    <br><br><strong>6. Improvement of inspection speed</strong><br>
+                                    - The sampling inspection of the mass production process is further speeded up by the automatic machine system! Error rate reduction is possible.
+                                    <br>- Inspector costs are also reduced.
+                                    
+                                    <br><br><strong>7. Texture mapping</strong><br>
+                                    - Reproduction of paintings ・ Digital data conversion of cultural properties such as vases and Buddha statues is possible
+                                </p>
+                                
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/CEv5CL2wRk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }};">
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th></th>
+                                    <th colspan="2">FLARE Pro</th>
+                                    <th colspan="2">FLARE S</th>
+                                    <th colspan="2">FLARE E</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2">
+                                        <img src="../../../images/pages/products/camera/flare_1_thumb.jpg" width="100%">
+                                    </td>
+                                    <td colspan="2">
+                                        <img src="../../../images/pages/products/camera/flare_2_thumb.jpg" width="100%">
+                                    </td>
+                                    <td colspan="2">
+                                        <img src="../../../images/pages/products/camera/flare_3_thumb.jpg" width="100%">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pixel</strong></td>
+                                    <td style="text-align: center;">8M</td>
+                                    <td style="text-align: center;">16M</td>
+                                    <td style="text-align: center;">5M</td>
+                                    <td style="text-align: center;">12M</td>
+                                    <td style="text-align: center;">5M</td>
+                                    <td style="text-align: center;">8M</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>FOV(mm)</strong></td>
+                                    <td style="text-align: center;">65x50 ～ <br>850x700</td>
+                                    <td style="text-align: center;">70x50 ～ <br>40x700</td>
+                                    <td style="text-align: center;">50x40 ～ <br>1200x750</td>
+                                    <td style="text-align: center;">70x55 ～ <br>25x630</td>
+                                    <td style="text-align: center;">40x30 ～ <br>500x450</td>
+                                    <td style="text-align: center;">80x60 ～ <br>500x400</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Point distance(μm)</strong></td>
+                                    <td style="text-align: center;">20 ～ 256</td>
+                                    <td style="text-align: center;">15 ～ 193</td>
+                                    <td style="text-align: center;">20 ～ 485</td>
+                                    <td style="text-align: center;">17 ～ 201</td>
+                                    <td style="text-align: center;">16 ～ 208</td>
+                                    <td style="text-align: center;">27 ～ 155</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Light source</strong></td>
+                                    <td style="text-align: center;" colspan="2">White light <br>(red/blue/gree 3 colors LED)</td>
+                                    <td style="text-align: center;" colspan="2">Blue LED</td>
+                                    <td style="text-align: center;" colspan="2">Blue LED</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            
+            </div>
+            <!-- SPACE -->
+            <div style="height: 10px"></div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>
