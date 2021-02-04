@@ -30,6 +30,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
     
     //filtros de vista
     $scope.filterViewByLocalization = "";
+    $scope.filterViewByDescription = "";
     $scope.filterViewByType = "";
     $scope.filterViewByChecked = "";
     

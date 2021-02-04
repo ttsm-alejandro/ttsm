@@ -100,6 +100,11 @@ Programmer: Alejandro Aguayo Acosta
                                         ng-model="filterViewByType"
                                         ng-options="x.id as x.name for x in typeCatalog"
                                     ></select>
+                                    <!-- Descripsion -->
+                                    <input
+                                        class="form-group-sm"
+                                        ng-model="filterViewByDescription"
+                                    >
                                     <!-- Location -->
                                     <select
                                         class="form-group-sm"
@@ -139,7 +144,7 @@ Programmer: Alejandro Aguayo Acosta
                                             <td>Stock</td>
                                             <td>Revisado</td>
                                         </tr>
-                                        <tr ng-repeat="row in inventoryTableData" title="clic para desplegar imagen, doble clic para actualizar datos" 
+                                        <tr ng-repeat="row in inventoryTableData | filter : { description : filterViewByDescription }" title="clic para desplegar imagen, doble clic para actualizar datos" 
                                             ng-dblclick="showDetailsInModal( row )"
                                             style="{{ setRowColorBySelected( row.description ) }}"
                                             ng-click="imageSelected( row.link , row.description )"
