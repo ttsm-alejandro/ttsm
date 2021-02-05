@@ -83,7 +83,6 @@ Step
 Medición
 Measurement
 Arm
-Comet
 Fotogrametría
 Photogrammetry
 Raptor Eye 2

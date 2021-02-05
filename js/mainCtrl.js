@@ -394,7 +394,6 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     $scope.productCategoryArray = [
         { id : 0 , name : "ALL" },
         { id : 1 , name : "Vectoron" },
-        { id : 2 , name : "Comet" },
         { id : 3 , name : "Leica Laser Tracker" },
         { id : 4 , name : "spScan" },
         { id : 5 , name : "DPA System" }
