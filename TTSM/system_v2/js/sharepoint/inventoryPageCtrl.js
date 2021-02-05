@@ -93,7 +93,8 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
             { id : "14", name : "Estanteria A15" },
             { id : "15", name : "Laboratory" },
             { id : "16", name : "Warehouse" },
-            { id : "17", name : "Sala de expocision"}
+            { id : "17", name : "Sala de expocision"},
+            { id : "18", name : "Clean Room"}
         ];
         $scope.unitCatalog = [ 
             { id : "0", name : "Piece" },

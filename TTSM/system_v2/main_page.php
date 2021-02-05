@@ -54,13 +54,7 @@ Programmer: Alejandro Aguayo Acosta
             
             <h2 style="color: white; background-color: darkblue; text-align: center;">NEWS</h2>
             <h3>
-                Header changed, new style
-                <br><br>
-                "CATALOGS" with a new, more accesible information, some tables where deleted
-                <br><br>
-                Old system still exist, but eventually will dissapear, 10 days left until dissapear...
-                <br><br>
-                Link to old system: <a href="../system/">clic aqui</a>
+                Inventory page added
             </h3>
             
         </div>
