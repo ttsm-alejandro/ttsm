@@ -145,6 +145,11 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     
     //
     $scope.showCalibrationPlanner = function(){
+        var a = document.createElement("a");
+        a.href = "./calibration_planner.php";
+        a.click();
+        
+        /*
         $http({
             url: calibrationPlannerServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
             method: "GET"
@@ -163,6 +168,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
             swal( { text: "PLEASE TRY AGAIN LATER", icon: "error" } );
             $('#myLoadingModal').modal('hide');
         });
+        */
     };
     
     //
