@@ -489,7 +489,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     
     /***** VARIABLES ******/
     $scope.brochureToDownload = "";
-    var emailServiceUrl = "http://www.ttsm.com.mx/php/sendEmailBrochureDownloadRequest.php";
+    var emailServiceUrl = "https://www.ttsm.com.mx/php/sendEmailBrochureDownloadRequest.php";
     
     //Brochure location
     $scope.brochureLocationFolder = "../../../brochures/";
@@ -652,7 +652,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     $scope.registerButtonDisabled = false;
     
     //
-    var emailWebinarServiceUrl = "http://www.ttsm.com.mx/php/sendEmailWebinarRegistrationRequest.php";
+    var emailWebinarServiceUrl = "https://www.ttsm.com.mx/php/sendEmailWebinarRegistrationRequest.php";
     //var emailWebinarServiceUrl = "http://localhost/ttsm_com_mx/php/sendEmailWebinarRegistrationRequest.php";
     
     /*********** Funciones ***********/
