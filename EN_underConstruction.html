@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <!-- Aqui poner el TITLE de la pagina que ya se subio pero esta en construccion -->
+        <title>Under construction</title>
+        
+        <link rel="icon" href="images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7959089.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="getCurrentUrl();"
+             >
+            <!-- Main Content -->
+            <div>
+                <!-- Header en container centrado -->
+                <div class="container">
+                    <!-- Header -->
+                    <div ng-include="'html/util/EN_header.html'"></div>
+
+                    <!-- MODAL INSCRIPCION A WEBINAR -->
+                    <!--div ng-include=" 'html/util/EN_modalWebinarRegistration.html' "></div-->
+                </div>
+
+                
+                <!-- IMAGEN en construccion -->
+                <div class="row" style="text-align: center">
+                    <h1>Please come back later...</h1>
+                    <img src="images/util/under_construction.png" width="50%">
+                </div>
+            </div>
+            
+            <!-- salto de 5px -->
+            <div style="height: 5px"></div>
+            
+            <!-- Footer -->
+            <div ng-include="'html/util/EN_footer.html'"></div>
+            
+        </div>
+    </body>
+</html>

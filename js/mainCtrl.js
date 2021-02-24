@@ -378,6 +378,15 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         $('#myModal').modal('show');
     };
     
+    //
+    $scope.showUnderConstructionAlert = function( isEspanol ){
+        if( isEspanol ){
+            swal( { title : "Proximamente" , text : "Sitio en construccion" , icon : "warning" }  );
+        }else{
+            swal( { title : "Coming soon" , text : "Site under construction" , icon : "warning" }  );
+        }
+    }
+    
         /*
      ************************************************************************** 
      * mainCtrl finishi here
