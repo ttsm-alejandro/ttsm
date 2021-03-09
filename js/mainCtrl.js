@@ -52,6 +52,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     $scope.showItem6 = false;
     $scope.showItem7 = false;
     $scope.showItem8 = false;
+    $scope.showItem9 = false;
     
     //show/hide DESCRIPTION / TECHNICAL DATA / INQUIRY
     $scope.productsShowDescription = false;
@@ -105,6 +106,9 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
                 break;
             case 8:
                 $scope.showItem8 = !$scope.showItem8;
+                break;
+            case 9:
+                $scope.showItem9 = !$scope.showItem9;
                 break;
         }
         

@@ -24,7 +24,7 @@
                         
                         <!-- PRODUCTOS -->
                         <li class="dropdown">
-                        <a style="font-weight: bold;" class="dropdown-toggle" data-toggle="dropdown" href="#"><br>&nbsp PRODUCTOS &nbsp<span class="caret"></span></a>
+                        <a style="font-weight: bold;" class="dropdown-toggle" data-toggle="dropdown" href="#"><br>&nbsp PRODUCTOS <div class="label label-danger">nuevo</div> &nbsp<span class="caret"></span></a>
                             <ul class="dropdown-menu">
 
                                 <!-- Product Information -->
@@ -116,9 +116,20 @@
                                 <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksInspector.html" ng-show="showItem6">Polyworks Inspector</a></li>
                                 <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksModeler.html" ng-show="showItem6">Polyworks Modeler</a></li>
                                 <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_spGauge.html" ng-show="showItem6">spGauge</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_atsInspect.html" ng-show="showItem6">ATS Inspect</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}ES_underConstruction.html" ng-show="showItem6">ATS CM4D <div class="label label-warning">proximamente</div></a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}ES_underConstruction.html" ng-show="showItem6">ATS Bus <div class="label label-warning">proximamente</div></a></li>
+                                <li class="divider"></li>
+                                
+                                
+                                <!-- Item 9: Industria 4.0 -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/industry4/ES_mainIndustry4.html">
+                                        INDUSTRIA 4.0 <div class="label label-danger">nuevo</div>
+                                        <span class="signoMas" ng-click="showSubMenu( 9 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsInspect.html" ng-show="showItem9">ATS Inspect</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}ES_underConstruction.html" ng-show="showItem9">ATS CM4D <div class="label label-warning">proximamente</div></a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}ES_underConstruction.html" ng-show="showItem9">ATS Bus <div class="label label-warning">proximamente</div></a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}ES_underConstruction.html" ng-show="showItem9">TTS Smart Measuring System <div class="label label-warning">proximamente</div></a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 7: Robot -->
