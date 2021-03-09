@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>Toukou Industries</title>
+        <link rel="icon" href="../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script src="../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../js/mainCtrl.js"></script>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131182236-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131182236-1');
+</script>
+    </head>
+    
+    <body ng-app="miApp">
+        <!-- to put BLUE BACKGROUND, select "setCaseStudySelected";  -->
+        <div ng-controller="mainCtrl"
+            ng-init="
+                setCaseStudySelected( 13 );
+                getCurrentUrl(); 
+                relativeUrl = '../../';"
+            
+        >
+            <!-- Main Content -->
+            <div class="container">
+                <!-- Header -->
+                <div ng-include="'../../html/util/ES_header.html'"></div>
+
+                <!-- Line -->
+                <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                
+                
+                <!-- MAIN TITLE -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-lg" style="background-color: {{ ttsmBlueColor }}; color: white;">
+                            <h1 style="text-align: center; font-weight: bold"><a href="../products/vectoron/ES_vectoronV6MII.html">VECTORON</a><br>Toukou Industries.</h1>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="row">
+                    <!-- Left MENU -->
+                    <div class="col-md-3">
+                        <div ng-include="'ES_caseStudyMenu.html'"></div>
+                    </div>
+                    
+                    <!-- Y-TEC Content -->
+                    <div class="col-md-9">
+                        <!-- ROUTE -->
+                        <div style="height: 2px"></div>
+                        <a href="{{ relativeUrl }}ES_index.php">HOME</a> / 
+                        <a href="{{ relativeUrl }}ES_caseStudy.html">CASE STUDY</a> /
+                        <a href="">Toukou Industries</a>
+                        
+                        <!-- ALLEX SCRIPT -->
+                        <!-- Title -->
+                        <h2><a href="../products/vectoron/ES_vectoronV7M.html">VECTORON</a><br>Toukou Industries</h2>
+                        
+                        <!-- line -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+
+
+<!-- Subtitle -->
+<h3>
+El panel de proceso del "molde de prensa" se cuantifica claramente con una máquina de medición 3D que es capaz de medir tanto con contacto como sin contacto.
+Las piezas de molde modificadas a mano también se convierten a datos 3D. 
+</h3>
+
+<!-- line -->
+<div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+
+
+<!-- Text on left, image on right-->
+<div class="row">
+<!-- text -->
+<div class="col-md-6">
+<p>
+<br> Toukou Industries, con sede en la ciudad de Inazawa, Aichi Pre., fue fundada en 1952 como una empresa de fabricación y procesamiento de troqueles de prensa para piezas de automóviles. Desde entonces, durante más de 60 años, han ampliado la fábrica de prensas y matrices, y han construido una nueva fábrica de tratamiento térmico, y todavía fabrican productos orientados a la calidad en la ciudad.
+<br>
+<br>
+Sus principales productos son repuestos para automóviles, aparatos de gas, etc., para los que se requiere alta precisión y seguridad. En los últimos años, se requiere una gran capacidad para manejar el proceso de fabricación de moldes debido al uso de acero de alta resistencia que es difícil de moldear y plazos de entrega más cortos debido a una velocidad de desarrollo más rápida. Para crear un nuevo valor además de la confianza y la experiencia que han ganado a lo largo de los años, han creado un entorno en el que pueden manejar la última tecnología.
+</p>
+</div>
+<!-- image -->
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouPiece01.jpg" style="width: 100%;">
+</div>
+</div>
+
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Si bien tienen grandes equipos y dispositivos de medición, introdujeron una máquina de medición 3D articulada "VECTORON VMC7000MApi" y el software de ingeniería inversa "spScan" que permite el análisis inmediato, de TTS en 2019.
+<br>
+<br> ¿Por qué eligieron “VECTORON”?
+<br> ¿Qué tipo de efecto obtuvieron después de la introducción?
+<br> Los entrevistamos, Toukou Industries, que mira hacia el futuro.
+
+</p>
+</div>
+</div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+    <h3>
+        ANTES
+    </h3>
+<p>
+- Se requieren muchas horas de trabajo para corregir la precisión del panel en la producción de moldes, lo cual es un desafío para mejorar la velocidad en el futuro.
+<br> - Es difícil reemplazar el sentido de experto con datos 3D.
+<br> - El panel de proceso intermedio del "tipo progresivo" no se puede medir y no hay más remedio que adivinar qué parte debe corregirse. 
+</p>
+
+    <h3>
+        DESPUES
+    </h3>
+<p>
+- Los puntos de corrección que solían ser encontrados por muchos años de intuición y conjetura son claros midiendo con VECTORON, lo que conduce a la reducción de horas hombre.
+<br> - Los mapas de color y los valores medidos facilitan la combinación de los sentidos de los expertos con los datos.
+<br> - El panel de proceso se puede medir inmediatamente cuando sea necesario y se pueden realizar mejoras precisas. 
+</p>
+
+</div>
+</div>
+
+<!-- Photo Staff01 -->
+<h3 style="text-align: center">
+    ■Mr. Kenji Suzumura / Director General
+</h3>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouStaff01.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Photo Staff02 -->
+<h3 style="text-align: center">
+    ■Mr. Kunimitsu Kato / Subdirector General del Departamento de Moldes
+</h3>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouStaff02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Photo Staff03 -->
+<h3 style="text-align: center">
+    ■Mr. Suguru Watanabe / Jefe del Departamento de Moldes 
+</h3>
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouStaff03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Space -->
+<div style="height: 10px"></div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Introdujeron el sistema VECTORON en su departamento de molduras para medir paneles formados en una moldura de prueba después de hacer el molde. Los datos se utilizan en la comunicación entre el sitio de moldeo y los operadores de datos 3D. 
+</p>
+</div>
+</div>
+
+
+
+<!-- Text Title-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+A medida que aumentó el manejo del acero de alta resistencia, comprender el panorama completo se volvió esencial.
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Con qué propósito se utiliza VECTORON, que se introdujo en 2019?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kunimitsu Kato (en adelante, “Kato”): </strong> nuestro departamento se encarga de diseñar y fabricar los moldes, y verificar si los productos están moldeados según lo diseñado por moldeo de prueba. Usamos el VECTORON para medir los paneles moldeados para determinar si tienen la forma adecuada como apuntamos. Medimos las partes del molde y si lo que está hecho a partir del molde es exacto o no. Manejamos principalmente piezas de automóviles y piezas de equipos de gas, que tienen un tamaño de entre 100 mm y 1000 mm. Actualmente, "VECTORON" se usa aproximadamente una vez cada dos días. 
+</p>
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Antes de tener VECTORON, ¿cómo manejaba el mismo trabajo?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kato: </strong> colocamos productos en plantillas proporcionadas por los clientes para ver las lagunas. Cada producto fue medido por el encargado de montaje. Dado que la plantilla de inspección varía según el panel, se debe utilizar cada plantilla de inspección. Pedimos prestados jigs a nuestros clientes y el encargado del montaje midió cada uno de ellos.
+</p>
+</div>
+</div>
+
+<!-- Photo Staff04 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouStaff04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Space -->
+<div style="height: 10px"></div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+A veces no podíamos tomar prestada la plantilla todavía en el momento en que la necesitábamos mientras el producto ya estaba terminado. Ahora que tenemos la máquina de medición, podemos medir los productos en cualquier momento que queramos por nosotros mismos. Hay muchos casos en los que queremos medir para conocer la pieza corregida en el proceso de fabricación, y el flujo de trabajo se ha vuelto más fluido que antes.
+</p>
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Qué te hizo decidir presentar VECTORON en 2019?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kato: </strong>
+Dado que se ha prestado atención a la seguridad contra colisiones y la reducción de peso en la industria de nuestros clientes, está aumentando el uso de materiales difíciles de moldear, como los materiales de alta resistencia.
+<br>
+Durante varios años, ha habido voces en el campo de que es difícil medir el tamaño del panel prensado debido a los cambios drásticos en la precisión del panel prensado según el material.
+<br> <br>
+Además, fue difícil comprender el panorama completo, ya que las plantillas proporcionadas por los clientes son para una inspección en un área necesaria. Aunque lo que tenemos que ver con mucho cuidado son el springback y la deformación, fue difícil ver la cantidad de corrección con precisión. Solo podíamos confiar en la intuición de un experto que tiene experiencia en el trabajo durante muchos años. Fue como, “en este material bajo esta condición, esta parte podría ser el punto a corregir. Vamos a revisarlo ". Siempre fue solo una suposición y fue muy difícil corregir las piezas con precisión, lo que generó horas de trabajo adicionales. La gran cantidad de horas-hombre también genera horas extraordinarias para los empleados.
+<br> <br>
+Así que empezamos a buscar una forma de reducir el número de correcciones aunque sea una sola vez, y llegamos a “VECTORON”. Habíamos visto la máquina real tantas veces como muchos de nuestros clientes ya la habían tenido y casi nos habíamos decidido a ir con VECTORON cuando empezamos a pensar en ella.
+<br> <br>
+Además, el manejo de los valores medidos será más estricto a partir de ahora y habrá más posibilidades de que se requieran evidencias de medición. Definitivamente existe una tendencia a enviar mapas de color y valores dimensionales a los clientes como parte del proceso, por lo que necesitábamos equipos que pudieran manejarlo.
+</p> 
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Viste también máquinas de medición 3D de otras empresas?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kato: </strong> Sí, lo hicimos. Pero sus pantallas están principalmente en inglés, lo cual fue un desafío para nosotros usarlas cómodamente. “Made in Japan” nos alivia. Llamamos al laboratorio Kosaka, el fabricante de VECTORON, y nos dijeron que TTS se encarga de sus ventas. Entonces te contactamos.
+<br>
+</p>
+</div>
+</div>
+
+<!-- Photo Piece02 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouPiece02.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Space -->
+<div style="height: 10px"></div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+No es sencillo ni fácil comprar un dispositivo tan caro. Creo que nuestra empresa tardó entre 3 y 4 años en tomar la decisión final. Tras obtener la certificación ISO, hemos celebrado reuniones periódicas de calidad y revisiones de la dirección, y hemos sido positivos en cuanto a mejorar la situación de nuestras divisiones comerciales y recursos de inversión. Pensamos que "VECTORON" es necesario para cubrir los tiempos y las necesidades del cliente.
+</p>
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Su empresa dispone de otras máquinas de medición como equipamiento del departamento de prensa. ¿No pensaste en usarlo también en tu departamento?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kato: </strong> Las máquinas de medición en el departamento de prensa eran todas del tipo sin contacto y solo se podían medir piezas pequeñas con ellas. Además, también medimos los elementos colocados en una plantilla de inspección con frecuencia, por lo que necesitábamos una función de medición de contacto para verificar el estándar de la plantilla de inspección. Queríamos no solo la función de medición por contacto, sino también una función para convertir los datos medidos en un mapa de color y pensamos que VECTORON se ajustaba a nuestro departamento de moldeo más que otras máquinas de medición. 
+</p>
+</div>
+</div>
+
+<!-- TEXT TITLE-->
+<div class="row">
+<div class="col-md-12">
+<h2>
+El proceso intermedio de "tipo progresivo" puede corregirse mediante una medición cuidadosa.
+
+</h2>
+</div>
+</div>
+
+<!-- Small Blue line -->
+<div class="row"> <div class="col-md-2 col-sm-2" style="background-color: {{ ttsmBlueColor}}; height: 2px"></div></div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+Habiendo empezado a usar VECTORON, ¿cuáles le parecieron los beneficios de VECTORON? 
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Suguru Watanabe (en lo sucesivo, "Watanabe"): </strong>
+Nuestro trabajo principal es hacer un molde de “tipo progresivo”, un molde en el que se pueden configurar múltiples procesos para que los materiales se envíen para pasar cada proceso y se formen en un panel al final. Las plantillas de inspección proporcionadas por los clientes eran solo para paneles completos, mientras que queríamos verificar esos paneles en medio del proceso. Por otro lado, VECTORON puede medir paneles en medio del proceso.
+</p>
+</div>
+</div>
+
+<!-- Photo Staff05 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouStaff05.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<!-- Space -->
+<div style="height: 10px"></div>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Con un mapa de color generado por el valor medido y los datos 3D, la irregularidad se puede ver de un vistazo. Solíamos compartir información sobre dónde y cómo corregir en función de las intuiciones de los expertos, lo cual era un poco vago. Ahora podemos obtener datos claros, lo que resultó en una reducción del proceso de corrección en el sitio debido a VECTORON. Es muy importante que todos puedan compartirlo visualmente. Creo que es el mejor beneficio.
+<br> <br>
+Ahora que podemos ver ciertos valores numéricos de las partes que solíamos medir con instrumentos analógicos como medidores de altura, es más fácil para nosotros dar instrucciones específicas como, "Quizás el punto donde comienza el plegado sea diferente", o “Quizás la deformación sea causada por la liberación de tensión cuando se perfora el agujero. Es realmente fácil para nosotros ver lo que no pudimos ver.
+</p>
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Cómo vas a utilizar VECTORON a partir de ahora?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong> Kenji Suzumura (en lo sucesivo, "Suzumura"): </strong>
+A partir de ahora, nos gustaría acumular los datos numéricos medidos y vincularlos bien con el software de análisis, para que podamos mejorar la precisión desde la etapa inicial de fabricación. Con el análisis que lee tendencias, podremos predecir las piezas que vamos a fabricar, y el tiempo de mecanizado y ajuste será aún más corto.
+<br> <br>
+Además, junto con el software "spScan" que se presentó en conjunto, también está desempeñando un papel en el desarrollo del negocio de la ingeniería inversa. El otro día, trabajé en revertir partes que no tenían dibujos o datos porque el fabricante había cerrado. Pudimos fabricar y entregar la misma pieza midiendo las piezas en detalle, incluidos los cambios que el experto había realizado al esmerilar y pulir en el sitio y usar spScan para convertir los datos escaneados en datos 3D.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece03 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouPiece03.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+<br>
+
+<!-- Text only -->
+<div class="row">
+<div class="col-md-12">
+<p>
+Con VECTORON, puede atender dicha solicitud de inmediato. Si dispone de datos 3D de la forma final de las piezas fabricadas internamente, podrá gestionar la crisis en caso de pedidos repentinos o imprevistos. Por motivos de seguridad, nos gustaría acumular datos de forma activa y planeamos capacitar a los empleados que puedan medir para aumentar la tasa de operación de VECTORON.
+</p>
+</div>
+</div>
+
+<!-- Pregunta en grande-->
+<div class="row">
+<div class="col-md-12">
+<h3>
+¿Cómo fue la respuesta del personal comercial y técnico de TTS al presentar "VECTORON"?
+</h3>
+</div>
+</div>
+
+<!-- Respuesta a pregunta en grande -->
+<div class="row">
+<div class="col-md-12">
+<p>
+<strong>Kato: </strong> 
+Estamos satisfechos con la forma en que responden a nuestras solicitudes de inmediato. Siempre que tenemos una pregunta, llamamos al personal técnico, y la mayoría de las veces la respuesta es rápida y se puede resolver por teléfono.
+<br> <br>
+En cooperación con Tokyo Boeki Techno-System, también estamos considerando un servicio para proporcionar resultados de medición a un nivel práctico por una tarifa a otros usuarios que deseen probar el uso de VECTORON. Aún puede tener una experiencia de demostración, pero estamos seguros de que todos necesitan saber qué sucederá cuando el sistema esté en funcionamiento. Pensamos que si nosotros, que conocemos la tecnología y la situación en el campo, pudiéramos ayudar, podríamos brindar una experiencia aún más precisa.
+</p>
+</div>
+</div>
+
+<!-- Photo Piece04 -->
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<img src="../../images/pages/caseStudy/toukou/toukouPiece04.jpg" style="width: 100%;">
+</div>
+<div class="col-md-3"></div>
+</div>
+<br>
+
+<!-- Only Text -->
+<div class="row">
+<div class="col-md-12">
+<p>
+El mundo evoluciona rápidamente. Nuestro objetivo es seguir el ritmo de esta evolución y aumentar la satisfacción del cliente. En particular, hemos escuchado opiniones de clientes en diversos campos con respecto a la respuesta a la digitalización, por lo que la digitalización es un proceso importante que será la base del futuro proceso de producción. Creemos que VECTORON y spScan continuarán desempeñando un papel central en el desarrollo de nuestro negocio.
+</p>
+</div>
+</div>
+
+
+                            <!-- Toukou Industries Information -->
+                            <div class="row" style="background-color: lightsteelblue">
+                                <!-- LOGO -->
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="../../images/pages/caseStudy/toukou/toukouLogo.jpg" style="width: 100%;">
+                                </div>
+
+                                <!-- Datos -->
+                                <div class="col-md-6">
+                                    <h3>
+Toukou Industries.
+                                    </h3>
+                                    <p>
+Toukou Industries se fundó en la ciudad de Inazawa, Aichi Pre. en 1952. Originalmente se dedicaban al procesamiento de fabricación de moldes de prensado de piezas de automóvil y ahora tienen una historia de más de 60 años en su ciudad natal, al tiempo que comenzaron nuevas divisiones y mejoraron las fábricas. Actualmente tienen 3 divisiones, división de moldes, división de prensas y división de tratamiento térmico para principalmente piezas de automóviles y piezas de aparatos de gas. Tras la certificación ISO14001 e ISO9001, están trabajando en la mejora de la calidad y la productividad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div ng-include="'../../html/util/ES_footer.html'"></div>
+                
+            </div>
+    </body>
+</html>
