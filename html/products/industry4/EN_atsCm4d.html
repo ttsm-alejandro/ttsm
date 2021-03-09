@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ATS CM4D</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/industry4/atsCm4d_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/industry4/EN_mainIndustry4.html">INDUSTRY 4.0</a> / 
+                <a href="">ATS CM4D</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ATS CM4D</h1></div>
+                        <h4>ATS CM4D is a solution that collects various types of numerical data such as facility data and measurement data, and manages and visualizes them on one platform.</h4>
+                        <p>
+                            It enables numerical analysis of defective products and preventive maintenance before problems occur. In addition, it enables digital traceability of quality records, which helps prevent intentional alteration of quality data.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        
+                        <h2>What ATS CM4D can do</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 5px;"></div>
+                        
+                        <p>
+                            ■ Collection of equipment data and measurement data
+                            <br>■ Linking management and analysis of equipment data and measurement data
+                            <br>■ Building digital traceability
+                            <br>■ Prevention of inspection data tampering
+                            <br>■ Auto-generation of inspection report
+                            <br>■ Send an alert message of preventive maintenance to related people before a problem occurs
+                        </p>
+                        
+                        <h2>Product Features</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- -->
+                        <h2>Data translation</h2>
+                        <p>
+                            The powerful data translator of CM4D can define data layout by only mouse control without programming for data from various kinds of equipment and measuring devices.
+                        </p>
+
+                        <img src="../../../images/pages/products/industry4/atsCm4d_2.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Auto report generation</h2>
+                        <p>
+                            With CM4D, inspection numbers output from different measuring machines can be arbitrarily exchanged and combined into one predetermined inspection report, and the inspection report can be created automatically. In addition, it is possible to automatically create a pre-created report in PDF and distribute it to the related people.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsCm4d_3.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Prevention of data tampering</h2>
+                        <p>
+                            By linking equipment data and measurement data to CM4D automatically, it prevents data tampering. Equipment data and measurement data are linked, managed, and watched.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsCm4d_4.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Preventive maintenance</h2>
+                        <p>
+                            It’s a tough job to deal with defects once they occur. With CM4D, it is possible to send an alert message BEFORE a defect occurs and take a preventive maintenance measure by linking process data and result data to CM4D.
+                        </p>
+                        <img src="../../../images/pages/products/industry4/atsCm4d_5.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Data browsing</h2>
+                        <p>
+                            Data accumulated in the CM4D database can be interactively browsed with general BI tools. It’s also possible to build a web page according to browsing requirements.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsCm4d_6.jpg" width="100%">
+                      
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            
+                            <!-- tabla para requisitos del sistema / pc -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

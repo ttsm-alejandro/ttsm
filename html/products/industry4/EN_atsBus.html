@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ATS BUS</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/industry4/atsBus_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/industry4/EN_mainIndustry4.html">INDUSTRY 4.0</a> / 
+                <a href="">ATS Bus</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ATS Bus</h1></div>
+                        <h4>ATS Bus is a solution that can build linkages between equipment and system in a short term at lower cost without programming. It’s one smart tool to promote IoT at factories which does not require a manual programming skill.</h4>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        
+                        <h2>What ATS Bus can do</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 5px;"></div>
+                        
+                        <p>
+                            ■ Collection and visualization of equipment data
+                            <br>■ In-process tracking of products
+                            <br>■ Efficient system linkage
+                            <br>■ Building system linkage in a short term without programming
+                            <br><br>The followings can be set with just mouse control:
+                            <br>&nbsp - Data definition
+                            <br>&nbsp - I/F・Route definition
+                            <br>&nbsp - Linkage definition of events and actions
+                        </p>
+                        
+                        <h2>Product Features</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- -->
+                        <h2>Collection and visualization of equipment data</h2>
+                        <p>
+                            It collects various kinds of manufacturing equipment information at manufacturing sites by setting data definition, route/event definition and actions/linkage definition, then it visualizes them on web applications.
+                        </p>
+
+                        <img src="../../../images/pages/products/industry4/atsBus_2.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Application example of manufacturing IoT using ATS Bus</h2>
+                        <p>
+                            CASE: Information gathered from manufacturing sites is sent into the database and a monitoring screen is built with a BI tool.
+                            <br><br>
+                            This case is explained in the following 3 steps:
+                            <br>&nbsp1. Data definition 
+                            <br>&nbsp2. I/F and route definition 
+                            <br>&nbsp3. Event, action, and linkage definition
+                        </p>
+                        
+                        <h4>【Overall structure】</h4>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_3.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>0. Preparation –Building a mechanism of data collection and data disclosure</h2>
+                        <p>
+                            ATS Bus is a tool that builds a system linkage among nodes such as equipment, measuring devices, sensors, etc., IoT platforms, and database. As well as ATS Bus, INPUT/OUTPUT mechanism needs to be built for realizing IoT as shown in the figures below.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_4.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>1. ATS Bus operation – 1. Data definition</h2>
+                        <p>
+                            Define identification keywords and data contents for the data collected from each equipment and measurement node, and data to send to an IoT platform and upper layer in the database, and save them with identification message.
+                        </p>
+                        <img src="../../../images/pages/products/industry4/atsBus_5.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>2. ATS Bus operation – 2. I/F and route definition</h2>
+                        <p>
+                            Define interface, monitoring target, and transferring target for the data collected from each equipment and measurement node, and data to send to an IoT platform and upper layer in the database, and save them with identification message name.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_6.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>3. ATS Bus operation – 3. Event, action, and linkage definition</h2>
+                        <p>
+                            Link actions such as transferring data to IoT platforms and upper layer in the database for events such as uploading data from each equipment and measurement node, and build data control between the nodes.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_7.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>4. Data disclosure with BI tools</h2>
+                        <p>
+                            Data collected from each node at manufacturing sites are gathered into the database or sent to production system via ATS Bus. Create a report page in any style each user wants with required information and disclose it.
+                        </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_8.jpg" width="100%">
+                      
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            
+                            <!-- tabla para requisitos del sistema / pc -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

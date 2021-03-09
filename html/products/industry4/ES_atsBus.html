@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>ATS BUS</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/industry4/atsBus_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/industry4/ES_mainIndustry4.html">INDUSTRIA 4.0</a> / 
+                <a href="">ATS BUS</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>ATS Bus</h1></div>
+                        <h4>ATS Bus is a solution that can build linkages between equipment and system in a short term at lower cost without programming. It’s one smart tool to promote IoT at factories which does not require a manual programming skill.</h4>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        
+                        <h2> Qué puede hacer ATS Bus </h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 5px;"></div>
+                        
+                        <p>
+                             ■ Recopilación y visualización de datos de equipos
+                             <br> ■ Seguimiento de productos en proceso
+                             <br> ■ Conexión eficiente del sistema
+                             <br> ■ Vinculación del sistema de construcción a corto plazo sin programación
+                             <br> <br> Lo siguiente se puede configurar con solo el control del mouse:
+                             <br> & nbsp: definición de datos
+                             <br> & nbsp - I / F ・ Definición de ruta
+                             <br> & nbsp: definición de vínculos de eventos y acciones
+                         </p> 
+                        
+                        <h2>Características del producto</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- -->
+                        <h2> Recopilación y visualización de datos de equipos </h2>
+                         <p>
+                             Recopila varios tipos de información de equipos de fabricación en los sitios de fabricación mediante el establecimiento de la definición de datos, la definición de ruta / evento y la definición de acciones / enlace, luego los visualiza en aplicaciones web.
+                         </p>
+
+                        <img src="../../../images/pages/products/industry4/atsBus_2.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> Ejemplo de aplicación de fabricación de IoT utilizando ATS Bus </h2>
+                         <p>
+                             CASO: La información recopilada de los sitios de fabricación se envía a la base de datos y se crea una pantalla de monitoreo con una herramienta de BI.
+                             <br> <br>
+                             Este caso se explica en los siguientes 3 pasos:
+                             <br> & nbsp1. Definición de datos
+                             <br> & nbsp2. Definición de I / F y ruta
+                             <br> & nbsp3. Definición de evento, acción y vinculación
+                         </p>
+                        
+                         <h4> 【Estructura general】 </h4>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_3.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> 0. Preparación: creación de un mecanismo de recopilación y divulgación de datos </h2>
+                         <p>
+                             ATS Bus es una herramienta que crea un enlace de sistema entre nodos, como equipos, dispositivos de medición, sensores, etc., plataformas de IoT y bases de datos. Además del bus ATS, es necesario construir un mecanismo de ENTRADA / SALIDA para realizar IoT como se muestra en las figuras siguientes.
+                         </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_4.jpg" width="100%">
+                        
+                        <! - ->
+                         <h2> 1. Funcionamiento del bus ATS: 1. Definición de datos </h2>
+                         <p>
+                             Defina las palabras clave de identificación y el contenido de los datos para los datos recopilados de cada equipo y nodo de medición, y los datos para enviar a una plataforma de IoT y una capa superior en la base de datos, y guárdelos con un mensaje de identificación.
+                         </p> 
+                         
+                        <img src="../../../images/pages/products/industry4/atsBus_5.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> 2. Operación del bus ATS - 2. Definición de ruta e I / F </h2>
+                         <p>
+                             Defina la interfaz, el objetivo de monitoreo y el objetivo de transferencia para los datos recopilados de cada equipo y nodo de medición, y los datos para enviar a una plataforma de IoT y una capa superior en la base de datos, y guárdelos con el nombre del mensaje de identificación.
+                         </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_6.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> 3. Operación del bus ATS - 3. Definición de eventos, acciones y vínculos </h2>
+                         <p>
+                             Vincular acciones como la transferencia de datos a las plataformas de IoT y la capa superior en la base de datos para eventos como la carga de datos de cada equipo y nodo de medición, y construir un control de datos entre los nodos.
+                         </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_7.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> 4. Divulgación de datos con herramientas de BI </h2>
+                         <p>
+                             Los datos recopilados de cada nodo en los sitios de fabricación se recopilan en la base de datos o se envían al sistema de producción a través de ATS Bus. Cree una página de informe en el estilo que desee cada usuario con la información requerida y divulguela.
+                         </p>
+                        
+                        <img src="../../../images/pages/products/industry4/atsBus_8.jpg" width="100%">
+                      
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!--h4>Requerimientos del sistema</h4-->
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>

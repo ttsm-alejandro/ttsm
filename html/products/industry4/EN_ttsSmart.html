@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>TTS Smart</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/industry4/ttsSmart_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/industry4/EN_mainIndustry4.html">INDUSTRY 4.0</a> / 
+                <a href="">TTS SMART</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>TTS Smart Measuring System</h1></div>
+                        <h4>TTS Smart Measuring System is a solution that reduces the review time of correction instruction for prototype development.</h4>
+                        <p>
+                            It is a Web application provided by TTS which links all the necessary information such as equipment / molding information, color map, dimensional information, defect history, CAD management information, and other information required for revisions. TTS connects measurements and supports the customer's further productivity improvement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        
+                        <h2>What TTS Smart Measuring System can do</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 5px;"></div>
+                        
+                        <p>
+                            ■One portal site can collect all the information for reviewing corrections.
+                            <br> &nbsp &nbsp・Measurement results (value, color map)
+                            <br> &nbsp &nbsp・Equipment information
+                            <br> &nbsp &nbsp・Defect history
+                            <br> &nbsp → Reduction of review time
+                            <br><br>
+                            ■Automatically sends event information, such as “Measurement Complete”, “Defect Detected”, “Correction Complete”, etc. to those who are in charge of the measurement to correction.
+                            <br> &nbsp →Information sharing, reduction of indirect cost
+                            <br>■A history of troubleshooting is recorded in 3D CAD and can be referenced
+                            <br> &nbsp →When developing a new model, past defect information can be referenced which prevents recurrence of the same defect.
+                            <br>■Using the accumulated database, the points of caution and the optimal correction instructions are automatically displayed by machine learning or deep learning.
+                        </p>
+                        
+                        <h2>Product Features</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- -->
+                        <h2>Innovative IoT solution for measurement – TTS Smart Measuring System</h2>
+                        <p>
+                            TTS Smart Measuring System makes full use of IT, connects the data accumulated in each process, and makes more effective use of measurement data.
+                        </p>
+
+                        <img src="../../../images/pages/products/industry4/ttsSmart_2.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2>Links all information into one web application</h2>
+                        <p>
+                            TTS Smart Measuring System is a Web application. It links equipment / molding information, dimensional information, defect information, and CAD management information into one application which results in reducing correction review time, building cooperate knowledge base, etc.
+                        </p>
+                        
+                        <!-- comment -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="../../../images/pages/products/industry4/ttsSmart_3.jpg" width="100%">
+                                <p>
+                                    ◆ The person in charge of each process is different and it takes time to share information…
+                                    <br>◆ It’s an ad hoc measurement…
+                                    <br>◆ Knowledge cannot be accumulated and the same defect reoccurs…
+                                </p>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../../../images/pages/products/industry4/ttsSmart_4.jpg" width="100%">
+                                <p>
+                                    ◆ Reduces correction review time and indirect cost!
+                                    <br>◆ Saves defect information into 3D CAD/Builds knowledge!
+                                </p>
+                                
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            
+                            <!-- tabla para requisitos del sistema / pc -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>

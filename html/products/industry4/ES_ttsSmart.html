@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>TTS Smart</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/industry4/ttsSmart_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/ES_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}ES_index.php">INICIO</a> / 
+                <a href="{{relativeUrl}}html/products/ES_mainProducts.html">PRODUCTOS</a> / 
+                <a href="{{relativeUrl}}html/products/industry4/ES_mainIndustry4.html">INDUSTRIA 4.0</a> / 
+                <a href="">TTS SMART</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>TTS Smart Measuring System</h1></div>
+                        <h4> TTS Smart Measuring System es una solución que reduce el tiempo de revisión de la instrucción de corrección para el desarrollo de prototipos. </h4>
+                         <p>
+                             Es una aplicación web proporcionada por TTS que vincula toda la información necesaria, como información de equipos / molduras, mapa de colores, información dimensional, historial de defectos, información de administración de CAD y otra información requerida para las revisiones. TTS conecta las mediciones y respalda la mejora de la productividad del cliente.
+                         </p> 
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/ES_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        
+                        <h2>Qué puede hacer TTS Smart Measuring System</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        <div style="height: 5px;"></div>
+                        
+                        <p>
+                            ■ Un sitio de portal puede recopilar toda la información para revisar las correcciones.
+                            <br> &nbsp &nbsp ・ Resultados de la medición (valor, mapa de color)
+                            <br> &nbsp &nbsp ・ Información del equipo
+                            <br> &nbsp &nbsp ・ Historial de defectos
+                            <br> &nbsp → Reducción del tiempo de revisión
+                            <br> <br>
+                            ■ Envía automáticamente información de eventos, como "Medición completa", "Defecto detectado", "Corrección completa", etc., a quienes están a cargo de la medición para su corrección.
+                            <br> &nbsp → Intercambio de información, reducción de costos indirectos
+                            <br> ■ Se registra un historial de resolución de problemas en CAD 3D y se puede consultar
+                            <br> &nbsp → Al desarrollar un nuevo modelo, se puede hacer referencia a la información de defectos anteriores, lo que evita la recurrencia del mismo defecto.
+                            <br> ■ Con la base de datos acumulada, los puntos de precaución y las instrucciones de corrección óptimas se muestran automáticamente mediante el aprendizaje automático o el aprendizaje profundo.
+                        </p> 
+                        
+                        <h2>Caracteristicas del Producto</h2>
+                        <!-- linea azul -->
+                        <div style="background-color: {{ ttsmBlueColor}}; height: 2px"></div>
+                        
+                        <!-- -->
+                        <h2> Solución innovadora de IoT para la medición: sistema de medición inteligente TTS </h2>
+                         <p>
+                             El sistema de medición inteligente TTS hace un uso completo de la TI, conecta los datos acumulados en cada proceso y hace un uso más efectivo de los datos de medición.
+                         </p>
+
+                        <img src="../../../images/pages/products/industry4/ttsSmart_2.jpg" width="100%">
+                        
+                        <!-- -->
+                        <h2> Vincula toda la información en una aplicación web </h2>
+                         <p>
+                             TTS Smart Measuring System es una aplicación web. Vincula la información de equipos / moldes, información dimensional, información de defectos e información de gestión de CAD en una sola aplicación, lo que reduce el tiempo de revisión de correcciones, crea una base de conocimientos cooperativa, etc.
+                         </p>
+                        
+                        <!-- comment -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="../../../images/pages/products/industry4/ttsSmart_3.jpg" width="100%">
+                                <p>
+                                     ◆ La persona a cargo de cada proceso es diferente y toma tiempo compartir información ...
+                                     <br> ◆ Es una medida ad hoc ...
+                                     <br> ◆ El conocimiento no se puede acumular y se repite el mismo defecto ...
+                                 </p>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../../../images/pages/products/industry4/ttsSmart_4.jpg" width="100%">
+                                <p>
+                                     ◆ ¡Reduce el tiempo de revisión de correcciones y los costos indirectos!
+                                     <br> ◆ Guarda la información de defectos en CAD 3D / ¡Genera conocimiento!
+                                 </p>
+                                
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/ES_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+
+                            <!--h4>Requerimientos del sistema</h4-->
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/ES_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/ES_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/ES_footer.html'"></div>
+        </div>
+    </body>
+</html>
