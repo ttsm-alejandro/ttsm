@@ -44,15 +44,18 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
 //    $scope.headerContactButton = [];
     
     //show/hide main menu
-    $scope.showItem1 = false;
-    $scope.showItem2 = false;
-    $scope.showItem3 = false;
-    $scope.showItem4 = false;
-    $scope.showItem5 = false;
-    $scope.showItem6 = false;
-    $scope.showItem7 = false;
-    $scope.showItem8 = false;
-    $scope.showItem9 = false;
+    $scope.showItem = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ];
     
     //show/hide DESCRIPTION / TECHNICAL DATA / INQUIRY
     $scope.productsShowDescription = false;
@@ -82,6 +85,8 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     
     //show/hide Products
     $scope.showSubMenu = function( menuParam ){
+        $scope.showItem[ menuParam ] = !$scope.showItem[ menuParam ];
+        /*
         switch( menuParam ){
             case 1:
                 $scope.showItem1 = !$scope.showItem1;
@@ -110,7 +115,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
             case 9:
                 $scope.showItem9 = !$scope.showItem9;
                 break;
-        }
+        }*/
         
     };
     

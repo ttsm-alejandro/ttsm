@@ -42,14 +42,14 @@
                                         <span class="signoMas" ng-click="showSubMenu( 1 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineAModel.html" ng-show="showItem1">LayOut Machine A Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineEModel.html" ng-show="showItem1">LayOut Machine E Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineGModel.html" ng-show="showItem1">LayOut Machine G Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineJModel.html" ng-show="showItem1">LayOut Machine J Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineFModel.html" ng-show="showItem1">LayOut Machine F Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineMiniModel.html" ng-show="showItem1">LayOut Machine Mini - Model</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_laymaticSncJSystem.html" ng-show="showItem1">Laymatic SNC J - System</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_laymaticSncFSystem.html" ng-show="showItem1">Laymatic SNC F - System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineAModel.html" ng-show="showItem[1]">LayOut Machine A Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineEModel.html" ng-show="showItem[1]">LayOut Machine E Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineGModel.html" ng-show="showItem[1]">LayOut Machine G Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineJModel.html" ng-show="showItem[1]">LayOut Machine J Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineFModel.html" ng-show="showItem[1]">LayOut Machine F Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_layoutMachineMiniModel.html" ng-show="showItem[1]">LayOut Machine Mini - Model</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_laymaticSncJSystem.html" ng-show="showItem[1]">Laymatic SNC J - System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/cmm/ES_laymaticSncFSystem.html" ng-show="showItem[1]">Laymatic SNC F - System</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 2: Brazo Multiarticulado -->
@@ -59,13 +59,23 @@
                                         <span class="signoMas" ng-click="showSubMenu( 2 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV7M.html" ng-show="showItem2">Vectoron V7M</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronVME300M.html" ng-show="showItem2">Vectoron VME-300M</a></li>
-                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV6MII.html" ng-show="showItem2">Vectoron V6MII</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV6C.html" ng-show="showItem2">Vectoron V6C</a></li-->
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_apiScan.html" ng-show="showItem2">ApiScan</a></li>
-                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_raptorEye.html" ng-show="showItem2">Raptor Eye</a></li-->
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_raptorEye2.html" ng-show="showItem2">Raptor Eye 2</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV7M.html" ng-show="showItem[2]">Vectoron V7M</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronVME300M.html" ng-show="showItem[2]">Vectoron VME-300M</a></li>
+                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV6MII.html" ng-show="showItem[2]">Vectoron V6MII</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_vectoronV6C.html" ng-show="showItem[2]">Vectoron V6C</a></li-->
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_apiScan.html" ng-show="showItem[2]">ApiScan</a></li>
+                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_raptorEye.html" ng-show="showItem[2]">Raptor Eye</a></li-->
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/vectoron/ES_raptorEye2.html" ng-show="showItem[2]">Raptor Eye 2</a></li>
+                                <li class="divider"></li>
+                                
+                                <!-- Item 0: Gap & Flush -->
+                                <li class="dropdown-header">
+                                    <a href="{{ relativeUrl }}html/products/gapandflush/ES_mainGapAndFlush.html">
+                                        GAP & FLUSH
+                                        <span class="signoMas" ng-click="showSubMenu( 0 )">(+)</span>
+                                    </a>
+                                </li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/gapandflush/ES_gapNinja.html" ng-show="showItem[0]">GAP Ninja</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 3: Laser Tracker -->
@@ -75,10 +85,10 @@
                                         <span class="signoMas" ng-click="showSubMenu( 3 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt403.html" ng-show="showItem3">Leica Absolute Tracker AT403</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt960.html" ng-show="showItem3">Leica Absolute Tracker AT960</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt930.html" ng-show="showItem3">Leica Absolute Tracker AT930</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAts600.html" ng-show="showItem3">Leica Absolute Tracker ATS600</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt403.html" ng-show="showItem[3]">Leica Absolute Tracker AT403</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt960.html" ng-show="showItem[3]">Leica Absolute Tracker AT960</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAt930.html" ng-show="showItem[3]">Leica Absolute Tracker AT930</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/laser/ES_leicaAbsoluteTrackerAts600.html" ng-show="showItem[3]">Leica Absolute Tracker ATS600</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 4: Camera -->
@@ -88,10 +98,10 @@
                                         <span class="signoMas" ng-click="showSubMenu( 4 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_flare.html" ng-show="showItem4">FLARE</a></li>
-                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_cometL3d2Standard.html" ng-show="showItem4">Comet L3D 2 Standard</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_comet6.html" ng-show="showItem4">Comet 6</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_cometL3d2Base.html" ng-show="showItem4">Comet L3D 2 Base</a></li-->
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_flare.html" ng-show="showItem[4]">FLARE</a></li>
+                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_cometL3d2Standard.html" ng-show="showItem[4">Comet L3D 2 Standard</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_comet6.html" ng-show="showItem[4">Comet 6</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/camera/ES_cometL3d2Base.html" ng-show="showItem[4">Comet L3D 2 Base</a></li-->
                                 <li class="divider"></li>
 
                                 <!-- Item 5: Milling System -->
@@ -101,8 +111,8 @@
                                         <span class="signoMas" ng-click="showSubMenu( 5 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/ES_mill7System.html" ng-show="showItem5">Mill-7 System</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/ES_portableMillSystem.html" ng-show="showItem5">Portable Mill System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/ES_mill7System.html" ng-show="showItem[5]">Mill-7 System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/milling/ES_portableMillSystem.html" ng-show="showItem[5]">Portable Mill System</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 6: Software -->
@@ -112,10 +122,10 @@
                                         <span class="signoMas" ng-click="showSubMenu( 6 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_libellaQueen.html" ng-show="showItem6">Libella Queen</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksInspector.html" ng-show="showItem6">Polyworks Inspector</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksModeler.html" ng-show="showItem6">Polyworks Modeler</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_spGauge.html" ng-show="showItem6">spGauge</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_libellaQueen.html" ng-show="showItem[6]">Libella Queen</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksInspector.html" ng-show="showItem[6]">Polyworks Inspector</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_polyworksModeler.html" ng-show="showItem[6]">Polyworks Modeler</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/software/ES_spGauge.html" ng-show="showItem[6]">spGauge</a></li>
                                 <li class="divider"></li>
                                 
                                 
@@ -126,10 +136,10 @@
                                         <span class="signoMas" ng-click="showSubMenu( 9 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsInspect.html" ng-show="showItem9">ATS Inspect</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsCm4d.html" ng-show="showItem9">ATS CM4D</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsBus.html" ng-show="showItem9">ATS Bus</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_ttsSmart.html" ng-show="showItem9">TTS Smart Measuring System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsInspect.html" ng-show="showItem[9]">ATS Inspect</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsCm4d.html" ng-show="showItem[9]">ATS CM4D</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_atsBus.html" ng-show="showItem[9]">ATS Bus</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/industry4/ES_ttsSmart.html" ng-show="showItem[9]">TTS Smart Measuring System</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 7: Robot -->
@@ -139,11 +149,11 @@
                                         <span class="signoMas" ng-click="showSubMenu( 7 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_cometAutomated.html" ng-show="showItem7">COMET Automaed</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_masterEyeRobotSystem.html" ng-show="showItem7">Master Eye Robot System</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_abisIISystem.html" ng-show="showItem7">ABIS II System</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_robotCalibrationSolution.html" ng-show="showItem7">Robot Calibration Solution</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_leicaRobotSystem.html" ng-show="showItem7">Leica Robot System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_cometAutomated.html" ng-show="showItem[7]">COMET Automaed</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_masterEyeRobotSystem.html" ng-show="showItem[7]">Master Eye Robot System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_abisIISystem.html" ng-show="showItem[7]">ABIS II System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_robotCalibrationSolution.html" ng-show="showItem[7]">Robot Calibration Solution</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/robot/ES_leicaRobotSystem.html" ng-show="showItem[7]">Leica Robot System</a></li>
                                 <li class="divider"></li>
 
                                 <!-- Item 6: Otros -->
@@ -153,10 +163,10 @@
                                         <span class="signoMas" ng-click="showSubMenu( 8 )">(+)</span>
                                     </a>
                                 </li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_gapNinja.html" ng-show="showItem8">GAP Ninja</a></li>
-                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_masterEye.html" ng-show="showItem8">Master Eye</a></li-->
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_dpaSystem.html" ng-show="showItem8">DPA System</a></li>
-                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_autoGrid.html" ng-show="showItem8">AutoGrid</a></li>
+                                
+                                <!--li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_masterEye.html" ng-show="showItem[8">Master Eye</a></li-->
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_dpaSystem.html" ng-show="showItem[8]">DPA System</a></li>
+                                <li class="text-right"><a href="{{ relativeUrl }}html/products/others/ES_autoGrid.html" ng-show="showItem[8]">AutoGrid</a></li>
                                 <li class="divider"></li>
 
                             </ul>
