@@ -230,10 +230,10 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         if( page === "gapNinja" ){
             switch( number ){
                 case 1:
-                    $scope.productImageSelected = "../../../images/pages/products/others/gapNinja_1.jpg";
+                    $scope.productImageSelected = "../../../images/pages/products/gapandflush/gapNinja_1.jpg";
                     break;
                 case 2:
-                    $scope.productImageSelected = "../../../images/pages/products/others/gapNinja_2.jpg";
+                    $scope.productImageSelected = "../../../images/pages/products/gapandflush/gapNinja_2.jpg";
                     break;
             }
         }
