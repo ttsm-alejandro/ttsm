@@ -529,6 +529,9 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     };
    
     /***** FUNCIONES ******/
+    /*
+     * DESCARGAR BROCHURE
+     */
     //
     $scope.showDownloadBrochureForm = function(){
         $('#modalDownloadBrochure').modal('show');
@@ -559,7 +562,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         return returnData;
     }
     
-    //
+    //convert downloadPurposeABCD and whereDidYouFindUs in the comment data
     $scope.brochureDataFromOptionsToComment = function(){
         var returnData = "Is interested because ";
         
@@ -589,6 +592,12 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
             
             if( $scope.brochureToDownload == "ES_V6M" ){ ahref = $scope.brochureLocationFolder + "VAR600 Brochure EN.pdf"; }
             if( $scope.brochureToDownload == "EN_V6M" ){ ahref = $scope.brochureLocationFolder + "VAR600 Brochure EN.pdf"; }
+            
+            if( $scope.brochureToDownload == "ES_API" ){ ahref = $scope.brochureLocationFolder + "API Brochure ES.pdf"; }
+            if( $scope.brochureToDownload == "EN_API" ){ ahref = $scope.brochureLocationFolder + "API Brochure EN.pdf"; }
+            
+            if( $scope.brochureToDownload == "ES_RE2" ){ ahref = $scope.brochureLocationFolder + "RE2 Brochure ES.pdf"; }
+            if( $scope.brochureToDownload == "EN_RE2" ){ ahref = $scope.brochureLocationFolder + "RE2 Brochure EN.pdf"; }
             
             if( $scope.brochureToDownload == "ES_LM" ){ ahref = $scope.brochureLocationFolder + "LM Brochure EN.pdf"; }
             if( $scope.brochureToDownload == "EN_LM" ){ ahref = $scope.brochureLocationFolder + "LM Brochure EN.pdf"; }
@@ -625,7 +634,7 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         }
     }
     
-    //
+    //manda correo de que bajaron un brochure
     $scope.sendEmailBrochureDownload = function(){
         var languageBrochure = "English";
         
