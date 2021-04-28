@@ -121,6 +121,24 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     
     //clic on the thumb
     $scope.productChangeImage = function( page , number ){
+        //spScan
+        if( page == "spScan" ){
+            switch( number ){
+                case 1:
+                    $scope.productImageSelected = "../../../images/pages/products/software/spScan_1.jpg";
+                    break;
+                case 2:
+                    $scope.productImageSelected = "../../../images/pages/products/software/spScan_2.jpg";
+                    break;
+                case 3:
+                    $scope.productImageSelected = "../../../images/pages/products/software/spScan_3.jpg";
+                    break;
+                case 4:
+                    $scope.productImageSelected = "../../../images/pages/products/software/spScan_4.jpg";
+                    break;
+            }
+        }
+        
         //Flare
         if( page === "flare" ){
             switch( number ){
