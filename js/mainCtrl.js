@@ -37,12 +37,6 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
 //    $scope.languajeSelected = 0;
 //    $scope.pageSelected = "";
     
-//    //header BUTTONS
-//    $scope.headerProductsButton = [];
-//    $scope.headerServicesButton = [];
-//    $scope.headerCorporateButton = [];
-//    $scope.headerContactButton = [];
-    
     //show/hide main menu
     $scope.showItem = [
         false,
@@ -55,6 +49,11 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
         false,
         false,
         false
+    ];
+    
+    //show/hide product features
+    $scope.showProductFeature = [
+        false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false
     ];
     
     //show/hide DESCRIPTION / TECHNICAL DATA / INQUIRY
@@ -86,37 +85,6 @@ miApp.controller( 'mainCtrl' , ['$scope' , '$http', function( $scope , $http ){
     //show/hide Products
     $scope.showSubMenu = function( menuParam ){
         $scope.showItem[ menuParam ] = !$scope.showItem[ menuParam ];
-        /*
-        switch( menuParam ){
-            case 1:
-                $scope.showItem1 = !$scope.showItem1;
-                break;
-            case 2:
-                $scope.showItem2 = !$scope.showItem2;
-                break;
-            case 3:
-                $scope.showItem3 = !$scope.showItem3;
-                break;
-            case 4:
-                $scope.showItem4 = !$scope.showItem4;
-                break;
-            case 5:
-                $scope.showItem5 = !$scope.showItem5;
-                break;
-            case 6:
-                $scope.showItem6 = !$scope.showItem6;
-                break;
-            case 7:
-                $scope.showItem7 = !$scope.showItem7;
-                break;
-            case 8:
-                $scope.showItem8 = !$scope.showItem8;
-                break;
-            case 9:
-                $scope.showItem9 = !$scope.showItem9;
-                break;
-        }*/
-        
     };
     
     //clic on the thumb

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<html>
+    <head>
+        <title>3D-Magic REGALIS</title>
+        <link rel="icon" href="../../../images/util/icono.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JQuery -->
+        <script src="../../../js/lib/jquery-3.2.1.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+        <script src="../../../js/lib/bootstrap.min.js"></script>
+        
+        <!-- SWEET ALERT -->
+        <script src="../../../js/lib/sweetalert.min.js"></script>
+
+        <!-- AngularJS libraries -->
+        <script src="../../../js/lib/angular.min.js"></script>
+
+        <!-- Controller -->
+        <script src="../../../js/mainCtrl.js"></script>
+    </head>
+    
+    <body ng-app="miApp">
+        <div ng-controller="mainCtrl"
+             ng-init="relativeUrl = '../../../'; 
+                        productImageSelected = '../../../images/pages/products/software/regalis_1.jpg';
+                        getCurrentUrl();
+                               ">
+            
+            <div class="container" >
+
+                <!-- Header -->
+                <div ng-include="'../../util/EN_header.html'"></div>
+
+                <!-- SPACE -->
+                <div style="height: 4px; background-color: {{ ttsmGrayColor }};" ></div>
+                <div style="height: 3px;"></div>
+
+                <!-- ROUTE -->
+                <a href="{{relativeUrl}}EN_index.php">HOME</a> / 
+                <a href="{{relativeUrl}}html/products/EN_mainProducts.html">PRODUCTS</a> / 
+                <a href="{{relativeUrl}}html/products/software/EN_mainSoftware.html">SOFTWARE</a> / 
+                <a href="">3D-Magic REGALIS</a>  
+
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ productImageSelected }}" width="100%">
+                        <div class="row" style="height: 10px;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-muted"><h1>3D-Magic REGALIS</h1></div>
+                        <p>
+                            Tokyo Boeki Techno-System Ltd is proud to provide exceptional metrology software for use in conjunction with surveying instruments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ************************ Content Details ************************ -->
+                <!-- DESCRIPTION -->
+                <div ng-include="'../../util/EN_showDescriptionButton.html'"></div>
+
+                <div class="row" ng-show="productsShowDescription">
+                    <div class="col-md-12" style="color: {{ ttsmBlueColor }}; ">
+                        <div style="height: 5px;"></div>
+                        <h3>3D-Magic REGALIS</h3>
+                        
+                        <p>
+                            It's an in-house developed software which has been used in vaiours industories mainly the auto industry since its development in 1999. 
+                            <br>Both contact and non-contact measurement are possible. It needs to be plugged into TTS measurement devices.
+                            <br>It's possible to compare and analyze the 3D CAD data and measurement work piece to see if it passes or fails at the site. 
+                            <br>By eliminating the need for drawings and simplifying the inspection jig, it reduces costs. 
+                            <br>It offers User-friendly measurement and analysis software that even beginners can easily operate.
+                            <br><br>
+                            <strong>*Compatible with Vectoron and Leica.</strong>
+                        </p>
+
+                        <h3>Product Features</h3>
+                        
+                        <!-- Feature 0 : High-speed processing of large data -->
+                        <div class="well-sm warning" ng-click="showProductFeature[0] = !showProductFeature[0]">
+                            <a><strong>
+                                <span class="caret"></span> High-speed processing of large data
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 0 -->
+                        <div ng-show="showProductFeature[0]">
+                            
+                        </div>
+                        
+                        <!-- Feature 1 : Office-like interface that offers users intuitive use -->
+                        <div class="well-sm warning" ng-click="showProductFeature[1] = !showProductFeature[1]">
+                            <a><strong>
+                                <span class="caret"></span> Office-like interface that offers users intuitive use
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 1 -->
+                        <div ng-show="showProductFeature[1]">
+                            ・Microsoft Office users can use the soft intuitively due to the ribbon interface same as Office.
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_2.jpg" width="100%">
+                        </div>
+                        
+                        <!-- Feature 2 : Function guide, operation procedure, and operation manual are displayed on the top of screen -->
+                        <div class="well-sm warning" ng-click="showProductFeature[2] = !showProductFeature[2]">
+                            <a><strong>
+                                <span class="caret"></span> Function guide, operation procedure, and operation manual are displayed on the top of screen
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 2 -->
+                        <div ng-show="showProductFeature[2]">
+                            ・Simple function guide is displayed on the screen when a pointer is on a button.
+                            <br>・There is no need to search in operation manual as each function has a link to jump to the manual.
+                            <br>・Animation of each operation procedure allows users to check the procedure immediately without jumping to other pages.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_3.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 3 : Main Menu -->
+                        <div class="well-sm warning" ng-click="showProductFeature[3] = !showProductFeature[3]">
+                            <a><strong>
+                                <span class="caret"></span> Main Menu
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 3 -->
+                        <div ng-show="showProductFeature[3]">
+                            　・There is no need to search buttons of major functions as buttons of those frequently used functions are installed in the main menu.
+                             <br>
+                             <br>
+                            <img src="../../../images/pages/products/software/regalis_4.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 4 :  Voice Guide and Voice Recognition -->
+                        <div class="well-sm warning" ng-click="showProductFeature[4] = !showProductFeature[4]">
+                            <a><strong>
+                                <span class="caret"></span> Voice Guide and Voice Recognition
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 4 -->
+                        <div ng-show="showProductFeature[4]">
+                            ・The software can be operated with an interactive function.<br>
+                            ・It can be operated remotely without looking at a monitor and touching a keyboard.
+                        </div>
+                        
+                        <!-- Feature 5 : Multi-assembly compatible (SUB-ASSY compatible) -->
+                        <div class="well-sm warning" ng-click="showProductFeature[5] = !showProductFeature[5]">
+                            <a><strong>
+                                <span class="caret"></span> Multi-assembly compatible (SUB-ASSY compatible)
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 5 -->
+                        <div ng-show="showProductFeature[5]">
+                            ・Multiple projects can be branched under one tree.<br>
+                            ・Coordinate system for each project can be held. 
+                        </div>
+                        
+                        <!-- Feature 6 :  Color mapped shape analysis of 3D CAD and measurement data-->
+                        <div class="well-sm warning" ng-click="showProductFeature[6] = !showProductFeature[6]">
+                            <a><strong>
+                                <span class="caret"></span> Color mapped shape analysis of 3D CAD and measurement data
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 6 -->
+                        <div ng-show="showProductFeature[6]">
+                            ・Difference between CAD and measurement data is displayed at the site.<br>
+                            ・The analysis result can be shown visually as the amount of change and difference are color mapped as well as the value.
+                             <br>
+                             <br>
+                            <img src="../../../images/pages/products/software/regalis_5.jpg" width="100%">
+                        </div>
+                        
+                        <!-- Feature 7 : Various alignment function -->
+                        <div class="well-sm warning" ng-click="showProductFeature[7] = !showProductFeature[7]">
+                            <a><strong>
+                                <span class="caret"></span> Various alignment function
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 7 -->
+                        <div ng-show="showProductFeature[7]">
+                            ・It is possible to select the most suitable alignment method among various features of the alignment function.
+                            <br>
+                            <br><strong>【Surface axis and coordinate origin setting 】</strong>
+                            <br>Coordinate system can be created based on a surface plate and inspection jig even without CAD data.
+                            <br>Alignment by selecting imported measurement elements is possible as well as alignment based on measurement of work piece at the manufacturing site.
+                            <br>
+                            <br><strong>【Rough Fitting】</strong>
+                            <br>Auto-alignment which makes the difference between CAD and measurement elements minimum is available just by clicking a button.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_6.gif" width="100%">
+                            <br>
+                            <br><strong>【3-point Fitting】</strong>
+                            <br>Select the reference side element (CAD) and the measurement side element as constraints at three points, and create a coordinate system by comparing the positions of each element.
+                            <br>Fitting types of CAD and those elements can be selected.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_7.gif" width="100%">
+                            <br>
+                            <br><strong>【6-point Fitting】</strong>
+                            <br>Align with 6 or more reference elements points(CAD) and 6 measurement points.
+                            <br>Alignment can be performed by arbitrarily selecting the axial direction for each point
+                            <br>
+                            <br><strong>【Parallel/rotational movement】</strong>
+                            <br>Create coordinate system by moving the data by entering numerical values.
+                            <br>Alignment is possible by defining rotation coordinates instead of Cartesian coordinates.
+                            <br>
+                            <br><strong>【Simple 3 point fitting】</strong>
+                            <br>Pick 3 points from CAD curved surface and point cloud or polygon data to set the position roughly.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_8.gif" width="100%">
+                            <br>
+                            <br><strong>【Best fit】</strong>
+                            <br>A function used after the simple 3 point fitting.
+                            <br>Auto-alignment function creates a coordinate system to make the difference between CAD and point cloud minimum
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_9.gif" width="100%">
+                            <br>
+                            <br><strong>【Best fit with constraints】</strong>
+                            <br>For best fit, constrain condition can be added by using the measurement elements
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_10.jpg" width="100%">
+                            <br>
+                            <br><strong>【Fit on】</strong>
+                            <br>Align the mating element without interference.
+                            <br>As alignment is performed at the position where the reference and measurement object first hit, only a positive difference is made.
+                            <br>This is useful when evaluating the clearance by aligning the top and bottom of the mold, or when checking interference by aligning the object and object.
+                            <br>
+                        </div>
+                        
+                        <!-- Feature 8 :  Measurement guide and automatic measurement using reference points-->
+                        <div class="well-sm warning" ng-click="showProductFeature[8] = !showProductFeature[8]">
+                            <a><strong>
+                                <span class="caret"></span> Measurement guide and automatic measurement using reference points
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 8 -->
+                        <div ng-show="showProductFeature[8]">
+                            ・Elements which require quality control such as points, holes, and edges are registered to CAD data as “management point”.
+                            <br>・It is effective for periodic measurements and measurements with a large number of N, as it can automate the measurement location indication, measurement element name management, analysis work, and report creation by guide measurement.
+                            <br>・Anyone can measure the same part and it prevents measurement omissions.
+                            <br>・Measurement guide information can be created semi-automatically from the measurement work itself.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_11.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 9 :  Cross section inspection, cross section range definition-->
+                        <div class="well-sm warning" ng-click="showProductFeature[9] = !showProductFeature[9]">
+                            <a><strong>
+                                <span class="caret"></span> Cross section inspection, cross section range definition
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 9 -->
+                        <div ng-show="showProductFeature[9]">
+                            ・Create a surface (cross section) where the data and the specified plane intersect, and perform a two-dimensional comparative inspection.
+                            <br>・Specify an inspection range and create a cross section.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_12.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 10 : Interference analysis (panel analysis by thickness input) -->
+                        <div class="well-sm warning" ng-click="showProductFeature[10] = !showProductFeature[10]">
+                            <a><strong>
+                                <span class="caret"></span> Interference analysis (panel analysis by thickness input)
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 10 -->
+                        <div ng-show="showProductFeature[10]">
+                            ・Verifies the combination accuracy of sheet metal parts.　
+                            <br>・Analyzes panels with different project thickness.
+                            <br>・Analyzes gaps (clearance) and interference with the assembly destination (parts) and displays a color map. 　Text Feature 10
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_13.jpg" width="100%">
+                        </div>
+                        
+                        <!-- Feature 11 : Element extraction from point cloud -->
+                        <div class="well-sm warning" ng-click="showProductFeature[11] = !showProductFeature[11]">
+                            <a><strong>
+                                <span class="caret"></span> Element extraction from point cloud
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 11 -->
+                        <div ng-show="showProductFeature[11]">
+                            ・Recognizes and extracts hole elements automatically by comparing CAD with point cloud.
+                            <br>・It is not necessary to specify each hole when extracting.
+                             <br>
+                             <br>
+                            <img src="../../../images/pages/products/software/regalis_14.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 12 : Dimension display and calipers -->
+                        <div class="well-sm warning" ng-click="showProductFeature[12] = !showProductFeature[12]">
+                            <a><strong>
+                                <span class="caret"></span> Dimension display and calipers
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 12 -->
+                        <div ng-show="showProductFeature[12]">
+                            　・The dimension can be displayed easily just by picking elements, point cloud, and polygons.
+                             <br>
+                             <br>
+                            <img src="../../../images/pages/products/software/regalis_15.gif" width="100%">
+                            <br>
+                            <br>・With the caliper function, axial distance is easily calculated and displayed without cutting the cross section.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_16.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 13 : GD & T (geometric dimension tolerance) analysis function based on JIS standard -->
+                        <div class="well-sm warning" ng-click="showProductFeature[13] = !showProductFeature[13]">
+                            <a><strong>
+                                <span class="caret"></span> GD & T (geometric dimension tolerance) analysis function based on JIS standard
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 13 -->
+                        <div ng-show="showProductFeature[13]">
+                            ・Calculation result of “Geometrical Dimension and tolerance” is displayed.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_17.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 14 : Auto meshing （polygonization with non-contact measurement） -->
+                        <div class="well-sm warning" ng-click="showProductFeature[14] = !showProductFeature[14]">
+                            <a><strong>
+                                <span class="caret"></span> Auto meshing （polygonization with non-contact measurement）
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 14 -->
+                        <div ng-show="showProductFeature[14]">
+                            ・Polygonizes the point cloud during measurement in real time.
+                            <br>・Polygonizes each patch and merge them all at the end.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_18.jpg" width="100%">
+                        </div>
+                        
+                        <!-- Feature 15 : Inspection of steps and gaps -->
+                        <div class="well-sm warning" ng-click="showProductFeature[15] = !showProductFeature[15]">
+                            <a><strong>
+                                <span class="caret"></span> Inspection of steps and gaps
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 15 -->
+                        <div ng-show="showProductFeature[15]">
+                            ・Pick the measurement element (edge, hem, and profile) to find the gap difference.
+                            <br>・Pick point cloud on the cross section to find the gap difference.
+                            <br>・The gap elements can be analyzed at once if they are registered as a management point.
+                        </div>
+                        
+                        <!-- Feature 16 : Analysis of gap difference between patches -->
+                        <div class="well-sm warning" ng-click="showProductFeature[16] = !showProductFeature[16]">
+                            <a><strong>
+                                <span class="caret"></span> Analysis of gap difference between patches
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 16 -->
+                        <div ng-show="showProductFeature[16]">
+                            ・Analyzes the gap difference between patch files of point cloud.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_19.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 17 : Wizard function -->
+                        <div class="well-sm warning" ng-click="showProductFeature[17] = !showProductFeature[17]">
+                            <a><strong>
+                                <span class="caret"></span> Wizard function
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 17 -->
+                        <div ng-show="showProductFeature[17]">
+                            ・Creates a measurement procedure (commands are put in order in the workflow) with the wizard and it can be shared among all the bases including overseas bases.
+                            <br>・It can reduce a difference of measurement result which occurs due to a skill and experience of users as position to create a coordinate system and measurement method are controlled on the screen.
+                            <br>・It simplifies the measurement drastically. As a result, the user doesn’t have to go back to his/her PC to control the measurement device. Instead, it can be controlled with buttons on the device, which simplifies and optimizes the measurement widely.
+                             <br>
+                        </div>
+                        
+                        <!-- Feature 18 : REGALIS report (excel output with original format) -->
+                        <div class="well-sm warning" ng-click="showProductFeature[18] = !showProductFeature[18]">
+                            <a><strong>
+                                <span class="caret"></span> REGALIS report (excel output with original format)
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 18 -->
+                        <div ng-show="showProductFeature[18]">
+                            ・Report format can be created optionally which allows users to create a report containing only sorted necessary items.
+                            <br>・Process of report creation can be skipped once user’s original format is created and saved as a report is output automatically after the measurement.
+                            <br>**Please do not hesitate to inquire if you have any requests or concerns on report customization.
+                            <br>
+                            <br>
+                            <img src="../../../images/pages/products/software/regalis_20.gif" width="100%">
+                        </div>
+                        
+                        <!-- Feature 19 : REGALIS viewer -->
+                        <div class="well-sm warning" ng-click="showProductFeature[19] = !showProductFeature[19]">
+                            <a><strong>
+                                <span class="caret"></span> REGALIS viewer
+                            </strong></a>
+                        </div>
+                        <!-- Descripcion Feature 19 -->
+                        <div ng-show="showProductFeature[19]">
+                            ・The viewer version which provides the minimum functions is available.
+                            <br>・This version allows users to install a project file and see the analysis result without interrupting any other works at the site.
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- TECHNICAL DATA -->
+                <div ng-include="'../../util/EN_showTechnicalDataButton.html'"></div>
+
+                <div class="row" ng-show="productsShowTechnicalData">
+                    <div class="content">
+                        <div class="col-md-12 img-rounded" style="color: {{ ttsmBlueColor }}; ">
+                            <div style="height: 5px;"></div>
+                            <table class="table table-striped table-condensed">
+                                <tr>
+                                    <th>O/S</th>
+                                    <td>
+                                        Windows 7 SP1 64bit or higher
+                                        <br>Windows 10 Pro version 1703 (Creator update) (64bit) or higher
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>Intel / AMD quad core</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory *1</th>
+                                    <td>
+                                        32 GB
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>HDD *1</th>
+                                    <td>At least 8 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>Graphics card *2</th>
+                                    <td>
+                                        Nvidia Quadro series
+                                        <br>(on-board graphics memory 8GB or more)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Microsoft Excel</th>
+                                    <td>
+                                        Microsoft Excel 2016
+                                    </td>
+                                </tr>
+                            </table>
+                            *1：Requires hard drive space appropriate to the work load.
+                            <br>*2：Requires the latest graphic card. Please obtain information from the NVIDIA homepage.
+                            <br><div style="color:red">There is no guarantee that Intel and AMD manufactured graphics cards will work.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY -->
+                <div ng-include="'../../util/EN_showInquiryButton.html'"></div>
+
+                <div class="row" ng-show="productsShowInquiry">
+                    <div class="col-md-12" ng-include="'../../../html/contact/EN_contactForm.html'"></div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div ng-include="'../../util/EN_footer.html'"></div>
+        </div>
+    </body>
+</html>
