@@ -17,6 +17,7 @@ class ComputerModel {
     var $macAddress;
     var $detail;
     var $softwareArray;
+    var $backupArray;
     var $comment;
     
     //constructor
@@ -26,6 +27,7 @@ class ComputerModel {
             $macAddress,
             $detail,
             $softwareArray,
+            $backupArray,
             $comment
             ){
         $this->id = $id;
@@ -33,6 +35,7 @@ class ComputerModel {
         $this->macAddress = $macAddress;
         $this->detail = $detail;
         $this->softwareArray = $softwareArray;
+        $this->backupArray = $backupArray;
         $this->comment = $comment;
     }
 }

@@ -524,7 +524,7 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
         if( id == "" ){
             swal({ text : "Select a option to EDIT" , icon : "error" });
         }else{
-            $window.open( $scope.relativeUrl + "html/catalogs/" + param + ".php?id=" + id , "" , "top=0,left=0,width=800,height=600" );
+            $window.open( $scope.relativeUrl + "html/catalogs/" + param + ".php?id=" + id , "" , "top=0,left=0,width=800,height=800" );
         }
     };
     

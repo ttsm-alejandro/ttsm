@@ -12,8 +12,6 @@ Programmer: Alejandro Aguayo Acosta
 -->
 <html>
     <head>
-        
-        
         <title>Computer</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,6 +134,41 @@ Programmer: Alejandro Aguayo Acosta
                                 <button class="btn btn-group-sm" ng-click="addNewSoftware()">Add</button>
                             </td>
                         </tr>
+<tr>
+<th>Backup</th>
+<td>
+    <!-- Parameters -->
+    <div class="btn {{ styleByBackupStatus( details.backupParameter ) }}" 
+                 ng-click="details.backupParameter = changeBackupStatusByClic( details.backupParameter )">
+        Parameters {{ details.backupParameter }}
+    </div>
+
+    <!-- Scan Parameters -->
+    <div class="btn {{ styleByBackupStatus( details.backupParameterScan ) }}" 
+                 ng-click="details.backupParameterScan = changeBackupStatusByClic( details.backupParameterScan )">
+        Scan Parameters {{ details.backupParameterScan }}
+    </div>
+
+    <!-- KeyFile LQ / 3D-Magic -->
+    <div class="btn {{ styleByBackupStatus( details.backupKeyfileLQ ) }}" 
+                 ng-click="details.backupKeyfileLQ = changeBackupStatusByClic( details.backupKeyfileLQ )">
+        KeyFile LQ / 3D-Magic {{ details.backupKeyfileLQ }}
+    </div>
+
+    <!-- Keyfile Regalis v2 -->
+    <div class="btn {{ styleByBackupStatus( details.backupKeyfileRegalisV2 ) }}" 
+                 ng-click="details.backupKeyfileRegalisV2 = changeBackupStatusByClic( details.backupKeyfileRegalisV2 )">
+        Keyfile Regalis v2 {{ details.backupKeyfileRegalisV2 }}
+    </div>
+
+    <!-- Keyfile Regalis v3 -->
+    <div class="btn {{ styleByBackupStatus( details.backupKeyfileRegalisV3 ) }}" 
+                 ng-click="details.backupKeyfileRegalisV3 = changeBackupStatusByClic( details.backupKeyfileRegalisV3 )">
+        Keyfile Regalis v3 {{ details.backupKeyfileRegalisV3 }}
+    </div>
+
+</td>
+</tr>
                         <tr><th>Comments:</th><td><textarea rows="5" ng-model="details.comment" class="form-control"></textarea></td></tr>
                     </table>
                     <button class="btn btn-info" ng-click="updateOrSaveRow()" >Save</button>

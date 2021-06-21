@@ -110,6 +110,7 @@ function returnDataPOST( $link ){
             $datos["macAddress"],
             $datos["detail"],
             $datos["softwareArray"],
+            $datos["backupArray"],
             $datos["comment"]
             );
     $returnInfo = ComputerService::save( $link , $newElement );

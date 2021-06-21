@@ -20,6 +20,7 @@ class ComputerService {
                     . " mac_address, "
                     . " detail, "
                     . " software_array, "
+                    . " backup_array, "
                     . " comment "
                 . "FROM"
                     . " computer "
@@ -38,6 +39,7 @@ class ComputerService {
                     . " mac_address, "
                     . " detail, "
                     . " software_array, "
+                    . " backup_array, "
                     . " comment "
                 . " FROM "
                     . " computer "
@@ -59,6 +61,7 @@ class ComputerService {
                             . " mac_address, "
                             . " detail, "
                             . " software_array, "
+                            . " backup_array, "
                             . " comment "
                         . ")"
                     . " VALUES("
@@ -66,6 +69,7 @@ class ComputerService {
                         . "'$newElement->macAddress',"
                         . "'$newElement->detail',"
                         . "'$newElement->softwareArray',"
+                        . "'$newElement->backupArray',"
                         . "'$newElement->comment'"
                     . ")";
         }else{
@@ -77,6 +81,7 @@ class ComputerService {
                         . " mac_address='$newElement->macAddress', "
                         . " detail='$newElement->detail', "
                         . " software_array='$newElement->softwareArray', "
+                        . " backup_array='$newElement->backupArray', "
                         . " comment='$newElement->comment' "
                     . " WHERE "
                         . "id=$newElement->id";
@@ -108,7 +113,8 @@ class ComputerService {
                 $row[2],
                 $row[3],
                 $row[4],
-                $row[5]
+                $row[5],
+                $row[6]
                 );
         return $newRow;
         

@@ -37,6 +37,12 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
         "macAddress" : "",
         "detail" : "",
         "softwareArray" : "",
+        "backupArray" : "",
+        "backupParameter" : "",
+        "backupParameterScan" : "",
+        "backupKeyfileLQ" : "",
+        "backupKeyfileRegalisV2" : "",
+        "backupKeyfileRegalisV3" : "",
         "comment" : ""
     };
     
@@ -131,7 +137,68 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
         //
         $scope.details.softwareArray = param.softwareArray;
         $scope.textToArray();
+        //
+        if( param.backupArray == "" ){
+            $scope.details.backupArray = "NG;NG;NG;NG;NG;"
+        }else{
+            $scope.details.backupArray = param.backupArray;
+        }
+        $scope.textToArrayBackup();
     };
+    
+    /*
+     * convierte el texto $scope.details.backupArray
+     *      NG;NG;NG;NA;OK; 
+     * en 
+     *      $scope.details.parameters = "NG";
+     *      .... 
+     *      $scope.details.keyfileRegalisV3 = "OK"
+     * 
+     */
+    $scope.textToArrayBackup = function(){
+        var backupText = $scope.details.backupArray.split(";");
+        $scope.details.backupParameter = backupText[ 0 ];
+        $scope.details.backupParameterScan = backupText[ 1 ];
+        $scope.details.backupKeyfileLQ = backupText[ 2 ];
+        $scope.details.backupKeyfileRegalisV2 = backupText[ 3 ];
+        $scope.details.backupKeyfileRegalisV3 = backupText[ 4 ];
+    }
+    
+    /*
+     * convierte el array 
+     *      $scope.details.parameters = "NG";
+     *      .... 
+     *      $scope.details.keyfileRegalisV3 = "OK"
+     * en texto
+     *      NG;NG;NG;NA;OK; 
+     * 
+     */
+    $scope.arrayToTextBackup = function(){
+        return "" + $scope.details.backupParameter + ";"
+                + $scope.details.backupParameterScan + ";"
+                + $scope.details.backupKeyfileLQ + ";"
+                + $scope.details.backupKeyfileRegalisV2 + ";"
+                + $scope.details.backupKeyfileRegalisV3 + ";"
+        ;
+    }
+    
+    // Regresa el estilo de un BTN segun el status OK - verde, NA - Amarillo, NG - Rojo
+    $scope.styleByBackupStatus = function( status ){
+        var returnData = "";
+        if( status == "NA" ){ returnData = "btn-warning"; }
+        if( status == "OK" ){ returnData = "btn-success"; }
+        if( status == "NG" ){ returnData = "btn-danger"; }
+        return returnData;
+    }
+    
+    // cambia el estatus en ese orden NG -> OK -> NA -> NG y se repite
+    $scope.changeBackupStatusByClic = function( status ){
+        var returnData = "NA";
+        if( status == "NG" ){ returnData = "OK"; }
+        if( status == "OK" ){ returnData = "NA"; }
+        if( status == "NA" ){ returnData = "NG"; }
+        return returnData;
+    }
     
     //new row
     $scope.newRow = function(){
@@ -174,6 +241,7 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
                     macAddress : $scope.details.macAddress,
                     detail : $scope.details.detail,
                     softwareArray : $scope.details.softwareArray,
+                    backupArray : $scope.details.backupArray,
                     comment : $scope.details.comment
                 }
             );
@@ -185,6 +253,7 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
                     $scope.tableContent[ index ].macAddress = $scope.details.macAddress;
                     $scope.tableContent[ index ].detail = $scope.details.detail;
                     $scope.tableContent[ index ].softwareArray = $scope.details.softwareArray;
+                    $scope.tableContent[ index ].backupArray = $scope.details.backupArray;
                     $scope.tableContent[ index ].comment = $scope.details.comment;
                 }
             }
@@ -201,6 +270,7 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
                             macAddress : temporalTable[ index ].macAddress,
                             detail : temporalTable[ index ].detail,
                             softwareArray : temporalTable[ index ].softwareArray,
+                            backupArray : temporalTable[ index ].backupArray,
                             comment : temporalTable[ index ].comment
                         }
                     );
@@ -257,14 +327,16 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
         $scope.details.detail = "";
         $scope.details.softwareArray = "";
         $scope.details.comment = "";
-        
+        //
+        $scope.details.backupArray = "NG;NG;NG;NG;NG;";
+        $scope.textToArrayBackup();
+        //
         $scope.softwareArray = [];
     };
 
     //    
     $scope.getCatalogData = function(){
         $scope.getCatalogDataByTable( "Software" );
-        //$scope.softwareCatalog.push({id:"1",name:"Windows"},{id:"2",name:"Libella Queen"},{id:"3",name:"3D Magic"});
     };
     
     //
@@ -297,6 +369,7 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
         var errorText = "";
         //check Software Array Data
         if( $scope.isSoftwareArrayOk() ){ $scope.arrayToText(); }
+        $scope.details.backupArray = $scope.arrayToTextBackup();
         
         if( $scope.details.serviceTag === "" ){ returnData = false; errorText += "Input Service Tag, "; }
         
@@ -309,7 +382,6 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
                 }
             }
         }
-        
         if( !returnData ){
             swal({"text":errorText,"icon":"error"});
         }
