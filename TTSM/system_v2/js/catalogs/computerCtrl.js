@@ -551,19 +551,6 @@ miApp.controller( 'computerCtrl'  ,['$scope' , '$http' , '$window' , function( $
         return returnData;
     }
 
-
-/*
-    $scope.isShowCompany = true;
-    $scope.labelCompany = "label-success";
-    $scope.isShowPlant = true;
-    $scope.labelPlant = "label-success";
-    $scope.isShowPerson = true;
-    $scope.labelPerson = "label-success";
-    $scope.isShowPersonEmail = true;
-    $scope.labelPersonEmail = "label-success";
-    $scope.isShowSystem = true;
-    $scope.labelSystem = "label-success";
-*/
     //
     $scope.clicLabelShowColumn = function( param ){
         //company
