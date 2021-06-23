@@ -90,7 +90,7 @@ Programmer: Alejandro Aguayo Acosta
                             <th>Save</th>
                         </tr>
                         <tr ng-repeat="row in backupReportData | filter : { serviceTag : filterComputerServiceTag , title : filterBySoftware }" title="{{ row.title }}">
-                            <td ng-show="showServiceTag" ng-dblclick="openComputerWindow( row )">{{ row.serviceTag }}</td>
+                            <td ng-show="showServiceTag" ng-dblclick="openComputerWindow( row )" title="MacAddress: {{ row.macAddress}}">{{ row.serviceTag }}</td>
                             <td><div
                                     class="btn {{ getStyleByStatus( row.backupParameter ) }}" 
                                     ng-click="row.backupParameter = changeStatusByClic( row.backupParameter ); row.saved='-floppy-disk'">
