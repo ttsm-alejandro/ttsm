@@ -245,5 +245,11 @@ miApp.controller( 'backupReportPageCtrl'  ,['$scope' , '$http' , '$window' , fun
         if( status == "NA" ){ returnData = "NG"; }
         return returnData;
     }
+    
+    //
+    $scope.openComputerWindow = function( row ){
+        var page = "computer";
+        $window.open( $scope.relativeUrl + "html/catalogs/" + page + ".php?id=" + row.id , "" , "top=0,left=0,width=800,height=800" );
+    }
 
 }]);
