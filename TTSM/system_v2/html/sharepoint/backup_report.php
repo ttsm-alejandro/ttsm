@@ -77,12 +77,12 @@ Programmer: Alejandro Aguayo Acosta
                     ng-model="filterBySoftware"
                     class="input-sm"
                     ng-options="x.name as x.name for x in softwareCatalog"></select>
-                <!--label class="label label-warning" ng-click="idSoftwareSelectedFilter = '' ; statusSelectedFilter = '';">RESET SELECTIONS</label-->
+                <label class="label label-primary" ng-click="filterBySoftware = '' ; filterComputerServiceTag = '';">RESET</label>
                 <div class="table-responsive"> 
                     <table class="table table-hover table-condensed">
                         <tr style="background-color: {{ ttsmBlueColor }}; color : white">
-                            <th>Service Tag</th>
-                            <th>Parameter</th>
+                            <th title="clic to hide Service Tag column" ng-show="showServiceTag" ng-click="showServiceTag = false">Service Tag</th>
+                            <th title="clic to show Service Tag column" ng-click="showServiceTag = true">Parameter</th>
                             <th>Scan Parameter</th>
                             <th>Keyfile LQ / 3D-Magic</th>
                             <th>Keyfile REGALIS v2</th>
@@ -90,40 +90,42 @@ Programmer: Alejandro Aguayo Acosta
                             <th>Save</th>
                         </tr>
                         <tr ng-repeat="row in backupReportData | filter : { serviceTag : filterComputerServiceTag , title : filterBySoftware }" title="{{ row.title }}">
-                            <td>{{ row.serviceTag }}</td>
+                            <td ng-show="showServiceTag">{{ row.serviceTag }}</td>
                             <td><div
                                     class="btn {{ getStyleByStatus( row.backupParameter ) }}" 
                                     ng-click="row.backupParameter = changeStatusByClic( row.backupParameter ); row.saved='-floppy-disk'">
-                                    Parameters<br>{{ row.backupParameter }}
+                                    <span ng-show="!showServiceTag">[<small>{{ row.serviceTag }}</small>]<br></span>Parameters<br>{{ row.backupParameter }}
                                 </div>
                             </td>
                             <td><div 
                                     class="btn {{ getStyleByStatus( row.backupParameterScan ) }}" 
                                     ng-click="row.backupParameterScan = changeStatusByClic( row.backupParameterScan ); row.saved='-floppy-disk'">
-                                        Scan Parameters<br>{{ row.backupParameterScan }}
+                                        <span ng-show="!showServiceTag">[<small>{{ row.serviceTag }}</small>]<br></span>Scan Parameters<br>{{ row.backupParameterScan }}
                                 </div>
                             </td>
-                            <td><div 
+                            <td>
+                                <div 
                                     class="btn {{ getStyleByStatus( row.backupKeyfileLQ ) }}" 
                                     ng-click="row.backupKeyfileLQ = changeStatusByClic( row.backupKeyfileLQ ); row.saved='-floppy-disk'">
-                                        KeyFile LQ / 3D-Magic<br>{{ row.backupKeyfileLQ }}
+                                        <span ng-show="!showServiceTag">[<small>{{ row.serviceTag }}</small>]<br></span>KeyFile LQ / 3D-Magic<br>{{ row.backupKeyfileLQ }}
                                 </div>
                             </td>
                             <td><div 
                                     class="btn {{ getStyleByStatus( row.backupKeyfileRegalisV2 ) }}" 
                                     ng-click="row.backupKeyfileRegalisV2 = changeStatusByClic( row.backupKeyfileRegalisV2 ); row.saved='-floppy-disk'">
-                                        KeyFile Regalis v2<br>{{ row.backupKeyfileRegalisV2 }}
+                                        <span ng-show="!showServiceTag">[<small>{{ row.serviceTag }}</small>]<br></span>KeyFile Regalis v2<br>{{ row.backupKeyfileRegalisV2 }}
                                 </div>
                             </td>
                             <td><div
                                     class="btn {{ getStyleByStatus( row.backupKeyfileRegalisV3 ) }}" 
                                     ng-click="row.backupKeyfileRegalisV3 = changeStatusByClic( row.backupKeyfileRegalisV3 ); row.saved='-floppy-disk'">
-                                        KeyFile Regalis v3<br>{{ row.backupKeyfileRegalisV3 }}
+                                        <span ng-show="!showServiceTag">[<small>{{ row.serviceTag }}</small>]<br></span>KeyFile Regalis v3<br>{{ row.backupKeyfileRegalisV3 }}
                                 </div>
                             </td>
                             <td><div ng-click="updateOrSaveRow( row )" class="btn btn-info"><span class="glyphicon glyphicon{{ row.saved }}"></span></div></td>
                         </tr>
                     </table>
+                    
                 </div>
             </div>
         </div>

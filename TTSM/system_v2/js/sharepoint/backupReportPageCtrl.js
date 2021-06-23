@@ -27,6 +27,9 @@ miApp.controller( 'backupReportPageCtrl'  ,['$scope' , '$http' , '$window' , fun
     $scope.deleteSuccess = "Data deleted!";
     $scope.deleteFailure = "Something went wrong!";
     
+    //flags
+    $scope.showServiceTag = true;
+    
     //forms
     $scope.details = {
         "id" : "--",
@@ -229,7 +232,7 @@ miApp.controller( 'backupReportPageCtrl'  ,['$scope' , '$http' , '$window' , fun
             returnData = "btn-danger";
         }
         if( statusParam == "NA" ){
-            returnData = "btn-warning";
+            returnData = "btn-default";
         }
         return returnData;
     }
