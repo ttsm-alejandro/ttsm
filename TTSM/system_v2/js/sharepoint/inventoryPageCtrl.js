@@ -33,6 +33,7 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
     $scope.filterViewByDescription = "";
     $scope.filterViewByType = "";
     $scope.filterViewByChecked = "";
+    $scope.filterViewByPartNumber = "";
     
     //selection
     $scope.imageToShowSelected = "";
@@ -115,6 +116,8 @@ miApp.controller( 'inventoryPageCtrl'  ,['$scope' , '$http' , '$window' , functi
         $scope.filterViewByLocalization = "";
         $scope.filterViewByType = "";
         $scope.filterViewByChecked = "";
+        $scope.filterViewByDescription = "";
+        $scope.filterViewByPartNumber = "";
     };
     
     //
