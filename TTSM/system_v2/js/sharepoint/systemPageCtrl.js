@@ -144,6 +144,11 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
     };
     
     //
+    $scope.showCommentResume =function(){
+        $('#sharepointCommentResumeInModal').modal('show');
+    }
+    
+    //
     $scope.showCalibrationPlanner = function(){
         var a = document.createElement("a");
         a.href = "./calibration_planner.php";
@@ -538,6 +543,9 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
         $scope.isShowMachineDetail = true;
         for( var index in $scope.machineCatalog ){
             if( $scope.machineCatalog[ index ].idSystem == $scope.systemDetail.id ){
+                //$scope.machineArrayInSystem.push( $scope.machineCatalog[ index ] );
+                //agrega computerServiceTag y computerComment
+                $scope.machineCatalog[ index ] = $scope.getServiceTagAndCommentByIdComputer( $scope.machineCatalog[ index ] )
                 $scope.machineArrayInSystem.push( $scope.machineCatalog[ index ] );
             }
         }
@@ -546,13 +554,25 @@ miApp.controller( 'systemPageCtrl'  ,['$scope' , '$http' , '$window', function( 
         if( $scope.machineArrayInSystem.length == 0 ){ 
             $scope.isShowMachineDetail = false; 
         }else{ 
-            console.log( responseData );
             
             if( responseData.includes( "DELETE" ) || (responseData == "") ){
                 $scope.getMachineDetail( $scope.machineArrayInSystem[ 0 ] ); 
             }
         }
     };
+    
+    //le agrega los parametros "computerServiceTag" y "computerComment" al json que llega, busca por idComputer
+    $scope.getServiceTagAndCommentByIdComputer = function( param ){
+        for( var index in $scope.computerCatalog ){
+            if( $scope.computerCatalog[ index ].id == param.idComputer ){
+                //agregar computer id, computer serial number y computer comment
+                param.computerServiceTag = $scope.computerCatalog[ index ].serviceTag;
+                param.computerComment =  $scope.computerCatalog[ index ].comment;
+                break;
+            }
+        }
+        return param;
+    }
     
     //AGREGAR COMENTARIOS
     $scope.getMachineDetail = function( machineParam ){

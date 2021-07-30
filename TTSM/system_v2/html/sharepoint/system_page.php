@@ -54,6 +54,7 @@ Programmer: Alejandro Aguayo Acosta
                 <div ng-include="'../util/modal/modal_loading.html'"></div>
                 <div ng-include="'../util/modal/modal_development.html'"></div>
                 <div ng-include="'../util/modal/modal_sharepoint_textarea.html'"></div>
+                <div ng-include="'../util/modal/modal_sharepoint_comment_resume.html'"></div>
                 <div ng-include="'../util/modal/modal_calibration_planner.html'"></div>
                 
                 
@@ -68,6 +69,7 @@ Programmer: Alejandro Aguayo Acosta
                         </h2>
                     </div>
                     <div class="col-lg-4" style="text-align: right; text">
+                        <button type="button" class="btn btn-info" ng-click="showCommentResume()"><span class="glyphicon glyphicon-comment"></span></button>
                         <button type="button" class="btn btn-success" ng-click="showCalibrationPlanner()">Calibration Planner</button>
                     </div>
                 </div>
