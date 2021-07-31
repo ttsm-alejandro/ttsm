@@ -61,12 +61,17 @@ class ControlPaseService {
         }
         mysqli_query( $link , $query );
         
-        $query = "SELECT id FROM control_pase WHERE date='$newElement->date' and destiny='$newElement->destiny' and user='$newElement->user'";
+        $query = "SELECT id FROM control_pase WHERE date='$newElement->date' and destiny='$newElement->destiny' and user='$newElement->user' ORDER BY id DESC LIMIT 1";
         //echo $query;
         $result = mysqli_query( $link , $query );
         $row = mysqli_fetch_row( $result );
         
-        return $saveOrUpdate . " " . $row[0];
+        if( $saveOrUpdate == "INSERT" ){
+            $saveOrUpdate = $saveOrUpdate . " " . $row[0];
+        }else{
+            $saveOrUpdate = $saveOrUpdate . " " . $newElement->id;
+        }
+        return $saveOrUpdate;
     }
     
     //Delete Element

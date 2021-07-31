@@ -23,7 +23,13 @@ Programmer: Alejandro Aguayo Acosta
                     </tr>
                     <tr>
                         <td><strong>User:</strong></td>
-                        <td><input class="input-lg" ng-model="paseDetail.user"></td>
+                        <td>
+                            <select 
+                                ng-model="paseDetail.user"
+                                ng-options="x as x for x in userCatalog"
+                                class="input-lg"
+                                >
+                            </select>
                     </tr>
                     <tr>
                         <td><strong>Amount:</strong></td>

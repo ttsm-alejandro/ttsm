@@ -35,6 +35,8 @@ miApp.controller( 'pasePageCtrl'  ,['$scope' , '$http' , '$window', function( $s
         "amount" : ""
     };
     
+    $scope.userCatalog = [ "Alejandro" , "Hitoshi" ];
+    
     $scope.totalAmount = "";
     
     //main table
