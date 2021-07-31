@@ -1,0 +1,39 @@
+<!--
+Company:    Tokyo Boeki Techno-System de Mexico S.A. de C.V. 
+Programmer: Alejandro Aguayo Acosta
+-->
+<!-- MODAL COMPANY -->
+<div class="modal fade" id="controlPaseAddRegisterModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Register</h4>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <td><strong>Date:</strong></td>
+                        <td><input class="input-lg" ng-model="paseDetail.date"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Destiny:</strong></td>
+                        <td><input class="input-lg" ng-model="paseDetail.destiny"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>User:</strong></td>
+                        <td><input class="input-lg" ng-model="paseDetail.user"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Amount:</strong></td>
+                        <td><input class="input-lg" ng-model="paseDetail.amount"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="updateOrSavePaseDetail()">SAVE</button>
+            </div>
+      </div>
+    </div>
+</div>
