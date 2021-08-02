@@ -4,7 +4,7 @@
  */
 
 var miApp = angular.module( "miApp" , [] );
-miApp.controller( 'pasePageCtrl'  ,['$scope' , '$http' , '$window', function( $scope , $http , $window ){
+miApp.controller( 'controlPasePageCtrl'  ,['$scope' , '$http' , '$window', function( $scope , $http , $window ){
     /**** variables ****/
     //Development
     $scope.showConsole = false;

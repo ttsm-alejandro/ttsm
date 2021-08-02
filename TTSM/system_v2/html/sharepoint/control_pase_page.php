@@ -35,11 +35,11 @@ Programmer: Alejandro Aguayo Acosta
         <script src="../../js/initConfig.js"></script>
         
         <!-- Controller -->
-        <script src="../../js/sharepoint/pasePageCtrl.js"></script>
+        <script src="../../js/sharepoint/controlPasePageCtrl.js"></script>
     </head>
     
     <body ng-app="miApp" >
-        <div class="container" ng-controller="pasePageCtrl" 
+        <div class="container" ng-controller="controlPasePageCtrl" 
              ng-init="
                  
                  user='<?php echo $_SESSION["user"]; ?>';
@@ -48,7 +48,7 @@ Programmer: Alejandro Aguayo Acosta
                                            ">
                 <!-- Header -->
                 <div ng-include="'../util/header.html'"></div>
-                <div style="color:red; text-align: center; font-size: 150px">{{ totalAmount }}</div>
+                <div style="color:red; text-align: center; font-size: 120px">{{ totalAmount }}</div>
                 
                 <!-- MODALS -->
                 <div ng-include="'../util/modal/modal_loading.html'"></div>
@@ -105,6 +105,7 @@ Programmer: Alejandro Aguayo Acosta
                         </table>
                     </div>
                 </div>
+            </div>
         </div>
     </body>
 </html>
