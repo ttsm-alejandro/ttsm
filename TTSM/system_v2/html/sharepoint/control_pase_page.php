@@ -48,7 +48,7 @@ Programmer: Alejandro Aguayo Acosta
                                            ">
                 <!-- Header -->
                 <div ng-include="'../util/header.html'"></div>
-                <div style="color:red; text-align: center; font-size: 120px">{{ totalAmount }}</div>
+                <div style="color:red; text-align: center; font-size: 100px">{{ totalAmount }}</div>
                 
                 <!-- MODALS -->
                 <div ng-include="'../util/modal/modal_loading.html'"></div>
