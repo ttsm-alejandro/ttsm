@@ -125,7 +125,14 @@ Programmer: Alejandro Aguayo Acosta
                         clicShowColumn( 'comment' );
                         getAllDateLastReminderSent();
                                             ">Comment</label>
-                    
+                <label
+                    title="Clic to show control over Days left and STATUS"
+                    class="label label-warning" 
+                    ng-click="isShowDaysCountInCalibrationPlanner = !isShowDaysCountInCalibrationPlanner"
+                    >Days Counter</label>    
+                <div ng-show="isShowDaysCountInCalibrationPlanner" >
+                    <input class="input-sm" type="number" ng-model="daysCount" title="Input number of days for STATUS, more than N status OK"><button title="Clic to update according to Number of days" class="" ng-click="getCalibrationPlannerData()">Update</button><br>
+                </div>
                     
                     <div class="table-responsive"> 
                     <table class="table table-hover table-condensed">

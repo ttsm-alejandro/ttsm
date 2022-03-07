@@ -13,7 +13,7 @@
  */
 class CalibrationPlannerService {
     //get all
-    static function getAll( $link ){
+    static function getAll( $link , $daysCount = 60 ){
         $query = " SELECT "
                     . " company.short_name, "
                     . " plant.name, "
@@ -42,7 +42,7 @@ class CalibrationPlannerService {
                 
         //echo $query."<br>";
         $result = mysqli_query( $link , $query );
-        return CalibrationPlannerService::getArrayByResult( $result );
+        return CalibrationPlannerService::getArrayByResult( $result , $daysCount );
     }
     
     //transform a $row into a $object
@@ -62,7 +62,7 @@ class CalibrationPlannerService {
     }
     
     //transform a $result into a $arrayObject
-    static function getArrayByResult( $result ){
+    static function getArrayByResult( $result , $daysCount = 60 ){
         $arrayResult = new ArrayObject();
         while( $row = mysqli_fetch_row( $result ) ){
             
@@ -77,7 +77,7 @@ class CalibrationPlannerService {
             $row[6] = CalibrationPlannerService::getDateAsDayMonthYear( $row[6] );
             
             //get Status OK/Close/Past by Days until next calibration
-            $row[8] = CalibrationPlannerService::getStatusByDaysUntilCalibrationDate( $row[7] );
+            $row[8] = CalibrationPlannerService::getStatusByDaysUntilCalibrationDate( $row[7] , $daysCount );
             
             //
             $newRow = CalibrationPlannerService::getElementByRow( $row );
@@ -98,10 +98,10 @@ class CalibrationPlannerService {
     }
     
     //
-    static function getStatusByDaysUntilCalibrationDate( $dayParam ){
+    static function getStatusByDaysUntilCalibrationDate( $dayParam , $dayCount = 60 ){
         $status = "OK";
         
-        if( $dayParam < 60 ){
+        if( $dayParam < $dayCount ){
             $status = "CLOSE";
         }
         

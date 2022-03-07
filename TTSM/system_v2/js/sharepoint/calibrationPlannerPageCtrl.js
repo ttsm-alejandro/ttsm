@@ -46,6 +46,9 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.stateCatalog = [];
     $scope.serviceReminderCatalog = [];
     
+    //Para aumentar los dias de OK / PAST / CLOSE
+    $scope.daysCount = 60;
+    
     //calibration Planner only
     $scope.statusCatalog = [
         { value : "" , name : "-- ALL --" },
@@ -86,6 +89,7 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.isShowEmailToSendInCalibrationPlanner = false;
     $scope.isShowDateLastReminderSentInCalibrationPlanner = false;
     $scope.isShowCommentInCalibrationPlanner = false;
+    $scope.isShowDaysCountInCalibrationPlanner = false;
     //labels for filter
     $scope.labelPlantStyle = "label-danger";
     $scope.labelPersonStyle = "label-danger";
@@ -148,7 +152,7 @@ miApp.controller( 'calibrationPlannerPageCtrl'  ,['$scope' , '$http' , '$window'
     $scope.getCalibrationPlannerData = function(){
         $('#myLoadingModal').modal('show');
         $http({
-            url: calibrationPlannerServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token,
+            url: calibrationPlannerServiceUrl + "?user=" + $scope.user + "&token=" + $scope.token + "&daysCount=" + $scope.daysCount,
             method: "GET"
         })
         .then(function(response) {

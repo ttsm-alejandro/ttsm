@@ -39,7 +39,7 @@ if( isset( $_GET[ "user" ] )
         //GET
         if( $_SERVER["REQUEST_METHOD"] === "GET" ){ 
             //Util::insertBitacore( $link , $user, "Person GET request" );
-            returnDataGET( $link ); 
+            returnDataGET( $link , $_GET[ "daysCount" ] ); 
         }
         mysqli_close( $link );
         
@@ -83,12 +83,12 @@ function getLink( $isSecurity = false ){
 }
 
 //if all the security filters are pass
-function returnDataGET( $link ){
+function returnDataGET( $link , $daysCount ){
     if( isset( $_GET[ "id" ] ) ){
         $id = $_GET[ "id" ];
-        echo json_encode( CalibrationPlannerService::getById( $link , $id ) );
+        echo json_encode( CalibrationPlannerService::getById( $link , $id , $daysCount ) );
     }else{
-        echo json_encode( CalibrationPlannerService::getAll( $link ) );
+        echo json_encode( CalibrationPlannerService::getAll( $link , $daysCount ) );
     }
 }
 
