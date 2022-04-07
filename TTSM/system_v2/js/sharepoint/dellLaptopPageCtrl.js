@@ -312,7 +312,7 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
     };
     
     //
-    $scope.saveToFileData = function(){
+    $scope.getTextToWriteInFile = function(){
         //generar el texto a exportar
         var textoEnArchivo = "";
         
@@ -387,21 +387,26 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
         textoEnArchivo += "\n" + "About the information errors,";
         textoEnArchivo += "\n" + "," + "Missing information" + "," + $scope.informationError + ",";
         
-        
-        
+        return textoEnArchivo;
+    };
+    
+    //
+    $scope.saveToFileData = function(){
+        var textoEnArchivo = $scope.getTextToWriteInFile();
+        var nombreDeArchivo = $scope.information.company + " " + $scope.information.department + " " + $scope.information.model + " " + $scope.information.serviceTag + " - resumen.csv ";
         
         
         //Crear el elemento y se descarga
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent( textoEnArchivo ));
-        element.setAttribute('download', "resume.csv");
+        element.setAttribute('download', nombreDeArchivo);
         element.style.display = 'none';
         document.body.appendChild(element);
         element.click();
         document.body.removeChild(element);
         
         //
-        swal( {"icon": "success" , "text" : "file downloaded"} );
+        swal( {"icon": "success" , "text" : nombreDeArchivo + " \nfile downloaded"} );
     };
     
     $scope.getYesNoByBoolean = function( param ){

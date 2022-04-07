@@ -112,7 +112,7 @@ Programmer: Alejandro Aguayo Acosta
                     <h4>Computer Details</h4>
                     <table class="table table-striped">
                         <tr><th>ID:</th><td>{{ details.id }}</td></tr>
-                        <tr><th>Service Tag:</th><td><input ng-model="details.serviceTag" class="form-control"></td></tr>
+                        <tr><th>Identifier:</th><td><input ng-model="details.serviceTag" class="form-control"></td></tr>
                         <tr><th>Mac Address:</th><td><input ng-model="details.macAddress" class="form-control"></td></tr>
                         <tr><th>Details:</th><td><textarea rows="5" ng-model="details.detail" class="form-control"></textarea></td></tr>
                         <tr><th>Software Installed:</th>
