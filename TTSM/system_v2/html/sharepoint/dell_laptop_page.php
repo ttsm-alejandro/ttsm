@@ -281,6 +281,12 @@ Programmer: Alejandro Aguayo Acosta
                                 <input class="form-control input-lg" ng-model="informationREGALIS.ttsmFolderRegalisInstaller" type="checkbox">
                             </div>
                             
+                            <!-- ttsmFolderRegalisInstaller -->
+                            <div class="form-group">
+                                <label for="inputlg">Folder TTSM - ATPC y AC6 Installer</label>
+                                <input class="form-control input-lg" ng-model="informationREGALIS.ttsmFolderAtpcAc6Installer" type="checkbox">
+                            </div>
+                            
                             <!-- ttsmFoldertbLicense -->
                             <div class="form-group">
                                 <label for="inputlg">Folder TTSM - tbLicense</label>
@@ -311,9 +317,15 @@ Programmer: Alejandro Aguayo Acosta
                                 <input class="form-control input-lg" ng-model="informationREGALIS.regalisInstalled" type="checkbox">
                             </div>
                             
+                            <!-- atpcAc6Installed -->
+                            <div class="form-group">
+                                <label for="inputlg">ATPC and AC6 correctly installed</label>
+                                <input class="form-control input-lg" ng-model="informationREGALIS.atpcAc6Installed" type="checkbox">
+                            </div>
+                            
                             <!-- regalisInstalledTestedWithArm -->
                             <div class="form-group">
-                                <label for="inputlg">REGALIS tested and connected to Vectoron</label>
+                                <label for="inputlg" title="In periodic inspection, ATPC opens?, path correctly setted?">REGALIS tested and connected to Vectoron - Periodic Inspection</label>
                                 <input class="form-control input-lg" ng-model="informationREGALIS.regalisInstalledTestedWithArm" type="checkbox">
                             </div>
                             

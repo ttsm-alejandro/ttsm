@@ -71,11 +71,13 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
         "regalisDongle" : "",
         "ipAddress" : false,
         "ttsmFolderRegalisInstaller" : false,
+        "ttsmFolderAtpcAc6Installer" : false,
         "ttsmFoldertbLicense" : false,
         "ttsmFoldermlLicense" : false,
         "ttsmFolderArmParam" : false,
         "ttsmFolderScanParam" : false,
         "regalisInstalled" : false,
+        "atpcAc6Installed" : false,
         "regalisInstalledTestedWithArm" : false,
         "excelTrustCenterSetting" : false
     };
@@ -244,12 +246,14 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
                 if( $scope.informationREGALIS.regalisDongle == "" ){ informacionFaltante += "REGALIS Dongle, "; returnData = false; }
                 if( !$scope.informationREGALIS.ipAddress ){ informacionFaltante += "Set IP Address, "; returnData = false; }
                 if( !$scope.informationREGALIS.ttsmFolderRegalisInstaller ){ informacionFaltante += "Save REGALIS installer, "; returnData = false; }
+                if( !$scope.informationREGALIS.ttsmFolderAtpcAc6Installer ){ informacionFaltante += "Save ATPC and AC6 installer, "; returnData = false; }
                 if( !$scope.informationREGALIS.ttsmFoldertbLicense ){ informacionFaltante += "Save tbLicense, "; returnData = false; }
                 if( !$scope.informationREGALIS.ttsmFoldermlLicense ){ informacionFaltante += "Save mlLicense, "; returnData = false; }
                 if( !$scope.informationREGALIS.ttsmFolderArmParam ){ informacionFaltante += "Save Arm Params, "; returnData = false; }
                 if( !$scope.informationREGALIS.ttsmFolderScanParam ){ informacionFaltante += "Save Scan Params, "; returnData = false; }
                 if( !$scope.informationREGALIS.regalisInstalled ){ informacionFaltante += "Install REGALIS, "; returnData = false; }
-                if( !$scope.informationREGALIS.regalisInstalledTestedWithArm ){ informacionFaltante += "Test REGALIS connection with Vectoron, "; returnData = false; }
+                if( !$scope.informationREGALIS.atpcAc6Installed ){ informacionFaltante += "Install ATPC and AC6, "; returnData = false; }
+                if( !$scope.informationREGALIS.regalisInstalledTestedWithArm ){ informacionFaltante += "Test REGALIS connection with Vectoron - Periodic inspection, "; returnData = false; }
                 if( !$scope.informationREGALIS.excelTrustCenterSetting ){ informacionFaltante += "Set EXCEL Trust Center for REPORT, "; returnData = false; }
             }
             
@@ -346,11 +350,13 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
             textoEnArchivo += "\n" + "," + "REGALIS Dongle" + "," + $scope.informationREGALIS.regalisDongle + ",";
             textoEnArchivo += "\n" + "," + "Set IP Address as 192.168.10.12 / 255.255.255.0" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ipAddress ) + ",";
             textoEnArchivo += "\n" + "," + "Folder TTSM - Save REGALIS installer" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFolderRegalisInstaller ) + ",";
+            textoEnArchivo += "\n" + "," + "Folder TTSM - Save ATPC and AC6 installer" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFolderAtpcAc6Installer ) + ",";
             textoEnArchivo += "\n" + "," + "Folder TTSM - Save tbLicense" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFoldertbLicense ) + ",";
             textoEnArchivo += "\n" + "," + "Folder TTSM - Save mlLicense" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFoldermlLicense ) + ",";
             textoEnArchivo += "\n" + "," + "Folder TTSM - Save Arm Params" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFolderArmParam ) + ",";
             textoEnArchivo += "\n" + "," + "Folder TTSM - Save Scan Params" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.ttsmFolderScanParam ) + ",";
             textoEnArchivo += "\n" + "," + "REGALIS correctly installed" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.regalisInstalled ) + ",";
+            textoEnArchivo += "\n" + "," + "ATPC and AC6 correctly installed" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.atpcAc6Installed ) + ",";
             textoEnArchivo += "\n" + "," + "Test REGALIS connection with Vectoron" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.regalisInstalledTestedWithArm ) + ",";
             textoEnArchivo += "\n" + "," + "Set EXCEL Trust Center for REPORT" + "," + $scope.getYesNoByBoolean( $scope.informationREGALIS.excelTrustCenterSetting ) + ",";
         }
@@ -393,7 +399,7 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
     //
     $scope.saveToFileData = function(){
         var textoEnArchivo = $scope.getTextToWriteInFile();
-        var nombreDeArchivo = $scope.information.company + " " + $scope.information.department + " " + $scope.information.model + " " + $scope.information.serviceTag + " - resumen.csv ";
+        var nombreDeArchivo = $scope.information.company + " " + $scope.information.department + " " + $scope.information.model + " " + $scope.information.serviceTag + " - resumen.csv";
         
         
         //Crear el elemento y se descarga
