@@ -13,7 +13,6 @@ miApp.controller( 'dellLaptopPageCtrl'  ,['$scope' , '$http' , '$window', functi
     $scope.lastSearch = "";
     
     //URL
-    var dellLaptopServiceUrl = serviceUrl + "php/resources/catalogs/DellLaptopResource.php";
     $scope.relativeUrl = "../../";
     
     
